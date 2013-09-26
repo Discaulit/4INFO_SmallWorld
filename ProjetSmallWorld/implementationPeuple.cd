@@ -48,6 +48,9 @@
   </Class>
   <Class Name="ProjetSmallWorld.UniteAbstrait">
     <Position X="7.25" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAgAEAAAAAAAAAAAAAwCAAAAA=</HashCode>
       <FileName>UniteAbstraite.cs</FileName>
@@ -58,7 +61,7 @@
     <Position X="5.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>UniteNainConcrete.cs</FileName>
+      <FileName>UniteNainConcret.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -66,7 +69,7 @@
     <Position X="7.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>UniteVikingConcrete.cs</FileName>
+      <FileName>UniteVikingConcret.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
