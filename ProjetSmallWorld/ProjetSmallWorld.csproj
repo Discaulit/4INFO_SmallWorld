@@ -42,20 +42,27 @@
   <ItemGroup>
     <Compile Include="Bonus.cs" />
     <Compile Include="BonusAtqDef.cs" />
+    <Compile Include="BonusCaseAbstraite.cs" />
     <Compile Include="BonusDeplacement.cs" />
     <Compile Include="BonusNoPoints.cs" />
     <Compile Include="BonusPoints.cs" />
     <Compile Include="Carte.cs" />
     <Compile Include="CaseDesert.cs" />
+    <Compile Include="CaseDesertConcret.cs" />
     <Compile Include="CaseEau.cs" />
+    <Compile Include="CaseEauConcret.cs" />
     <Compile Include="CaseForet.cs" />
+    <Compile Include="CaseForetConcret.cs" />
     <Compile Include="CaseMontagne.cs" />
+    <Compile Include="CaseMontagneConcret.cs" />
     <Compile Include="CasePlaine.cs" />
+    <Compile Include="CasePlaineConcret.cs" />
     <Compile Include="CaseReelle.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Combat.cs" />
     <Compile Include="FabBonus.cs" />
     <Compile Include="FabCase.cs" />
+    <Compile Include="FabCaseConcret.cs" />
     <Compile Include="FabGaulois.cs" />
     <Compile Include="FabGauloisConcret.cs" />
     <Compile Include="FabNain.cs" />
@@ -73,6 +80,7 @@
     <Compile Include="MonteurPetit.cs" />
     <Compile Include="MonteurPlateau.cs" />
     <Compile Include="Partie.cs" />
+    <Compile Include="PartieConcret.cs" />
     <Compile Include="Peuple.cs" />
     <Compile Include="PeupleAbstrait.cs" />
     <Compile Include="PeupleGaulois.cs" />
@@ -82,16 +90,22 @@
     <Compile Include="PeupleViking.cs" />
     <Compile Include="PeupleVikingConcret.cs" />
     <Compile Include="Plateau.cs" />
+    <Compile Include="PlateauConcret.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StrategieDemoConcret.cs" />
+    <Compile Include="StrategieNormalConcret.cs" />
+    <Compile Include="StrategiePetitConcret.cs" />
+    <Compile Include="StrategiePlateauAbstrait.cs" />
     <Compile Include="Terrain.cs" />
+    <Compile Include="TypeCaseAbstrait.cs" />
     <Compile Include="Unite.cs" />
     <Compile Include="UniteAbstraite.cs" />
     <Compile Include="UniteGaulois.cs" />
     <Compile Include="UniteGauloisConcret.cs" />
     <Compile Include="UniteNain.cs" />
-    <Compile Include="UniteNainConcrete.cs" />
+    <Compile Include="UniteNainConcret.cs" />
     <Compile Include="UniteViking.cs" />
-    <Compile Include="UniteVikingConcrete.cs" />
+    <Compile Include="UniteVikingConcret.cs" />
     <Compile Include="Vue.cs" />
   </ItemGroup>
   <ItemGroup>
