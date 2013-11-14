@@ -13,7 +13,7 @@
     <Position X="16.363" Y="1.309" Height="0.562" Width="2.085" />
   </Comment>
   <Comment CommentText="Monteur Partie">
-    <Position X="5.654" Y="8.034" Height="0.291" Width="1.08" />
+    <Position X="2.739" Y="7.384" Height="0.291" Width="1.08" />
   </Comment>
   <Comment CommentText="+ Singleton GestionCombats&#xD;&#xA;Gstion des différents combat du tour.">
     <Position X="1.676" Y="3.903" Height="0.932" Width="2.046" />
@@ -180,31 +180,10 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="ProjetSmallWorld.MonteurPartie">
-    <Position X="4" Y="8.5" Width="1.5" />
+    <Position X="4" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MonteurPartie.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="ProjetSmallWorld.MonteurDemo">
-    <Position X="2.5" Y="9.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MonteurDemo.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="ProjetSmallWorld.MonteurPetit">
-    <Position X="4" Y="9.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MonteurPetit.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="ProjetSmallWorld.MonteurNormal">
-    <Position X="5.5" Y="9.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MonteurNormal.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ProjetSmallWorld.PeupleNain">
