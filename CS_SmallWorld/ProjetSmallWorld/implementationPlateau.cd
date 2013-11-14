@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Poids-mouche Case et BonusCase">
+    <Position X="5.819" Y="1.298" Height="0.492" Width="1.333" />
+  </Comment>
+  <Comment CommentText="Stratégie Plateau">
+    <Position X="4.908" Y="3.505" Height="0.291" Width="1.325" />
+  </Comment>
+  <Interface Name="ProjetSmallWorld.Case">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CaseReelle.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjetSmallWorld.TypeCase">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Terrain.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjetSmallWorld.BonusCase">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bonus.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjetSmallWorld.FabBonus">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FabBonus.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjetSmallWorld.Plateau">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Plateau.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjetSmallWorld.FabCase">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FabCase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjetSmallWorld.StrategiePlateau">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MonteurPlateau.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjetSmallWorld.StrategieDemo">
+    <Position X="1.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MonteurDemo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjetSmallWorld.StrategiePetit">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MonteurPetit.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjetSmallWorld.StrategieNormal">
+    <Position X="4.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MonteurNormal.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

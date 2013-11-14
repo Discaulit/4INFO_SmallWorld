@@ -1,0 +1,6 @@
+H:\TP_POO_MOO\4INFO_SmallWorld\ProjetSmallWorld\bin\Debug\ProjetSmallWorld.XML
+H:\TP_POO_MOO\4INFO_SmallWorld\ProjetSmallWorld\bin\Debug\ProjetSmallWorld.dll
+H:\TP_POO_MOO\4INFO_SmallWorld\ProjetSmallWorld\bin\Debug\ProjetSmallWorld.pdb
+H:\TP_POO_MOO\4INFO_SmallWorld\ProjetSmallWorld\obj\Debug\ProjetSmallWorld.csprojResolveAssemblyReference.cache
+H:\TP_POO_MOO\4INFO_SmallWorld\ProjetSmallWorld\obj\Debug\ProjetSmallWorld.dll
+H:\TP_POO_MOO\4INFO_SmallWorld\ProjetSmallWorld\obj\Debug\ProjetSmallWorld.pdb

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="fd2ab1f6-7b1c-4b0e-89b9-381f79f7a893" name="UtilisationUnite" linkedPackageId="b05ad04b-0b1d-4cfb-956e-5e5d77285378" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="4ebc06a2-771e-493a-92ed-5001ee4724c9">
+      <elementDefinition Id="e1223a96-b7c5-4221-afe9-d6a891136c2e" />
+      <body>Avec cette unité</body>
+      <annotatedElements>
+        <useCaseMoniker Id="b8b7a17b-74ae-4c87-ac67-ced7ed4e15e6" LastKnownName="Ne rien faire" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="f2b9fbd7-41e6-426c-8380-d58879a0af29">
+      <profileInstance Id="a92400e9-09a2-4878-98dc-5957b923acd2" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2311c31b-4539-4180-8463-d7c83c844369">
+      <profileInstance Id="f501112e-34a9-4128-a52b-4230ef6e51d7" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="834835da-75e2-462b-8c55-ae643b64c34d" name="Joueur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0157eeea-bf83-43fd-a8e2-c9b05a595284" />
+        <targetEnds>
+          <association Id="aa49e439-3dd9-414b-b978-8eaf00a9a716" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Selection Unite" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ad913272-ba74-4ddf-9a52-b52c29454d1f" LastKnownName="Selection Unite" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b5cc4b6e-6265-4f6d-b8bf-fa40fb6b935b" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="84e83806-43ca-4208-9340-f5e9fda4cc4c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="97292325-4e5b-40e8-9fb5-bd970daae316" name="Selection Unite" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fc235709-ae61-4573-a621-d3d1324f74d7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9d23ce88-3310-4f8e-a45e-4b93b05e4fb5" />
+          </association>
+          <association Id="0fc6c465-afc6-49a6-bb8c-c90c1079d336" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Fin Tour" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="24703379-a979-4751-8aeb-a6483610c2a2" LastKnownName="Fin Tour" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="26ef2d93-f3d4-42d5-b4be-1f3196668ebe" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="393bf38b-c42c-4daa-9eff-942403573d2b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b2c2cc4d-9c2b-406a-9cca-95e46e674bca" name="Fin Tour" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8210756e-2047-4a6f-9015-dfe5a84f36a6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="89adbeaa-0c4f-4075-8107-518fb8846116" />
+          </association>
+          <association Id="a0e2a57f-e84b-47eb-8ec8-a957c3b454b2" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Analyse Case" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e38a5bfa-a26f-4e9e-8d32-f1e13f5da5d5" LastKnownName="Analyse Case" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3775f7e9-b6b6-4fb7-952a-6846a5b3cef3" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="061e35b7-dbe2-40b6-81e1-346fbbaada79" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="06a4372e-4dbe-487d-897c-31eb8db80da7" name="Analyse Case" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="56e7bda6-ef60-4283-b2ff-3efac3d2d34e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="723d817f-57d5-4dc4-8216-af0731906b9b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ad913272-ba74-4ddf-9a52-b52c29454d1f" name="Selection Unite" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="00c3c8a5-91db-4eba-9e11-482f2d1d9169" />
+        <extendedCases>
+          <extend Id="7e686ebf-609c-4e22-94ff-adff4a38a94d">
+            <useCaseMoniker Id="2acb8c30-db6a-45cf-9f3d-b7c8a7820625" LastKnownName="Deplacement Unite" />
+            <elementDefinition Id="711ceb39-bada-4ea5-a332-a66820fe01d6" />
+          </extend>
+          <extend Id="78d00737-6200-4d41-b7f8-59c3cda98e9c">
+            <useCaseMoniker Id="5b92b69f-b0e0-4dff-8c6a-2bc91109fa15" LastKnownName="Deselection Unite" />
+            <elementDefinition Id="7bcd7a69-8224-46db-aad8-f9a39c0f31d5" />
+          </extend>
+          <extend Id="d2d8b761-7bd3-4e12-ac45-075f5b644991">
+            <useCaseMoniker Id="c48d3373-dc2a-4a87-967e-e1ff1fb54492" LastKnownName="Attaque Unite Ennemie" />
+            <elementDefinition Id="f72f5ba1-824f-41fb-93e5-71fab9f392a6" />
+          </extend>
+          <extend Id="bf09cd18-7456-46ed-ab5d-2a0e24c9eb14">
+            <useCaseMoniker Id="b8b7a17b-74ae-4c87-ac67-ced7ed4e15e6" LastKnownName="Ne rien faire" />
+            <elementDefinition Id="85f485c1-ee71-44de-ac50-1e5412c201c6" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2acb8c30-db6a-45cf-9f3d-b7c8a7820625" name="Deplacement Unite" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4079f92d-a474-4321-bceb-59dc6fd9c7d9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c48d3373-dc2a-4a87-967e-e1ff1fb54492" name="Attaque Unite Ennemie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5ac67a1a-55b8-42c2-8773-8d2208b3b1f7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5b92b69f-b0e0-4dff-8c6a-2bc91109fa15" name="Deselection Unite" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e2c3f684-6e01-4fd5-8c3e-5f3fe0c48c55" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8f85f5e0-6e73-4e1b-a3e2-9fe665e3d189" name="Selection Autre Unite" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e6edda31-d82f-4102-8cbe-d62cee413eb5" />
+        <generalsInternal>
+          <generalization Id="15bd4b0f-bb0d-4d0d-978e-f3c8ad4ff103" isSubstitutable="false">
+            <useCaseMoniker Id="5b92b69f-b0e0-4dff-8c6a-2bc91109fa15" LastKnownName="Deselection Unite" />
+            <elementDefinition Id="b07fb5ce-df94-4ab6-904a-149fb873eb02" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e38a5bfa-a26f-4e9e-8d32-f1e13f5da5d5" name="Analyse Case" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="816b2569-381e-43b7-b165-5006b83378cf" />
+        <generalsInternal>
+          <generalization Id="d9d5fa2e-f422-488e-bb16-b475864e2ae2" isSubstitutable="false">
+            <useCaseMoniker Id="5b92b69f-b0e0-4dff-8c6a-2bc91109fa15" LastKnownName="Deselection Unite" />
+            <elementDefinition Id="e09feeb7-fd56-4285-9a6f-eee82255326f" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="24703379-a979-4751-8aeb-a6483610c2a2" name="Fin Tour" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3c57cbb0-7baa-4812-8ab3-76ca8df445d5" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b8b7a17b-74ae-4c87-ac67-ced7ed4e15e6" name="Ne rien faire" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e043b43c-749f-4b60-9b72-02712c976d9d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="b05ad04b-0b1d-4cfb-956e-5e5d77285378" name="ModelisationSmallWorld">
+    <elementDefinition Id="f1eed4ac-99df-4fa4-b39a-27ec2afe8a56" />
+  </package>
+</useCaseModelRoot>
