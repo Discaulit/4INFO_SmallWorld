@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="f1eed4ac-99df-4fa4-b39a-27ec2afe8a56"
   name="ModelisationSmallWorld" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -2695,6 +2695,241 @@ message via IHM</body>
       <executionEvent
         Id="69bc704f-1fab-4b78-99f2-afc3e78bb006"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="8c04e8ca-d7a0-42d7-be35-f08e63e202aa"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="343b239b-0b56-4fdb-8656-bc76cfab5cbb"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c02819d6-8b68-4dcf-8afc-1e6172979aa6"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e53b09b0-6832-4745-8090-4891ea5a5a88"
+                  LastKnownName="Récupération PVs&#xD;&#xA;des Unites Atq et Def"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="e53b09b0-6832-4745-8090-4891ea5a5a88"
+            name="Récupération PVs&#xD;&#xA;des Unites Atq et Def"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="02b1d883-d4e8-4002-ad7e-ed2248e279a0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6b087747-f4ac-42d3-afd7-432b1f4708e0"
+                  LastKnownName="Calcul des points effectifs&#xD;&#xA;d'atq et de def pour les Unites"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="6b087747-f4ac-42d3-afd7-432b1f4708e0"
+            name="Calcul des points effectifs&#xD;&#xA;d'atq et de def pour les Unites"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="18204291-6209-4b1d-a5f9-fdc95ac3bf57"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="1df2e20d-3fdf-47c1-b9d4-0f4475ceef70"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="c74e0c8b-9d49-45a7-8ab9-1bf59ef19c73"
+            name="Calcul de l'atq pour Unite Atq"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2c54ef13-9cfc-44a3-b016-4457e5e7055b"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="459a85cc-7c04-4163-9502-ecfa8a81fe86"
+                  LastKnownName="Join1"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="1df2e20d-3fdf-47c1-b9d4-0f4475ceef70"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="da3f92de-1e44-4f44-a510-9adff0efa206"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c74e0c8b-9d49-45a7-8ab9-1bf59ef19c73"
+                  LastKnownName="Calcul de l'atq pour Unite Atq"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="6391bd29-db45-4e1b-891c-bf541d586d8d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="a9fa4218-96a4-4963-ad24-98ed0edfb0b9"
+                  LastKnownName="Calcul de la def pour Unite Def"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction
+            Id="a9fa4218-96a4-4963-ad24-98ed0edfb0b9"
+            name="Calcul de la def pour Unite Def"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e3c76e1b-ab3b-4482-8f7d-f89417116b6f"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="459a85cc-7c04-4163-9502-ecfa8a81fe86"
+                  LastKnownName="Join1"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode
+            Id="459a85cc-7c04-4163-9502-ecfa8a81fe86"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d0cbcca7-0589-4edc-a3be-238ab5a0f734"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b568d2c0-b6ce-44a0-a718-a560e492845e"
+                  LastKnownName="Cacul rapport de force&#xD;&#xA;RF = Atq atq / Def def"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction
+            Id="b568d2c0-b6ce-44a0-a718-a560e492845e"
+            name="Cacul rapport de force&#xD;&#xA;RF = Atq atq / Def def"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5c982ae3-e066-45ba-97f9-d971957b9f61"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="48c47e8a-570f-4f2d-8a0d-20095284b735"
+                  LastKnownName="Calcul chance de Vict pour l'Atq&#xD;&#xA;VA = 0.5 * RF"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="48c47e8a-570f-4f2d-8a0d-20095284b735"
+            name="Calcul chance de Vict pour l'Atq&#xD;&#xA;VA = 0.5 * RF"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f2d6791c-c7f0-45ab-bbe1-96339f2d89f9"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="50ffcf2f-9b6e-430e-b565-716d716b4f95"
+                  LastKnownName="Décision victoire V"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="50ffcf2f-9b6e-430e-b565-716d716b4f95"
+            name="Décision victoire V"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d54fb3fb-c857-44fa-b3c7-f2b944a55e79"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="5529bcea-37f6-44b7-9801-c1028f04d4b6"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="5529bcea-37f6-44b7-9801-c1028f04d4b6"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f4d895f4-4994-4357-9a54-b2e504d0c830"
+                guard="V &lt; VA"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="ba39d0be-0a47-446e-8528-e07853657153"
+                  LastKnownName="Victoire Atq"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="f016674c-b4f3-4cfc-ad6a-3c6db846cc65"
+                guard="V &gt; VA"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c22a35f0-9c2e-43b8-95e3-0d6951f608fd"
+                  LastKnownName="Victoire Def"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="ba39d0be-0a47-446e-8528-e07853657153"
+            name="Victoire Atq"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="728d3bed-49ce-4690-b39a-4da828dee62f"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="34990757-8cfd-4e1c-ac8f-3caec37aff35"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="c22a35f0-9c2e-43b8-95e3-0d6951f608fd"
+            name="Victoire Def"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ac85cc5f-94bf-465a-b08a-e50d81e1ef23"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="840f7cde-9d5e-4d26-aa11-e6f26229763e"
+                  LastKnownName="ActivityFinal2"
+                  LastKnownLocation="ModelisationSmallWorld.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="34990757-8cfd-4e1c-ac8f-3caec37aff35"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <activityFinalNode
+            Id="840f7cde-9d5e-4d26-aa11-e6f26229763e"
+            name="ActivityFinal2"
+            isLeaf="false" />
+        </nodes>
+      </activity>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

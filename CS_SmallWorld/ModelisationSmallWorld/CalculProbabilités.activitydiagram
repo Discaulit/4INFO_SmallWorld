@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="12ae0e05-eb76-4842-88cb-8ba1eb1a316b" name="Activity1" linkedPackageId="9082fdf0-b981-4d91-b148-e39ad4fabee3" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="eccf26dd-5a03-47f2-aa35-7a68fe705f00">
+      <profileInstance Id="1aa8508d-07a4-404a-aaf1-210ffee8d158" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="02759a1b-a851-464c-abc7-0310139eb0a7">
+      <profileInstance Id="02529859-b12c-4615-a6cc-81dbfdf788b5" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="327850b2-f38e-4354-a648-0fc5ebf86c72" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="8c04e8ca-d7a0-42d7-be35-f08e63e202aa" />
+        <nodes>
+          <initialNode Id="422313ce-51c4-48c2-b881-928dddec1e0a" name="Initial1" isLeaf="false">
+            <elementDefinition Id="343b239b-0b56-4fdb-8656-bc76cfab5cbb" />
+            <flowNodeTargets>
+              <controlFlow Id="041cce3f-7553-441e-b25f-de2327a259ef" isLeaf="false">
+                <opaqueActionMoniker Id="3e345537-5e83-4dd8-b054-13af5baf9578" LastKnownName="Récupération PVs&#xD;&#xA;des Unites Atq et Def" />
+                <elementDefinition Id="c02819d6-8b68-4dcf-8afc-1e6172979aa6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="3e345537-5e83-4dd8-b054-13af5baf9578" name="Récupération PVs&#xD;&#xA;des Unites Atq et Def" isLeaf="false">
+            <elementDefinition Id="e53b09b0-6832-4745-8090-4891ea5a5a88" />
+            <flowNodeTargets>
+              <controlFlow Id="fe3bfbd7-241a-43c4-810e-0e982b1f3f86" isLeaf="false">
+                <opaqueActionMoniker Id="6b9f1b05-1287-4570-9b72-160738e0b136" LastKnownName="Calcul des points effectifs&#xD;&#xA;d'atq et de def pour les Unites" />
+                <elementDefinition Id="02b1d883-d4e8-4002-ad7e-ed2248e279a0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="6b9f1b05-1287-4570-9b72-160738e0b136" name="Calcul des points effectifs&#xD;&#xA;d'atq et de def pour les Unites" isLeaf="false">
+            <elementDefinition Id="6b087747-f4ac-42d3-afd7-432b1f4708e0" />
+            <flowNodeTargets>
+              <controlFlow Id="aa3ca003-e9c0-4af2-8e97-520cbaaedba8" isLeaf="false">
+                <forkNodeMoniker Id="d5774161-037e-4825-b05d-3db9b979d79f" LastKnownName="Fork1" />
+                <elementDefinition Id="18204291-6209-4b1d-a5f9-fdc95ac3bf57" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="f93f6d1c-a36c-4758-8606-e925ff797246" name="Calcul de l'atq pour Unite Atq" isLeaf="false">
+            <elementDefinition Id="c74e0c8b-9d49-45a7-8ab9-1bf59ef19c73" />
+            <flowNodeTargets>
+              <controlFlow Id="6080c995-d92b-4686-a653-7bce6da5224e" isLeaf="false">
+                <joinNodeMoniker Id="eaa55df9-0f25-4afa-872d-e512702c1a2e" LastKnownName="Join1" />
+                <elementDefinition Id="2c54ef13-9cfc-44a3-b016-4457e5e7055b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="d5774161-037e-4825-b05d-3db9b979d79f" name="Fork1" isLeaf="false">
+            <elementDefinition Id="1df2e20d-3fdf-47c1-b9d4-0f4475ceef70" />
+            <flowNodeTargets>
+              <controlFlow Id="1920813c-befb-4972-8774-f7e0dc8f9553" isLeaf="false">
+                <opaqueActionMoniker Id="f93f6d1c-a36c-4758-8606-e925ff797246" LastKnownName="Calcul de l'atq pour Unite Atq" />
+                <elementDefinition Id="da3f92de-1e44-4f44-a510-9adff0efa206" />
+              </controlFlow>
+              <controlFlow Id="1bfaf594-6ef5-4aa2-b650-2fba66bfcd1a" isLeaf="false">
+                <opaqueActionMoniker Id="708367f0-7ce9-455d-936e-3143c101c57b" LastKnownName="Calcul de la def pour Unite Def" />
+                <elementDefinition Id="6391bd29-db45-4e1b-891c-bf541d586d8d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction Id="708367f0-7ce9-455d-936e-3143c101c57b" name="Calcul de la def pour Unite Def" isLeaf="false">
+            <elementDefinition Id="a9fa4218-96a4-4963-ad24-98ed0edfb0b9" />
+            <flowNodeTargets>
+              <controlFlow Id="113c01d6-0808-4d9d-8656-e460f9eabb2c" isLeaf="false">
+                <joinNodeMoniker Id="eaa55df9-0f25-4afa-872d-e512702c1a2e" LastKnownName="Join1" />
+                <elementDefinition Id="e3c76e1b-ab3b-4482-8f7d-f89417116b6f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode Id="eaa55df9-0f25-4afa-872d-e512702c1a2e" name="Join1" isLeaf="false">
+            <elementDefinition Id="459a85cc-7c04-4163-9502-ecfa8a81fe86" />
+            <flowNodeTargets>
+              <controlFlow Id="ad960d1f-9282-4415-8c5a-3eae14b9942c" isLeaf="false">
+                <opaqueActionMoniker Id="7320a697-dacc-4be4-897d-10adc63e76c9" LastKnownName="Cacul rapport de force&#xD;&#xA;RF = Atq atq / Def def" />
+                <elementDefinition Id="d0cbcca7-0589-4edc-a3be-238ab5a0f734" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction Id="7320a697-dacc-4be4-897d-10adc63e76c9" name="Cacul rapport de force&#xD;&#xA;RF = Atq atq / Def def" isLeaf="false">
+            <elementDefinition Id="b568d2c0-b6ce-44a0-a718-a560e492845e" />
+            <flowNodeTargets>
+              <controlFlow Id="f3f7b1c5-8ead-4b58-90cd-f633534998f4" isLeaf="false">
+                <opaqueActionMoniker Id="81e7532d-963a-4398-b0e7-323057669aa6" LastKnownName="Calcul chance de Vict pour l'Atq&#xD;&#xA;VA = 0.5 * RF" />
+                <elementDefinition Id="5c982ae3-e066-45ba-97f9-d971957b9f61" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="81e7532d-963a-4398-b0e7-323057669aa6" name="Calcul chance de Vict pour l'Atq&#xD;&#xA;VA = 0.5 * RF" isLeaf="false">
+            <elementDefinition Id="48c47e8a-570f-4f2d-8a0d-20095284b735" />
+            <flowNodeTargets>
+              <controlFlow Id="483dc02a-02f3-48f8-ad8b-b5a9c44f1bd1" isLeaf="false">
+                <opaqueActionMoniker Id="f7a4e1db-4766-4da0-8691-034884bf188f" LastKnownName="Décision victoire V" />
+                <elementDefinition Id="f2d6791c-c7f0-45ab-bbe1-96339f2d89f9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="f7a4e1db-4766-4da0-8691-034884bf188f" name="Décision victoire V" isLeaf="false">
+            <elementDefinition Id="50ffcf2f-9b6e-430e-b565-716d716b4f95" />
+            <flowNodeTargets>
+              <controlFlow Id="348b8dc9-375a-4ad0-bfe4-bea7cce06528" isLeaf="false">
+                <decisionNodeMoniker Id="dc907952-e5eb-451c-a836-70d642fc8d9e" LastKnownName="Decision1" />
+                <elementDefinition Id="d54fb3fb-c857-44fa-b3c7-f2b944a55e79" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="dc907952-e5eb-451c-a836-70d642fc8d9e" name="Decision1" isLeaf="false">
+            <elementDefinition Id="5529bcea-37f6-44b7-9801-c1028f04d4b6" />
+            <flowNodeTargets>
+              <controlFlow Id="97f5e546-6c52-4b1c-b22a-0ce30dc7cf49" guard="V &lt; VA" isLeaf="false">
+                <opaqueActionMoniker Id="e1833438-4250-4e9c-adfd-5256aadeb008" LastKnownName="Victoire Atq" />
+                <elementDefinition Id="f4d895f4-4994-4357-9a54-b2e504d0c830" />
+              </controlFlow>
+              <controlFlow Id="06597334-7045-4e29-97ab-6906f18ad5d6" guard="V &gt; VA" isLeaf="false">
+                <opaqueActionMoniker Id="4dbb3e0e-705e-4113-8ad7-41b2fbb56b3a" LastKnownName="Victoire Def" />
+                <elementDefinition Id="f016674c-b4f3-4cfc-ad6a-3c6db846cc65" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="e1833438-4250-4e9c-adfd-5256aadeb008" name="Victoire Atq" isLeaf="false">
+            <elementDefinition Id="ba39d0be-0a47-446e-8528-e07853657153" />
+            <flowNodeTargets>
+              <controlFlow Id="10d12ae0-305f-4645-aa0d-9b7a3ad8f00a" isLeaf="false">
+                <activityFinalNodeMoniker Id="a4fba8d0-2fba-45d4-994e-93c5ed3a4be9" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="728d3bed-49ce-4690-b39a-4da828dee62f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4dbb3e0e-705e-4113-8ad7-41b2fbb56b3a" name="Victoire Def" isLeaf="false">
+            <elementDefinition Id="c22a35f0-9c2e-43b8-95e3-0d6951f608fd" />
+            <flowNodeTargets>
+              <controlFlow Id="d4c7cd7c-b603-46b2-930f-d2bc1ee79ce2" isLeaf="false">
+                <activityFinalNodeMoniker Id="fd0281ab-f80e-4067-8cf5-b1e14614f1bd" LastKnownName="ActivityFinal2" />
+                <elementDefinition Id="ac85cc5f-94bf-465a-b08a-e50d81e1ef23" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="a4fba8d0-2fba-45d4-994e-93c5ed3a4be9" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="34990757-8cfd-4e1c-ac8f-3caec37aff35" />
+          </activityFinalNode>
+          <activityFinalNode Id="fd0281ab-f80e-4067-8cf5-b1e14614f1bd" name="ActivityFinal2" isLeaf="false">
+            <elementDefinition Id="840f7cde-9d5e-4d26-aa11-e6f26229763e" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="9082fdf0-b981-4d91-b148-e39ad4fabee3" name="ModelisationSmallWorld">
+    <elementDefinition Id="f1eed4ac-99df-4fa4-b39a-27ec2afe8a56" />
+  </package>
+</activityRootModel>
