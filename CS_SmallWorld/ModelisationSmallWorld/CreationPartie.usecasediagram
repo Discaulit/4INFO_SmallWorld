@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="cc736a4d-7e2d-43a5-b037-f8b402b925a4" name="UMLUseCaseDiagram1" linkedPackageId="5166da81-0cdd-44a0-806b-a849f6ec066b" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="65973c79-cd77-42e4-9d97-0c8439d5cd38">
+      <profileInstance Id="4e07b21e-e08e-459f-b62f-dfec0c3cba78" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c7905a4c-25bd-4788-9828-a130fbb1e6f5">
+      <profileInstance Id="50196fc3-af7f-43e9-ad7d-43f98349e8d6" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="977c1eab-ac1b-491c-ba85-f0e07526e6c4" name="MaitreDuJeu" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cb0d1c29-6fbc-4a20-af20-f1f7bfca3b4e" />
+        <targetEnds>
+          <association Id="ecc799f6-4d1e-4028-9fe2-596e555cbfaa" isDerived="false" sourceEndRoleName="MaitreDuJeu" targetEndRoleName="Creer Partie" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="82838acd-d281-4515-82c6-8e5472f987e6" LastKnownName="Creer Partie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8ed5d5c9-6dff-4813-9c24-c004b4f40619" name="MaitreDuJeu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="af704845-d322-4e2b-95ef-daef9f0e306e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2d2bd1c8-6533-4afd-8167-20956d97134a" name="Creer Partie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fd5d4dc9-6759-45a2-b233-9f7603d93496" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b9944de4-cbae-4a6f-ad2f-d405ffecf01f" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="3769c61f-f93c-4029-925a-f6c1fc696133" name="Joueur" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="89ded05e-e1ba-4090-b60c-34a83ed4484e" />
+        <generalsInternal>
+          <generalization Id="3d9675ac-7959-4288-9fba-bbe3c9413151" isSubstitutable="false">
+            <actorMoniker Id="977c1eab-ac1b-491c-ba85-f0e07526e6c4" LastKnownName="MaitreDuJeu" />
+            <elementDefinition Id="7184eb33-870d-475d-90b3-4b844f6b35e1" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="259a4565-ea25-4083-b65d-9c035bf5ccbb" isDerived="false" sourceEndRoleName="Joueur" targetEndRoleName="Choisir Peuple" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9665f4f8-0fb9-40f8-9379-b5faabe94726" LastKnownName="Choisir Peuple" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fd5d8c67-b1f7-4dc1-b1e7-cd9fbed4aaa0" name="Joueur" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1f468c35-2761-4040-9b8c-27e138665ee1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1513f953-f8c3-47a9-a60b-c14aea509d62" name="Choisir Peuple" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="03db7fb9-49bd-43ab-8e05-ac4c86c45677" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b19b82f8-33ef-44e9-8e8b-86effd1f0086" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="82838acd-d281-4515-82c6-8e5472f987e6" name="Creer Partie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="df498d41-3d12-45ad-8fc1-f19355f8efc9" />
+        <additions>
+          <include Id="ea244b0e-85d3-45f6-a5f3-8014ccdb08e7">
+            <useCaseMoniker Id="6db68264-1f5c-48e3-9816-dc40ab0d3e04" LastKnownName="Choisir type partie" />
+            <elementDefinition Id="42ce4425-0e0c-4aa3-ad7c-04394e495eee" />
+          </include>
+          <include Id="38601e85-be38-441e-b640-dcdef2888674">
+            <useCaseMoniker Id="9665f4f8-0fb9-40f8-9379-b5faabe94726" LastKnownName="Choisir Peuple" />
+            <elementDefinition Id="727d7166-5709-4f32-9f47-365db312bb63" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6db68264-1f5c-48e3-9816-dc40ab0d3e04" name="Choisir type partie" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3abf7ebf-90e3-49d4-bff2-6e3c279139ea" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9665f4f8-0fb9-40f8-9379-b5faabe94726" name="Choisir Peuple" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="58722f2a-76c7-4f75-87ba-015a163ef1c8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="df8ddc83-bba9-41e5-855e-ec1b05ae4001" name="PartieDemo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="96ff8124-5893-4c85-87ed-9e0890961192" />
+        <generalsInternal>
+          <generalization Id="e35bca78-0dc0-465d-af9c-1aec3046d4a1" isSubstitutable="false">
+            <useCaseMoniker Id="6db68264-1f5c-48e3-9816-dc40ab0d3e04" LastKnownName="Choisir type partie" />
+            <elementDefinition Id="bb50aa60-c257-4e9e-99b3-fb3cd90098c4" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="41e1f352-edd3-4566-b1f6-1a549d7ecddf" name="Partie Petite" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="649593ed-8786-4883-b938-2ac0d49498fc" />
+        <generalsInternal>
+          <generalization Id="daa2886a-e295-49f6-9cdf-8dccb209be68" isSubstitutable="false">
+            <useCaseMoniker Id="6db68264-1f5c-48e3-9816-dc40ab0d3e04" LastKnownName="Choisir type partie" />
+            <elementDefinition Id="1244a66c-6029-4e40-80c0-b30728591a36" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="feef751c-4fcb-4287-9519-0dae093fd990" name="Partie Normale" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1877098c-cebd-455b-a8fc-9f751fa18955" />
+        <generalsInternal>
+          <generalization Id="9d5bc58d-f5ad-4161-9bd8-e54cbf888b5f" isSubstitutable="false">
+            <useCaseMoniker Id="6db68264-1f5c-48e3-9816-dc40ab0d3e04" LastKnownName="Choisir type partie" />
+            <elementDefinition Id="9cfc868d-da5d-4894-8d37-13611f9d5840" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6ac8be44-71c1-4a05-8b3f-e043ed6859d3" name="Nain" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="18356538-56c2-46a9-949c-f5b93762315a" />
+        <generalsInternal>
+          <generalization Id="da10f906-cb64-4a53-bedc-f4810b8de99b" isSubstitutable="false">
+            <useCaseMoniker Id="9665f4f8-0fb9-40f8-9379-b5faabe94726" LastKnownName="Choisir Peuple" />
+            <elementDefinition Id="3c5c153f-1878-4fa8-b517-9cdbf99cbff4" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b44e1a50-194d-4a6b-875d-7414b0949bdc" name="Viking" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2b2233dc-7f25-41a0-8cfc-0fd3b8d3ab69" />
+        <generalsInternal>
+          <generalization Id="ccbdf054-ff30-43af-bdf1-d14ed87de2a4" isSubstitutable="false">
+            <useCaseMoniker Id="9665f4f8-0fb9-40f8-9379-b5faabe94726" LastKnownName="Choisir Peuple" />
+            <elementDefinition Id="d96f6872-a0f6-4b63-aef1-a71647b65ea0" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fccfe4f9-aeed-4494-b0b0-400f6f55ab66" name="Gaulois" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="31533145-a844-496c-8697-9027f18e97c4" />
+        <generalsInternal>
+          <generalization Id="79380076-4eae-47c2-8709-b176986692f6" isSubstitutable="false">
+            <useCaseMoniker Id="9665f4f8-0fb9-40f8-9379-b5faabe94726" LastKnownName="Choisir Peuple" />
+            <elementDefinition Id="9a28c4ec-b88f-452a-b178-6a65de105ea8" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="5166da81-0cdd-44a0-806b-a849f6ec066b" name="ModelisationSmallWorld">
+    <elementDefinition Id="f1eed4ac-99df-4fa4-b39a-27ec2afe8a56" />
+  </package>
+</useCaseModelRoot>

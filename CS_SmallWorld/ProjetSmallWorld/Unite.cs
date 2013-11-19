@@ -7,5 +7,16 @@ namespace ProjetSmallWorld
 {
     public interface Unite
     {
+        Case CaseCourante
+        {
+            get;
+            set;
+        }
+
+        bool estAmie(Unite u);
+
+        void deplacer(Case c);
+
+        void detruire();
     }
 }

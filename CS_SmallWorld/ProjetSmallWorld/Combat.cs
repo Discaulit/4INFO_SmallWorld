@@ -7,5 +7,6 @@ namespace ProjetSmallWorld
 {
     public interface Combat
     {
+        bool lancerCombat(Unite uniteCourante, Case caseAttaquee);
     }
 }

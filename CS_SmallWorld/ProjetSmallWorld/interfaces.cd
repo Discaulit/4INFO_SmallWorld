@@ -28,7 +28,7 @@
   <Interface Name="ProjetSmallWorld.Unite">
     <Position X="16" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAgAAIAAAAAAAAAAAAACAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>Unite.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -147,8 +147,8 @@
   <Interface Name="ProjetSmallWorld.Case">
     <Position X="13.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>CaseReelle.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Case.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ProjetSmallWorld.FabBonus">
@@ -208,21 +208,21 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="ProjetSmallWorld.UniteNain">
-    <Position X="14.5" Y="7.75" Width="1.5" />
+    <Position X="14.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UniteNain.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ProjetSmallWorld.UniteViking">
-    <Position X="16" Y="7.75" Width="1.5" />
+    <Position X="16" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UniteViking.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="ProjetSmallWorld.UniteGaulois">
-    <Position X="17.5" Y="7.75" Width="1.5" />
+    <Position X="17.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UniteGaulois.cs</FileName>
@@ -231,7 +231,7 @@
   <Interface Name="ProjetSmallWorld.Combat">
     <Position X="2" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Combat.cs</FileName>
     </TypeIdentifier>
   </Interface>

@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>CalculProbabilités.activitydiagram</DependentUpon>
     </Content>
+    <Content Include="CreationPartie.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CreationPartie.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CreationPartie.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="UtilisationUnite.sequencediagram">
       <SubType>Content</SubType>
     </Content>

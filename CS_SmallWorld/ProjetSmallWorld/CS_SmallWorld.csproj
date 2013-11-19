@@ -51,8 +51,7 @@
     <Compile Include="CaseForet.cs" />
     <Compile Include="CaseMontagne.cs" />
     <Compile Include="CasePlaine.cs" />
-    <Compile Include="CaseReelle.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="Case.cs" />
     <Compile Include="Combat.cs" />
     <Compile Include="FabBonus.cs" />
     <Compile Include="FabCase.cs" />

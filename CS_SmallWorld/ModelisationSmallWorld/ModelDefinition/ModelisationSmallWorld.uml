@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="f1eed4ac-99df-4fa4-b39a-27ec2afe8a56"
   name="ModelisationSmallWorld" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -316,12 +316,12 @@ message via IHM</body>
                         LastKnownName="S_Deplacement"
                         LastKnownLocation="ModelisationSmallWorld.uml" />
                       <lifelineMoniker
-                        Id="ad049960-9a98-46c3-bca2-9304cfc906c1"
-                        LastKnownName="Unite"
-                        LastKnownLocation="ModelisationSmallWorld.uml" />
-                      <lifelineMoniker
                         Id="f9ca7e17-4fc8-40d0-b7df-53d313b930e6"
                         LastKnownName="S_Combat"
+                        LastKnownLocation="ModelisationSmallWorld.uml" />
+                      <lifelineMoniker
+                        Id="ad049960-9a98-46c3-bca2-9304cfc906c1"
+                        LastKnownName="Unite"
                         LastKnownLocation="ModelisationSmallWorld.uml" />
                     </coveredLifelines>
                     <operands>
@@ -334,12 +334,12 @@ message via IHM</body>
                             LastKnownName="S_Deplacement"
                             LastKnownLocation="ModelisationSmallWorld.uml" />
                           <lifelineMoniker
-                            Id="ad049960-9a98-46c3-bca2-9304cfc906c1"
-                            LastKnownName="Unite"
-                            LastKnownLocation="ModelisationSmallWorld.uml" />
-                          <lifelineMoniker
                             Id="f9ca7e17-4fc8-40d0-b7df-53d313b930e6"
                             LastKnownName="S_Combat"
+                            LastKnownLocation="ModelisationSmallWorld.uml" />
+                          <lifelineMoniker
+                            Id="ad049960-9a98-46c3-bca2-9304cfc906c1"
+                            LastKnownName="Unite"
                             LastKnownLocation="ModelisationSmallWorld.uml" />
                         </coveredLifelines>
                         <guard>
@@ -382,12 +382,12 @@ message via IHM</body>
                             LastKnownName="S_Deplacement"
                             LastKnownLocation="ModelisationSmallWorld.uml" />
                           <lifelineMoniker
-                            Id="ad049960-9a98-46c3-bca2-9304cfc906c1"
-                            LastKnownName="Unite"
-                            LastKnownLocation="ModelisationSmallWorld.uml" />
-                          <lifelineMoniker
                             Id="f9ca7e17-4fc8-40d0-b7df-53d313b930e6"
                             LastKnownName="S_Combat"
+                            LastKnownLocation="ModelisationSmallWorld.uml" />
+                          <lifelineMoniker
+                            Id="ad049960-9a98-46c3-bca2-9304cfc906c1"
+                            LastKnownName="Unite"
                             LastKnownLocation="ModelisationSmallWorld.uml" />
                         </coveredLifelines>
                         <fragments>
@@ -708,22 +708,22 @@ message via IHM</body>
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="e8a1e665-b821-4bb9-a4e6-04fac88494cf"
-            name="MessageOccurrenceSpecification16">
-            <covered>
-              <lifelineMoniker
-                Id="dcb95a78-4bbc-4f6c-8085-e0aab00bab12"
-                LastKnownName="Case"
-                LastKnownLocation="ModelisationSmallWorld.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="f5541093-9f72-401a-b142-4a5e5765a250"
             name="MessageOccurrenceSpecification15">
             <covered>
               <lifelineMoniker
                 Id="e334a258-79bd-4e0c-ad50-8adce85ba15f"
                 LastKnownName="S_Deplacement"
+                LastKnownLocation="ModelisationSmallWorld.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e8a1e665-b821-4bb9-a4e6-04fac88494cf"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="dcb95a78-4bbc-4f6c-8085-e0aab00bab12"
+                LastKnownName="Case"
                 LastKnownLocation="ModelisationSmallWorld.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -988,16 +988,6 @@ message via IHM</body>
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="6ebbd3f7-a010-450c-ac0f-ace7363330aa"
-            name="OperandOccurrenceSpecification102">
-            <covered>
-              <lifelineMoniker
-                Id="ad049960-9a98-46c3-bca2-9304cfc906c1"
-                LastKnownName="Unite"
-                LastKnownLocation="ModelisationSmallWorld.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="f368635c-4460-45b1-916d-25e5698b5cda"
             name="OperandOccurrenceSpecification122">
             <covered>
@@ -1014,6 +1004,16 @@ message via IHM</body>
               <lifelineMoniker
                 Id="e334a258-79bd-4e0c-ad50-8adce85ba15f"
                 LastKnownName="S_Deplacement"
+                LastKnownLocation="ModelisationSmallWorld.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="6ebbd3f7-a010-450c-ac0f-ace7363330aa"
+            name="OperandOccurrenceSpecification102">
+            <covered>
+              <lifelineMoniker
+                Id="ad049960-9a98-46c3-bca2-9304cfc906c1"
+                LastKnownName="Unite"
                 LastKnownLocation="ModelisationSmallWorld.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1138,22 +1138,22 @@ message via IHM</body>
             </covered>
           </messageOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="e3139a97-f553-4f38-9e0c-927831cb0bb3"
-            name="OperandOccurrenceSpecification125">
-            <covered>
-              <lifelineMoniker
-                Id="f9ca7e17-4fc8-40d0-b7df-53d313b930e6"
-                LastKnownName="S_Combat"
-                LastKnownLocation="ModelisationSmallWorld.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="d14436b2-fba6-4c88-a2cf-f8820862705c"
             name="OperandOccurrenceSpecification127">
             <covered>
               <lifelineMoniker
                 Id="ad049960-9a98-46c3-bca2-9304cfc906c1"
                 LastKnownName="Unite"
+                LastKnownLocation="ModelisationSmallWorld.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="e3139a97-f553-4f38-9e0c-927831cb0bb3"
+            name="OperandOccurrenceSpecification125">
+            <covered>
+              <lifelineMoniker
+                Id="f9ca7e17-4fc8-40d0-b7df-53d313b930e6"
+                LastKnownName="S_Combat"
                 LastKnownLocation="ModelisationSmallWorld.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1262,22 +1262,22 @@ message via IHM</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="1c0ec136-5c0f-44b0-b9cc-6183fb8f8ca5"
-            name="OperandOccurrenceSpecification129">
-            <covered>
-              <lifelineMoniker
-                Id="f9ca7e17-4fc8-40d0-b7df-53d313b930e6"
-                LastKnownName="S_Combat"
-                LastKnownLocation="ModelisationSmallWorld.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="f6e633bb-6823-4798-84d0-065e8abe3154"
             name="OperandOccurrenceSpecification131">
             <covered>
               <lifelineMoniker
                 Id="ad049960-9a98-46c3-bca2-9304cfc906c1"
                 LastKnownName="Unite"
+                LastKnownLocation="ModelisationSmallWorld.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="1c0ec136-5c0f-44b0-b9cc-6183fb8f8ca5"
+            name="OperandOccurrenceSpecification129">
+            <covered>
+              <lifelineMoniker
+                Id="f9ca7e17-4fc8-40d0-b7df-53d313b930e6"
+                LastKnownName="S_Combat"
                 LastKnownLocation="ModelisationSmallWorld.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1404,16 +1404,6 @@ message via IHM</body>
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="4067ef94-2d17-4434-ab17-7bddb16e7106"
-            name="OperandOccurrenceSpecification108">
-            <covered>
-              <lifelineMoniker
-                Id="e334a258-79bd-4e0c-ad50-8adce85ba15f"
-                LastKnownName="S_Deplacement"
-                LastKnownLocation="ModelisationSmallWorld.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="234814ab-5215-4f59-90df-e890c577f7ef"
             name="OperandOccurrenceSpecification124">
             <covered>
@@ -1430,6 +1420,16 @@ message via IHM</body>
               <lifelineMoniker
                 Id="ad049960-9a98-46c3-bca2-9304cfc906c1"
                 LastKnownName="Unite"
+                LastKnownLocation="ModelisationSmallWorld.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="4067ef94-2d17-4434-ab17-7bddb16e7106"
+            name="OperandOccurrenceSpecification108">
+            <covered>
+              <lifelineMoniker
+                Id="e334a258-79bd-4e0c-ad50-8adce85ba15f"
+                LastKnownName="S_Deplacement"
                 LastKnownLocation="ModelisationSmallWorld.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -1474,6 +1474,16 @@ message via IHM</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="2579cec9-8421-424e-a728-3af190b7f2b8"
+            name="OperandOccurrenceSpecification53">
+            <covered>
+              <lifelineMoniker
+                Id="dcb95a78-4bbc-4f6c-8085-e0aab00bab12"
+                LastKnownName="Case"
+                LastKnownLocation="ModelisationSmallWorld.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="9ef4a06f-478f-4ab1-ab8d-45c7552b4239"
             name="OperandOccurrenceSpecification59">
             <covered>
@@ -1504,26 +1514,6 @@ message via IHM</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="2579cec9-8421-424e-a728-3af190b7f2b8"
-            name="OperandOccurrenceSpecification53">
-            <covered>
-              <lifelineMoniker
-                Id="dcb95a78-4bbc-4f6c-8085-e0aab00bab12"
-                LastKnownName="Case"
-                LastKnownLocation="ModelisationSmallWorld.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="07ab6754-80fb-44bf-a627-6e330735e6fd"
-            name="OperandOccurrenceSpecification56">
-            <covered>
-              <lifelineMoniker
-                Id="e334a258-79bd-4e0c-ad50-8adce85ba15f"
-                LastKnownName="S_Deplacement"
-                LastKnownLocation="ModelisationSmallWorld.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="8b8ff022-a6b8-4e19-9234-8f1aad6dddd0"
             name="OperandOccurrenceSpecification60">
             <covered>
@@ -1540,6 +1530,16 @@ message via IHM</body>
               <lifelineMoniker
                 Id="dcb95a78-4bbc-4f6c-8085-e0aab00bab12"
                 LastKnownName="Case"
+                LastKnownLocation="ModelisationSmallWorld.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="07ab6754-80fb-44bf-a627-6e330735e6fd"
+            name="OperandOccurrenceSpecification56">
+            <covered>
+              <lifelineMoniker
+                Id="e334a258-79bd-4e0c-ad50-8adce85ba15f"
+                LastKnownName="S_Deplacement"
                 LastKnownLocation="ModelisationSmallWorld.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -2930,6 +2930,260 @@ message via IHM</body>
             isLeaf="false" />
         </nodes>
       </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="cb0d1c29-6fbc-4a20-af20-f1f7bfca3b4e"
+        name="MaitreDuJeu"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="b9944de4-cbae-4a6f-ad2f-d405ffecf01f"
+            isDerived="false"
+            sourceEndRoleName="MaitreDuJeu"
+            targetEndRoleName="Creer Partie"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="df498d41-3d12-45ad-8fc1-f19355f8efc9"
+              LastKnownName="Creer Partie"
+              LastKnownLocation="ModelisationSmallWorld.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="af704845-d322-4e2b-95ef-daef9f0e306e"
+                  name="MaitreDuJeu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fd5d4dc9-6759-45a2-b233-9f7603d93496"
+                  name="Creer Partie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="89ded05e-e1ba-4090-b60c-34a83ed4484e"
+        name="Joueur"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="7184eb33-870d-475d-90b3-4b844f6b35e1"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="cb0d1c29-6fbc-4a20-af20-f1f7bfca3b4e"
+              LastKnownName="MaitreDuJeu"
+              LastKnownLocation="ModelisationSmallWorld.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="b19b82f8-33ef-44e9-8e8b-86effd1f0086"
+            isDerived="false"
+            sourceEndRoleName="Joueur"
+            targetEndRoleName="Choisir Peuple"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="58722f2a-76c7-4f75-87ba-015a163ef1c8"
+              LastKnownName="Choisir Peuple"
+              LastKnownLocation="ModelisationSmallWorld.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1f468c35-2761-4040-9b8c-27e138665ee1"
+                  name="Joueur"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="03db7fb9-49bd-43ab-8e05-ac4c86c45677"
+                  name="Choisir Peuple"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="df498d41-3d12-45ad-8fc1-f19355f8efc9"
+        name="Creer Partie"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="42ce4425-0e0c-4aa3-ad7c-04394e495eee">
+            <useCaseMoniker
+              Id="3abf7ebf-90e3-49d4-bff2-6e3c279139ea"
+              LastKnownName="Choisir type partie"
+              LastKnownLocation="ModelisationSmallWorld.uml" />
+          </include>
+          <include
+            Id="727d7166-5709-4f32-9f47-365db312bb63">
+            <useCaseMoniker
+              Id="58722f2a-76c7-4f75-87ba-015a163ef1c8"
+              LastKnownName="Choisir Peuple"
+              LastKnownLocation="ModelisationSmallWorld.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3abf7ebf-90e3-49d4-bff2-6e3c279139ea"
+        name="Choisir type partie"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="58722f2a-76c7-4f75-87ba-015a163ef1c8"
+        name="Choisir Peuple"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="96ff8124-5893-4c85-87ed-9e0890961192"
+        name="PartieDemo"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="bb50aa60-c257-4e9e-99b3-fb3cd90098c4"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="3abf7ebf-90e3-49d4-bff2-6e3c279139ea"
+              LastKnownName="Choisir type partie"
+              LastKnownLocation="ModelisationSmallWorld.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="649593ed-8786-4883-b938-2ac0d49498fc"
+        name="Partie Petite"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="1244a66c-6029-4e40-80c0-b30728591a36"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="3abf7ebf-90e3-49d4-bff2-6e3c279139ea"
+              LastKnownName="Choisir type partie"
+              LastKnownLocation="ModelisationSmallWorld.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1877098c-cebd-455b-a8fc-9f751fa18955"
+        name="Partie Normale"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="9cfc868d-da5d-4894-8d37-13611f9d5840"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="3abf7ebf-90e3-49d4-bff2-6e3c279139ea"
+              LastKnownName="Choisir type partie"
+              LastKnownLocation="ModelisationSmallWorld.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="18356538-56c2-46a9-949c-f5b93762315a"
+        name="Nain"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="3c5c153f-1878-4fa8-b517-9cdbf99cbff4"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="58722f2a-76c7-4f75-87ba-015a163ef1c8"
+              LastKnownName="Choisir Peuple"
+              LastKnownLocation="ModelisationSmallWorld.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2b2233dc-7f25-41a0-8cfc-0fd3b8d3ab69"
+        name="Viking"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="d96f6872-a0f6-4b63-aef1-a71647b65ea0"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="58722f2a-76c7-4f75-87ba-015a163ef1c8"
+              LastKnownName="Choisir Peuple"
+              LastKnownLocation="ModelisationSmallWorld.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="31533145-a844-496c-8697-9027f18e97c4"
+        name="Gaulois"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="9a28c4ec-b88f-452a-b178-6a65de105ea8"
+            isSubstitutable="false">
+            <useCaseMoniker
+              Id="58722f2a-76c7-4f75-87ba-015a163ef1c8"
+              LastKnownName="Choisir Peuple"
+              LastKnownLocation="ModelisationSmallWorld.uml" />
+          </generalization>
+        </generalsInternal>
+      </useCase>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
