@@ -3,9 +3,9 @@
   <Comment CommentText="Fabrique (le peuple) pour Unites (produit)">
     <Position X="4.505" Y="0.58" Height="0.448" Width="1.471" />
   </Comment>
-  <Class Name="ProjetSmallWorld.PeupleAbstrait">
+  <Class Name="CS_SmallWorld.PeupleAbstrait">
     <Position X="2" Y="3.5" Width="1.5" />
-    <AssociationLine Name="FabUnite" Type="ProjetSmallWorld.FabUniteAbstrait" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="FabUnite" Type="CS_SmallWorld.FabUniteAbstrait" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="2" Y="3.834" />
         <Point X="0.26" Y="3.834" />
@@ -22,7 +22,7 @@
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProjetSmallWorld.PeupleNainConcret">
+  <Class Name="CS_SmallWorld.PeupleNainConcret">
     <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -30,7 +30,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProjetSmallWorld.PeupleVikingConcret">
+  <Class Name="CS_SmallWorld.PeupleVikingConcret">
     <Position X="2" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -38,7 +38,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProjetSmallWorld.PeupleGauloisConcret">
+  <Class Name="CS_SmallWorld.PeupleGauloisConcret">
     <Position X="3.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -46,7 +46,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProjetSmallWorld.UniteAbstrait">
+  <Class Name="CS_SmallWorld.UniteAbstrait">
     <Position X="7.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAgAEAAAAAAAAAAAAAwCAAAAA=</HashCode>
@@ -54,7 +54,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProjetSmallWorld.UniteNainConcret">
+  <Class Name="CS_SmallWorld.UniteNainConcret">
     <Position X="5.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -62,7 +62,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProjetSmallWorld.UniteVikingConcret">
+  <Class Name="CS_SmallWorld.UniteVikingConcret">
     <Position X="7.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -70,7 +70,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProjetSmallWorld.UniteGauloisConcret">
+  <Class Name="CS_SmallWorld.UniteGauloisConcret">
     <Position X="8.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -78,7 +78,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProjetSmallWorld.FabUniteAbstrait">
+  <Class Name="CS_SmallWorld.FabUniteAbstrait">
     <Position X="2" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -86,7 +86,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProjetSmallWorld.FabNainConcret">
+  <Class Name="CS_SmallWorld.FabNainConcret">
     <Position X="0.5" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -94,7 +94,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProjetSmallWorld.FabVikingConcret">
+  <Class Name="CS_SmallWorld.FabVikingConcret">
     <Position X="2" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -102,7 +102,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="ProjetSmallWorld.FabGauloisConcret">
+  <Class Name="CS_SmallWorld.FabGauloisConcret">
     <Position X="3.5" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -110,84 +110,84 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="ProjetSmallWorld.Peuple">
+  <Interface Name="CS_SmallWorld.Peuple">
     <Position X="2" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Peuple.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.Unite">
+  <Interface Name="CS_SmallWorld.Unite">
     <Position X="7.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Unite.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.FabUnite">
+  <Interface Name="CS_SmallWorld.FabUnite">
     <Position X="2" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>FabUnite.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.PeupleNain">
+  <Interface Name="CS_SmallWorld.PeupleNain">
     <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PeupleNain.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.PeupleViking">
+  <Interface Name="CS_SmallWorld.PeupleViking">
     <Position X="2" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PeupleViking.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.PeupleGaulois">
+  <Interface Name="CS_SmallWorld.PeupleGaulois">
     <Position X="3.5" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PeupleGaulois.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.UniteNain">
+  <Interface Name="CS_SmallWorld.UniteNain">
     <Position X="5.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UniteNain.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.UniteViking">
+  <Interface Name="CS_SmallWorld.UniteViking">
     <Position X="7.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UniteViking.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.UniteGaulois">
+  <Interface Name="CS_SmallWorld.UniteGaulois">
     <Position X="8.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UniteGaulois.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.FabNain">
+  <Interface Name="CS_SmallWorld.FabNain">
     <Position X="0.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>FabNain.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.FabViking">
+  <Interface Name="CS_SmallWorld.FabViking">
     <Position X="2" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>FabViking.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.FabGaulois">
+  <Interface Name="CS_SmallWorld.FabGaulois">
     <Position X="3.5" Y="8.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>

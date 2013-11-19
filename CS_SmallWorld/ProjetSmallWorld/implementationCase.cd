@@ -3,84 +3,84 @@
   <Comment CommentText="Decorateur dont les composants sont différents bonus pour Cases">
     <Position X="10.863" Y="1.559" Height="0.562" Width="2.085" />
   </Comment>
-  <Interface Name="ProjetSmallWorld.TypeCase">
+  <Interface Name="CS_SmallWorld.TypeCase">
     <Position X="6.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Terrain.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.BonusCase">
+  <Interface Name="CS_SmallWorld.BonusCase">
     <Position X="9.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Bonus.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.CaseEau">
+  <Interface Name="CS_SmallWorld.CaseEau">
     <Position X="3.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CaseEau.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.CaseMontagne">
+  <Interface Name="CS_SmallWorld.CaseMontagne">
     <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CaseMontagne.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.CasePlaine">
+  <Interface Name="CS_SmallWorld.CasePlaine">
     <Position X="2" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CasePlaine.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.CaseForet">
+  <Interface Name="CS_SmallWorld.CaseForet">
     <Position X="6.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CaseForet.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.CaseDesert">
+  <Interface Name="CS_SmallWorld.CaseDesert">
     <Position X="5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CaseDesert.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.BonusDeplacement">
+  <Interface Name="CS_SmallWorld.BonusDeplacement">
     <Position X="11.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BonusDeplacement.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.BonusPoints">
+  <Interface Name="CS_SmallWorld.BonusPoints">
     <Position X="12.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BonusPoints.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.BonusAtqDef">
+  <Interface Name="CS_SmallWorld.BonusAtqDef">
     <Position X="9.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BonusAtqDef.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.BonusNoPoints">
+  <Interface Name="CS_SmallWorld.BonusNoPoints">
     <Position X="8.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BonusNoPoints.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.Case">
+  <Interface Name="CS_SmallWorld.Case">
     <Position X="8" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>

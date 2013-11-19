@@ -53,6 +53,7 @@
     <Compile Include="CasePlaine.cs" />
     <Compile Include="Case.cs" />
     <Compile Include="Combat.cs" />
+    <Compile Include="Deplacement.cs" />
     <Compile Include="FabBonus.cs" />
     <Compile Include="FabCase.cs" />
     <Compile Include="FabGaulois.cs" />

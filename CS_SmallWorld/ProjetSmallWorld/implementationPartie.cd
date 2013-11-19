@@ -3,7 +3,7 @@
   <Comment CommentText="Monteur Partie">
     <Position X="5.654" Y="4.284" Height="0.291" Width="1.08" />
   </Comment>
-  <Class Name="ProjetSmallWorld.JoueurConcret">
+  <Class Name="CS_SmallWorld.JoueurConcret">
     <Position X="7" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -11,49 +11,49 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="ProjetSmallWorld.Partie">
+  <Interface Name="CS_SmallWorld.Partie">
     <Position X="4" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Partie.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.Joueur">
+  <Interface Name="CS_SmallWorld.Joueur">
     <Position X="7" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Joueur.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.MonteurPartie">
+  <Interface Name="CS_SmallWorld.MonteurPartie">
     <Position X="4" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MonteurPartie.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.MonteurDemo">
+  <Interface Name="CS_SmallWorld.MonteurDemo">
     <Position X="2.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MonteurDemo.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.MonteurPetit">
+  <Interface Name="CS_SmallWorld.MonteurPetit">
     <Position X="4" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MonteurPetit.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.MonteurNormal">
+  <Interface Name="CS_SmallWorld.MonteurNormal">
     <Position X="5.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MonteurNormal.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="ProjetSmallWorld.Plateau">
+  <Interface Name="CS_SmallWorld.Plateau">
     <Position X="4" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
