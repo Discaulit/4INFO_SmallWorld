@@ -1,0 +1,7 @@
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\obj\Debug\TestsSmallWorld.csprojResolveAssemblyReference.cache
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\TestsSmallWorld.dll
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\TestsSmallWorld.pdb
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\wrapperLibSmallWorld.dll
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\wrapperLibSmallWorld.pdb
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\obj\Debug\TestsSmallWorld.dll
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\obj\Debug\TestsSmallWorld.pdb

@@ -1,0 +1,27 @@
+﻿La génération a démarré 20/11/2013 11:39:24.
+     1>Projet "H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\wrapperLibSmallWorld\wrapperLibSmallWorld.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>InitializeBuildStatus:
+         Création de "Debug\wrapperLibSmallWorld.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       GenerateTargetFrameworkMonikerAttribute:
+       La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
+       ClCompile:
+         Toutes les sorties sont à jour.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../LibSmallWorld /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\wrapperLibSmallWorld.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt wrapperLibSmallWorld.cpp /clr:nostdlib 
+         wrapperLibSmallWorld.cpp
+         Toutes les sorties sont à jour.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\wrapperLibSmallWorld.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../debug LibSmallWorld.lib /MANIFEST /ManifestFile:"Debug\wrapperLibSmallWorld.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\wrapperLibSmallWorld.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\AssemblyInfo.obj
+         Debug\Stdafx.obj
+         Debug\wrapperLibSmallWorld.obj
+         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+         wrapperLibSmallWorld.vcxproj -> H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\wrapperLibSmallWorld.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\wrapperLibSmallWorld.dll;#2" /manifest Debug\wrapperLibSmallWorld.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Suppression du fichier "Debug\wrapperLibSmallWorld.unsuccessfulbuild".
+         Mise à jour de l'horodatage "Debug\wrapperLibSmallWorld.lastbuildstate".
+     1>Génération du projet "H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\wrapperLibSmallWorld\wrapperLibSmallWorld.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:01.71

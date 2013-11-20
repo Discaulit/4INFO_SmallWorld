@@ -8,23 +8,25 @@ namespace CS_SmallWorld
    
     public interface Combat
     {
-        private Unite uniteAtq{
-            get;
-            set;
-        }
+        /*
+         public Unite uniteAtq{
+             get;
+             set;
+         }
 
-        private Unite uniteDef{
-            get;
-            set;
-        }
+         public Unite uniteDef{
+             get;
+             set;
+         }
+  //*/
 
-        /**
-         * \fn bool lancerCombat(Unite uniteAttaque, Case caseDef)
-         * 
-         * \brief commence le combat de l'uniteAttaque sur la caseDef
-         * 
-         * \return true si l'attaquant a gagner ce combat
-         */
+         /**
+          * \fn bool lancerCombat(Unite uniteAttaque, Case caseDef)
+          * 
+          * \brief commence le combat de l'uniteAttaque sur la caseDef
+          * 
+          * \return true si l'attaquant a gagner ce combat
+          */
         bool lancerCombat(Unite uniteAttaque, Case caseDef);
 
         /**

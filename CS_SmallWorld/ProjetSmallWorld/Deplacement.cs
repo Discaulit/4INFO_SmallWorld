@@ -10,7 +10,8 @@ namespace CS_SmallWorld
         /**
          * L'unite en cours de déplacement
          */
-        public Unite uniteCourante
+
+        Unite uniteCourante
         {
             get;
             set;
@@ -24,6 +25,6 @@ namespace CS_SmallWorld
          * 
          * \return true si la case est a portée pour cette unite, false sinon.
          */
-        public bool estAPorte(Case caseVisee);
+        bool estAPorte(Case caseVisee);
     }
 }

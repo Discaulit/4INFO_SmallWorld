@@ -234,7 +234,7 @@
   <Interface Name="CS_SmallWorld.Combat">
     <Position X="1" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAQAAAAAAAAAAAAAAAIAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAEAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Combat.cs</FileName>
     </TypeIdentifier>
   </Interface>
