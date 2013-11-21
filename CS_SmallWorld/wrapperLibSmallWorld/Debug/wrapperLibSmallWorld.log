@@ -1,27 +1,24 @@
-﻿La génération a démarré 20/11/2013 11:39:24.
-     1>Projet "H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\wrapperLibSmallWorld\wrapperLibSmallWorld.vcxproj" sur le nœud 2 (Build cible(s)).
-     1>InitializeBuildStatus:
-         Création de "Debug\wrapperLibSmallWorld.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
-       GenerateTargetFrameworkMonikerAttribute:
-       La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
-       ClCompile:
-         Toutes les sorties sont à jour.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../LibSmallWorld /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\wrapperLibSmallWorld.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt wrapperLibSmallWorld.cpp /clr:nostdlib 
+﻿La génération a démarré 21/11/2013 21:55:43.
+     1>Projet "D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\wrapperLibSmallWorld\wrapperLibSmallWorld.vcxproj" sur le nœud 2 (Rebuild cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../LibSmallWorld /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\wrapperLibSmallWorld.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt Stdafx.cpp /clr:nostdlib 
+         Stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../LibSmallWorld /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\wrapperLibSmallWorld.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt AssemblyInfo.cpp wrapperLibSmallWorld.cpp /clr:nostdlib 
+         AssemblyInfo.cpp
          wrapperLibSmallWorld.cpp
-         Toutes les sorties sont à jour.
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../LibSmallWorld /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /analyze- /errorReport:prompt "C:\Users\Fabien\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
+         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\wrapperLibSmallWorld.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../debug LibSmallWorld.lib /MANIFEST /ManifestFile:"Debug\wrapperLibSmallWorld.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\wrapperLibSmallWorld.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\AssemblyInfo.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Debug\wrapperLibSmallWorld.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:../debug LibSmallWorld.lib /MANIFEST /ManifestFile:"Debug\wrapperLibSmallWorld.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Debug\wrapperLibSmallWorld.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\AssemblyInfo.obj
          Debug\Stdafx.obj
          Debug\wrapperLibSmallWorld.obj
          "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
-         wrapperLibSmallWorld.vcxproj -> H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\wrapperLibSmallWorld.dll
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\wrapperLibSmallWorld.dll;#2" /manifest Debug\wrapperLibSmallWorld.dll.intermediate.manifest
-       FinalizeBuildStatus:
-         Suppression du fichier "Debug\wrapperLibSmallWorld.unsuccessfulbuild".
-         Mise à jour de l'horodatage "Debug\wrapperLibSmallWorld.lastbuildstate".
-     1>Génération du projet "H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\wrapperLibSmallWorld\wrapperLibSmallWorld.vcxproj" terminée (Build cible(s)).
+     1>wrapperLibSmallWorld.obj : error LNK2028: unresolved token (0A000009) "extern "C" int * __cdecl generateMap(int)" (?generateMap@@$$J0YAPAHH@Z) referenced in function "public: __clrcall wrapperLibSmallWorld::WrapperLibsSmallWorld::WrapperLibsSmallWorld(int)" (??0WrapperLibsSmallWorld@wrapperLibSmallWorld@@$$FQ$AAM@H@Z)
+     1>wrapperLibSmallWorld.obj : error LNK2019: unresolved external symbol "extern "C" int * __cdecl generateMap(int)" (?generateMap@@$$J0YAPAHH@Z) referenced in function "public: __clrcall wrapperLibSmallWorld::WrapperLibsSmallWorld::WrapperLibsSmallWorld(int)" (??0WrapperLibsSmallWorld@wrapperLibSmallWorld@@$$FQ$AAM@H@Z)
+     1>D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Debug\wrapperLibSmallWorld.dll : fatal error LNK1120: 2 unresolved externals
+     1>Génération du projet "D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\wrapperLibSmallWorld\wrapperLibSmallWorld.vcxproj" terminée (Rebuild cible(s)) -- ÉCHEC.
 
-La génération a réussi.
+ÉCHEC de la build.
 
-Temps écoulé 00:00:01.71
+Temps écoulé 00:00:00.96

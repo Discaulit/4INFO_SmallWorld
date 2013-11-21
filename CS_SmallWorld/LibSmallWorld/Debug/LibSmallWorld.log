@@ -1,27 +1,20 @@
-﻿La génération a démarré 20/11/2013 11:29:32.
-     1>Projet "H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\LibSmallWorld\LibSmallWorld.vcxproj" sur le nœud 2 (Rebuild cible(s)).
-     1>_PrepareForClean:
-         Suppression du fichier "Debug\LibSmallWorld.lastbuildstate".
-       InitializeBuildStatus:
-         Création de "Debug\LibSmallWorld.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
-       ClCompile:
+﻿La génération a démarré 21/11/2013 21:55:43.
+     1>Projet "D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\LibSmallWorld\LibSmallWorld.vcxproj" sur le nœud 2 (Rebuild cible(s)).
+     1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LIBSMALLWORLD_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt apiSmallWorld.cpp map.cpp
          map.cpp
          apiSmallWorld.cpp
-         Génération de code en cours...
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\LibSmallWorld.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.lib" /MACHINE:X86 /DLL Debug\apiSmallWorld.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\LibSmallWorld.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.lib" /MACHINE:X86 /DLL Debug\apiSmallWorld.obj
          Debug\map.obj
-     1>apiSmallWorld.obj : warning LNK4075: ' /EDITANDCONTINUE' ignoré à cause de la spécification '/INCREMENTAL:NO'
-            Création de la bibliothèque H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.lib et de l'objet H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.exp
-         LibSmallWorld.vcxproj -> H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.dll
+     1>apiSmallWorld.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+            Creating library D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.lib and object D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.exp
+         LibSmallWorld.vcxproj -> D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.dll
        Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.dll;#2" /manifest Debug\LibSmallWorld.dll.intermediate.manifest
-       FinalizeBuildStatus:
-         Suppression du fichier "Debug\LibSmallWorld.unsuccessfulbuild".
-         Mise à jour de l'horodatage "Debug\LibSmallWorld.lastbuildstate".
-     1>Génération du projet "H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\LibSmallWorld\LibSmallWorld.vcxproj" terminée (Rebuild cible(s)).
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.dll;#2" /manifest Debug\LibSmallWorld.dll.intermediate.manifest
+     1>Génération du projet "D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\LibSmallWorld\LibSmallWorld.vcxproj" terminée (Rebuild cible(s)).
 
 La génération a réussi.
 
-Temps écoulé 00:00:01.24
+Temps écoulé 00:00:00.58

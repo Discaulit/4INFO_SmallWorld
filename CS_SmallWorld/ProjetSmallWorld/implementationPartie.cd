@@ -4,9 +4,9 @@
     <Position X="5.654" Y="4.284" Height="0.291" Width="1.08" />
   </Comment>
   <Class Name="CS_SmallWorld.JoueurConcret">
-    <Position X="7" Y="4" Width="1.5" />
+    <Position X="7" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>JoueurConcret.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -21,7 +21,7 @@
   <Interface Name="CS_SmallWorld.Joueur">
     <Position X="7" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Joueur.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -56,7 +56,7 @@
   <Interface Name="CS_SmallWorld.Plateau">
     <Position X="4" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Plateau.cs</FileName>
     </TypeIdentifier>
   </Interface>

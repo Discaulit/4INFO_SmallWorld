@@ -4,11 +4,14 @@
 
 #include "wrapperLibSmallWorld.h"
 
-wrapperLibSmallWorld::WrapperLibsSmallWorld(int taille)
+//le wrapper etant enveloppe dans le namespace, il est utile pour de faire ce using
+using namespace wrapperLibSmallWorld;
+
+WrapperLibsSmallWorld::WrapperLibsSmallWorld(int taille)
 {
-	_map = new List<int>();
+	_map = gcnew List<int>(); //gcnew pour les classes managees
 	int* map = generateMap(taille);
 	for(int i = 0; i < taille*taille; i++)
-		_map->add(map[i]);
+		_map->Add(map[i]);
 }
 
