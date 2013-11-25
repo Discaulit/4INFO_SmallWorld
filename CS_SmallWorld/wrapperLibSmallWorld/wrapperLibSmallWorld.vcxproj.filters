@@ -21,9 +21,6 @@
     <ClInclude Include="Stdafx.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="wrapperLibSmallWorld.cpp">
@@ -38,8 +35,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ReadMe.txt" />
-    <None Include="app.ico">
-      <Filter>Fichiers de ressources</Filter>
-    </None>
   </ItemGroup>
 </Project>

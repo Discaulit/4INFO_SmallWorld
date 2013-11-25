@@ -1,2 +1,1 @@
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.csprojResolveAssemblyReference.cache
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.csprojResolveAssemblyReference.cache
