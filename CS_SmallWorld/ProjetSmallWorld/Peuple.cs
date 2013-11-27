@@ -7,6 +7,6 @@ namespace CS_SmallWorld
 {
     public interface Peuple
     {
-        void FabriqueUnite();
+        void fabriqueUnite();
     }
 }

@@ -7,16 +7,18 @@ namespace CS_SmallWorld
 {
     public class JoueurConcret : Joueur
     {
-        private int points;
+        private int _points;
         int Joueur.points
         {
+            get { return _points; }
+            set { _points = value; }
         }
 
-        private Peuple peuple;
+        private Peuple _peuple;
         Peuple Joueur.peuple
         {
-            get { return peuple;}
-            set { peuple = value;}
+            get { return _peuple;}
+            set { _peuple = value;}
         }
     }
 }

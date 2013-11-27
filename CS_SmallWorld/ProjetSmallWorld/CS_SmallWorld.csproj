@@ -56,15 +56,6 @@
     <Compile Include="Deplacement.cs" />
     <Compile Include="FabBonus.cs" />
     <Compile Include="FabCase.cs" />
-    <Compile Include="FabGaulois.cs" />
-    <Compile Include="FabGauloisConcret.cs" />
-    <Compile Include="FabNain.cs" />
-    <Compile Include="FabNainConcret.cs" />
-    <Compile Include="FabTerrain.cs" />
-    <Compile Include="FabUnite.cs" />
-    <Compile Include="FabUniteAbstrait.cs" />
-    <Compile Include="FabViking.cs" />
-    <Compile Include="FabVikingConcret.cs" />
     <Compile Include="Joueur.cs" />
     <Compile Include="JoueurConcret.cs" />
     <Compile Include="MonteurDemo.cs" />

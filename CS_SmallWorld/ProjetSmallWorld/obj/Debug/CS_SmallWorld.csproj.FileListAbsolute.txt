@@ -1,1 +1,8 @@
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.csprojResolveAssemblyReference.cache
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.XML
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.dll
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.pdb
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\wrapperLibSmallWorld.dll
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\wrapperLibSmallWorld.pdb
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.dll
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.pdb

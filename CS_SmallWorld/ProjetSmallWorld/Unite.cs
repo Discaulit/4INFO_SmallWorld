@@ -7,6 +7,12 @@ namespace CS_SmallWorld
 {
     public interface Unite
     {
+        Joueur Joueur
+        {
+            get;
+            set;
+        }
+
         Case CaseCourante
         {
             get;

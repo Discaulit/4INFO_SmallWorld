@@ -1,1 +1,4 @@
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.dll
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.pdb
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.xml
+H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\obj\Debug\ModelisationSmallWorld.modelprojResolveAssemblyReference.cache
