@@ -12,8 +12,8 @@ public:
 	Map(int taille);
 	~Map(void);
 
-	inline int* getMatrice() {return _matrice;}
-	inline int getTaille() {return _taille;}
+	int* getMatrice() {return _matrice;}
+	int getTaille() {return _taille;}
 
 private:
 	/**

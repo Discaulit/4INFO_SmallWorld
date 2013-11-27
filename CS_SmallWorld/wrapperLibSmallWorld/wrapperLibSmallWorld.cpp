@@ -1,6 +1,6 @@
 // Il s'agit du fichier DLL principal.
 
-#include "stdafx.h"
+//#include "stdafx.h"
 
 #include "wrapperLibSmallWorld.h"
 
@@ -15,3 +15,11 @@ WrapperLibsSmallWorld::WrapperLibsSmallWorld(int taille)
 		_map->Add(map[i]);
 }
 
+List<int>^ WrapperLibsSmallWorld::combatResult(const int& pvAtq, const int& pvDef, const int& atq, const int& def,const int &pvMax)
+	{
+		int res = resCombat(pvAtq,pvDef,atq,def,pvMax);
+		List<int>^ lRes = gcnew  List<int>();
+		lRes->Add(res/10); // pvAtq
+		lRes->Add(res%10); // pvDef
+		return lRes;
+	}

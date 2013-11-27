@@ -18,7 +18,7 @@ namespace wrapperLibSmallWorld {
 	public:
 		WrapperLibsSmallWorld(int taille);
 		inline List<int>^ getMap() {return _map;}
-		inline bool atkWin(const int& pvAtq, const int& pvDef, const int& atq, const int& def,const int &pvMax) { return atkWin(pvAtq, pvDef,atq, def, pvMax) ;}
+		inline List<int>^ combatResult(const int& pvAtq, const int& pvDef, const int& atq, const int& def,const int &pvMax);
 
 	};
 }

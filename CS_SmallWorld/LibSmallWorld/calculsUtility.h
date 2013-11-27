@@ -6,15 +6,24 @@ class calculsUtility
 {
 public:
 	/**
-	*	\fn bool AtqGagne(const int& pvAtq, const int& pvDef, const int& atq = 2, const int& def = 1, const int& pvMax = 5)
+	*	\fn int combatResult(const int& pvAtq, const int& pvDef, const int& atq = 2, const int& def = 1, const int& pvMax = 5)
 	*
 	*	\brief Indique si l'attaquant gagne ou non ce combat.
 	*
-	*	\return true si l'attaquant gagne ce combat, false sinon.
+	*	\return les pv de l'Atq en dizaine, pv de la Def en unite.
 	*/
-	static bool AtqGagne(const int& pvAtq, const int& pvDef, const int& atq = 2, const int& def = 1, const int& pvMax = 5);
-
+	static int resCombat(const int& pvAtq, const int& pvDef, const int& atq = 2, const int& def = 1, const int& pvMax = 5);
+	
 private:
+	/**
+	*	\fn bool atqGagneUnTour(const int& pvAtq, const int& pvDef, const int& atq = 2, const int& def = 1, const int& pvMax = 5)
+	*
+	*	\brief Indique si l'attaquant gagne ou non ce tour.
+	*
+	*	\return true si l'attaquant gagne ce tour, false sinon.
+	*/
+	static bool atqGagneUnTour(const int& pvAtq, const int& pvDef, const int& atq = 2, const int& def = 1, const int& pvMax = 5);
+
 	/**
 	*	\fn double calculPtsAtqDefEffectifs(const int& pv, const int& atqOuDef, const int& pvMax = 5)
 	*
