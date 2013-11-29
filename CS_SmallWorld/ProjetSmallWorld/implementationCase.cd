@@ -3,6 +3,13 @@
   <Comment CommentText="Decorateur dont les composants sont différents bonus pour Cases">
     <Position X="10.863" Y="1.559" Height="0.562" Width="2.085" />
   </Comment>
+  <Class Name="CS_SmallWorld.Position">
+    <Position X="2.75" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="CS_SmallWorld.TypeCase">
     <Position X="6.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
@@ -83,7 +90,7 @@
   <Interface Name="CS_SmallWorld.Case">
     <Position X="8" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Case.cs</FileName>
     </TypeIdentifier>
   </Interface>

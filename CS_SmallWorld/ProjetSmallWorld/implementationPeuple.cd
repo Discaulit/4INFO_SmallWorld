@@ -4,26 +4,15 @@
     <Position X="4.505" Y="0.58" Height="0.448" Width="1.471" />
   </Comment>
   <Class Name="CS_SmallWorld.PeupleAbstrait">
-    <Position X="2" Y="3.5" Width="1.5" />
-    <AssociationLine Name="FabUnite" Type="CS_SmallWorld.FabUniteAbstrait" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="2" Y="3.834" />
-        <Point X="0.26" Y="3.834" />
-        <Point X="0.26" Y="10.184" />
-        <Point X="2" Y="10.184" />
-      </Path>
-    </AssociationLine>
+    <Position X="1.75" Y="3.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAIAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>PeupleAbstrait.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="FabUnite" />
-    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="CS_SmallWorld.PeupleNainConcret">
-    <Position X="0.5" Y="5" Width="1.5" />
+    <Position X="0.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PeupleNainConcret.cs</FileName>
@@ -31,7 +20,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="CS_SmallWorld.PeupleVikingConcret">
-    <Position X="2" Y="5" Width="1.5" />
+    <Position X="2" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PeupleVikingConcret.cs</FileName>
@@ -39,9 +28,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="CS_SmallWorld.PeupleGauloisConcret">
-    <Position X="3.5" Y="5" Width="1.5" />
+    <Position X="3.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>PeupleGauloisConcret.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -49,13 +38,13 @@
   <Class Name="CS_SmallWorld.UniteAbstrait">
     <Position X="7.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAgAAAAgAEAAAAAAAAAAAAAwCAAAAA=</HashCode>
+      <HashCode>AAAAAEAAAAIAAAAgAAAAgAEAIAAAgAAAAAAgAAIAAgA=</HashCode>
       <FileName>UniteAbstraite.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="CS_SmallWorld.UniteNainConcret">
-    <Position X="5.75" Y="7.25" Width="1.5" />
+    <Position X="5.75" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UniteNainConcrete.cs</FileName>
@@ -63,7 +52,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="CS_SmallWorld.UniteVikingConcret">
-    <Position X="7.25" Y="7.25" Width="1.5" />
+    <Position X="7.25" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UniteVikingConcrete.cs</FileName>
@@ -71,64 +60,25 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="CS_SmallWorld.UniteGauloisConcret">
-    <Position X="8.75" Y="7.25" Width="1.5" />
+    <Position X="8.75" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UniteGauloisConcret.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="CS_SmallWorld.FabUniteAbstrait">
-    <Position X="2" Y="9.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FabUniteAbstrait.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="CS_SmallWorld.FabNainConcret">
-    <Position X="0.5" Y="11.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FabNainConcret.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="CS_SmallWorld.FabVikingConcret">
-    <Position X="2" Y="11.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FabVikingConcret.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="CS_SmallWorld.FabGauloisConcret">
-    <Position X="3.5" Y="11.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FabGauloisConcret.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Interface Name="CS_SmallWorld.Peuple">
     <Position X="2" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Peuple.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.Unite">
     <Position X="7.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAIAAAAAAAAAAAAACAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAgAAIAAAAAAAAAAAAACAAAAAAAAAIAAAAAgAAAA=</HashCode>
       <FileName>Unite.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="CS_SmallWorld.FabUnite">
-    <Position X="2" Y="7" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FabUnite.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.PeupleNain">
@@ -171,27 +121,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UniteGaulois.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="CS_SmallWorld.FabNain">
-    <Position X="0.5" Y="8.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FabNain.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="CS_SmallWorld.FabViking">
-    <Position X="2" Y="8.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FabViking.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="CS_SmallWorld.FabGaulois">
-    <Position X="3.5" Y="8.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FabGaulois.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

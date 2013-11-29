@@ -7,6 +7,15 @@ namespace CS_SmallWorld
 {
     public interface Peuple
     {
-        void fabriqueUnite();
+        Unite Unite
+        {
+            get;
+        }
+
+        //void fabriqueUnite();
+
+        Unite getUneUnite(int numUnite);
+
     }
+
 }

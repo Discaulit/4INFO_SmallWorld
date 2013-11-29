@@ -7,6 +7,21 @@ namespace CS_SmallWorld
 {
     public abstract class PeupleAbstrait : Peuple
     {
-        void Peuple.fabriqueUnite() {}
+        protected Unite _unite;
+
+        protected List<Unite> _troupes;
+
+        Unite Peuple.Unite
+        {
+            get { return _unite; }
+        }
+
+        Unite Peuple.getUneUnite(int numUnite)
+        {
+            return _troupes.ElementAt(numUnite);
+        }
+
+        protected abstract void fabriqueUnite(JoueurConcret j);
+
     }
 }

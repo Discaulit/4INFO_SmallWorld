@@ -7,24 +7,39 @@ namespace CS_SmallWorld
 {
     public interface Case
     {
-        int posX
+        /*Position Pos
         {
             get;
             set;
+        }*/
+
+        // Le setter mettra la 1ere Unite a aller dans la case ; le getter la retournera,
+        //ou null si Case vide
+        Unite Unite
+        {
+            get;
+            set;
+        }
+    }
+
+    class Position
+    {
+        Position(int x, int y)
+        {
+            X = x;
+            Y = y;
         }
 
-        int posY
+        int X
         {
-            get;
-            set;
+            get { return X; }
+            set { X = value; }
         }
-        /**
-         * \fn Unite contient()
-         * 
-         * \brief indique quelle unite est presente sur la case.
-         * 
-         * \return une des unites présentes sur la case, null si la case est vide. 
-         */
-        Unite contient();
+
+        int Y
+        {
+            get { return Y; }
+            set { Y = value; }
+        }
     }
 }

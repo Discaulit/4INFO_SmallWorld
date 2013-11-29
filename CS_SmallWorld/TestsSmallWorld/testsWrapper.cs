@@ -2,7 +2,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using wrapperLibSmallWorld;
 using System.Collections.Generic;
-//using CS_SmallWorld;
+using CS_SmallWorld;
+
 
 namespace TestsSmallWorld
 {

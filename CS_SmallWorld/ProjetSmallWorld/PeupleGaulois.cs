@@ -7,5 +7,6 @@ namespace CS_SmallWorld
 {
     public interface PeupleGaulois : Peuple
     {
+
     }
 }

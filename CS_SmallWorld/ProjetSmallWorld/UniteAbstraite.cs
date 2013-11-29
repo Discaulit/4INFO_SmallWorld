@@ -7,17 +7,20 @@ namespace CS_SmallWorld
 {
     public abstract class UniteAbstrait : Unite
     {
-        int ptAtq = 2, ptDef = 1, ptVie = 5;
-        int posX, posY;
+        private int _ptAtq = 2, _ptDef = 1, _ptVie = 5;
 
-        private Joueur _joueur;
-        Joueur Unite.Joueur
+        JoueurConcret _joueur;
+        private Case _caseCourante;
+
+       
+        JoueurConcret Unite.Joueur
         {
             get { return _joueur; }
             set { _joueur = value; }
         }
 
-        private Case _caseCourante;
+        //Permet de connaitre la position de l'unite
+        
         Case Unite.CaseCourante
         {
             get { return _caseCourante; }

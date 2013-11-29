@@ -7,16 +7,21 @@ namespace CS_SmallWorld
 {
     public interface Joueur
     {
-        Peuple peuple
+        string Name
+        {
+            get;
+        }
+        Peuple Peuple
+        {
+            get;
+        }
+
+        int Points
         {
             get;
             set;
         }
 
-        int points
-        {
-            get;
-            set;
-        }
+        //TODO: ajouter couleur
     }
 }

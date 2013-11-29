@@ -7,7 +7,7 @@ namespace CS_SmallWorld
 {
     public interface Unite
     {
-        Joueur Joueur
+        JoueurConcret Joueur
         {
             get;
             set;

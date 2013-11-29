@@ -4,13 +4,6 @@
         <name>CS_SmallWorld</name>
     </assembly>
     <members>
-        <member name="M:CS_SmallWorld.Case.contient">
-            \fn Unite contient()
-            
-            \brief indique quelle unite est presente sur la case.
-            
-            \return une des unites présentes sur la case, null si la case est vide. 
-        </member>
         <member name="M:CS_SmallWorld.Combat.lancerCombat(CS_SmallWorld.Unite,CS_SmallWorld.Case)">
             \fn bool lancerCombat(Unite uniteAttaque, Case caseDef)
             

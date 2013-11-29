@@ -7,5 +7,14 @@ namespace CS_SmallWorld
 {
     public class PeupleVikingConcret : PeupleAbstrait, PeupleViking
     {
+        PeupleVikingConcret(JoueurConcret j, int nbUnite)
+        {
+            
+        }
+
+        protected override void fabriqueUnite(JoueurConcret j)
+        {
+            _troupes.Add(new UniteVikingConcret());
+        }
     }
 }
