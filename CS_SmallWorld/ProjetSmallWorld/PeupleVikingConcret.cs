@@ -9,12 +9,16 @@ namespace CS_SmallWorld
     {
         PeupleVikingConcret(JoueurConcret j, int nbUnite)
         {
-            
+            for (int i = 0; i < nbUnite; i++)
+                fabriqueUnite(j);
         }
 
         protected override void fabriqueUnite(JoueurConcret j)
         {
-            _troupes.Add(new UniteVikingConcret());
+            Unite u = new UniteVikingConcret();
+            u.Joueur = j;
+            
+            _troupes.Add(u);
         }
     }
 }

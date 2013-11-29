@@ -94,7 +94,7 @@
   <ItemGroup>
     <ProjectReference Include="..\wrapperLibSmallWorld\wrapperLibSmallWorld.vcxproj">
       <Project>{bda0ffe0-e80b-433f-b1fc-d102f5ae4f9d}</Project>
-      <Name>wrapperLibSmallWorld %28Visual Studio 2010%29</Name>
+      <Name>wrapperLibSmallWorld</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

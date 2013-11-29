@@ -7,5 +7,18 @@ namespace CS_SmallWorld
 {
     public class PeupleNainConcret : PeupleAbstrait, PeupleNain
     {
+        PeupleNainConcret(JoueurConcret j, int nbUnite)
+        {
+            for (int i = 0; i < nbUnite; i++)
+                fabriqueUnite(j);
+        }
+
+        protected override void fabriqueUnite(JoueurConcret j)
+        {
+            Unite u = new UniteNainConcret();
+            u.Joueur = j;
+            
+            _troupes.Add(u);
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace CS_SmallWorld
 
         protected override void fabriqueUnite(JoueurConcret j)
         {
-            UniteGauloisConcret u = new UniteGauloisConcret();
+            Unite u = new UniteGauloisConcret();
             u.Joueur = j;
             
             _troupes.Add(u);
