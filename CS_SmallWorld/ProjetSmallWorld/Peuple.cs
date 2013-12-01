@@ -14,8 +14,6 @@ namespace CS_SmallWorld
 
         //void fabriqueUnite();
 
-        Unite getUneUnite(int numUnite);
-
     }
 
 }

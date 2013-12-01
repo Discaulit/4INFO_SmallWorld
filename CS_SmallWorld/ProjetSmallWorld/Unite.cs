@@ -13,10 +13,21 @@ namespace CS_SmallWorld
             set;
         }
 
-        Case CaseCourante
+        TypeCase CaseCourante
         {
             get;
             set;
+        }
+
+        int PV
+        {
+            get;
+            set;
+        }
+        
+        int PtsGenerer
+        {
+            get;
         }
 
         bool estAmie(Unite u);

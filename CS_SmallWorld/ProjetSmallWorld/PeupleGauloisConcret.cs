@@ -17,8 +17,7 @@ namespace CS_SmallWorld
         {
             Unite u = new UniteGauloisConcret();
             u.Joueur = j;
-            
-            _troupes.Add(u);
+            j.ajouteUneUnite(u);
         }
     }
 }

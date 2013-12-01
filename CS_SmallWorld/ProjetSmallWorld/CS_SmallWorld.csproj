@@ -21,6 +21,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\CS_SmallWorld.XML</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,16 +43,25 @@
   <ItemGroup>
     <Compile Include="Bonus.cs" />
     <Compile Include="BonusAtqDef.cs" />
+    <Compile Include="BonusCaseAbstrait.cs" />
     <Compile Include="BonusDeplacement.cs" />
     <Compile Include="BonusNoPoints.cs" />
     <Compile Include="BonusPoints.cs" />
     <Compile Include="Carte.cs" />
+    <Compile Include="CaseAbstrait.cs" />
     <Compile Include="CaseDesert.cs" />
+    <Compile Include="CaseDesertConcret.cs" />
     <Compile Include="CaseEau.cs" />
+    <Compile Include="CaseEauConcret.cs" />
     <Compile Include="CaseForet.cs" />
+    <Compile Include="CaseForetConcret.cs" />
     <Compile Include="CaseMontagne.cs" />
+    <Compile Include="CaseMontagneConcret.cs" />
     <Compile Include="CasePlaine.cs" />
     <Compile Include="Case.cs" />
+    <Compile Include="CasePlaineConcret.cs" />
+    <Compile Include="PartiConcret.cs" />
+    <Compile Include="Position.cs" />
     <Compile Include="Combat.cs" />
     <Compile Include="Deplacement.cs" />
     <Compile Include="FabBonus.cs" />
@@ -74,7 +84,8 @@
     <Compile Include="PeupleVikingConcret.cs" />
     <Compile Include="Plateau.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Terrain.cs" />
+    <Compile Include="TypeCase.cs" />
+    <Compile Include="TypeCaseAbstrait.cs" />
     <Compile Include="Unite.cs" />
     <Compile Include="UniteAbstraite.cs" />
     <Compile Include="UniteGaulois.cs" />

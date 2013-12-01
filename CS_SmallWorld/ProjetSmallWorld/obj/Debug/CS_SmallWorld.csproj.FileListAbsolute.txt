@@ -1,11 +1,3 @@
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.XML
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.dll
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.pdb
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\wrapperLibSmallWorld.dll
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\wrapperLibSmallWorld.pdb
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.csprojResolveAssemblyReference.cache
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.dll
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.pdb
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.XML
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.dll
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.pdb
@@ -14,3 +6,11 @@ H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\wrapperL
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.csprojResolveAssemblyReference.cache
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.dll
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.csprojResolveAssemblyReference.cache
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.XML
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\wrapperLibSmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\wrapperLibSmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.pdb

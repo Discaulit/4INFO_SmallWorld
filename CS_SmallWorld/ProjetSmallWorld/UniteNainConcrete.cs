@@ -7,5 +7,12 @@ namespace CS_SmallWorld
 {
     public class UniteNainConcret : UniteAbstrait, UniteNain
     {
+        protected override bool avantageTerrain()
+        {
+            if (_caseCourante.TypeTerrain == typeCase.t_montagne)
+                return true;
+            else
+                return false;
+        }
     }
 }

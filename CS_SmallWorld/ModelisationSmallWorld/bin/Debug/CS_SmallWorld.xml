@@ -4,6 +4,10 @@
         <name>CS_SmallWorld</name>
     </assembly>
     <members>
+        <member name="P:CS_SmallWorld.Case.UnitePresentes">
+            Le setter mettra la 1ere Unite a aller dans la case ; le getter la retournera,
+            ou null si Case vide
+        </member>
         <member name="M:CS_SmallWorld.Combat.lancerCombat(CS_SmallWorld.Unite,CS_SmallWorld.Case)">
             \fn bool lancerCombat(Unite uniteAttaque, Case caseDef)
             

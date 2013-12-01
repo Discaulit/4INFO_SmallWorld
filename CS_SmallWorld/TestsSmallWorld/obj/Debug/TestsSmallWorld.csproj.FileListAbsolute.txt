@@ -1,13 +1,3 @@
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\TestsSmallWorld.dll
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\TestsSmallWorld.pdb
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\wrapperLibSmallWorld.dll
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\wrapperLibSmallWorld.pdb
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\obj\Debug\TestsSmallWorld.csprojResolveAssemblyReference.cache
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\obj\Debug\TestsSmallWorld.dll
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\obj\Debug\TestsSmallWorld.pdb
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\CS_SmallWorld.dll
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\CS_SmallWorld.pdb
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\CS_SmallWorld.xml
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\TestsSmallWorld.dll
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\TestsSmallWorld.pdb
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\CS_SmallWorld.dll
@@ -18,3 +8,13 @@ H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\wrapperLi
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\obj\Debug\TestsSmallWorld.csprojResolveAssemblyReference.cache
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\obj\Debug\TestsSmallWorld.dll
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\obj\Debug\TestsSmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\obj\Debug\TestsSmallWorld.csprojResolveAssemblyReference.cache
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\TestsSmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\TestsSmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\CS_SmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\wrapperLibSmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\CS_SmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\CS_SmallWorld.xml
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\bin\Debug\wrapperLibSmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\obj\Debug\TestsSmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\TestsSmallWorld\obj\Debug\TestsSmallWorld.pdb

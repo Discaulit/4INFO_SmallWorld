@@ -22,6 +22,8 @@ namespace CS_SmallWorld
             set;
         }
 
+        void compterScore();
+
         //TODO: ajouter couleur
     }
 }

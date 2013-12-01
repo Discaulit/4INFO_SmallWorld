@@ -7,5 +7,22 @@ namespace CS_SmallWorld
 {
     public interface Partie
     {
+        List<JoueurConcret> Joueurs
+        {
+            get;
+            set;
+        }
+
+        Plateau Plateau
+        {
+            get;
+            set;
+        }
+        MonteurPartie Monteur
+        {
+            get;
+            set;
+        }
+
     }
 }

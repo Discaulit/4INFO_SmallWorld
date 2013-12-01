@@ -9,7 +9,4 @@ namespace CS_SmallWorld
     {
     }
 
-    public interface CopyOfCaseEau
-    {
-    }
 }

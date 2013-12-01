@@ -1,8 +1,8 @@
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.dll
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.pdb
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.xml
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\obj\Debug\ModelisationSmallWorld.modelprojResolveAssemblyReference.cache
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.dll
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.pdb
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.xml
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\obj\Debug\ModelisationSmallWorld.modelprojResolveAssemblyReference.cache
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.xml
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\obj\Debug\ModelisationSmallWorld.modelprojResolveAssemblyReference.cache

@@ -7,6 +7,21 @@ namespace CS_SmallWorld
 {
     public class JoueurConcret : Joueur
     {
+        private int _points;
+        private string _name;
+        private Peuple _peuple;
+        protected List<Unite> _troupes;
+
+        public void ajouteUneUnite(Unite u)
+        {
+            _troupes.Add(u);
+        }
+
+        Unite getUneUnite(int numUnite)
+        {
+            return _troupes.ElementAt(numUnite);
+        }
+        
         JoueurConcret(string name, Peuple peuple)
         {
             _name = name;
@@ -14,26 +29,29 @@ namespace CS_SmallWorld
             _points = 0;
         }
 
-        private string _name;
-        string Joueur.Name
+        public string Name
         {
             get { return _name; }
         }
 
-        private int _points;
-        int Joueur.Points
+        public int Points
         {
             get { return _points; }
             set { _points = value; }
         }
 
-        private Peuple _peuple;
-        Peuple Joueur.Peuple
+        public Peuple Peuple
         {
             get { return _peuple;}
         }
 
-        private List<Unite> _troupes;
+        public void compterScore()
+        {
+            int score =0;
+            foreach (Unite u in _troupes)
+                score += u.PtsGenerer;
 
+            Points += score;
+        }
     }
 }

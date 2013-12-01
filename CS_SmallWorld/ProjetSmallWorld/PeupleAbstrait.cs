@@ -9,16 +9,9 @@ namespace CS_SmallWorld
     {
         protected Unite _unite;
 
-        protected List<Unite> _troupes;
-
-        Unite Peuple.Unite
+        public Unite Unite
         {
             get { return _unite; }
-        }
-
-        Unite Peuple.getUneUnite(int numUnite)
-        {
-            return _troupes.ElementAt(numUnite);
         }
 
         protected abstract void fabriqueUnite(JoueurConcret j);
