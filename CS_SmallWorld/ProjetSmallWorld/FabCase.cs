@@ -7,5 +7,29 @@ namespace CS_SmallWorld
 {
     public interface FabCase
     {
+        CaseMontagneConcret CaseMontagne
+        {
+            get;
+        }
+
+        CaseForetConcret CaseForet
+        {
+            get;
+        }
+
+        CasePlaineConcret CasePlaine
+        {
+            get;
+        }
+
+        CaseEauConcret CaseEau
+        {
+            get;
+        }
+
+        CaseDesertConcret CaseDesert
+        {
+            get;
+        }
     }
 }

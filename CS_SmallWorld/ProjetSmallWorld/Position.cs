@@ -8,22 +8,24 @@ namespace CS_SmallWorld
 {
     public class Position
     {
-        Position(int x, int y)
+        private int _x;
+        private int _y;
+        public Position(int x, int y)
         {
-            X = x;
-            Y = y;
+            X = _x;
+            Y = _y;
         }
 
         public int X
         {
-            get { return X; }
-            set { X = value; }
+            get { return _x; }
+            set { _x = value; }
         }
 
         public int Y
         {
-            get { return Y; }
-            set { Y = value; }
+            get { return _y; }
+            set { _y = value; }
         }
     }
 }

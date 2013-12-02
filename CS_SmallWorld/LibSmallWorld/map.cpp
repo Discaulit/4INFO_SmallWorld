@@ -21,15 +21,22 @@ void Map::freeMatrice()
 
 void Map::typerCase()
 {
-	bool type[5] = {false,false,false,false,false}; 
-	
-	while(!type[0] && !type[1] && !type[2] && !type[3] && !type[4])
+	srand(time(0));
+
+	int type[5];
+	int moy = _taille*_taille / 5;
+
+	while (type[0] < (moy-2) && type[0] > (moy+2) &&
+		type[1] < (moy-2) && type[1] > (moy+2) &&
+		type[2] < (moy-2) && type[2] > (moy+2) &&
+		type[3] < (moy-2) && type[3] > (moy+2) &&
+		type[4] < (moy-2) && type[4] > (moy+2) )
 	{
 		for (int i =0; i< _taille*_taille;i++)
 		{
 			int tmp = typeCase(rand() % 5);
 			_matrice[i] = tmp;
-			type[tmp] = true;
+			type[tmp]++;
 		}
 	}
 }

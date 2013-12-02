@@ -7,10 +7,7 @@ namespace CS_SmallWorld
 {
     public interface Plateau
     {
-        StrategiePlateau strategie
-        {
-            get;
-            set;
-        }
+        TypeCase getCaseAt(Position p);
+        List<Unite> getTroupesAt(Position p);
     }
 }
