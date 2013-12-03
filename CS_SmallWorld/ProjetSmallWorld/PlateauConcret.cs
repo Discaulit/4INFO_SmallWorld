@@ -10,14 +10,12 @@ namespace CS_SmallWorld
         private StrategiePlateau _strategie;
         private FabCase _fabCase;
         private TypeCase[,] _carteCase;
-        private List<Unite>[,] _carteTroupes;
 
         public PlateauConcret(int taille)
         {
             _fabCase = new FabCaseConcret();
-            _strategie = new StrategiePlateauConcret(taille);
-            _carteCase = new TypeCase[taille, taille];
-            _carteTroupes = new List<Unite>[taille, taille];
+            _strategie = new StrategiePlateauConcret(taille, _fabCase);
+            _carteCase = _strategie.Carte;
         }
 
         public TypeCase getCaseAt(Position p)
@@ -25,12 +23,9 @@ namespace CS_SmallWorld
             return _carteCase[p.X, p.Y];
         }
 
-        public List<Unite>getTroupesAt(Position p)
+        public Unite getUniteAt(Position p)
         {
-            if (_carteTroupes[p.X, p.Y].Count > 0)
-                return _carteTroupes[p.X, p.Y];
-            else
-                return null;
+            return _carteCase[p.X, p.Y].UnitePresente;
         }
     }
 }

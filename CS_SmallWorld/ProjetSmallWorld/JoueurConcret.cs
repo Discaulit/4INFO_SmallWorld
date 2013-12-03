@@ -7,10 +7,19 @@ namespace CS_SmallWorld
 {
     public class JoueurConcret : Joueur
     {
-        private int _points;
         private string _name;
+        private int _points;
         private Peuple _peuple;
-        protected List<Unite> _troupes;
+        private List<Unite> _troupes;
+
+        public JoueurConcret(string name, Peuple p, TypeCase startCase)
+        {
+            _name = name;
+            _points = 0;
+            _peuple = p;
+            _troupes = new List<Unite>();
+
+        }
 
         public void ajouteUneUnite(Unite u)
         {

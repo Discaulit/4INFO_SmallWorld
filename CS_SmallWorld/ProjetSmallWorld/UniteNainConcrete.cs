@@ -7,9 +7,18 @@ namespace CS_SmallWorld
 {
     public class UniteNainConcret : UniteAbstrait, UniteNain
     {
+        public UniteNainConcret(JoueurConcret j, TypeCase startCase)
+        {
+            _joueur = j;
+            _ptVie = 5;
+            _ptsDeplacement = 2;
+            _caseCourante = startCase;
+
+        }
+
         protected override bool avantageTerrain()
         {
-            if (_caseCourante.TypeTerrain == typeCase.t_montagne)
+            if (_caseCourante.GetType().Name == "CaseMontagneConcret")
                 return true;
             else
                 return false;

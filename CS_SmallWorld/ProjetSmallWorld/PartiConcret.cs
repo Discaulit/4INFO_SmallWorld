@@ -5,8 +5,17 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
-    public class PartiConcret : Partie
+    public class PartieConcret : Partie
     {
+        List<JoueurConcret> _joueurs;
+        Plateau _plateau;
+        MonteurPartie _monteur;
+
+        public PartieConcret()
+        {
+            _joueurs = new List<JoueurConcret>();
+        }
+
         public List<JoueurConcret> Joueurs
         {
             get

@@ -7,7 +7,7 @@ namespace CS_SmallWorld
 {
     public interface StrategiePlateau
     {
-        int[,] Carte
+        TypeCase[,] Carte
         {
             get;
         }

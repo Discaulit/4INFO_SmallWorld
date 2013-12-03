@@ -7,9 +7,9 @@ namespace CS_SmallWorld
 {
     public class CaseDesertConcret : TypeCaseAbstrait, CaseDesert
     {
-        public override typeCase TypeTerrain
+        public override int TypeTerrain
         {
-            get { return typeCase.t_desert; }
+            get { return 2; }
         }
     }
 }

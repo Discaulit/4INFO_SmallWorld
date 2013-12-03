@@ -4,33 +4,33 @@
     <Position X="4.505" Y="0.58" Height="0.448" Width="1.471" />
   </Comment>
   <Class Name="CS_SmallWorld.PeupleAbstrait">
-    <Position X="1.75" Y="3.5" Width="2" />
+    <Position X="1.75" Y="4.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAIAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAQAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>PeupleAbstrait.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="CS_SmallWorld.PeupleNainConcret">
-    <Position X="0.5" Y="6.5" Width="1.5" />
+    <Position X="0.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PeupleNainConcret.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="CS_SmallWorld.PeupleVikingConcret">
-    <Position X="2" Y="6.5" Width="1.5" />
+    <Position X="2" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PeupleVikingConcret.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="CS_SmallWorld.PeupleGauloisConcret">
-    <Position X="3.5" Y="6.5" Width="1.5" />
+    <Position X="3.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PeupleGauloisConcret.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -38,7 +38,7 @@
   <Class Name="CS_SmallWorld.UniteAbstrait">
     <Position X="7.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAIAAAAgAAAAgAEAIAAAgAAAAAAgAAIAAgA=</HashCode>
+      <HashCode>AAAAAkEAIAAAAABACAAAAQCAAAACAAAAIEAQAAgAAgQ=</HashCode>
       <FileName>UniteAbstraite.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -46,7 +46,7 @@
   <Class Name="CS_SmallWorld.UniteNainConcret">
     <Position X="5.75" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>UniteNainConcrete.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -54,7 +54,7 @@
   <Class Name="CS_SmallWorld.UniteVikingConcret">
     <Position X="7.25" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>UniteVikingConcrete.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -62,7 +62,7 @@
   <Class Name="CS_SmallWorld.UniteGauloisConcret">
     <Position X="8.75" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>UniteGauloisConcret.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -70,14 +70,14 @@
   <Interface Name="CS_SmallWorld.Peuple">
     <Position X="2" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Peuple.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.Unite">
     <Position X="7.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAIAAAAAAAAAAAAACAAAAAAAAAIAAAAAgAAAA=</HashCode>
+      <HashCode>AAAAAgAAIAAAAAAACAAAAACAAAAAAAAAIAAQAAgAAAA=</HashCode>
       <FileName>Unite.cs</FileName>
     </TypeIdentifier>
   </Interface>

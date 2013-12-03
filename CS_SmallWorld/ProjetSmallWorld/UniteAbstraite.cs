@@ -7,8 +7,8 @@ namespace CS_SmallWorld
 {
     public abstract class UniteAbstrait : Unite
     {
-        private int _ptAtq = 2, _ptDef = 1, _ptVie = 5;
-        private int _ptsGenereBase = 1, _ptsAvantageTerrain = 1;
+        protected static int _ptAtq = 2, _ptDef = 1, _ptsGenereBase = 1, _ptsAvantageTerrain = 1; 
+        protected int _ptVie, _ptsDeplacement;
 
         protected JoueurConcret _joueur;
         protected TypeCase _caseCourante;
@@ -39,6 +39,12 @@ namespace CS_SmallWorld
                     return _ptsGenereBase + _ptsAvantageTerrain;
                 else
                     return _ptsGenereBase;}
+        }
+
+        public int PtsDeplacement
+        {
+            get { return _ptsDeplacement; }
+            set { _ptsDeplacement = value; }
         }
 
         protected abstract bool avantageTerrain();

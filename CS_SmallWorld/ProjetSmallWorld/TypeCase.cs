@@ -7,7 +7,7 @@ namespace CS_SmallWorld
 {
     public interface TypeCase : Case
     {
-        typeCase TypeTerrain
+        int TypeTerrain
         {
             get;
         }

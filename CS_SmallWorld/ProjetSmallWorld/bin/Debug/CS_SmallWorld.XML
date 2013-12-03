@@ -4,7 +4,7 @@
         <name>CS_SmallWorld</name>
     </assembly>
     <members>
-        <member name="P:CS_SmallWorld.Case.UnitePresentes">
+        <member name="P:CS_SmallWorld.Case.UnitePresente">
             Le setter mettra la 1ere Unite a aller dans la case ; le getter la retournera,
             ou null si Case vide
         </member>

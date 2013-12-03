@@ -30,6 +30,12 @@ namespace CS_SmallWorld
             get;
         }
 
+        int PtsDeplacement
+        {
+            get;
+            set;
+        }
+
         bool estAmie(Unite u);
 
         void deplacer(Case c);

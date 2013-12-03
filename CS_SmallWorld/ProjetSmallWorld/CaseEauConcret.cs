@@ -7,9 +7,9 @@ namespace CS_SmallWorld
 {
     public class CaseEauConcret : TypeCaseAbstrait, CaseEau
     {
-        public override typeCase TypeTerrain
+        public override int TypeTerrain
         {
-            get { return typeCase.t_eau; }
+            get { return 3; }
         }
     }
 }

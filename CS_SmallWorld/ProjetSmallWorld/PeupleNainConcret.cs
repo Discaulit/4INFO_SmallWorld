@@ -7,15 +7,15 @@ namespace CS_SmallWorld
 {
     public class PeupleNainConcret : PeupleAbstrait, PeupleNain
     {
-        PeupleNainConcret(JoueurConcret j, int nbUnite)
+        PeupleNainConcret(JoueurConcret j, TypeCase startCase, int nbUnite)
         {
             for (int i = 0; i < nbUnite; i++)
-                fabriqueUnite(j);
+                fabriqueUnite(j, startCase);
         }
 
-        protected override void fabriqueUnite(JoueurConcret j)
+        protected override void fabriqueUnite(JoueurConcret j, TypeCase startCase)
         {
-            Unite u = new UniteNainConcret();
+            Unite u = new UniteNainConcret(j, startCase);
             u.Joueur = j;
             j.ajouteUneUnite(u);
         }

@@ -14,7 +14,7 @@ namespace CS_SmallWorld
             get { return _unite; }
         }
 
-        protected abstract void fabriqueUnite(JoueurConcret j);
+        protected abstract void fabriqueUnite(JoueurConcret j, TypeCase startCase);
 
     }
 }

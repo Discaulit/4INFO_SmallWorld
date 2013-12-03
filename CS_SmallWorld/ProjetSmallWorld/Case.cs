@@ -17,7 +17,7 @@ namespace CS_SmallWorld
         /** Le setter mettra la 1ere Unite a aller dans la case ; le getter la retournera,
          * ou null si Case vide
          */
-        Unite UnitePresentes
+        Unite UnitePresente
         {
             get;
             set;

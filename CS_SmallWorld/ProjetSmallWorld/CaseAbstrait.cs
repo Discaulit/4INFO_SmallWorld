@@ -7,7 +7,7 @@ namespace CS_SmallWorld
 {
     public abstract class CaseAbstrait : Case
     {
-        private List<Unite> _unitePresentes;
+        private List<Unite> _unitePresente;
 
         private Position _pos;
 
@@ -17,19 +17,19 @@ namespace CS_SmallWorld
             set { _pos = value; }
         }
 
-        public Unite UnitePresentes
+        public Unite UnitePresente
         {
-            get { if (_unitePresentes.Count > 0)
-                    return _unitePresentes.ElementAt(0);
+            get { if (_unitePresente.Count > 0)
+                    return _unitePresente.ElementAt(0);
                 else
                     return null; }
-            set { _unitePresentes.Add(value); }
+            set { _unitePresente.Add(value); }
         }
 
         public Unite getMeilleureUnite()
         {
-            Unite best = _unitePresentes.ElementAt(0);
-            foreach (Unite u in _unitePresentes)
+            Unite best = _unitePresente.ElementAt(0);
+            foreach (Unite u in _unitePresente)
                 if (u.PV > best.PV)
                     best = u;
 

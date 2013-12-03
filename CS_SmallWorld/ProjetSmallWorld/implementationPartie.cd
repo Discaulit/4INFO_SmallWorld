@@ -6,30 +6,31 @@
   <Class Name="CS_SmallWorld.JoueurConcret">
     <Position X="8.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACIAAAAAAIIAAggAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAIAAAAIAIgAIAgAAAAAwAAAAAAAAEAAAACAAAAAA=</HashCode>
       <FileName>JoueurConcret.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="CS_SmallWorld.PartiConcret">
-    <Position X="5.5" Y="2.75" Width="1.5" />
+  <Class Name="CS_SmallWorld.PartieConcret">
+    <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAIAAAEAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAABAAAAAIAAAEAAAAAAAAAAAIAABAAAAAAAAAAAEA=</HashCode>
       <FileName>PartiConcret.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="CS_SmallWorld.Partie">
-    <Position X="5.5" Y="0.5" Width="1.5" />
+  <Class Name="CS_SmallWorld.PlateauConcret">
+    <Position X="2" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAIAAAEAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
-      <FileName>Partie.cs</FileName>
+      <HashCode>AAAAAABAAAAAAAAAAAAAEAAAAAAAAAAAACAAEAABAAA=</HashCode>
+      <FileName>PlateauConcret.cs</FileName>
     </TypeIdentifier>
-  </Interface>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="CS_SmallWorld.Joueur">
     <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAgAAAAAAAAAQAAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Joueur.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -38,34 +39,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MonteurPartie.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="CS_SmallWorld.MonteurDemo">
-    <Position X="0.5" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MonteurDemo.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="CS_SmallWorld.MonteurPetit">
-    <Position X="2" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MonteurPetit.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="CS_SmallWorld.MonteurNormal">
-    <Position X="3.5" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MonteurNormal.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="CS_SmallWorld.Plateau">
-    <Position X="2" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Plateau.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
