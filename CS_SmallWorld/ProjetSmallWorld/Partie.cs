@@ -18,6 +18,7 @@ namespace CS_SmallWorld
             get;
             set;
         }
+
         MonteurPartie Monteur
         {
             get;

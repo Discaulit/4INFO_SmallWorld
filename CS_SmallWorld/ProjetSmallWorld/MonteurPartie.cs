@@ -7,5 +7,10 @@ namespace CS_SmallWorld
 {
     public interface MonteurPartie
     {
+        Plateau construirePlateau(int taillePlateau);
+
+        Position positionDepart(int taillePlateau);
+
+        Joueur creerJoueur(Peuple p, Position startCase);
     }
 }

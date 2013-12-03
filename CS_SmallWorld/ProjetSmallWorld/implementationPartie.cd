@@ -15,7 +15,7 @@
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABAAAAAIAAAEAAAAAAAAAAAIAABAAAAAAAAAAAEA=</HashCode>
-      <FileName>PartiConcret.cs</FileName>
+      <FileName>PartieConcret.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -27,18 +27,19 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="CS_SmallWorld.MonteurPartieConcret">
+    <Position X="5.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAIAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>MonteurPartieConcret.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="CS_SmallWorld.Joueur">
     <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAgAAAAAAAAAQAAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Joueur.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="CS_SmallWorld.MonteurPartie">
-    <Position X="2" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MonteurPartie.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

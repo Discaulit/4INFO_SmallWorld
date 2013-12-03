@@ -62,7 +62,8 @@
     <Compile Include="Case.cs" />
     <Compile Include="CasePlaineConcret.cs" />
     <Compile Include="FabCaseConcret.cs" />
-    <Compile Include="PartiConcret.cs" />
+    <Compile Include="MonteurPartieConcret.cs" />
+    <Compile Include="PartieConcret.cs" />
     <Compile Include="PlateauConcret.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Combat.cs" />
