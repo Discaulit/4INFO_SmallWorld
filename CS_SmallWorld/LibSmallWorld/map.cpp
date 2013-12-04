@@ -23,20 +23,20 @@ void Map::typerCase()
 {
 	srand(time(0));
 
-	int type[5];
+	int type[5] = {0,0,0,0,0};
 	int moy = _taille*_taille / 5;
 
-	while (type[0] < (moy-2) && type[0] > (moy+2) &&
-		type[1] < (moy-2) && type[1] > (moy+2) &&
-		type[2] < (moy-2) && type[2] > (moy+2) &&
-		type[3] < (moy-2) && type[3] > (moy+2) &&
-		type[4] < (moy-2) && type[4] > (moy+2) )
+	for (int i =0; i< _taille*_taille;i++)
 	{
-		for (int i =0; i< _taille*_taille;i++)
-		{
-			int tmp = typeCase(rand() % 5);
-			_matrice[i] = tmp;
-			type[tmp]++;
-		}
+		int tmp =0;
+		do{
+			tmp = rand() % 5;
+		}while(type[tmp] > moy);
+		
+		_matrice[i] = tmp;
+		type[tmp]++;
 	}
+
+	moy = 25;
+
 }

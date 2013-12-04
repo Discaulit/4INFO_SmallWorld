@@ -12,8 +12,8 @@ namespace CS_SmallWorld
         private int _y;
         public Position(int x, int y)
         {
-            X = _x;
-            Y = _y;
+            _x = x;
+            _y = y;
         }
 
         public int X

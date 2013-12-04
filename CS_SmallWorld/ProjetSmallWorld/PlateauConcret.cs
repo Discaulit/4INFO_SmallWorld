@@ -10,12 +10,19 @@ namespace CS_SmallWorld
         private StrategiePlateau _strategie;
         private FabCase _fabCase;
         private TypeCase[,] _carteCase;
+        private int _taille;
 
         public PlateauConcret(int taille)
         {
             _fabCase = new FabCaseConcret();
             _strategie = new StrategiePlateauConcret(taille, _fabCase);
             _carteCase = _strategie.Carte;
+            _taille = taille;
+        }
+
+        public int Taille
+        {
+            get { return _taille; }
         }
 
         public TypeCase getCaseAt(Position p)

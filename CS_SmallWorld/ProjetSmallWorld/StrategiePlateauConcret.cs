@@ -13,8 +13,8 @@ namespace CS_SmallWorld
 
         public StrategiePlateauConcret(int taille, FabCase fab)
         {
-            creerPlateau(taille);
             _fabriqueCase = fab;
+            creerPlateau(taille);       
         }
 
         public void creerPlateau(int taille)

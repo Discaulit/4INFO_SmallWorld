@@ -7,7 +7,7 @@ namespace CS_SmallWorld
 {
     public class PeupleNainConcret : PeupleAbstrait, PeupleNain
     {
-        PeupleNainConcret(JoueurConcret j, TypeCase startCase, int nbUnite)
+        public PeupleNainConcret(JoueurConcret j, TypeCase startCase, int nbUnite)
         {
             for (int i = 0; i < nbUnite; i++)
                 fabriqueUnite(j, startCase);

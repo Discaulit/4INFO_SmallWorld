@@ -2,7 +2,6 @@
 #include <time.h>       /* time */
 class Map
 {
-	enum typeCase{ t_montagne, t_plaine, t_desert, t_eau, t_foret};
 
 private:
 	int _taille;

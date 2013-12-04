@@ -7,6 +7,10 @@ namespace CS_SmallWorld
 {
     public interface Plateau
     {
+        int Taille
+        {
+            get;
+        }
         TypeCase getCaseAt(Position p);
         Unite getUniteAt(Position p);
     }

@@ -9,8 +9,6 @@ namespace CS_SmallWorld
     {
         Plateau construirePlateau(int taillePlateau);
 
-        Position positionDepart(int taillePlateau);
-
-        Joueur creerJoueur(Peuple p, Position startCase);
+        Joueur creerJoueur(Plateau plateau, String name, Peuple peuple, int numJ);
     }
 }
