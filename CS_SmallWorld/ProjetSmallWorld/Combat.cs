@@ -11,8 +11,7 @@ namespace CS_SmallWorld
     * \brief La classe gérant les combats
     */
     public interface Combat
-    {
-        
+    {        
          /**
           * \fn bool lancerCombat(Unite uniteAttaque, Case caseDef)
           * 

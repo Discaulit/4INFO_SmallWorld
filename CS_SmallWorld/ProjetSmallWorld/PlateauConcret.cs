@@ -16,7 +16,9 @@ namespace CS_SmallWorld
         private FabCase _fabCase;
         private TypeCase[,] _carteCase;
         private int _taille;
-
+        /**
+         * \fn Constructeur de la classe
+         */
         public PlateauConcret(int taille, wrapperLibSmallWorld.WrapperLibsSmallWorld wrapper)
         {
             _fabCase = new FabCaseConcret();
@@ -25,16 +27,19 @@ namespace CS_SmallWorld
             _taille = taille;
         }
 
+        /** cf interface */
         public int Taille
         {
             get { return _taille; }
         }
 
+        /** cf interface */
         public TypeCase getCaseAt(Position p)
         {
             return _carteCase[p.X, p.Y];
         }
 
+        /** cf interface */
         public Unite getUniteAt(Position p)
         {
             //le calcul ne sera pas trop long ici car il y aura rarement plus de 5 unités sur une case

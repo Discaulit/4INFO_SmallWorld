@@ -5,6 +5,11 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    /**
+     * \class FabCaseConcret
+     * 
+     * \brief implémente FabCase
+     */
     public class FabCaseConcret : FabCase
     {
         private CaseMontagneConcret _caseMontagne;
@@ -13,6 +18,9 @@ namespace CS_SmallWorld
         private CaseEauConcret _caseEau;
         private CasePlaineConcret _casePlaine;
 
+        /**
+         * \fn Constructeur de la classe
+         */
         public FabCaseConcret()
         {
             _caseMontagne = new CaseMontagneConcret();
@@ -23,6 +31,7 @@ namespace CS_SmallWorld
 
         }
 
+        /** cf interface */
         public CaseMontagneConcret CaseMontagne
         {
             get
@@ -31,6 +40,7 @@ namespace CS_SmallWorld
             }
         }
 
+        /** cf interface */
         public CasePlaineConcret CasePlaine
         {
             get
@@ -39,6 +49,7 @@ namespace CS_SmallWorld
             }
         }
 
+        /** cf interface */
         public CaseEauConcret CaseEau
         {
             get
@@ -47,6 +58,7 @@ namespace CS_SmallWorld
             }
         }
 
+        /** cf interface */
         public CaseDesertConcret CaseDesert
         {
             get
@@ -55,6 +67,7 @@ namespace CS_SmallWorld
             }
         }
 
+        /** cf interface */
         public CaseForetConcret CaseForet
         {
             get

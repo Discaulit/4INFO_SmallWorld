@@ -18,7 +18,7 @@ namespace CS_SmallWorld
             _ptVie = 5;
             _ptsDeplacement = 2;
             _caseCourante = startCase;
-
+            _caseCourante.positionnerUnite(this);
         }
 
         protected override bool avantageTerrain()

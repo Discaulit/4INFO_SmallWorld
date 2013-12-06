@@ -9,7 +9,6 @@ namespace CS_SmallWorld
     {
         public CaseEauConcret()
         {
-            _pos = new Position(-1, -1); //case non positionnée
             _unitePresente = new List<Unite>();
         }
     }

@@ -17,37 +17,44 @@ namespace CS_SmallWorld
         private Peuple _peuple;
         private List<Unite> _troupes;
         private int _nbUniteRestantes;
-
+        /**
+         * \fn Constructeur de la classe
+         */
         public JoueurConcret(string name, int peuple, TypeCase startCase, int nbUnite)
         {
             _name = name;
             _score = 0;
-            _peuple = donnerPeuple(peuple, startCase);
             _troupes = new List<Unite>();
+            _peuple = donnerPeuple(peuple, startCase);         
             _nbUniteRestantes = nbUnite;
 
         }
 
+        /** cf interface */
         public string Name
         {
             get { return _name; }
         }
 
+        /** cf interface */
         public int Score
         {
             get { return _score; }
         }
 
+        /** cf interface */
         public Peuple Peuple
         {
             get { return _peuple; }
         }
 
+        /** cf interface */
         public void ajouterUneUnite(Unite u)
         {
             _troupes.Add(u);
         }
 
+        /** cf interface */
         public void retirerUneUnite(Unite u)
         {
             if (_troupes.Contains(u))
@@ -86,6 +93,7 @@ namespace CS_SmallWorld
             }
         }
 
+        /** cf interface */
         public void compterScore()
         {
             int score =0;

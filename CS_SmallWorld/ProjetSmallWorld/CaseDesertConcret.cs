@@ -5,11 +5,16 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+
+    /**
+     * \class CasDesertConcret
+     * 
+     * \brief implémente CaseDesert
+     */
     public class CaseDesertConcret : TypeCaseAbstrait, CaseDesert
     {
         public CaseDesertConcret()
         {
-            _pos = new Position(-1,-1); //case non positionnée
             _unitePresente = new List<Unite>();
         }
     }

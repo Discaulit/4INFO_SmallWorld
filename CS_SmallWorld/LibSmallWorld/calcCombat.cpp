@@ -1,4 +1,5 @@
 #include "calcCombat.h"
+#include <math.h>
 
 CalcCombat::CalcCombat()
 {
@@ -16,7 +17,9 @@ bool CalcCombat::atqGagneUnTour(const int pvAtq, const int pvDef, const int atq,
 	double Atq = calculPtsAtqDefEffectifs(pvAtq,atq);
 	double Def = calculPtsAtqDefEffectifs(pvDef,def);
 
-	double rapportForce = Atq / Def;
+	double maxAtqDef = (Atq>Def)?Atq:Def;
+	//double rapportForce = Atq / Def; // Calcul standard du poly
+	double rapportForce = 1+ ((Atq-Def)/maxAtqDef); //Calcul légèrement modifié
 
 	return ( (rand()%100) < 100*(0.5*rapportForce) );
 }

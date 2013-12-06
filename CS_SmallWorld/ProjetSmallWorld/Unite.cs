@@ -5,6 +5,11 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    /**
+     * \class interface Unite
+     * 
+     * \brief Modélise une Unite d'un Peuple
+     */
     public interface Unite
     {
         /**
@@ -18,15 +23,25 @@ namespace CS_SmallWorld
             set;
         }
 
-        /*
-         * \fn property TypeCase caseCourante
+        /**
+         * \fn property Position Position
          * 
-         * \brief Permet de connaitre la case sur laquelle est stationnée cette unité.
+         * \brief Permet de connaitre la position où est stationnée cette unité.
+         */
+        Position Position
+        {
+            get;
+            set;
+        }
+
+        /**
+         * \fn property TypeCase CaseCourante
+         * 
+         * \brief Permet de connaitre le type de case sur laquelle est stationnée cette unité.
          */
         TypeCase CaseCourante
         {
             get;
-            set;
         }
 
         /**

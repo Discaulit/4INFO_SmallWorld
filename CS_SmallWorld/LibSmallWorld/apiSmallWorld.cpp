@@ -11,3 +11,9 @@ int resCombat(const int pvAtq, const int pvDef, const int atq, const int def,con
 	CalcCombat* combat = new CalcCombat();
 	return combat->resCombat(pvAtq, pvDef, atq, def, pvMax);
 }
+
+int* generateStartCases(const int size)
+{
+	Map* map = new Map(size);
+	return map->getPositionsDepart(size);
+}

@@ -5,6 +5,11 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    /**
+     * \class interface BonusCase
+     * 
+     * \brief Décorateur de Case
+     * */
     public interface BonusCase : Case
     {
     }

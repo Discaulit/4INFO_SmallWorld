@@ -16,10 +16,20 @@ WrapperLibsSmallWorld::WrapperLibsSmallWorld(int taille)
 }
 
 List<int>^ WrapperLibsSmallWorld::combatResult(const int pvAtq, const int pvDef, const int atq, const int def,const int pvMax)
-	{
-		int res = resCombat(pvAtq,pvDef,atq,def,pvMax);
-		List<int>^ lRes = gcnew  List<int>();
-		lRes->Add(res/10); // pvAtq
-		lRes->Add(res%10); // pvDef
-		return lRes;
-	}
+{
+	int res = resCombat(pvAtq,pvDef,atq,def,pvMax);
+	List<int>^ lRes = gcnew  List<int>();
+	lRes->Add(res/10); // pvAtq
+	lRes->Add(res%10); // pvDef
+	return lRes;
+}
+
+List<int>^ WrapperLibsSmallWorld::getStartCases(int size)
+{
+	List<int>^ startCases = gcnew List<int>();
+	int* sc = generateStartCases(size);
+	for (int i=0;i<4;i++)
+		startCases->Add(sc[i]);
+
+	return startCases;
+}

@@ -14,3 +14,4 @@ Class wrapperLibSmallWorld.WrapperLibsSmallWorld: AutoLayout, AnsiClass, Class, 
   Methods:
     getMap(): PrivateScope, Public, HideBySig
     combatResult(Int32 IsConst, Int32 IsConst, Int32 IsConst, Int32 IsConst, Int32 IsConst): PrivateScope, Public, HideBySig
+    getStartCases(Int32 IsConst): PrivateScope, Public, HideBySig

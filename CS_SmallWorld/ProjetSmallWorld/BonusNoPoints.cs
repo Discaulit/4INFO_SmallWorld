@@ -5,6 +5,7 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    /**/
     public interface BonusNoPoints : BonusCase
     {
     }

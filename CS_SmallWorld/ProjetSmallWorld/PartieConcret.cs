@@ -18,6 +18,7 @@ namespace CS_SmallWorld
         Combat _singletonCombat;
         private int _nbJoueurs;
 
+        /** cf interface */
         public PartieConcret(int taillePlateau, Dictionary<String,int> players)
         {
             _joueurs = new List<JoueurConcret>();
@@ -35,6 +36,7 @@ namespace CS_SmallWorld
 
         }
 
+        /** cf interface */
         public List<JoueurConcret> Joueurs
         {
              get
@@ -43,6 +45,7 @@ namespace CS_SmallWorld
             }
         }
 
+        /** cf interface */
         public Plateau Plateau
         {
             get

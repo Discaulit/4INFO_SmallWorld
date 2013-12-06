@@ -18,5 +18,6 @@ EXTERNC LIBSMALLWORLD_DLL int* generateMap(const int size);
 Fait combattre deux unitées et
 retourne leurs points de vie (attaquante en dizaine, défensive en unité) à la fin de ce combat.
 */
-EXTERNC LIBSMALLWORLD_DLL int resCombat(const int pvAtq, const int pvDef, const int atq=4, const int def=3,const int pvMax=5);
+EXTERNC LIBSMALLWORLD_DLL int resCombat(const int pvAtq, const int pvDef, const int atq=3, const int def=2,const int pvMax=5);
 
+EXTERNC LIBSMALLWORLD_DLL int* generateStartCases(const int size);

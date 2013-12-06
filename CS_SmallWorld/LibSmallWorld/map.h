@@ -12,7 +12,8 @@ public:
 	~Map(void);
 
 	int* getMatrice() {return _matrice;}
-	int getTaille() {return _taille;}
+
+	int* getPositionsDepart(const int taille);
 
 private:
 	/**

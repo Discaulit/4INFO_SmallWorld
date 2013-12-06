@@ -5,6 +5,7 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    /**/
     public class BonusCaseAbstrait : CaseAbstrait, BonusCase
     {
     }

@@ -5,6 +5,11 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    /**
+     * \class interface Deplacement
+     * 
+     * \brief Gere les déplacement
+     */
     public interface Deplacement
     {
         /**

@@ -17,6 +17,9 @@ namespace CS_SmallWorld
         private FabCase _fabriqueCase;
         WrapperLibsSmallWorld _wrapper;
 
+        /**
+         * \fn Constructeur de la classe
+         */
         public StrategiePlateauConcret(int taille, FabCase fab, WrapperLibsSmallWorld wrapper)
         {
             _wrapper = wrapper;
@@ -48,34 +51,25 @@ namespace CS_SmallWorld
                     {
                         case 0:
                             _plateau[x, y] = _fabriqueCase.CaseMontagne;
-                            _plateau[x, y].Position.X = x;
-                            _plateau[x, y].Position.Y = y;
                             break;
                         case 1:
                             _plateau[x, y] = _fabriqueCase.CasePlaine;
-                            _plateau[x, y].Position.X = x;
-                            _plateau[x, y].Position.Y = y;
                             break;
                         case 2:
                             _plateau[x, y] = _fabriqueCase.CaseDesert;
-                            _plateau[x, y].Position.X = x;
-                            _plateau[x, y].Position.Y = y;
                             break;
                         case 3:
                             _plateau[x, y] = _fabriqueCase.CaseEau;
-                            _plateau[x, y].Position.X = x;
-                            _plateau[x, y].Position.Y = y;
                             break;
                         case 4:
                             _plateau[x, y] = _fabriqueCase.CaseForet;
-                            _plateau[x, y].Position.X = x;
-                            _plateau[x, y].Position.Y = y;
                             break;
                     }
                 }
             }
         }
 
+        /** cf interface */
         public TypeCase[,] Plateau
         {
             get { return _plateau; }

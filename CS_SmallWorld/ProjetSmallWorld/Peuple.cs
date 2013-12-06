@@ -5,15 +5,14 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    /**
+     * \class interface Peuple
+     * 
+     * \brief Modélise un Peuple jouable
+     */
     public interface Peuple
     {
-        Unite Unite
-        {
-            get;
-        }
-
         //void fabriqueUnite();
-
     }
 
 }

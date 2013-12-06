@@ -4,6 +4,12 @@
         <name>CS_SmallWorld</name>
     </assembly>
     <members>
+        <member name="T:CS_SmallWorld.BonusCase">
+            \class interface BonusCase
+            
+            \brief Décorateur de Case
+            
+        </member>
         <member name="T:CS_SmallWorld.Case">
             \class interface Case
             
@@ -30,20 +36,62 @@
             
             \param[in] Unite u l'Unite à retirer
         </member>
-        <member name="P:CS_SmallWorld.Case.Position">
-            \fn property Position Position (lecture seule)
+        <member name="T:CS_SmallWorld.BonusAtqDef">
             
-            \brief indique la position(x,y) de la Case sur la plateau.
+        </member>
+        <member name="T:CS_SmallWorld.BonusCaseAbstrait">
+            
+        </member>
+        <member name="T:CS_SmallWorld.CaseAbstrait">
+            \class CaseAbstrait
+            
+            \brief implémente Case. Contient tout ce qui est commun à toutes les cases
+        </member>
+        <member name="F:CS_SmallWorld.CaseAbstrait._unitePresente">
+            Liste des unités présentes sur cette case. 
+        </member>
+        <member name="M:CS_SmallWorld.CaseAbstrait.getMeilleureUnite">
+            cf interface 
+        </member>
+        <member name="M:CS_SmallWorld.CaseAbstrait.positionnerUnite(CS_SmallWorld.Unite)">
+            cf interface 
+        </member>
+        <member name="M:CS_SmallWorld.CaseAbstrait.enleverUneUnite(CS_SmallWorld.Unite)">
+            cf interface 
+        </member>
+        <member name="T:CS_SmallWorld.BonusDeplacement">
+            
+        </member>
+        <member name="T:CS_SmallWorld.BonusNoPoints">
+            
+        </member>
+        <member name="T:CS_SmallWorld.BonusPoints">
+            
+        </member>
+        <member name="T:CS_SmallWorld.CaseDesert">
+             \class interface CaseDesert
+            
+             \brief Modélise une Case de type Désert
         </member>
         <member name="T:CS_SmallWorld.TypeCase">
             \class TypeCase
             
             \brief Type les Case du Plateau
         </member>
+        <member name="T:CS_SmallWorld.CaseDesertConcret">
+            \class CasDesertConcret
+            
+            \brief implémente CaseDesert
+        </member>
         <member name="T:CS_SmallWorld.TypeCaseAbstrait">
             \class TypeCaseAbstrait
             
             \brief Hérite de CaseAbstrait et est mère des cases concrètes
+        </member>
+        <member name="T:CS_SmallWorld.CombatConcret">
+            \class CombatConcret
+            
+            \brief implémente Combat
         </member>
         <member name="T:CS_SmallWorld.Combat">
             \class interface Combat
@@ -57,6 +105,9 @@
             
             \return true si l'attaquant a gagner ce combat
         </member>
+        <member name="M:CS_SmallWorld.CombatConcret.#ctor(wrapperLibSmallWorld.WrapperLibsSmallWorld)">
+            \fn Constructeur de la classe
+        </member>
         <member name="M:CS_SmallWorld.CombatConcret.lancerCombat(CS_SmallWorld.Unite,CS_SmallWorld.Case)">
             \fn int lancerCombat(Unite uniteAttaque, Case caseDef)
             
@@ -67,6 +118,61 @@
             \param[out] Case caseDef la case qui doit se défendre
             
             \return 1 si l'attaquant gagne, 0 si match nul, -1 si l'attaquant meurt
+        </member>
+        <member name="T:CS_SmallWorld.FabCaseConcret">
+            \class FabCaseConcret
+            
+            \brief implémente FabCase
+        </member>
+        <member name="T:CS_SmallWorld.FabCase">
+            \class interface FabCase
+            
+            \brief Fabrique de Case
+            
+        </member>
+        <member name="P:CS_SmallWorld.FabCase.CaseMontagne">
+            \fn property CaseMontagneConcret CaseMontagne
+            
+            \brief une CaseMontagneConcret pour le poids-mouche
+            
+        </member>
+        <member name="P:CS_SmallWorld.FabCase.CaseForet">
+            \fn property CaseForetConcret CaseForet
+            
+            \brief une CaseForetConcret pour le poids-mouche
+        </member>
+        <member name="P:CS_SmallWorld.FabCase.CasePlaine">
+            \fn property CasePlaineeConcret CasePlaine
+            
+            \brief une CasePlaineConcret pour le poids-mouche
+        </member>
+        <member name="P:CS_SmallWorld.FabCase.CaseEau">
+            \fn property CaseEauConcret CaseEau
+            
+            \brief une CaseEauConcret pour le poids-mouche
+        </member>
+        <member name="P:CS_SmallWorld.FabCase.CaseDesert">
+            \fn property CaseDesertConcret CaseDesert
+            
+            \brief une CaseDesertConcret pour le poids-mouche
+        </member>
+        <member name="M:CS_SmallWorld.FabCaseConcret.#ctor">
+            \fn Constructeur de la classe
+        </member>
+        <member name="P:CS_SmallWorld.FabCaseConcret.CaseMontagne">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.FabCaseConcret.CasePlaine">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.FabCaseConcret.CaseEau">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.FabCaseConcret.CaseDesert">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.FabCaseConcret.CaseForet">
+            cf interface 
         </member>
         <member name="T:CS_SmallWorld.MonteurPartieConcret">
             \class MonteurPartieConcret
@@ -99,7 +205,22 @@
             
             \brief Le plateau de la partie.
         </member>
+        <member name="M:CS_SmallWorld.MonteurPartieConcret.#ctor(System.Int32)">
+            \fn Constructeur de la casse
+        </member>
         <!-- Commentaire XML incorrect ignoré pour le membre "M:CS_SmallWorld.MonteurPartieConcret.positionsDepart" -->
+        <member name="M:CS_SmallWorld.MonteurPartieConcret.creerJoueur(System.String,System.Int32,System.Int32)">
+            cf interface 
+        </member>
+        <member name="M:CS_SmallWorld.MonteurPartieConcret.singletonCombat">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.MonteurPartieConcret.Plateau">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.MonteurPartieConcret.CasesDepart">
+            cf interface 
+        </member>
         <member name="T:CS_SmallWorld.PartieConcret">
             \class PartieConcret
             
@@ -122,6 +243,15 @@
             
             \brief Le plateau sur lequel se déroule la partie.
             
+        </member>
+        <member name="M:CS_SmallWorld.PartieConcret.#ctor(System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32})">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.PartieConcret.Joueurs">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.PartieConcret.Plateau">
+            cf interface 
         </member>
         <member name="T:CS_SmallWorld.PlateauConcret">
             \class PlateauConcret
@@ -155,6 +285,41 @@
             \fn property int Taille
             
             \brief la longueur d'un coté du plateau.
+        </member>
+        <member name="M:CS_SmallWorld.PlateauConcret.#ctor(System.Int32,wrapperLibSmallWorld.WrapperLibsSmallWorld)">
+            \fn Constructeur de la classe
+        </member>
+        <member name="M:CS_SmallWorld.PlateauConcret.getCaseAt(CS_SmallWorld.Position)">
+            cf interface 
+        </member>
+        <member name="M:CS_SmallWorld.PlateauConcret.getUniteAt(CS_SmallWorld.Position)">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.PlateauConcret.Taille">
+            cf interface 
+        </member>
+        <member name="T:CS_SmallWorld.Position">
+            \class Position
+            
+            \brief représente une position(x,y) sur le plateau
+        </member>
+        <member name="M:CS_SmallWorld.Position.#ctor(System.Int32,System.Int32)">
+            \fn Constructeur de la classe
+        </member>
+        <member name="P:CS_SmallWorld.Position.X">
+            \fn property int X
+            
+            \brief la coordonnée en X
+        </member>
+        <member name="P:CS_SmallWorld.Position.Y">
+            \fn property int  Y
+            
+            \brief la coordonnée en Y
+        </member>
+        <member name="T:CS_SmallWorld.Deplacement">
+            \class interface Deplacement
+            
+            \brief Gere les déplacement
         </member>
         <member name="M:CS_SmallWorld.Deplacement.estAPorte(CS_SmallWorld.Case)">
             \fn bool estAPorte(Case caseVisee)
@@ -215,6 +380,15 @@
             
             \brief implémentation de la classe Joueur
         </member>
+        <member name="M:CS_SmallWorld.JoueurConcret.#ctor(System.String,System.Int32,CS_SmallWorld.TypeCase,System.Int32)">
+            \fn Constructeur de la classe
+        </member>
+        <member name="M:CS_SmallWorld.JoueurConcret.ajouterUneUnite(CS_SmallWorld.Unite)">
+            cf interface 
+        </member>
+        <member name="M:CS_SmallWorld.JoueurConcret.retirerUneUnite(CS_SmallWorld.Unite)">
+            cf interface 
+        </member>
         <member name="M:CS_SmallWorld.JoueurConcret.donnerPeuple(System.Int32,CS_SmallWorld.TypeCase)">
             \fn Peuple donnerPeuple(int peuple, TypeCase startCase)
             
@@ -223,6 +397,18 @@
             \param[in] int peuple le numéro correspondant au Peuple à créer
             
             \param[in] TypeCase startCase la case de départ pour ce joueur, donc pour ce peuple
+        </member>
+        <member name="M:CS_SmallWorld.JoueurConcret.compterScore">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.JoueurConcret.Name">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.JoueurConcret.Score">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.JoueurConcret.Peuple">
+            cf interface 
         </member>
         <member name="T:CS_SmallWorld.StrategiePlateau">
             \class interface StrategiePlateau
@@ -235,10 +421,45 @@
             
             \brief le Plateau créé par la Strategie
         </member>
+        <member name="T:CS_SmallWorld.Peuple">
+            \class interface Peuple
+            
+            \brief Modélise un Peuple jouable
+        </member>
+        <member name="T:CS_SmallWorld.PeupleAbstrait">
+            \class PeupleAbstrait
+            
+            \brief "implémente" Peuple.
+        </member>
+        <member name="M:CS_SmallWorld.PeupleAbstrait.fabriqueUnite(CS_SmallWorld.JoueurConcret,CS_SmallWorld.TypeCase)">
+            \fn void fabriqueUnite(JoueurConcret j, TypeCase startCase)
+            
+            \brief La fabrique d'Unite du Peuple. Crée une Unite et
+            lui associe le joueur possédant ce peuple ainsi que sa position de départ
+        </member>
+        <member name="T:CS_SmallWorld.PeupleGaulois">
+            \class interface PeupleGaulois
+            
+            \brief Modélise le Peuple jouable gaulois
+        </member>
+        <member name="T:CS_SmallWorld.PeupleGauloisConcret">
+            \class PeupleGauloisConcret
+            
+            \brief implémente PeupleAbstrait et PeupleGaulois
+        </member>
+        <member name="M:CS_SmallWorld.PeupleGauloisConcret.#ctor(CS_SmallWorld.JoueurConcret,CS_SmallWorld.TypeCase,System.Int32)">
+            \fn Constructeur de la classe
+        </member>
+        <member name="M:CS_SmallWorld.PeupleGauloisConcret.fabriqueUnite(CS_SmallWorld.JoueurConcret,CS_SmallWorld.TypeCase)">
+            cf interface 
+        </member>
         <member name="T:CS_SmallWorld.StrategiePlateauConcret">
             \class StrategiePlateauConcret
             
             \brief implémente StrategiePlateau.
+        </member>
+        <member name="M:CS_SmallWorld.StrategiePlateauConcret.#ctor(System.Int32,CS_SmallWorld.FabCase,wrapperLibSmallWorld.WrapperLibsSmallWorld)">
+            \fn Constructeur de la classe
         </member>
         <member name="M:CS_SmallWorld.StrategiePlateauConcret.creerPlateau(System.Int32)">
             \fn void creerPlateau(int taille)
@@ -247,6 +468,14 @@
             un tableau de TypeCase à deux dimensions pour simplifier l'utilisation.
             
             \param[in] int taille la longueur d'un coté du plateau
+        </member>
+        <member name="P:CS_SmallWorld.StrategiePlateauConcret.Plateau">
+            cf interface 
+        </member>
+        <member name="T:CS_SmallWorld.Unite">
+            \class interface Unite
+            
+            \brief Modélise une Unite d'un Peuple
         </member>
         <member name="M:CS_SmallWorld.Unite.estAmie(CS_SmallWorld.Unite)">
             \fn bool estAmie(Unite u)
@@ -275,6 +504,16 @@
             
             \brief Le Joueur possédant cette unité.
         </member>
+        <member name="P:CS_SmallWorld.Unite.Position">
+            \fn property Position Position
+            
+            \brief Permet de connaitre la position où est stationnée cette unité.
+        </member>
+        <member name="P:CS_SmallWorld.Unite.CaseCourante">
+            \fn property TypeCase CaseCourante
+            
+            \brief Permet de connaitre le type de case sur laquelle est stationnée cette unité.
+        </member>
         <member name="P:CS_SmallWorld.Unite.PV">
             \fn property int PV
             
@@ -295,6 +534,34 @@
             
             \brief implémente en partie Unite : possède les fonctions et attributs communs à toutes les Unites
         </member>
+        <member name="F:CS_SmallWorld.UniteAbstrait._ptAtq">
+            points d'attaque et de défense de l'Unite.
+            points que permet de gagner l'Unite de base et le bonus si le Terrain est avantageux.
+        </member>
+        <member name="F:CS_SmallWorld.UniteAbstrait._ptDef">
+            points d'attaque et de défense de l'Unite.
+            points que permet de gagner l'Unite de base et le bonus si le Terrain est avantageux.
+        </member>
+        <member name="F:CS_SmallWorld.UniteAbstrait._ptsGenereBase">
+            points d'attaque et de défense de l'Unite.
+            points que permet de gagner l'Unite de base et le bonus si le Terrain est avantageux.
+        </member>
+        <member name="F:CS_SmallWorld.UniteAbstrait._ptsAvantageTerrain">
+            points d'attaque et de défense de l'Unite.
+            points que permet de gagner l'Unite de base et le bonus si le Terrain est avantageux.
+        </member>
+        <member name="F:CS_SmallWorld.UniteAbstrait._ptVie">
+            points de vie et de déplacement de l'Unite 
+        </member>
+        <member name="F:CS_SmallWorld.UniteAbstrait._ptsDeplacement">
+            points de vie et de déplacement de l'Unite 
+        </member>
+        <member name="F:CS_SmallWorld.UniteAbstrait._joueur">
+            Le joueur possédant l'Unite 
+        </member>
+        <member name="F:CS_SmallWorld.UniteAbstrait._caseCourante">
+            La Case sur laquelle se situe l'Unite actuellement 
+        </member>
         <member name="M:CS_SmallWorld.UniteAbstrait.avantageTerrain">
             \fn bool avantageTerrain()
             
@@ -302,10 +569,56 @@
             
             \return true si l'Unite est sur une case qui l'avantage, faux sinon
         </member>
+        <member name="M:CS_SmallWorld.UniteAbstrait.estAmie(CS_SmallWorld.Unite)">
+            cf interface 
+        </member>
+        <member name="M:CS_SmallWorld.UniteAbstrait.deplacer(CS_SmallWorld.TypeCase)">
+            cf interface 
+        </member>
+        <member name="M:CS_SmallWorld.UniteAbstrait.attaquer(CS_SmallWorld.Position)">
+            \fn void attaquer(Position cAtq)
+            
+            \brief Verifie si une case est attaquable ou non, c'est-à-dire si elle est voisine
+            et si elle appartient à l'adversaire. Sinon, se déplacer dessus ou ne indiquer case trop loin.
+            
+            \param[im] Case cAtq la case attaquée
+        </member>
+        <member name="M:CS_SmallWorld.UniteAbstrait.detruire">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.UniteAbstrait.Joueur">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.UniteAbstrait.CaseCourante">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.UniteAbstrait.Position">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.UniteAbstrait.PV">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.UniteAbstrait.PtsDeplacement">
+            cf interface 
+        </member>
+        <member name="P:CS_SmallWorld.UniteAbstrait.PtsGeneres">
+            cf interface 
+        </member>
+        <member name="T:CS_SmallWorld.UniteGaulois">
+            \class interface UniteGaulois
+            
+            \brief Modélise une unité gauloise
+        </member>
         <member name="T:CS_SmallWorld.UniteGauloisConcret">
             \class UniteGauloisConcret
             
             \brief Une Unite Gauloise.
+        </member>
+        <member name="M:CS_SmallWorld.UniteGauloisConcret.#ctor(CS_SmallWorld.JoueurConcret,CS_SmallWorld.TypeCase)">
+            \fn Constructeur de la classe
+        </member>
+        <member name="M:CS_SmallWorld.UniteGauloisConcret.avantageTerrain">
+            cf interface 
         </member>
         <member name="T:CS_SmallWorld.UniteNainConcret">
             \class UniteNainConcret

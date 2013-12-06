@@ -6,14 +6,32 @@ using wrapperLibSmallWorld;
 
 namespace CS_SmallWorld
 {
+    /**
+     * \class CombatConcret
+     * 
+     * \brief implémente Combat
+     */
     public class CombatConcret : Combat
     {
         WrapperLibsSmallWorld _wrapper;
 
+        //private static CombatConcret instance;
+        
+        /**
+         * \fn Constructeur de la classe
+         */
         public CombatConcret(WrapperLibsSmallWorld wrapper)
         {
             _wrapper = wrapper;
         }
+
+        /*public static Combat Instance
+        {
+            if(instance == null)
+        {
+            instance = New CombatConcret(wra
+        }
+        }*/
 
         /**
          * \fn int lancerCombat(Unite uniteAttaque, Case caseDef)

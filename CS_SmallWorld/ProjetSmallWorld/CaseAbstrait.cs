@@ -5,18 +5,17 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    /**
+     * \class CaseAbstrait
+     * 
+     * \brief implémente Case. Contient tout ce qui est commun à toutes les cases
+     */
     public abstract class CaseAbstrait : Case
     {
+        /** Liste des unités présentes sur cette case. */
         protected List<Unite> _unitePresente;
 
-        protected Position _pos;
-
-        public Position Position
-        {
-            get { return _pos; }
-            set { _pos = value; }
-        }
-
+        /** cf interface */
         public Unite getMeilleureUnite()
         {
             Unite best = null;
@@ -32,11 +31,13 @@ namespace CS_SmallWorld
             return best;
         }
 
+        /** cf interface */
         public void positionnerUnite(Unite u)
         {
             _unitePresente.Add(u);
         }
 
+        /** cf interface */
         public void enleverUneUnite(Unite u)
         {
             if (_unitePresente.Contains(u))

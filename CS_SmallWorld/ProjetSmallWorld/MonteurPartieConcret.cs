@@ -18,6 +18,9 @@ namespace CS_SmallWorld
         List<TypeCase> _casesDepart;
         Plateau _plateau;
 
+        /**
+         * \fn Constructeur de la casse
+         */
         public MonteurPartieConcret(int taillePlateau)
         {
             _taillePlateau = taillePlateau;
@@ -25,12 +28,14 @@ namespace CS_SmallWorld
             _plateau = new PlateauConcret(_taillePlateau, _wrapper);
             _casesDepart = positionsDepart();
         }
-        
+
+        /** cf interface */
         public Plateau Plateau
         {
             get { return _plateau; }
         }
 
+        /** cf interface */
         public List<TypeCase> CasesDepart
         {
             get { return _casesDepart; }
@@ -46,17 +51,24 @@ namespace CS_SmallWorld
         private List<TypeCase> positionsDepart()
         {
             List<TypeCase> pos = new List<TypeCase>();
-            pos.Add(_plateau.getCaseAt(new Position(0,0)));
-            pos.Add(_plateau.getCaseAt(new Position(_taillePlateau - 1, _taillePlateau - 1)));
+            List<int> coordStart = _wrapper.getStartCases(_taillePlateau);
+
+            Position p1 = new Position(coordStart[0], coordStart[1]);
+            Position p2 = new Position(coordStart[2], coordStart[3]);
+
+            pos.Add(_plateau.getCaseAt(p1));
+            pos.Add(_plateau.getCaseAt(p2));
             return pos;
 
         }
 
+        /** cf interface */
         public Joueur creerJoueur(string name, int peuple, int numJ)
         {
             return new JoueurConcret(name, peuple, _casesDepart[numJ], _taillePlateau);
         }
 
+        /** cf interface */
         public Combat singletonCombat()
         {
             return new CombatConcret(_wrapper);
