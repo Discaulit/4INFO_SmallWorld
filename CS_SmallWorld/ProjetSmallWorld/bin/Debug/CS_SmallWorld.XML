@@ -4,9 +4,51 @@
         <name>CS_SmallWorld</name>
     </assembly>
     <members>
-        <member name="P:CS_SmallWorld.Case.UnitePresente">
-            Le setter mettra la 1ere Unite a aller dans la case ; le getter la retournera,
-            ou null si Case vide
+        <member name="T:CS_SmallWorld.Case">
+            \class interface Case
+            
+            \brief une Case du plateau.
+        </member>
+        <member name="M:CS_SmallWorld.Case.getMeilleureUnite">
+            \fn Unite getMeilleureUnite()
+            
+            \brief Cherche et renvoie l'Unite ayant le plus de PV dans cette case, s'il y en a.
+            
+            \return l'Unite ayant le plus de PV, null s'il n'y a aucune Unite
+        </member>
+        <member name="M:CS_SmallWorld.Case.positionnerUnite(CS_SmallWorld.Unite)">
+            \fn void positionnerUnite(Unite u)
+            
+            \brief place l'Unite passée en paramètre sur la Case.
+            
+            \param[in] Unite u l'Unite à positionner sur la Case
+        </member>
+        <member name="M:CS_SmallWorld.Case.enleverUneUnite(CS_SmallWorld.Unite)">
+            \fn void enleverUneUnite(Unite u)
+            
+            \brief Retire une Unite aux troupes du joueur.
+            
+            \param[in] Unite u l'Unite à retirer
+        </member>
+        <member name="P:CS_SmallWorld.Case.Position">
+            \fn property Position Position (lecture seule)
+            
+            \brief indique la position(x,y) de la Case sur la plateau.
+        </member>
+        <member name="T:CS_SmallWorld.TypeCase">
+            \class TypeCase
+            
+            \brief Type les Case du Plateau
+        </member>
+        <member name="T:CS_SmallWorld.TypeCaseAbstrait">
+            \class TypeCaseAbstrait
+            
+            \brief Hérite de CaseAbstrait et est mère des cases concrètes
+        </member>
+        <member name="T:CS_SmallWorld.Combat">
+            \class interface Combat
+            
+            \brief La classe gérant les combats
         </member>
         <member name="M:CS_SmallWorld.Combat.lancerCombat(CS_SmallWorld.Unite,CS_SmallWorld.Case)">
             \fn bool lancerCombat(Unite uniteAttaque, Case caseDef)
@@ -15,10 +57,104 @@
             
             \return true si l'attaquant a gagner ce combat
         </member>
-        <member name="M:CS_SmallWorld.Combat.calculerProbas">
-            \fn void calculerProbas()
+        <member name="M:CS_SmallWorld.CombatConcret.lancerCombat(CS_SmallWorld.Unite,CS_SmallWorld.Case)">
+            \fn int lancerCombat(Unite uniteAttaque, Case caseDef)
             
-            \brief calcule les probabilites de victoire des unites qui combattent actuellement.
+            \brief lance un combat entre l'uniteAttaque et un défenseur de la caseDef.
+            
+            \param[in] Unite uniteAttaque l'unite attaquante
+            
+            \param[out] Case caseDef la case qui doit se défendre
+            
+            \return 1 si l'attaquant gagne, 0 si match nul, -1 si l'attaquant meurt
+        </member>
+        <member name="T:CS_SmallWorld.MonteurPartieConcret">
+            \class MonteurPartieConcret
+            
+            \brief implémentation de MonteurPartie
+        </member>
+        <member name="T:CS_SmallWorld.MonteurPartie">
+            \class interface MonteurPartie
+            
+            \brief Le monteur d'une partie. Cette classe crée le plateau, les joueurs etc. pour la partie.
+        </member>
+        <member name="M:CS_SmallWorld.MonteurPartie.creerJoueur(System.String,System.Int32,System.Int32)">
+            \fn Joueur creerJoueur(string name, int peuple, int numJoueur)
+            
+            \brief Crée un joueur avec son nom et le peuple choisi, et positionne ses unités sur
+            sa case de départ selon son numéro.
+            
+            \return le Joueur créé
+        </member>
+        <member name="M:CS_SmallWorld.MonteurPartie.singletonCombat">
+            \fn Combat singletonCombat()
+            
+            \brief génère le singleton gérant les combats.
+            
+            \return Combat le singleton gérant les combats
+        </member>
+        <!-- Commentaire XML incorrect ignoré pour le membre "P:CS_SmallWorld.MonteurPartie.CasesDepart" -->
+        <member name="P:CS_SmallWorld.MonteurPartie.Plateau">
+            \fn proterty Plateau Plateau
+            
+            \brief Le plateau de la partie.
+        </member>
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:CS_SmallWorld.MonteurPartieConcret.positionsDepart" -->
+        <member name="T:CS_SmallWorld.PartieConcret">
+            \class PartieConcret
+            
+            \brief implémentation de la classe Partie
+        </member>
+        <member name="T:CS_SmallWorld.Partie">
+            \class interface Partie
+            
+            \brief Une partie de SmallWorld. C'est la "classe principale".
+            
+        </member>
+        <member name="P:CS_SmallWorld.Partie.Joueurs">
+            \fn property Joueurs (lecture seule)
+            
+            \brief La liste des joueurs de la partie.
+            
+        </member>
+        <member name="P:CS_SmallWorld.Partie.Plateau">
+            \fn property Plateau (lecture seule)
+            
+            \brief Le plateau sur lequel se déroule la partie.
+            
+        </member>
+        <member name="T:CS_SmallWorld.PlateauConcret">
+            \class PlateauConcret
+            
+            \brief implémente Plateau
+        </member>
+        <member name="T:CS_SmallWorld.Plateau">
+            \class interface Plateau
+            
+            \brief Modélise le Plateau sur lequel se déroule la partie.
+        </member>
+        <member name="M:CS_SmallWorld.Plateau.getCaseAt(CS_SmallWorld.Position)">
+            \fn TypeCase getCaseAt(Position p)
+            
+            \brief Retourne la case à la position donnée en paramètre.
+            
+            \param[in] Position p la position dont on veut récupérer la case
+            
+            \return TypeCase la case dont la position est celle donnée en paramètre
+        </member>
+        <member name="M:CS_SmallWorld.Plateau.getUniteAt(CS_SmallWorld.Position)">
+            \fn TypeCase getUniteAt(Position p)
+            
+            \brief Retourne une unité présente à la position donnée en paramètre, s'il y en a.
+            
+            \param[in] Position p la position dont on veut récupérer l'unité
+            
+            \return Unite une unité dont la position est celle donnée en paramètre
+        </member>
+        <member name="P:CS_SmallWorld.Plateau.Taille">
+            \fn property int Taille
+            
+            \brief la longueur d'un coté du plateau.
         </member>
         <member name="M:CS_SmallWorld.Deplacement.estAPorte(CS_SmallWorld.Case)">
             \fn bool estAPorte(Case caseVisee)
@@ -30,6 +166,156 @@
         </member>
         <member name="P:CS_SmallWorld.Deplacement.uniteCourante">
             L'unite en cours de déplacement
+        </member>
+        <member name="T:CS_SmallWorld.Joueur">
+            \class interface Joueur
+            
+            \brief Un joueur du SmallWorld.
+        </member>
+        <member name="M:CS_SmallWorld.Joueur.ajouterUneUnite(CS_SmallWorld.Unite)">
+            \fn void ajouteUneUnite(Unite u)
+            
+            \brief Ajoute une Unite aux troupes du joueur.
+            
+            \param[in] Unite u l'Unite à ajouter
+        </member>
+        <member name="M:CS_SmallWorld.Joueur.retirerUneUnite(CS_SmallWorld.Unite)">
+            \fn void retirerUneUnite(Unite u)
+            
+            \brief Retirn une Unite aux troupes du joueur.
+            
+            \param[in] Unite u l'Unite à retirer
+        </member>
+        <member name="M:CS_SmallWorld.Joueur.compterScore">
+            \fn void compterScore()
+            
+            \brief Compte le score marqué par le joueur durant le tour courant et le rajoute au Score.
+            
+        </member>
+        <member name="P:CS_SmallWorld.Joueur.Name">
+            \fn property Name (lecture seule)
+            
+            \brief Le nom du joueur
+            
+        </member>
+        <member name="P:CS_SmallWorld.Joueur.Peuple">
+            \fn property Peuple (lecture seule)
+            
+            \brief Le Peuple contrôlé par le joueur
+            
+        </member>
+        <member name="P:CS_SmallWorld.Joueur.Score">
+            \fn property Score (lecture-écriture)
+            
+            \brief Les points accumulés par le joueur.
+            
+        </member>
+        <member name="T:CS_SmallWorld.JoueurConcret">
+            \class JoueurConcret
+            
+            \brief implémentation de la classe Joueur
+        </member>
+        <member name="M:CS_SmallWorld.JoueurConcret.donnerPeuple(System.Int32,CS_SmallWorld.TypeCase)">
+            \fn Peuple donnerPeuple(int peuple, TypeCase startCase)
+            
+            \brief Traduit l'int peuple passé en paramètre en Peuple et indique la Case de départ pour les unités.
+            
+            \param[in] int peuple le numéro correspondant au Peuple à créer
+            
+            \param[in] TypeCase startCase la case de départ pour ce joueur, donc pour ce peuple
+        </member>
+        <member name="T:CS_SmallWorld.StrategiePlateau">
+            \class interface StrategiePlateau
+            
+            \brief Cree le Plateau selon la Strategie choisie.
+            Ici il n'y a qu'un seul algo donc ne sert pas à grand chose...
+        </member>
+        <member name="P:CS_SmallWorld.StrategiePlateau.Plateau">
+            \fn property TypeCase[,] Plateau
+            
+            \brief le Plateau créé par la Strategie
+        </member>
+        <member name="T:CS_SmallWorld.StrategiePlateauConcret">
+            \class StrategiePlateauConcret
+            
+            \brief implémente StrategiePlateau.
+        </member>
+        <member name="M:CS_SmallWorld.StrategiePlateauConcret.creerPlateau(System.Int32)">
+            \fn void creerPlateau(int taille)
+            
+            \brief Cree le Plateau de la taille désiré en traduisant la matrice d'int du wrapper en
+            un tableau de TypeCase à deux dimensions pour simplifier l'utilisation.
+            
+            \param[in] int taille la longueur d'un coté du plateau
+        </member>
+        <member name="M:CS_SmallWorld.Unite.estAmie(CS_SmallWorld.Unite)">
+            \fn bool estAmie(Unite u)
+            
+            \brief Vérifie si l'Unite en paramètre appartient au même joueur
+            
+            \param[in] Unite u l'Unite a tester
+            
+            \return true si l'Unite en paramètre appartient au même joueur, faux sinon.
+        </member>
+        <member name="M:CS_SmallWorld.Unite.deplacer(CS_SmallWorld.TypeCase)">
+            \fn void deplacer(TypeCase c)
+            
+            \brief Deplace l'Unite vers la Case passée en paramètre.
+            
+            \param[in] Case c la case cible du déplacement
+        </member>
+        <member name="M:CS_SmallWorld.Unite.detruire">
+            \fn void detruire()
+            
+            \brief Tue l'Unite si elle n'a plus de points de vie.
+            Il faut donc retirer toutes les références vers cette Unite
+        </member>
+        <member name="P:CS_SmallWorld.Unite.Joueur">
+            \fn property JoueurConcret Joueur
+            
+            \brief Le Joueur possédant cette unité.
+        </member>
+        <member name="P:CS_SmallWorld.Unite.PV">
+            \fn property int PV
+            
+            \brief Les points de vie de cette unité.
+        </member>
+        <member name="P:CS_SmallWorld.Unite.PtsGeneres">
+            \fn property int PtsGeneres
+            
+            \brief Les points de vie de cette unité.
+        </member>
+        <member name="P:CS_SmallWorld.Unite.PtsDeplacement">
+            \fn property int PtsDeplacement
+            
+            \brief Les points de déplacement de cette unité.
+        </member>
+        <member name="T:CS_SmallWorld.UniteAbstrait">
+            \class UniteAbstraite
+            
+            \brief implémente en partie Unite : possède les fonctions et attributs communs à toutes les Unites
+        </member>
+        <member name="M:CS_SmallWorld.UniteAbstrait.avantageTerrain">
+            \fn bool avantageTerrain()
+            
+            \brief Vérifie si l'Unite est sur une case qui l'avantage.
+            
+            \return true si l'Unite est sur une case qui l'avantage, faux sinon
+        </member>
+        <member name="T:CS_SmallWorld.UniteGauloisConcret">
+            \class UniteGauloisConcret
+            
+            \brief Une Unite Gauloise.
+        </member>
+        <member name="T:CS_SmallWorld.UniteNainConcret">
+            \class UniteNainConcret
+            
+            \brief Une Unite Naine.
+        </member>
+        <member name="M:CS_SmallWorld.UniteVikingConcret.#ctor(CS_SmallWorld.JoueurConcret,CS_SmallWorld.TypeCase)">
+            \class UniteVikingConcret
+            
+            \brief Une Unite Viking.
         </member>
     </members>
 </doc>

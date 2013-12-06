@@ -76,12 +76,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="apiSmallWorld.h" />
-    <ClInclude Include="calculsUtility.h" />
+    <ClInclude Include="calcCombat.h" />
     <ClInclude Include="map.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="apiSmallWorld.cpp" />
-    <ClCompile Include="calculsUtility.cpp" />
+    <ClCompile Include="calcCombat.cpp" />
     <ClCompile Include="map.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -7,9 +7,10 @@ namespace CS_SmallWorld
 {
     public class CaseMontagneConcret : TypeCaseAbstrait, CaseMontagne
     {
-        public override int TypeTerrain
+        public CaseMontagneConcret()
         {
-            get { return 0; }
+            _pos = new Position(-1, -1); //case non positionnée
+            _unitePresente = new List<Unite>();
         }
     }
 }

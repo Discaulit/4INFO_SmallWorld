@@ -1,7 +1,7 @@
 #include "map.h"
 
 
-Map::Map(int taille)
+Map::Map(const int taille)
 {
 	_matrice = new int[taille*taille];
 	_taille = taille;
@@ -31,12 +31,9 @@ void Map::typerCase()
 		int tmp =0;
 		do{
 			tmp = rand() % 5;
-		}while(type[tmp] > moy);
+		}while(type[tmp] >= moy);
 		
 		_matrice[i] = tmp;
 		type[tmp]++;
 	}
-
-	moy = 25;
-
 }

@@ -5,21 +5,14 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
-   
+   /**
+    * \class interface Combat
+    * 
+    * \brief La classe gérant les combats
+    */
     public interface Combat
     {
-        /*
-         public Unite uniteAtq{
-             get;
-             set;
-         }
-
-         public Unite uniteDef{
-             get;
-             set;
-         }
-  //*/
-
+        
          /**
           * \fn bool lancerCombat(Unite uniteAttaque, Case caseDef)
           * 
@@ -27,14 +20,7 @@ namespace CS_SmallWorld
           * 
           * \return true si l'attaquant a gagner ce combat
           */
-        bool lancerCombat(Unite uniteAttaque, Case caseDef);
-
-        /**
-         * \fn void calculerProbas()
-         * 
-         * \brief calcule les probabilites de victoire des unites qui combattent actuellement.
-         */
-        void calculerProbas();
+        int lancerCombat(Unite uniteAttaque, Case caseDef);
     }
 
 }

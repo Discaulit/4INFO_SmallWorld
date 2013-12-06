@@ -5,6 +5,11 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    /**
+     * \class PlateauConcret
+     * 
+     * \brief implémente Plateau
+     */
     public class PlateauConcret : Plateau
     {
         private StrategiePlateau _strategie;
@@ -12,11 +17,11 @@ namespace CS_SmallWorld
         private TypeCase[,] _carteCase;
         private int _taille;
 
-        public PlateauConcret(int taille)
+        public PlateauConcret(int taille, wrapperLibSmallWorld.WrapperLibsSmallWorld wrapper)
         {
             _fabCase = new FabCaseConcret();
-            _strategie = new StrategiePlateauConcret(taille, _fabCase);
-            _carteCase = _strategie.Carte;
+            _strategie = new StrategiePlateauConcret(taille, _fabCase, wrapper);
+            _carteCase = _strategie.Plateau;
             _taille = taille;
         }
 
@@ -32,7 +37,8 @@ namespace CS_SmallWorld
 
         public Unite getUniteAt(Position p)
         {
-            return _carteCase[p.X, p.Y].UnitePresente;
+            //le calcul ne sera pas trop long ici car il y aura rarement plus de 5 unités sur une case
+            return _carteCase[p.X, p.Y].getMeilleureUnite();
         }
     }
 }

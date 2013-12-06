@@ -1,6 +1,6 @@
 #pragma once
 #include "map.h"
-#include "calculsUtility.h"
+#include "calcCombat.h"
 
 #define LIBSMALLWORLD_EXPORTS
 #ifdef LIBSMALLWORLD_EXPORTS
@@ -12,11 +12,11 @@
 	#define EXTERNC
 #endif
 
-EXTERNC LIBSMALLWORLD_DLL double calculPtsAtqDefEffectifs(const int& pv, const int& atqOuDef, const int& pvMax=5);
+EXTERNC LIBSMALLWORLD_DLL int* generateMap(const int size);
 
-//LIBSMALLWORLD_DLL Map::typeCase;
-
-EXTERNC LIBSMALLWORLD_DLL int* generateMap(const int& size);
-
-EXTERNC LIBSMALLWORLD_DLL int resCombat(const int& pvAtq, const int& pvDef, const int& atq=2, const int& def=1,const int &pvMax=5);
+/*
+Fait combattre deux unitées et
+retourne leurs points de vie (attaquante en dizaine, défensive en unité) à la fin de ce combat.
+*/
+EXTERNC LIBSMALLWORLD_DLL int resCombat(const int pvAtq, const int pvDef, const int atq=4, const int def=3,const int pvMax=5);
 

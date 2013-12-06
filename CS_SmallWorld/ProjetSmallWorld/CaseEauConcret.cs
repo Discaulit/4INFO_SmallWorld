@@ -7,9 +7,10 @@ namespace CS_SmallWorld
 {
     public class CaseEauConcret : TypeCaseAbstrait, CaseEau
     {
-        public override int TypeTerrain
+        public CaseEauConcret()
         {
-            get { return 3; }
+            _pos = new Position(-1, -1); //case non positionnée
+            _unitePresente = new List<Unite>();
         }
     }
 }

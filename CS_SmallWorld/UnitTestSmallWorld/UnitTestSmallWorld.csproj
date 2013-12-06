@@ -64,6 +64,10 @@
       <Project>{37c64dd8-0db6-4ff8-a0d2-683f7dbe400e}</Project>
       <Name>CS_SmallWorld</Name>
     </ProjectReference>
+    <ProjectReference Include="..\wrapperLibSmallWorld\wrapperLibSmallWorld.vcxproj">
+      <Project>{bda0ffe0-e80b-433f-b1fc-d102f5ae4f9d}</Project>
+      <Name>wrapperLibSmallWorld</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\Debug\LibSmallWorld.dll">

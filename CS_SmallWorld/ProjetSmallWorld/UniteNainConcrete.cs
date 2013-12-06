@@ -5,6 +5,11 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    /**
+     * \class UniteNainConcret
+     * 
+     * \brief Une Unite Naine.
+     */
     public class UniteNainConcret : UniteAbstrait, UniteNain
     {
         public UniteNainConcret(JoueurConcret j, TypeCase startCase)
@@ -18,7 +23,7 @@ namespace CS_SmallWorld
 
         protected override bool avantageTerrain()
         {
-            if (_caseCourante.GetType().Name == "CaseMontagneConcret")
+            if (_caseCourante is CaseMontagneConcret)
                 return true;
             else
                 return false;

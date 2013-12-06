@@ -15,6 +15,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestSmallWorld", "UnitTestSmallWorld\UnitTestSmallWorld.csproj", "{C27EDDBC-98A8-4C18-A381-1F27E7301DF6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{37C64DD8-0DB6-4FF8-A0D2-683F7DBE400E} = {37C64DD8-0DB6-4FF8-A0D2-683F7DBE400E}
+		{BDA0FFE0-E80B-433F-B1FC-D102F5AE4F9D} = {BDA0FFE0-E80B-433F-B1FC-D102F5AE4F9D}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appli_SmallWorld", "Appli_SmallWorld\Appli_SmallWorld.csproj", "{9CF397EB-540B-4EDC-9ED0-D840F9B02292}"

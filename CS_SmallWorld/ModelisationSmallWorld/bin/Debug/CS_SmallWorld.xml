@@ -15,10 +15,16 @@
             
             \return true si l'attaquant a gagner ce combat
         </member>
-        <member name="M:CS_SmallWorld.Combat.calculerProbas">
-            \fn void calculerProbas()
+        <member name="M:CS_SmallWorld.CombatConcret.lancerCombat(CS_SmallWorld.Unite,CS_SmallWorld.Case)">
+            \fn int lancerCombat(Unite uniteAttaque, Case caseDef)
             
-            \brief calcule les probabilites de victoire des unites qui combattent actuellement.
+            \brief lance un combat entre l'uniteAttaque et un défenseur de la caseDef.
+            
+            \param[in] Unite uniteAttaque l'unite attaquante
+            
+            \param[out] Case caseDef la case qui doit se défendre
+            
+            \return 1 si l'attaquant gagne, 0 si match nul, -1 si l'attaquant meurt
         </member>
         <member name="M:CS_SmallWorld.Deplacement.estAPorte(CS_SmallWorld.Case)">
             \fn bool estAPorte(Case caseVisee)

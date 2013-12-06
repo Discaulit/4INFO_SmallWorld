@@ -7,6 +7,11 @@ namespace CS_SmallWorld
 {
     public class UniteVikingConcret : UniteAbstrait, UniteViking
     {
+        /**
+     * \class UniteVikingConcret
+     * 
+     * \brief Une Unite Viking.
+     */
         public UniteVikingConcret(JoueurConcret j, TypeCase startCase)
         {
             _joueur = j;
@@ -18,7 +23,7 @@ namespace CS_SmallWorld
 
         protected override bool avantageTerrain()
         {
-            if (_caseCourante.GetType().Name == "CaseEauConcret")
+            if (_caseCourante is CaseEauConcret)
                 return true;
             else
                 return false;

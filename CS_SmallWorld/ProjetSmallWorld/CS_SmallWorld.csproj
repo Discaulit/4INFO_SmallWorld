@@ -48,7 +48,6 @@
     <Compile Include="BonusDeplacement.cs" />
     <Compile Include="BonusNoPoints.cs" />
     <Compile Include="BonusPoints.cs" />
-    <Compile Include="Carte.cs" />
     <Compile Include="CaseAbstrait.cs" />
     <Compile Include="CaseDesert.cs" />
     <Compile Include="CaseDesertConcret.cs" />
@@ -61,6 +60,7 @@
     <Compile Include="CasePlaine.cs" />
     <Compile Include="Case.cs" />
     <Compile Include="CasePlaineConcret.cs" />
+    <Compile Include="CombatConcret.cs" />
     <Compile Include="FabCaseConcret.cs" />
     <Compile Include="MonteurPartieConcret.cs" />
     <Compile Include="PartieConcret.cs" />

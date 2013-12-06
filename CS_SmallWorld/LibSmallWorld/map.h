@@ -8,7 +8,7 @@ private:
 	int* _matrice;
 
 public:
-	Map(int taille);
+	Map(const int taille);
 	~Map(void);
 
 	int* getMatrice() {return _matrice;}

@@ -9,13 +9,13 @@ using namespace wrapperLibSmallWorld;
 
 WrapperLibsSmallWorld::WrapperLibsSmallWorld(int taille)
 {
-	_map = gcnew List<int>(); //gcnew pour les classes managees
+	_map = gcnew List<int>(); //gcnew pour les classes managées
 	int* map = generateMap(taille);
 	for(int i = 0; i < taille*taille; i++)
 		_map->Add(map[i]);
 }
 
-List<int>^ WrapperLibsSmallWorld::combatResult(const int& pvAtq, const int& pvDef, const int& atq, const int& def,const int &pvMax)
+List<int>^ WrapperLibsSmallWorld::combatResult(const int pvAtq, const int pvDef, const int atq, const int def,const int pvMax)
 	{
 		int res = resCombat(pvAtq,pvDef,atq,def,pvMax);
 		List<int>^ lRes = gcnew  List<int>();

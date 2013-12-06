@@ -3,8 +3,8 @@ H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.xml
 H:\TP_POO_MOO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\obj\Debug\ModelisationSmallWorld.modelprojResolveAssemblyReference.cache
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.dll
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.xml
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.pdb
-D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\obj\Debug\ModelisationSmallWorld.modelprojResolveAssemblyReference.cache
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\wrapperLibSmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\CS_SmallWorld.xml
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Debug\wrapperLibSmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\obj\Debug\ModelisationSmallWorld.modelprojResolveAssemblyReference.cache

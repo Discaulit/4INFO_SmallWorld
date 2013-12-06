@@ -5,14 +5,12 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
-    // t_montagne = 0, t_plaine, t_desert, t_eau, t_foret
-
+    /**
+     * \class TypeCaseAbstrait
+     * 
+     * \brief Hérite de CaseAbstrait et est mère des cases concrètes
+     */
     public abstract class TypeCaseAbstrait : CaseAbstrait, TypeCase
     {
-        public abstract int TypeTerrain
-        { 
-            get;
-        }
     }
-
 }

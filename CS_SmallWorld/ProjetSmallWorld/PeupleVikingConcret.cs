@@ -17,7 +17,7 @@ namespace CS_SmallWorld
         {
             Unite u = new UniteVikingConcret(j, startCase);
             u.Joueur = j;
-            j.ajouteUneUnite(u);
+            j.ajouterUneUnite(u);
         }
     }
 }

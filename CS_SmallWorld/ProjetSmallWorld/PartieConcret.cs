@@ -5,24 +5,31 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    /**
+     * \class PartieConcret
+     * 
+     * \brief implémentation de la classe Partie
+     */
     public class PartieConcret : Partie
     {
         List<JoueurConcret> _joueurs;
         Plateau _plateau;
         MonteurPartie _monteur;
+        Combat _singletonCombat;
         private int _nbJoueurs;
 
-        public PartieConcret(int taillePlateau, Dictionary<String,Peuple> players)
+        public PartieConcret(int taillePlateau, Dictionary<String,int> players)
         {
             _joueurs = new List<JoueurConcret>();
-            _monteur = new MonteurPartieConcret();
-            _plateau = _monteur.construirePlateau(taillePlateau);
+            _monteur = new MonteurPartieConcret(taillePlateau);
+            _plateau = _monteur.Plateau;
+            _singletonCombat = _monteur.singletonCombat();
 
             int numPlayer = 0;
 
-            foreach (KeyValuePair<String, Peuple> pair in players)
+            foreach (KeyValuePair<String, int> pair in players)
             {
-                _monteur.creerJoueur(_plateau, pair.Key, pair.Value, numPlayer++);
+                _monteur.creerJoueur(pair.Key, pair.Value, numPlayer++);
             }
             _nbJoueurs = numPlayer;
 
@@ -34,10 +41,6 @@ namespace CS_SmallWorld
             {
                 throw new NotImplementedException();
             }
-            set
-            {
-                throw new NotImplementedException();
-            }
         }
 
         public Plateau Plateau
@@ -46,22 +49,7 @@ namespace CS_SmallWorld
             {
                 throw new NotImplementedException();
             }
-            set
-            {
-                throw new NotImplementedException();
-            }
         }
 
-        public MonteurPartie Monteur
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
     }
 }
