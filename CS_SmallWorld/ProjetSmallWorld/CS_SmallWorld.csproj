@@ -42,12 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bonus.cs" />
+    <Compile Include="BonusCase.cs" />
     <Compile Include="BonusAtqDef.cs" />
+    <Compile Include="BonusAtqDefConcret.cs" />
     <Compile Include="BonusCaseAbstrait.cs" />
     <Compile Include="BonusDeplacement.cs" />
+    <Compile Include="BonusDeplacementConcret.cs" />
     <Compile Include="BonusNoPoints.cs" />
+    <Compile Include="BonusNoPointsConcret.cs" />
     <Compile Include="BonusPoints.cs" />
+    <Compile Include="BonusPointsConcret.cs" />
     <Compile Include="CaseAbstrait.cs" />
     <Compile Include="CaseDesert.cs" />
     <Compile Include="CaseDesertConcret.cs" />
@@ -60,6 +64,8 @@
     <Compile Include="CasePlaine.cs" />
     <Compile Include="Case.cs" />
     <Compile Include="CasePlaineConcret.cs" />
+    <Compile Include="CaseStandard.cs" />
+    <Compile Include="CaseStandardConcret.cs" />
     <Compile Include="CombatConcret.cs" />
     <Compile Include="FabCaseConcret.cs" />
     <Compile Include="MonteurPartieConcret.cs" />

@@ -12,7 +12,7 @@ namespace CS_SmallWorld
      */
     public class UniteNainConcret : UniteAbstrait, UniteNain
     {
-        public UniteNainConcret(JoueurConcret j, TypeCase startCase)
+        public UniteNainConcret(JoueurConcret j, BonusCase startCase)
         {
             _joueur = j;
             _ptVie = 5;

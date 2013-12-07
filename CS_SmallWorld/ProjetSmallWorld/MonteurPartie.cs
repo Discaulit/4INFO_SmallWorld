@@ -13,11 +13,11 @@ namespace CS_SmallWorld
     public interface MonteurPartie
     {
         /**
-         * \fn property List<Position> PositionsDepart (lecture seule)
+         * \fn property List<BonusCase> PositionsDepart (lecture seule)
          * 
          * \brief Contient la liste des positions de départ pour les joueurs
          */
-        List<TypeCase> CasesDepart
+        List<BonusCase> CasesDepart
         {
             get;
         }

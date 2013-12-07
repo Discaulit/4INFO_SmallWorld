@@ -28,18 +28,18 @@ namespace CS_SmallWorld
          * 
          * \brief Permet de connaitre la position où est stationnée cette unité.
          */
-        Position Position
-        {
-            get;
-            set;
-        }
+        //Position Position
+        //{
+        //    get;
+        //    set;
+        //}
 
         /**
          * \fn property TypeCase CaseCourante
          * 
          * \brief Permet de connaitre le type de case sur laquelle est stationnée cette unité.
          */
-        TypeCase CaseCourante
+        BonusCase CaseCourante
         {
             get;
         }
@@ -88,13 +88,13 @@ namespace CS_SmallWorld
         bool estAmie(Unite u);
 
         /**
-         * \fn void deplacer(TypeCase c)
+         * \fn void deplacer(BonusCase c)
          * 
          * \brief Deplace l'Unite vers la Case passée en paramètre.
          * 
          * \param[in] Case c la case cible du déplacement
          */
-        void deplacer(TypeCase c);
+        void deplacer(BonusCase c);
 
         /**
          * \fn void detruire()

@@ -13,7 +13,7 @@ namespace CS_SmallWorld
      */
     public class StrategiePlateauConcret : StrategiePlateau
     {
-        private TypeCase[,] _plateau;
+        private BonusCase[,] _plateau;
         private FabCase _fabriqueCase;
         WrapperLibsSmallWorld _wrapper;
 
@@ -38,9 +38,10 @@ namespace CS_SmallWorld
         private void creerPlateau(int taille)
         {
             //Tableau a deux dimensions !
-            _plateau = new TypeCase[taille, taille];
+            _plateau = new BonusCase[taille, taille];
 
             List<int> matrice = _wrapper.getMap();
+            TypeCase tmp = null;
 
             for (int x = 0; x < taille; x++)
             {
@@ -50,27 +51,28 @@ namespace CS_SmallWorld
                     switch (matrice[(x * taille) + y])
                     {
                         case 0:
-                            _plateau[x, y] = _fabriqueCase.CaseMontagne;
+                            tmp = _fabriqueCase.CaseMontagne;
                             break;
                         case 1:
-                            _plateau[x, y] = _fabriqueCase.CasePlaine;
+                            tmp = _fabriqueCase.CasePlaine;
                             break;
                         case 2:
-                            _plateau[x, y] = _fabriqueCase.CaseDesert;
+                            tmp = _fabriqueCase.CaseDesert;
                             break;
                         case 3:
-                            _plateau[x, y] = _fabriqueCase.CaseEau;
+                            tmp = _fabriqueCase.CaseEau;
                             break;
                         case 4:
-                            _plateau[x, y] = _fabriqueCase.CaseForet;
+                            tmp = _fabriqueCase.CaseForet;
                             break;
                     }
+                    _plateau[x, y] = new CaseStandardConcret(new Position(x, y), tmp);
                 }
             }
         }
 
         /** cf interface */
-        public TypeCase[,] Plateau
+        public BonusCase[,] Plateau
         {
             get { return _plateau; }
         }

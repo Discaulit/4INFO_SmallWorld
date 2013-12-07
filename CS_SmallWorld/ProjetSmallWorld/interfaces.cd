@@ -21,99 +21,113 @@
   <Comment CommentText="+ Singleton GestionDeplacement&#xD;&#xA;Gstion des différents déplacement du tour.">
     <Position X="3.073" Y="3.865" Height="0.588" Width="2.192" />
   </Comment>
+  <Class Name="CS_SmallWorld.Position">
+    <Position X="19" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="CS_SmallWorld.Peuple">
     <Position X="10.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Peuple.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.Unite">
     <Position X="16" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgAAIAAAAAAACAAAAACAAAAAAAAAIAAQAAgAAAA=</HashCode>
+      <HashCode>AEAAAgAAIAAAAAAgBAAAAACAAAAAAAAAIAAQAAgAAAA=</HashCode>
       <FileName>Unite.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.TypeCase">
-    <Position X="12" Y="2.75" Width="1.5" />
+    <Position X="12" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TypeCase.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.StrategiePlateau">
     <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StrategiePlateau.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.BonusCase">
-    <Position X="15.25" Y="2.75" Width="1.5" />
+    <Position X="16.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Bonus.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAgAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BonusCase.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TypeCase" />
+      <Property Name="Position" />
+    </ShowAsAssociation>
   </Interface>
   <Interface Name="CS_SmallWorld.CaseEau">
-    <Position X="9" Y="4" Width="1.5" />
+    <Position X="9" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CaseEau.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.CaseMontagne">
-    <Position X="6" Y="4" Width="1.5" />
+    <Position X="6" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CaseMontagne.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.CasePlaine">
-    <Position X="7.5" Y="4" Width="1.5" />
+    <Position X="7.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CasePlaine.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.CaseForet">
-    <Position X="12" Y="4" Width="1.5" />
+    <Position X="12" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CaseForet.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.CaseDesert">
-    <Position X="10.5" Y="4" Width="1.5" />
+    <Position X="10.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CaseDesert.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.BonusDeplacement">
-    <Position X="16.75" Y="4" Width="1.5" />
+    <Position X="18.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BonusDeplacement.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.BonusPoints">
-    <Position X="18.25" Y="4" Width="1.5" />
+    <Position X="19.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BonusPoints.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.BonusAtqDef">
-    <Position X="15.25" Y="4" Width="1.5" />
+    <Position X="16.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BonusAtqDef.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.BonusNoPoints">
-    <Position X="13.75" Y="4" Width="1.5" />
+    <Position X="15.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BonusNoPoints.cs</FileName>
@@ -122,38 +136,35 @@
   <Interface Name="CS_SmallWorld.Plateau">
     <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <HashCode>AAAAAABAAAAgAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Plateau.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="FabCase" />
-    </ShowAsAssociation>
   </Interface>
   <Interface Name="CS_SmallWorld.FabCase">
     <Position X="7.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAABABAAAAAAAAACA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAACAAAAABABAAAAAAAAACA=</HashCode>
       <FileName>FabCase.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.Joueur">
     <Position X="7" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAgAAAAAAAAAQAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAEAAAIAAAAgAAAAAAAQAAAAAAAAEAAAAAAAAAAA=</HashCode>
       <FileName>Joueur.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.Partie">
     <Position X="4" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAIAAAEAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>Partie.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="CS_SmallWorld.Case">
     <Position X="13.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>gAAAABAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAEAAAAAAAA=</HashCode>
       <FileName>Case.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -230,7 +241,7 @@
   <Interface Name="CS_SmallWorld.Combat">
     <Position X="1" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Combat.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -239,6 +250,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAQAAAAA=</HashCode>
       <FileName>Deplacement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CS_SmallWorld.CaseStandard">
+    <Position X="13.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CaseStandard.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

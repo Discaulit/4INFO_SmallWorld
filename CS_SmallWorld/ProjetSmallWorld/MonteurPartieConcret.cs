@@ -15,7 +15,7 @@ namespace CS_SmallWorld
     {
         WrapperLibsSmallWorld _wrapper;
         int _taillePlateau;
-        List<TypeCase> _casesDepart;
+        List<BonusCase> _casesDepart;
         Plateau _plateau;
 
         /**
@@ -36,7 +36,7 @@ namespace CS_SmallWorld
         }
 
         /** cf interface */
-        public List<TypeCase> CasesDepart
+        public List<BonusCase> CasesDepart
         {
             get { return _casesDepart; }
         }
@@ -48,9 +48,9 @@ namespace CS_SmallWorld
          * 
          * \return La liste des cases de départ des joueurs
          */
-        private List<TypeCase> positionsDepart()
+        private List<BonusCase> positionsDepart()
         {
-            List<TypeCase> pos = new List<TypeCase>();
+            List<BonusCase> pos = new List<BonusCase>();
             List<int> coordStart = _wrapper.getStartCases(_taillePlateau);
 
             Position p1 = new Position(coordStart[0], coordStart[1]);

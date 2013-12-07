@@ -36,6 +36,16 @@
             
             \param[in] Unite u l'Unite à retirer
         </member>
+        <member name="P:CS_SmallWorld.BonusCase.TCase">
+            \fn property TypeCase TCase
+            
+            \brief  Le type de la case.
+        </member>
+        <member name="P:CS_SmallWorld.BonusCase.Position">
+            \fn property Position Position
+            
+            \brief La position de la case sur le plateau.
+        </member>
         <member name="T:CS_SmallWorld.BonusAtqDef">
             
         </member>
@@ -58,6 +68,12 @@
         </member>
         <member name="M:CS_SmallWorld.CaseAbstrait.enleverUneUnite(CS_SmallWorld.Unite)">
             cf interface 
+        </member>
+        <member name="F:CS_SmallWorld.BonusCaseAbstrait._position">
+            Position _position la position de la case sur le plateau 
+        </member>
+        <member name="F:CS_SmallWorld.BonusCaseAbstrait._tcase">
+            TypeCase _tcase le type de la case 
         </member>
         <member name="T:CS_SmallWorld.BonusDeplacement">
             
@@ -264,7 +280,7 @@
             \brief Modélise le Plateau sur lequel se déroule la partie.
         </member>
         <member name="M:CS_SmallWorld.Plateau.getCaseAt(CS_SmallWorld.Position)">
-            \fn TypeCase getCaseAt(Position p)
+            \fn BonusCase getCaseAt(Position p)
             
             \brief Retourne la case à la position donnée en paramètre.
             
@@ -380,7 +396,7 @@
             
             \brief implémentation de la classe Joueur
         </member>
-        <member name="M:CS_SmallWorld.JoueurConcret.#ctor(System.String,System.Int32,CS_SmallWorld.TypeCase,System.Int32)">
+        <member name="M:CS_SmallWorld.JoueurConcret.#ctor(System.String,System.Int32,CS_SmallWorld.BonusCase,System.Int32)">
             \fn Constructeur de la classe
         </member>
         <member name="M:CS_SmallWorld.JoueurConcret.ajouterUneUnite(CS_SmallWorld.Unite)">
@@ -389,7 +405,7 @@
         <member name="M:CS_SmallWorld.JoueurConcret.retirerUneUnite(CS_SmallWorld.Unite)">
             cf interface 
         </member>
-        <member name="M:CS_SmallWorld.JoueurConcret.donnerPeuple(System.Int32,CS_SmallWorld.TypeCase)">
+        <member name="M:CS_SmallWorld.JoueurConcret.donnerPeuple(System.Int32,CS_SmallWorld.BonusCase)">
             \fn Peuple donnerPeuple(int peuple, TypeCase startCase)
             
             \brief Traduit l'int peuple passé en paramètre en Peuple et indique la Case de départ pour les unités.
@@ -431,7 +447,7 @@
             
             \brief "implémente" Peuple.
         </member>
-        <member name="M:CS_SmallWorld.PeupleAbstrait.fabriqueUnite(CS_SmallWorld.JoueurConcret,CS_SmallWorld.TypeCase)">
+        <member name="M:CS_SmallWorld.PeupleAbstrait.fabriqueUnite(CS_SmallWorld.JoueurConcret,CS_SmallWorld.BonusCase)">
             \fn void fabriqueUnite(JoueurConcret j, TypeCase startCase)
             
             \brief La fabrique d'Unite du Peuple. Crée une Unite et
@@ -447,10 +463,10 @@
             
             \brief implémente PeupleAbstrait et PeupleGaulois
         </member>
-        <member name="M:CS_SmallWorld.PeupleGauloisConcret.#ctor(CS_SmallWorld.JoueurConcret,CS_SmallWorld.TypeCase,System.Int32)">
+        <member name="M:CS_SmallWorld.PeupleGauloisConcret.#ctor(CS_SmallWorld.JoueurConcret,CS_SmallWorld.BonusCase,System.Int32)">
             \fn Constructeur de la classe
         </member>
-        <member name="M:CS_SmallWorld.PeupleGauloisConcret.fabriqueUnite(CS_SmallWorld.JoueurConcret,CS_SmallWorld.TypeCase)">
+        <member name="M:CS_SmallWorld.PeupleGauloisConcret.fabriqueUnite(CS_SmallWorld.JoueurConcret,CS_SmallWorld.BonusCase)">
             cf interface 
         </member>
         <member name="T:CS_SmallWorld.StrategiePlateauConcret">
@@ -486,8 +502,8 @@
             
             \return true si l'Unite en paramètre appartient au même joueur, faux sinon.
         </member>
-        <member name="M:CS_SmallWorld.Unite.deplacer(CS_SmallWorld.TypeCase)">
-            \fn void deplacer(TypeCase c)
+        <member name="M:CS_SmallWorld.Unite.deplacer(CS_SmallWorld.BonusCase)">
+            \fn void deplacer(BonusCase c)
             
             \brief Deplace l'Unite vers la Case passée en paramètre.
             
@@ -503,11 +519,6 @@
             \fn property JoueurConcret Joueur
             
             \brief Le Joueur possédant cette unité.
-        </member>
-        <member name="P:CS_SmallWorld.Unite.Position">
-            \fn property Position Position
-            
-            \brief Permet de connaitre la position où est stationnée cette unité.
         </member>
         <member name="P:CS_SmallWorld.Unite.CaseCourante">
             \fn property TypeCase CaseCourante
@@ -572,7 +583,7 @@
         <member name="M:CS_SmallWorld.UniteAbstrait.estAmie(CS_SmallWorld.Unite)">
             cf interface 
         </member>
-        <member name="M:CS_SmallWorld.UniteAbstrait.deplacer(CS_SmallWorld.TypeCase)">
+        <member name="M:CS_SmallWorld.UniteAbstrait.deplacer(CS_SmallWorld.BonusCase)">
             cf interface 
         </member>
         <member name="M:CS_SmallWorld.UniteAbstrait.attaquer(CS_SmallWorld.Position)">
@@ -590,9 +601,6 @@
             cf interface 
         </member>
         <member name="P:CS_SmallWorld.UniteAbstrait.CaseCourante">
-            cf interface 
-        </member>
-        <member name="P:CS_SmallWorld.UniteAbstrait.Position">
             cf interface 
         </member>
         <member name="P:CS_SmallWorld.UniteAbstrait.PV">
@@ -614,7 +622,7 @@
             
             \brief Une Unite Gauloise.
         </member>
-        <member name="M:CS_SmallWorld.UniteGauloisConcret.#ctor(CS_SmallWorld.JoueurConcret,CS_SmallWorld.TypeCase)">
+        <member name="M:CS_SmallWorld.UniteGauloisConcret.#ctor(CS_SmallWorld.JoueurConcret,CS_SmallWorld.BonusCase)">
             \fn Constructeur de la classe
         </member>
         <member name="M:CS_SmallWorld.UniteGauloisConcret.avantageTerrain">
@@ -625,7 +633,7 @@
             
             \brief Une Unite Naine.
         </member>
-        <member name="M:CS_SmallWorld.UniteVikingConcret.#ctor(CS_SmallWorld.JoueurConcret,CS_SmallWorld.TypeCase)">
+        <member name="M:CS_SmallWorld.UniteVikingConcret.#ctor(CS_SmallWorld.JoueurConcret,CS_SmallWorld.BonusCase)">
             \class UniteVikingConcret
             
             \brief Une Unite Viking.

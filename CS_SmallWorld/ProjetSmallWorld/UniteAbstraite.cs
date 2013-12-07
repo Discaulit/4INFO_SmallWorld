@@ -25,8 +25,7 @@ namespace CS_SmallWorld
         protected JoueurConcret _joueur;
 
         /** La Case sur laquelle se situe l'Unite actuellement */
-        protected TypeCase _caseCourante;
-        protected Position _position;
+        protected BonusCase _caseCourante;
 
         /** cf interface */
         public JoueurConcret Joueur
@@ -36,7 +35,7 @@ namespace CS_SmallWorld
         }
 
         /** cf interface */
-        public TypeCase CaseCourante
+        public BonusCase CaseCourante
         {
             get { return _caseCourante; }
             protected set
@@ -47,14 +46,14 @@ namespace CS_SmallWorld
         }
 
         /** cf interface */
-        public Position Position
-        {
-            get { return _position; }
-            set
-            {
-                _position = value;
-            }
-        }
+        //public Position Position
+        //{
+        //    get { return _position; }
+        //    set
+        //    {
+        //        _position = value;
+        //    }
+        //}
 
         /** cf interface */
         public int PV
@@ -95,7 +94,7 @@ namespace CS_SmallWorld
         public bool estAmie(Unite u) { return u.Joueur == _joueur; }
 
         /** cf interface */
-        public void deplacer(TypeCase c)
+        public void deplacer(BonusCase c)
         {
             if (_ptsDeplacement > 0)
             {

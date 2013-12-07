@@ -18,7 +18,7 @@ namespace CS_SmallWorld
          * 
          * \brief le Plateau créé par la Strategie
          */
-        TypeCase[,] Plateau
+        BonusCase[,] Plateau
         {
             get;
         }

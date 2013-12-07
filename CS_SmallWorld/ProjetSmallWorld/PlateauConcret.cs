@@ -14,7 +14,7 @@ namespace CS_SmallWorld
     {
         private StrategiePlateau _strategie;
         private FabCase _fabCase;
-        private TypeCase[,] _carteCase;
+        private BonusCase[,] _carteCase;
         private int _taille;
         /**
          * \fn Constructeur de la classe
@@ -34,7 +34,7 @@ namespace CS_SmallWorld
         }
 
         /** cf interface */
-        public TypeCase getCaseAt(Position p)
+        public BonusCase getCaseAt(Position p)
         {
             return _carteCase[p.X, p.Y];
         }

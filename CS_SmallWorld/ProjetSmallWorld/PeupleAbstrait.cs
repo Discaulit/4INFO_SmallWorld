@@ -18,6 +18,6 @@ namespace CS_SmallWorld
          * \brief La fabrique d'Unite du Peuple. Crée une Unite et
          * lui associe le joueur possédant ce peuple ainsi que sa position de départ
          */
-        protected abstract void fabriqueUnite(JoueurConcret j, TypeCase startCase);
+        protected abstract void fabriqueUnite(JoueurConcret j, BonusCase startCase);
     }
 }

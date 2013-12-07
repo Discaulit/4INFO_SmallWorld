@@ -9,4 +9,8 @@ namespace CS_SmallWorld
     public interface BonusNoPoints : BonusCase
     {
     }
+
+    public interface CopyOfBonusNoPoints : BonusCase
+    {
+    }
 }

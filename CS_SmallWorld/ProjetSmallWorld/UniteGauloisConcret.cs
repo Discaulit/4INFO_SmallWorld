@@ -15,7 +15,7 @@ namespace CS_SmallWorld
         /**
          * \fn Constructeur de la classe
          */
-        public UniteGauloisConcret(JoueurConcret j, TypeCase startCase)
+        public UniteGauloisConcret(JoueurConcret j, BonusCase startCase)
         {
             _joueur = j;
             _ptVie = 5;

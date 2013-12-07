@@ -9,4 +9,8 @@ namespace CS_SmallWorld
     public interface BonusAtqDef : BonusCase
     {
     }
+
+    public interface CopyOfBonusAtqDef : BonusCase
+    {
+    }
 }

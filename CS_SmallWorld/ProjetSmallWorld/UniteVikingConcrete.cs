@@ -12,7 +12,7 @@ namespace CS_SmallWorld
      * 
      * \brief Une Unite Viking.
      */
-        public UniteVikingConcret(JoueurConcret j, TypeCase startCase)
+        public UniteVikingConcret(JoueurConcret j, BonusCase startCase)
         {
             _joueur = j;
             _ptVie = 5;

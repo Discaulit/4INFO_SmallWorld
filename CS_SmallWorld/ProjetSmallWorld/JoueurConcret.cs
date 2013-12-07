@@ -20,7 +20,7 @@ namespace CS_SmallWorld
         /**
          * \fn Constructeur de la classe
          */
-        public JoueurConcret(string name, int peuple, TypeCase startCase, int nbUnite)
+        public JoueurConcret(string name, int peuple, BonusCase startCase, int nbUnite)
         {
             _name = name;
             _score = 0;
@@ -78,7 +78,7 @@ namespace CS_SmallWorld
          * 
          * \param[in] TypeCase startCase la case de départ pour ce joueur, donc pour ce peuple
          */
-        private Peuple donnerPeuple(int peuple, TypeCase startCase)
+        private Peuple donnerPeuple(int peuple, BonusCase startCase)
         {
             switch(peuple)
             {

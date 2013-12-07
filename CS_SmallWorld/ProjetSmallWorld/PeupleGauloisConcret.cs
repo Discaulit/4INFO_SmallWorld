@@ -15,14 +15,14 @@ namespace CS_SmallWorld
         /**
          * \fn Constructeur de la classe
          */
-        public PeupleGauloisConcret(JoueurConcret j, TypeCase startCase, int nbUnite)
+        public PeupleGauloisConcret(JoueurConcret j, BonusCase startCase, int nbUnite)
         {
             for (int i = 0; i < nbUnite; i++)
                 fabriqueUnite(j, startCase);
         }
 
         /** cf interface */
-        protected override void fabriqueUnite(JoueurConcret j, TypeCase startCase)
+        protected override void fabriqueUnite(JoueurConcret j, BonusCase startCase)
         {
             Unite u = new UniteGauloisConcret(j, startCase);
             u.Joueur = j;

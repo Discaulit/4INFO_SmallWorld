@@ -22,7 +22,7 @@ namespace CS_SmallWorld
             get;
         }
         /**
-         * \fn TypeCase getCaseAt(Position p)
+         * \fn BonusCase getCaseAt(Position p)
          * 
          * \brief Retourne la case à la position donnée en paramètre.
          * 
@@ -30,7 +30,7 @@ namespace CS_SmallWorld
          * 
          * \return TypeCase la case dont la position est celle donnée en paramètre
          */
-        TypeCase getCaseAt(Position p);
+        BonusCase getCaseAt(Position p);
 
         /**
          * \fn TypeCase getUniteAt(Position p)
