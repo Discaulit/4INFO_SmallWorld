@@ -21,12 +21,14 @@ namespace CS_SmallWorld
             _caseCourante.positionnerUnite(this);
         }
 
-        protected override bool avantageTerrain()
+        protected override int avantageTerrain()
         {
             if (_caseCourante is CaseEauConcret)
-                return true;
+                return 1;
+            else if (_caseCourante is CaseDesertConcret)
+                return -1;
             else
-                return false;
+                return 0;
         }
     }
 }

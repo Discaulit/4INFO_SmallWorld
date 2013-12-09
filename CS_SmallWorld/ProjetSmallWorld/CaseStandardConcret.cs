@@ -7,10 +7,11 @@ namespace CS_SmallWorld
 {
     public class CaseStandardConcret : BonusCaseAbstrait, CaseStandard
     {
-        public CaseStandardConcret(Position p, TypeCase tc)
+        private List<Unite> _troupes;
+        public CaseStandardConcret(TypeCase tc)
         {
-            _position = p;
             _tcase = tc;
+            _troupes = new List<Unite>();
         }
     }
 }

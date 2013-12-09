@@ -9,7 +9,6 @@ namespace CS_SmallWorld
     {
         public CaseForetConcret()
         {
-            _unitePresente = new List<Unite>();
         }
     }
 }

@@ -15,7 +15,6 @@ namespace CS_SmallWorld
     {
         public CaseDesertConcret()
         {
-            _unitePresente = new List<Unite>();
         }
     }
 }

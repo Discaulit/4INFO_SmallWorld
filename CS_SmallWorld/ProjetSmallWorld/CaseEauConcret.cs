@@ -9,7 +9,6 @@ namespace CS_SmallWorld
     {
         public CaseEauConcret()
         {
-            _unitePresente = new List<Unite>();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace CS_SmallWorld
          * points d'attaque et de défense de l'Unite.
          * points que permet de gagner l'Unite de base et le bonus si le Terrain est avantageux.
          */
-        protected static int _ptAtq = 3, _ptDef = 2, _ptsGenereBase = 1, _ptsAvantageTerrain = 1;
+        protected const int _ptAtq = 3, _ptDef = 2, _ptsGenereBase = 1, _ptsAvantageTerrain = 1;
 
         /** points de vie et de déplacement de l'Unite */
         protected int _ptVie, _ptsDeplacement;
@@ -25,7 +25,7 @@ namespace CS_SmallWorld
         protected JoueurConcret _joueur;
 
         /** La Case sur laquelle se situe l'Unite actuellement */
-        protected BonusCase _caseCourante;
+        public BonusCase _caseCourante;
 
         /** cf interface */
         public JoueurConcret Joueur
@@ -74,27 +74,38 @@ namespace CS_SmallWorld
         {
             get
             {
-                if (avantageTerrain())
-                    return _ptsGenereBase + _ptsAvantageTerrain;
-                else
+                if (avantageTerrain() == 0) //case standard
                     return _ptsGenereBase;
+                else if (avantageTerrain() == 1) // avantage
+                    return _ptsGenereBase + _ptsAvantageTerrain;
+                else // desavantage
+                    return _ptsGenereBase - _ptsAvantageTerrain;
             }
         }
 
+        protected abstract int avantageTerrain();
+
         /**
-         * \fn bool avantageTerrain()
+         * \fn int avantageDeplacementTerrain()
          * 
          * \brief Vérifie si l'Unite est sur une case qui l'avantage.
          * 
-         * \return true si l'Unite est sur une case qui l'avantage, faux sinon
+         * \return 1 si l'Unite est sur une case qui l'avantage, 0 si c'est une case neutre, -1 sinon
          */
-        protected abstract bool avantageTerrain();
+        protected abstract bool avantageDeplacementTerrain();
+
+        /**
+         * \fn void deplacerPeuple()
+         * 
+         * \brief La partie du déplacement spécifique au Peuple de l'Unite, par rapport aux différents bonus.
+         */
+        protected abstract void deplacerPeuple();
 
         /** cf interface */
         public bool estAmie(Unite u) { return u.Joueur == _joueur; }
 
         /** cf interface */
-        void utiliserUnite(BonusCase c)
+        public void utiliserUnite(BonusCase c)
         {
             //se deplacer si la case est alliée ou vide
             if (estAmie(c.getMeilleureUnite()) || (c.getMeilleureUnite() == null))
@@ -118,10 +129,7 @@ namespace CS_SmallWorld
                 _caseCourante = c; //changer de case
                 _caseCourante.positionnerUnite(this); //se rajouter sur la nouvelle case
 
-                if (avantageTerrain())
-                    _ptsDeplacement--;
-                else
-                    _ptsDeplacement -= 2;
+                deplacerPeuple();
             }
             else
                 Console.WriteLine("Impossible de bouger\n");

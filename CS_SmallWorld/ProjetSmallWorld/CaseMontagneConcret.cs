@@ -9,7 +9,6 @@ namespace CS_SmallWorld
     {
         public CaseMontagneConcret()
         {
-            _unitePresente = new List<Unite>();
         }
     }
 }

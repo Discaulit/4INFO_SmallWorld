@@ -25,12 +25,14 @@ namespace CS_SmallWorld
         }
 
         /** cf interface */
-        protected override bool avantageTerrain()
+        protected override int avantageTerrain()
         {
             if (_caseCourante is CasePlaineConcret)
-                return true;
+                return 1;
+            else if (_caseCourante is CaseMontagneConcret)
+                return -1;
             else
-                return false;
+                return 0;
         }
     }
 }

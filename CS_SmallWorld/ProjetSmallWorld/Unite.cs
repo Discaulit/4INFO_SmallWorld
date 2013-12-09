@@ -24,17 +24,6 @@ namespace CS_SmallWorld
         }
 
         /**
-         * \fn property Position Position
-         * 
-         * \brief Permet de connaitre la position où est stationnée cette unité.
-         */
-        //Position Position
-        //{
-        //    get;
-        //    set;
-        //}
-
-        /**
          * \fn property TypeCase CaseCourante
          * 
          * \brief Permet de connaitre le type de case sur laquelle est stationnée cette unité.
