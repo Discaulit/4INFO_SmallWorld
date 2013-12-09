@@ -102,9 +102,9 @@
     <Compile Include="UniteGaulois.cs" />
     <Compile Include="UniteGauloisConcret.cs" />
     <Compile Include="UniteNain.cs" />
-    <Compile Include="UniteNainConcrete.cs" />
+    <Compile Include="UniteNainConcret.cs" />
     <Compile Include="UniteViking.cs" />
-    <Compile Include="UniteVikingConcrete.cs" />
+    <Compile Include="UniteVikingConcret.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="implementationPartie.cd" />

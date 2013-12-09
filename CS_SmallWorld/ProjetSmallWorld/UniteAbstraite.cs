@@ -94,7 +94,23 @@ namespace CS_SmallWorld
         public bool estAmie(Unite u) { return u.Joueur == _joueur; }
 
         /** cf interface */
-        public void deplacer(BonusCase c)
+        void utiliserUnite(BonusCase c)
+        {
+            //se deplacer si la case est alliée ou vide
+            if (estAmie(c.getMeilleureUnite()) || (c.getMeilleureUnite() == null))
+                deplacer(c);
+            else //sinon attaquer
+                attaquer(c);
+        }
+
+        /**
+         * \fn void deplacer(BonusCase c)
+         * 
+         * \brief Déplace l'Unite sur la case passée en paramètre.
+         * 
+         * \param[in] BonusCase c la case cible
+         */
+        private void deplacer(BonusCase c)
         {
             if (_ptsDeplacement > 0)
             {
@@ -113,16 +129,24 @@ namespace CS_SmallWorld
 
 
         /**
-         * \fn void attaquer(Position cAtq)
+         * \fn void attaquer(BonusCase cAtq)
          * 
          * \brief Verifie si une case est attaquable ou non, c'est-à-dire si elle est voisine
          * et si elle appartient à l'adversaire. Sinon, se déplacer dessus ou ne indiquer case trop loin.
          * 
          * \param[im] Case cAtq la case attaquée
          */
-        public void attaquer(Position cAtq)
+        private void attaquer(BonusCase cAtq)
         {
-            //TODO
+            //TODO: faire le combat
+
+            //action en fonction du résultat du combat :
+            if (PV == 0)
+                detruire();
+            else
+                if (cAtq.getMeilleureUnite() == null)
+                    deplacer(cAtq);
+
         }
 
         /** cf interface */

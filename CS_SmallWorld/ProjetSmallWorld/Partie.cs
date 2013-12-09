@@ -19,7 +19,18 @@ namespace CS_SmallWorld
          * \brief La liste des joueurs de la partie.
          * 
          */
-        List<JoueurConcret> Joueurs
+        List<Joueur> Joueurs
+        {
+            get;
+        }
+
+        /**
+         * \fn property JoueurCourant (lecture-écriture)
+         * 
+         * \brief Le joueur à qui c'est le tour de jouer.
+         * 
+         */
+        Joueur JoueurCourant
         {
             get;
         }
@@ -35,5 +46,12 @@ namespace CS_SmallWorld
             get;
         }
 
+        /**
+         * \fn void finirTour()
+         * 
+         * \brief Finit le tour du joueur courant en comptant ses points
+         * et passe au joueur suivant.
+         */
+        void finirTour();
     }
 }

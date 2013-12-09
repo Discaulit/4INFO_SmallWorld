@@ -15,23 +15,20 @@ namespace CS_SmallWorld
     {
         WrapperLibsSmallWorld _wrapper;
 
-        //private static CombatConcret instance;
+        private static bool _instance;
         
         /**
          * \fn Constructeur de la classe
          */
         public CombatConcret(WrapperLibsSmallWorld wrapper)
         {
-            _wrapper = wrapper;
+            if (!_instance)
+            {
+                _instance = true;
+                _wrapper = wrapper;
+            }
+            //TODO : améliorer ce "singleton"
         }
-
-        /*public static Combat Instance
-        {
-            if(instance == null)
-        {
-            instance = New CombatConcret(wra
-        }
-        }*/
 
         /**
          * \fn int lancerCombat(Unite uniteAttaque, Case caseDef)

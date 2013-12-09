@@ -96,11 +96,11 @@ namespace CS_SmallWorld
         /** cf interface */
         public void compterScore()
         {
-            int score =0;
+            int scoreTmp =0;
             foreach (Unite u in _troupes)
-                score += u.PtsGeneres;
+                scoreTmp += u.PtsGeneres;
 
-            _score += score;
+            _score += scoreTmp;
         }
     }
 }
