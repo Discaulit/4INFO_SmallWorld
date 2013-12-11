@@ -66,7 +66,7 @@ namespace CS_SmallWorld
                             tmp = _fabriqueCase.CaseForet;
                             break;
                     }
-                    _plateau[x, y] = new CaseStandardConcret(new Position(x, y), tmp);
+                    _plateau[x, y] = new CaseStandardConcret( tmp);
                 }
             }
         }

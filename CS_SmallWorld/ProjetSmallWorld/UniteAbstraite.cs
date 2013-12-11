@@ -92,14 +92,14 @@ namespace CS_SmallWorld
          * 
          * \return 1 si l'Unite est sur une case qui l'avantage, 0 si c'est une case neutre, -1 sinon
          */
-        protected abstract bool avantageDeplacementTerrain();
+        //protected abstract bool avantageDeplacementTerrain();
 
         /**
          * \fn void deplacerPeuple()
          * 
          * \brief La partie du déplacement spécifique au Peuple de l'Unite, par rapport aux différents bonus.
          */
-        protected abstract void deplacerPeuple();
+        //protected abstract void deplacerPeuple();
 
         /** cf interface */
         public bool estAmie(Unite u) { return u.Joueur == _joueur; }
@@ -129,7 +129,7 @@ namespace CS_SmallWorld
                 _caseCourante = c; //changer de case
                 _caseCourante.positionnerUnite(this); //se rajouter sur la nouvelle case
 
-                deplacerPeuple();
+                //deplacerPeuple();
             }
             else
                 Console.WriteLine("Impossible de bouger\n");

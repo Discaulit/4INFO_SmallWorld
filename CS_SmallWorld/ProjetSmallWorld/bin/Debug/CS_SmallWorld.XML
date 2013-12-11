@@ -15,21 +15,21 @@
             
             \brief une Case du plateau.
         </member>
-        <member name="M:CS_SmallWorld.Case.getMeilleureUnite">
+        <member name="M:CS_SmallWorld.BonusCase.getMeilleureUnite">
             \fn Unite getMeilleureUnite()
             
             \brief Cherche et renvoie l'Unite ayant le plus de PV dans cette case, s'il y en a.
             
             \return l'Unite ayant le plus de PV, null s'il n'y a aucune Unite
         </member>
-        <member name="M:CS_SmallWorld.Case.positionnerUnite(CS_SmallWorld.Unite)">
+        <member name="M:CS_SmallWorld.BonusCase.positionnerUnite(CS_SmallWorld.Unite)">
             \fn void positionnerUnite(Unite u)
             
             \brief place l'Unite passée en paramètre sur la Case.
             
             \param[in] Unite u l'Unite à positionner sur la Case
         </member>
-        <member name="M:CS_SmallWorld.Case.enleverUneUnite(CS_SmallWorld.Unite)">
+        <member name="M:CS_SmallWorld.BonusCase.enleverUneUnite(CS_SmallWorld.Unite)">
             \fn void enleverUneUnite(Unite u)
             
             \brief Retire une Unite aux troupes du joueur.
@@ -40,11 +40,6 @@
             \fn property TypeCase TCase
             
             \brief  Le type de la case.
-        </member>
-        <member name="P:CS_SmallWorld.BonusCase.Position">
-            \fn property Position Position
-            
-            \brief La position de la case sur le plateau.
         </member>
         <member name="T:CS_SmallWorld.BonusAtqDef">
             
@@ -57,23 +52,20 @@
             
             \brief implémente Case. Contient tout ce qui est commun à toutes les cases
         </member>
-        <member name="F:CS_SmallWorld.CaseAbstrait._unitePresente">
-            Liste des unités présentes sur cette case. 
-        </member>
-        <member name="M:CS_SmallWorld.CaseAbstrait.getMeilleureUnite">
-            cf interface 
-        </member>
-        <member name="M:CS_SmallWorld.CaseAbstrait.positionnerUnite(CS_SmallWorld.Unite)">
-            cf interface 
-        </member>
-        <member name="M:CS_SmallWorld.CaseAbstrait.enleverUneUnite(CS_SmallWorld.Unite)">
-            cf interface 
-        </member>
-        <member name="F:CS_SmallWorld.BonusCaseAbstrait._position">
-            Position _position la position de la case sur le plateau 
-        </member>
         <member name="F:CS_SmallWorld.BonusCaseAbstrait._tcase">
             TypeCase _tcase le type de la case 
+        </member>
+        <member name="F:CS_SmallWorld.BonusCaseAbstrait._unitePresente">
+            Liste des unités présentes sur cette case. 
+        </member>
+        <member name="M:CS_SmallWorld.BonusCaseAbstrait.getMeilleureUnite">
+            cf interface 
+        </member>
+        <member name="M:CS_SmallWorld.BonusCaseAbstrait.positionnerUnite(CS_SmallWorld.Unite)">
+            cf interface 
+        </member>
+        <member name="M:CS_SmallWorld.BonusCaseAbstrait.enleverUneUnite(CS_SmallWorld.Unite)">
+            cf interface 
         </member>
         <member name="T:CS_SmallWorld.BonusDeplacement">
             
@@ -114,7 +106,7 @@
             
             \brief La classe gérant les combats
         </member>
-        <member name="M:CS_SmallWorld.Combat.lancerCombat(CS_SmallWorld.Unite,CS_SmallWorld.Case)">
+        <member name="M:CS_SmallWorld.Combat.lancerCombat(CS_SmallWorld.Unite,CS_SmallWorld.BonusCase)">
             \fn bool lancerCombat(Unite uniteAttaque, Case caseDef)
             
             \brief commence le combat de l'uniteAttaque sur la caseDef
@@ -124,7 +116,7 @@
         <member name="M:CS_SmallWorld.CombatConcret.#ctor(wrapperLibSmallWorld.WrapperLibsSmallWorld)">
             \fn Constructeur de la classe
         </member>
-        <member name="M:CS_SmallWorld.CombatConcret.lancerCombat(CS_SmallWorld.Unite,CS_SmallWorld.Case)">
+        <member name="M:CS_SmallWorld.CombatConcret.lancerCombat(CS_SmallWorld.Unite,CS_SmallWorld.BonusCase)">
             \fn int lancerCombat(Unite uniteAttaque, Case caseDef)
             
             \brief lance un combat entre l'uniteAttaque et un défenseur de la caseDef.
@@ -248,10 +240,22 @@
             \brief Une partie de SmallWorld. C'est la "classe principale".
             
         </member>
+        <member name="M:CS_SmallWorld.Partie.finirTour">
+            \fn void finirTour()
+            
+            \brief Finit le tour du joueur courant en comptant ses points
+            et passe au joueur suivant.
+        </member>
         <member name="P:CS_SmallWorld.Partie.Joueurs">
             \fn property Joueurs (lecture seule)
             
             \brief La liste des joueurs de la partie.
+            
+        </member>
+        <member name="P:CS_SmallWorld.Partie.JoueurCourant">
+            \fn property JoueurCourant (lecture-écriture)
+            
+            \brief Le joueur à qui c'est le tour de jouer.
             
         </member>
         <member name="P:CS_SmallWorld.Partie.Plateau">
@@ -260,10 +264,11 @@
             \brief Le plateau sur lequel se déroule la partie.
             
         </member>
-        <member name="M:CS_SmallWorld.PartieConcret.#ctor(System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32})">
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:CS_SmallWorld.PartieConcret.#ctor(System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32})" -->
+        <member name="P:CS_SmallWorld.PartieConcret.Joueurs">
             cf interface 
         </member>
-        <member name="P:CS_SmallWorld.PartieConcret.Joueurs">
+        <member name="P:CS_SmallWorld.PartieConcret.JoueurCourant">
             cf interface 
         </member>
         <member name="P:CS_SmallWorld.PartieConcret.Plateau">
@@ -502,10 +507,13 @@
             
             \return true si l'Unite en paramètre appartient au même joueur, faux sinon.
         </member>
-        <member name="M:CS_SmallWorld.Unite.deplacer(CS_SmallWorld.BonusCase)">
-            \fn void deplacer(BonusCase c)
+        <member name="M:CS_SmallWorld.Unite.utiliserUnite(CS_SmallWorld.BonusCase)">
+            \fn void utiliserUnite(BonusCase c)
             
-            \brief Deplace l'Unite vers la Case passée en paramètre.
+            \brief Déplace l'Unite vers la Case passée en paramètre.
+            Si la case cible est occupée par un ennemi, lance un combat.
+            Déplace l'Unite si elle est victorieuse et s'il ne reste plus
+            d'ennemi sur la case cible.
             
             \param[in] Case c la case cible du déplacement
         </member>
@@ -573,21 +581,21 @@
         <member name="F:CS_SmallWorld.UniteAbstrait._caseCourante">
             La Case sur laquelle se situe l'Unite actuellement 
         </member>
-        <member name="M:CS_SmallWorld.UniteAbstrait.avantageTerrain">
-            \fn bool avantageTerrain()
-            
-            \brief Vérifie si l'Unite est sur une case qui l'avantage.
-            
-            \return true si l'Unite est sur une case qui l'avantage, faux sinon
-        </member>
         <member name="M:CS_SmallWorld.UniteAbstrait.estAmie(CS_SmallWorld.Unite)">
             cf interface 
         </member>
-        <member name="M:CS_SmallWorld.UniteAbstrait.deplacer(CS_SmallWorld.BonusCase)">
+        <member name="M:CS_SmallWorld.UniteAbstrait.utiliserUnite(CS_SmallWorld.BonusCase)">
             cf interface 
         </member>
-        <member name="M:CS_SmallWorld.UniteAbstrait.attaquer(CS_SmallWorld.Position)">
-            \fn void attaquer(Position cAtq)
+        <member name="M:CS_SmallWorld.UniteAbstrait.deplacer(CS_SmallWorld.BonusCase)">
+            \fn void deplacer(BonusCase c)
+            
+            \brief Déplace l'Unite sur la case passée en paramètre.
+            
+            \param[in] BonusCase c la case cible
+        </member>
+        <member name="M:CS_SmallWorld.UniteAbstrait.attaquer(CS_SmallWorld.BonusCase)">
+            \fn void attaquer(BonusCase cAtq)
             
             \brief Verifie si une case est attaquable ou non, c'est-à-dire si elle est voisine
             et si elle appartient à l'adversaire. Sinon, se déplacer dessus ou ne indiquer case trop loin.

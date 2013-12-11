@@ -14,3 +14,11 @@ D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\wrapperL
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\wrapperLibSmallWorld.pdb
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.dll
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.pdb
+C:\Users\fdubar\Desktop\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.csprojResolveAssemblyReference.cache
+C:\Users\fdubar\Desktop\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.XML
+C:\Users\fdubar\Desktop\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.dll
+C:\Users\fdubar\Desktop\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\CS_SmallWorld.pdb
+C:\Users\fdubar\Desktop\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\wrapperLibSmallWorld.dll
+C:\Users\fdubar\Desktop\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\bin\Debug\wrapperLibSmallWorld.pdb
+C:\Users\fdubar\Desktop\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.dll
+C:\Users\fdubar\Desktop\4INFO_SmallWorld\CS_SmallWorld\ProjetSmallWorld\obj\Debug\CS_SmallWorld.pdb

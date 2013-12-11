@@ -19,7 +19,7 @@ namespace CS_SmallWorld
           * 
           * \return true si l'attaquant a gagner ce combat
           */
-        int lancerCombat(Unite uniteAttaque, Case caseDef);
+        int lancerCombat(Unite uniteAttaque, BonusCase caseDef);
     }
 
 }

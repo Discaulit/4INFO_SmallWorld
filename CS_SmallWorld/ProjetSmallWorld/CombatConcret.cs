@@ -41,7 +41,7 @@ namespace CS_SmallWorld
          * 
          * \return 1 si l'attaquant gagne, 0 si match nul, -1 si l'attaquant meurt
          */
-        public int lancerCombat(Unite uniteAttaque, Case caseDef)
+        public int lancerCombat(Unite uniteAttaque, BonusCase caseDef)
         {
             Unite uniteDef = caseDef.getMeilleureUnite();
             List<int> resCombat = _wrapper.combatResult(uniteAttaque.PV, uniteDef.PV,1,2,5);
