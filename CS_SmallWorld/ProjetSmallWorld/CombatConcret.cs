@@ -11,23 +11,38 @@ namespace CS_SmallWorld
      * 
      * \brief implémente Combat
      */
-    public class CombatConcret : Combat
+    public sealed class CombatConcret : Combat
     {
         WrapperLibsSmallWorld _wrapper;
 
-        private static bool _instance;
-        
+        private static readonly CombatConcret _instance = new CombatConcret();
+
         /**
          * \fn Constructeur de la classe
          */
-        public CombatConcret(WrapperLibsSmallWorld wrapper)
+        private CombatConcret() { _wrapper = null; /* initialisé via la fonction mettreWrapper(w)*/ }
+
+        /**
+         * \fn property le singleton Combat
+         */
+        public static CombatConcret Instance
         {
-            if (!_instance)
+            get
             {
-                _instance = true;
-                _wrapper = wrapper;
+                return _instance;
             }
-            //TODO : améliorer ce "singleton"
+        }
+
+        /**
+         * \fn mettreWrapper(WrapperLibsSmallWorld w)
+         * 
+         * \brief Permet de donner le wrapper au singleton
+         * 
+         * \param[in] WrapperLibsSmallWorld w le wrapper à indiquer
+         */
+        public void mettreWrapper(WrapperLibsSmallWorld w)
+        {
+            _wrapper = w;
         }
 
         /**
@@ -41,21 +56,12 @@ namespace CS_SmallWorld
          * 
          * \return 1 si l'attaquant gagne, 0 si match nul, -1 si l'attaquant meurt
          */
-        public int lancerCombat(Unite uniteAttaque, BonusCase caseDef)
+        public void lancerCombat(Unite uniteAttaque, BonusCase caseDef)
         {
             Unite uniteDef = caseDef.getMeilleureUnite();
-            List<int> resCombat = _wrapper.combatResult(uniteAttaque.PV, uniteDef.PV,1,2,5);
+            List<int> resCombat = _wrapper.combatResult(uniteAttaque.PV, uniteDef.PV, 3, 2, 5);
             uniteAttaque.PV = resCombat[0];
             uniteDef.PV = resCombat[1];
-            if (uniteAttaque.PV > 0)
-            {
-                if (uniteDef.PV > 0)
-                    return 0; //Atq vivant, Def vivant = match null
-                else
-                    return 1; // Atq vivant, Def mort = victoire attaquant
-            }
-            else
-                return -1; // Atq mort = victoire def
         }
     }
 }

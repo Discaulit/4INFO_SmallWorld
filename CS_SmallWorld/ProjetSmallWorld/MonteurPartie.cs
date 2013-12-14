@@ -49,6 +49,6 @@ namespace CS_SmallWorld
          * 
          * \return Combat le singleton gérant les combats
          */
-        Combat singletonCombat();
+        CombatConcret singletonCombat();
     }
 }

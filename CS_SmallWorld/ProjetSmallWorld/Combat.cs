@@ -11,7 +11,7 @@ namespace CS_SmallWorld
     * \brief La classe gérant les combats
     */
     public interface Combat
-    {        
+    {
          /**
           * \fn bool lancerCombat(Unite uniteAttaque, Case caseDef)
           * 
@@ -19,7 +19,7 @@ namespace CS_SmallWorld
           * 
           * \return true si l'attaquant a gagner ce combat
           */
-        int lancerCombat(Unite uniteAttaque, BonusCase caseDef);
+        void lancerCombat(Unite uniteAttaque, BonusCase caseDef);
     }
 
 }

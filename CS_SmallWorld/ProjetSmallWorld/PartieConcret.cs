@@ -17,7 +17,7 @@ namespace CS_SmallWorld
         private int _numJoueurCourant;
         Plateau _plateau;
         MonteurPartie _monteur;
-        Combat _singletonCombat;
+        public static CombatConcret _singletonCombat;
         private int _nbJoueurs;
 
         /**

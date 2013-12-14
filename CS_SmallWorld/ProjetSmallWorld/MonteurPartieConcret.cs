@@ -69,9 +69,11 @@ namespace CS_SmallWorld
         }
 
         /** cf interface */
-        public Combat singletonCombat()
+        public CombatConcret singletonCombat()
         {
-            return new CombatConcret(_wrapper);
+            CombatConcret cc = CombatConcret.Instance;
+            cc.mettreWrapper(_wrapper);
+            return cc;
         }
     }
 }

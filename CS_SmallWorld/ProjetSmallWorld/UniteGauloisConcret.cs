@@ -34,5 +34,13 @@ namespace CS_SmallWorld
             else
                 return 0;
         }
+
+        protected override bool deplacementPeuple(BonusCase caseCible)
+        {
+            // Un Gaulois peut se déplacer deux cases plus loin s'il est sur une case Plaine et que c'est
+            // son premier déplacement, 1 case sinon.
+            return ((_caseCourante is CasePlaine) && (_caseCourante.distance(caseCible) < 3) && (_ptsDeplacement < 1)
+                || _caseCourante.distance(caseCible) < 2);
+        }
     }
 }

@@ -14,6 +14,19 @@ namespace CS_SmallWorld
         /** Liste des unités présentes sur cette case. */
         protected List<Unite> _unitePresente;
 
+        protected Position _position;
+
+        public TypeCase TCase
+        {
+            get { return _tcase; }
+        }
+
+        public Position Position
+        {
+            set { _position = value; }
+            get { return _position; }
+        }
+
         /** cf interface */
         public Unite getMeilleureUnite()
         {
@@ -46,9 +59,9 @@ namespace CS_SmallWorld
                     + "elle ne fait pas partie des unités présentent sur cette case.");
         }
 
-        public TypeCase TCase
+        public int distance(BonusCase c)
         {
-            get { return _tcase; } 
+            return (Math.Abs(this.Position.X - c.Position.X) + Math.Abs(this.Position.Y - c.Position.Y));
         }
     }
 }

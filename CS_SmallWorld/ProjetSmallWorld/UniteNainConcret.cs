@@ -30,5 +30,13 @@ namespace CS_SmallWorld
             else
                 return 0;
         }
+
+        protected override bool deplacementPeuple(BonusCase caseCible)
+        {
+            // Un nain est capable de se déplacer sur n'importe quelle caseMontagne
+            //si est déjà sur une CaseMontagne
+            return ((_caseCourante.distance(caseCible) < 2) ||
+                (caseCible is CaseMontagne) && (_caseCourante is CaseMontagne));
+        }
     }
 }

@@ -30,5 +30,11 @@ namespace CS_SmallWorld
             else
                 return 0;
         }
+
+        protected override bool deplacementPeuple(BonusCase caseCible)
+        {
+            //la partie propre aux Viking est déjà traitée dans UniteAbstraite (cf CaseEau).
+            return (_caseCourante.distance(caseCible) <2);
+        }
     }
 }
