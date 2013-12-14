@@ -46,6 +46,17 @@ namespace CS_SmallWorld
         }
 
         /**
+         * \fn property Troupes (lecture seule)
+         * 
+         * \brief Les troupes du joueur.
+         * 
+         */
+        List<Unite> Troupes
+        {
+            get;
+        }
+
+        /**
          * \fn void ajouteUneUnite(Unite u)
          * 
          * \brief Ajoute une Unite aux troupes du joueur.

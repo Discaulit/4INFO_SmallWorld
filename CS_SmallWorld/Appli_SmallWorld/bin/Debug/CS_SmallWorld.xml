@@ -411,6 +411,12 @@
             \brief Les points accumulés par le joueur.
             
         </member>
+        <member name="P:CS_SmallWorld.Joueur.Troupes">
+            \fn property Troupes (lecture seule)
+            
+            \brief Les troupes du joueur.
+            
+        </member>
         <member name="T:CS_SmallWorld.JoueurConcret">
             \class JoueurConcret
             

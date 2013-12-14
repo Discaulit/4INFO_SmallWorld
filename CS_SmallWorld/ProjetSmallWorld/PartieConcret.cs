@@ -50,7 +50,7 @@ namespace CS_SmallWorld
         {
              get
             {
-                throw new NotImplementedException();
+                return _joueurs;
             }
         }
 

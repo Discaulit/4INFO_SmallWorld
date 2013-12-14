@@ -48,6 +48,11 @@ namespace CS_SmallWorld
             get { return _peuple; }
         }
 
+        public List<Unite> Troupes
+        {
+            get { return _troupes; }
+        }
+
         /** cf interface */
         public void ajouterUneUnite(Unite u)
         {

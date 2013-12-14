@@ -29,6 +29,7 @@ namespace Appli_SmallWorld
             InitializeComponent();
             System.Collections.Generic.Dictionary<String, int> players = new System.Collections.Generic.Dictionary<String, int>();
 
+
             players.Add("Tom", 1);
             players.Add("Fab", 2);
             _partie = new PartieConcret(25, players);
@@ -54,6 +55,23 @@ namespace Appli_SmallWorld
                     plateauGrid.Children.Add(element);
                 }
             }
+
+
+            // Affichage des noms des joueurs :
+            labelJ1.Content = _partie.Joueurs.ElementAt(0).Name;
+            scoreJ1.Content = 0;
+            labelJ2.Content = _partie.Joueurs.ElementAt(1).Name;
+            scoreJ2.Content = 0;
+
+            foreach (JoueurConcret j in _partie.Joueurs)
+            {
+            
+                foreach (Unite u in j.Troupes)
+                {
+                    var element = placerUnite(u.CaseCourante.Position.X, u.CaseCourante.Position.Y, j.Peuple);
+                    plateauGrid.Children.Add(element);
+                }
+            }
             //updateUnitUI();
         }
 
@@ -69,7 +87,7 @@ namespace Appli_SmallWorld
             if (bonusCase.TCase is CasePlaine)
                 rectangle.Fill = Brushes.LightGreen;
             if (bonusCase.TCase is CaseDesert)
-                rectangle.Fill = Brushes.Yellow;
+                rectangle.Fill = Brushes.DarkGoldenrod;
             // mise à jour des attributs (column et Row) référencant la position dans la grille à rectangle
             Grid.SetColumn(rectangle, c);
             Grid.SetRow(rectangle, l);
@@ -83,7 +101,22 @@ namespace Appli_SmallWorld
             return rectangle;
         }
 
+        private Ellipse placerUnite(int c, int l, Peuple peuple)
+        {
+            var ellipseUnite = new Ellipse();
+            if (peuple is PeupleGauloisConcret)
+                     ellipseUnite.Fill = Brushes.Blue;
+            else if (peuple is PeupleNainConcret)
+                    ellipseUnite.Fill = Brushes.Red;
+            else if (peuple is PeupleVikingConcret)
+                    ellipseUnite.Fill = Brushes.Yellow;
+            ellipseUnite.Visibility = System.Windows.Visibility.Collapsed;
+            Grid.SetColumn(ellipseUnite, c);
+            Grid.SetRow(ellipseUnite, l);
 
+            ellipseUnite.Tag = _plateau.getCaseAt(new Position(c,l));
+            return ellipseUnite;
+        }
     }
 
 
