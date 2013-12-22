@@ -56,20 +56,18 @@ namespace Appli_SmallWorld
                 }
             }
 
-
             // Affichage des noms des joueurs :
-            labelJ1.Content = _partie.Joueurs.ElementAt(0).Name;
+            //labelJ1.Content = _partie.Joueurs.ElementAt(0).Name + " " + _partie.Joueurs.ElementAt(0).Troupes.ElementAt(0).CaseCourante.Position;
             scoreJ1.Content = 0;
             labelJ2.Content = _partie.Joueurs.ElementAt(1).Name;
             scoreJ2.Content = 0;
 
             foreach (JoueurConcret j in _partie.Joueurs)
             {
-            
                 foreach (Unite u in j.Troupes)
+                for (int i=0;i<5;i++)
                 {
-                    var element = placerUnite(u.CaseCourante.Position.X, u.CaseCourante.Position.Y, j.Peuple);
-                    plateauGrid.Children.Add(element);
+                    placerUnite(u.CaseCourante.Position.X, u.CaseCourante.Position.Y, j.Peuple);
                 }
             }
             //updateUnitUI();
@@ -97,7 +95,7 @@ namespace Appli_SmallWorld
             rectangle.StrokeThickness = 0.5;
             // enregistrement d'un écouteur d'evt sur le rectangle : 
             // source = rectangle / evt = MouseLeftButtonDown / délégué = rectangle_MouseLeftButtonDown
-            //rectangle.MouseLeftButtonDown += new MouseButtonEventHandler(rectangle_MouseLeftButtonDown);
+            rectangle.MouseLeftButtonDown += new MouseButtonEventHandler(rectangle_MouseLeftButtonDown);
             return rectangle;
         }
 
@@ -110,12 +108,55 @@ namespace Appli_SmallWorld
                     ellipseUnite.Fill = Brushes.Red;
             else if (peuple is PeupleVikingConcret)
                     ellipseUnite.Fill = Brushes.Yellow;
-            ellipseUnite.Visibility = System.Windows.Visibility.Collapsed;
+            ellipseUnite.Height = 25;
+            ellipseUnite.Width = 25;
             Grid.SetColumn(ellipseUnite, c);
             Grid.SetRow(ellipseUnite, l);
 
             ellipseUnite.Tag = _plateau.getCaseAt(new Position(c,l));
+            plateauGrid.Children.Add(ellipseUnite);
+
+            ellipseUnite.MouseLeftButtonDown += new MouseButtonEventHandler(ellipseUnite_MouseLeftButtonDown);
             return ellipseUnite;
+        }
+
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            //Cette fonction est appelée AVANT celle sur le rectangle donc
+            //permet d'enlever le focus sur l'ancienne caseAnalysee avant
+            //de le mettre via l'handler sur rectangle sur la nouvelle
+            caseAnalysee.Tag = null;
+            caseAnalysee.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
+        void rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var rectangle = sender as Rectangle;
+            var bonusCase = rectangle.Tag as BonusCase;
+
+            int c = Grid.GetColumn(rectangle);
+            int r = Grid.GetRow(rectangle);
+
+            Grid.SetColumn(caseAnalysee, c);
+            Grid.SetRow(caseAnalysee, r);
+
+            caseAnalysee.Tag = bonusCase;
+            caseAnalysee.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        void ellipse_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            //var ellipse = sender as Rectangle;
+            //var bonusCase = ellipse.Tag as BonusCase;
+
+            //int c = Grid.GetColumn(ellipse);
+            //int r = Grid.GetRow(ellipse);
+
+            //Grid.SetColumn(caseAnalysee, c);
+            //Grid.SetRow(caseAnalysee, r);
+
+            //caseAnalysee.Tag = bonusCase;
+            //caseAnalysee.Visibility = System.Windows.Visibility.Visible;
         }
     }
 

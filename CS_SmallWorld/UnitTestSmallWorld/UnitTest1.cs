@@ -47,7 +47,7 @@ namespace UnitTestSmallWorld
         {
             int taille = 5;
             WrapperLibsSmallWorld wrapper = new WrapperLibsSmallWorld(taille);
-            Combat combat = new CombatConcret(wrapper);
+            Combat combat = PartieConcret._singletonCombat;
             bool[] resDuCombat =  { false, false, false };
             bool resFinal = false;
             int uniteAttaque, uniteDef;

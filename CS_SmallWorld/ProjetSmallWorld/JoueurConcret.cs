@@ -25,8 +25,8 @@ namespace CS_SmallWorld
             _name = name;
             _score = 0;
             _troupes = new List<Unite>();
-            _peuple = donnerPeuple(peuple, startCase);         
             _nbUniteRestantes = nbUnite;
+            _peuple = donnerPeuple(peuple, startCase);
 
         }
 

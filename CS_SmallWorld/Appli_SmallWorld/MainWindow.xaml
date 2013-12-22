@@ -1,13 +1,13 @@
 ﻿<Window x:Class="Appli_SmallWorld.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Loaded="Window_Loaded" WindowState="Normal">
+        Title="MainWindow" Loaded="Window_Loaded" WindowState="Normal" MouseLeftButtonDown="Window_MouseLeftButtonDown">
 
     <Window.Resources>
-        <Style TargetType="Ellipse" x:Key="uniteStd" >
-            <Setter Property="Width" Value="25"/>
-            <Setter Property="Height" Value="25"/>
-            <Setter Property="Fill" Value="Black"/>
+        <Style TargetType="Rectangle" x:Key="styleCaseSelect" >
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Stroke" Value="Red"/>
             <Setter Property="StrokeThickness" Value="1"/>
             <Setter Property="Panel.ZIndex" Value="333"/>
             <!-- pour avoir un affichage au premier plan -->
@@ -15,16 +15,31 @@
             <!-- visibilité par défaut = cachée -->
         </Style>
     </Window.Resources>
-    
+
     <DockPanel Name="dockMainWindow">
-        <StackPanel Name="scores" DockPanel.Dock="Left">
-            <Label Name="labelJ1"/>
-            <Label Name="scoreJ1"/>
-            <Label Name="labelJ2"/>
-            <Label Name="scoreJ2"/>
+        <StackPanel Name="bandeauG" DockPanel.Dock="Left">
+            <StackPanel Name="Score" DockPanel.Dock ="Top">
+                <Label Name="labelJ1"/>
+                <Label Name="scoreJ1"/>
+                <Label Name="labelJ2"/>
+                <Label Name="scoreJ2"/>
+            </StackPanel>
+            <StackPanel Name="ContenuCaseAnalysee" DockPanel.Dock ="Bottom">
+                <StackPanel Name="PositionCase" Orientation="Horizontal">
+                    <Label Name="posCaseX" Content="{Binding (Grid.Row), ElementName=caseAnalysee}"/>
+                    <Label Name="posCaseY" Content="{Binding (Grid.Column), ElementName=caseAnalysee}"/>
+                </StackPanel>
+                <StackPanel Name="DansCase" DataContext="{Binding Tag, ElementName=caseAnalysee}">
+                    <Label Name="typeCase" Content="{Binding TCase}"/>
+                    <Label Name="occupeePar" Content="{Binding getMeilleureUnite()}"/>
+                    <Label Name="MeilleureUnite"/>
+                    <Label Name="ptsGeneres"/>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-        <Grid Name="plateauGrid">
+            <Grid Name="plateauGrid">
+                <Rectangle Name="caseAnalysee" Style="{StaticResource styleCaseSelect}"/>
                 <!--<Ellipse Fill="White" Width="10" Height="10" Name="unitEllipse" Panel.ZIndex="444" IsHitTestVisible="False" />-->
             </Grid>
         </ScrollViewer>

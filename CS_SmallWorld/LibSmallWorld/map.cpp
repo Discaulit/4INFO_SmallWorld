@@ -30,6 +30,7 @@ void Map::typerCase()
 	{
 		int tmp =0;
 		do{
+			// t_montagne = 0, t_plaine, t_desert, t_eau, t_foret
 			tmp = rand() % 5;
 		}while(type[tmp] >= moy);
 		
@@ -50,7 +51,10 @@ int* Map::getPositionsDepart(const int taille)
 		posDepart[3] = rand() % taille; //y2
 
 		//abs(x1-x2) + abs(y1-y2) = distance entre les deux positions
-	}while( (abs(posDepart[0]-posDepart[2]) + abs(posDepart[1]-posDepart[3])) > _taille);
+	}while( (abs(posDepart[0]-posDepart[2]) + abs(posDepart[1]-posDepart[3])) < (_taille*_taille-_taille)
+		// eviter les cases eau
+		&& _matrice[posDepart[0]*_taille + posDepart[1]] == 3
+		&& _matrice[posDepart[2]*_taille + posDepart[3]] == 3);
 
 
 	return posDepart;

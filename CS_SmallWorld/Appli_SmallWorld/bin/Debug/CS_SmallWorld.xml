@@ -60,7 +60,7 @@
         <member name="F:CS_SmallWorld.BonusCaseAbstrait._tcase">
             TypeCase _tcase le type de la case 
         </member>
-        <member name="F:CS_SmallWorld.BonusCaseAbstrait._unitePresente">
+        <member name="F:CS_SmallWorld.BonusCaseAbstrait._unitesPresentes">
             Liste des unités présentes sur cette case. 
         </member>
         <member name="M:CS_SmallWorld.BonusCaseAbstrait.getMeilleureUnite">

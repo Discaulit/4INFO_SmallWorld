@@ -12,7 +12,7 @@ namespace CS_SmallWorld
         protected TypeCase _tcase;
 
         /** Liste des unités présentes sur cette case. */
-        protected List<Unite> _unitePresente;
+        protected List<Unite> _unitesPresentes;
 
         protected Position _position;
 
@@ -32,10 +32,10 @@ namespace CS_SmallWorld
         {
             Unite best = null;
 
-            if (_unitePresente.Count > 0)
+            if (_unitesPresentes.Count > 0)
             {
-                best = _unitePresente.ElementAt(0);
-                foreach (Unite u in _unitePresente)
+                best = _unitesPresentes.ElementAt(0);
+                foreach (Unite u in _unitesPresentes)
                     if (u.PV > best.PV)
                         best = u;
             }
@@ -46,14 +46,14 @@ namespace CS_SmallWorld
         /** cf interface */
         public void positionnerUnite(Unite u)
         {
-            _unitePresente.Add(u);
+            _unitesPresentes.Add(u);
         }
 
         /** cf interface */
         public void enleverUneUnite(Unite u)
         {
-            if (_unitePresente.Contains(u))
-                _unitePresente.Remove(u);
+            if (_unitesPresentes.Contains(u))
+                _unitesPresentes.Remove(u);
             else
                 throw new InvalidOperationException("L'unite passée en paramètre ne peut pas être retirée car "
                     + "elle ne fait pas partie des unités présentent sur cette case.");
