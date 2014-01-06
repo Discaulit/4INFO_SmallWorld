@@ -46,16 +46,6 @@ namespace CS_SmallWorld
         }
 
         /** cf interface */
-        //public Position Position
-        //{
-        //    get { return _position; }
-        //    set
-        //    {
-        //        _position = value;
-        //    }
-        //}
-
-        /** cf interface */
         public int PV
         {
             get { return _ptVie; }
@@ -89,16 +79,23 @@ namespace CS_SmallWorld
         public bool estAmie(Unite u) { return u.Joueur == _joueur; }
 
         /** cf interface */
-        public void utiliserUnite(BonusCase c)
+        public bool utiliserUnite(BonusCase c)
         {
             if (caseAccessible(c))
             {
                 //se deplacer si la case est alliée ou vide
-                if (estAmie(c.getMeilleureUnite()) || (c.getMeilleureUnite() == null))
+                if ( (c.getMeilleureUnite() == null) || estAmie(c.getMeilleureUnite()))
+                {
                     deplacer(c);
+                    return true;
+                }
                 else //sinon attaquer
-                    attaquer(c);
+                {
+                    return attaquer(c);
+                }
             }
+            else
+                return false;
         }
 
         /**
@@ -123,7 +120,7 @@ namespace CS_SmallWorld
         {
             // test d'abord si c'est une Unite Viking car celle-ci peut aller sur l'eau ;
             // si ce n'est pas une Unite Viking, elle n'a pas le droit.
-            if ((this is UniteViking) || !(caseCible is CaseEau))
+            if ((this is UniteViking) || !(caseCible.TCase is CaseEau))
             {
                 if (_ptsDeplacement > 0)
                 {
@@ -173,17 +170,30 @@ namespace CS_SmallWorld
          * 
          * \param[im] Case cAtq la case attaquée
          */
-        private void attaquer(BonusCase cAtq)
+        private bool attaquer(BonusCase cAtq)
         {
             //TODO: faire le combat
             PartieConcret._singletonCombat.lancerCombat(this, cAtq);
             //action en fonction du résultat du combat :
             if (PV == 0)
+            {
                 detruire();
+                return false;
+            }
             else
-                if (cAtq.getMeilleureUnite() == null)
-                    deplacer(cAtq);
+            {
+                Unite uDef = cAtq.getMeilleureUnite();
+                if (uDef.PV == 0)
+                    uDef.detruire();
 
+                if (cAtq.getMeilleureUnite() == null)
+                {
+                    deplacer(cAtq);
+                    return true;
+                }
+                else
+                    return false;
+            }
         }
 
         /** cf interface */

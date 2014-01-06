@@ -47,11 +47,34 @@ namespace CS_SmallWorld
         }
 
         /**
+         * \fn property NbTourMax (lecture seule)
+         * 
+         * \brief Le nombre de tour de la partie.
+         * 
+         */
+        int NbTourMax
+        {
+            get;
+        }
+
+        /**
+         * \fn property NumTour (lecture-ecriture)
+         * 
+         * \brief Le nombre de tour de la partie.
+         * 
+         */
+        int NumTour
+        {
+            set;
+            get;
+        }
+
+        /**
          * \fn void finirTour()
          * 
          * \brief Finit le tour du joueur courant en comptant ses points
          * et passe au joueur suivant.
          */
-        void finirTour();
+        bool finirTour();
     }
 }

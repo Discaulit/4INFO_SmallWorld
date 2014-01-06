@@ -45,5 +45,10 @@ namespace CS_SmallWorld
             //le calcul ne sera pas trop long ici car il y aura rarement plus de 5 unités sur une case
             return _carteCase[p.X, p.Y].getMeilleureUnite();
         }
+
+        //public IEnumerator<BonusCase> enumerator()
+        //{
+
+        //}
     }
 }

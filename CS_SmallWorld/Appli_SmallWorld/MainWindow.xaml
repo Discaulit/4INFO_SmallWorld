@@ -14,32 +14,74 @@
             <Setter Property="Visibility" Value= "Collapsed"/>
             <!-- visibilité par défaut = cachée -->
         </Style>
+        <Style TargetType="Ellipse" x:Key="styleUniteSelect" >
+            <Setter Property="Width" Value="25"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Stroke" Value="Yellow"/>
+            <Setter Property="StrokeThickness" Value="5"/>
+            <Setter Property="Panel.ZIndex" Value="333"/>
+            <!-- pour avoir un affichage au premier plan -->
+            <Setter Property="Visibility" Value= "Collapsed"/>
+            <!-- visibilité par défaut = cachée -->
+        </Style>
     </Window.Resources>
 
     <DockPanel Name="dockMainWindow">
+        <Ellipse Name="eltPartie" Visibility="Hidden"/>
         <StackPanel Name="bandeauG" DockPanel.Dock="Left">
-            <StackPanel Name="Score" DockPanel.Dock ="Top">
-                <Label Name="labelJ1"/>
+            <StackPanel Name="GestionPartie" DataContext="{Binding Tag, ElementName=eltPartie}">
+                <StackPanel Name="tourJ" Orientation="Vertical">
+                    <Label Name="phTourJ" Content="Joueur Courant : "/>
+                    <Label Name="JCourant" Content="{Binding JoueurCourant}"/>
+                </StackPanel>
+                <StackPanel Name="tourNum" Orientation="Horizontal">
+                    <Label Name="phTourPartie" Content="Tour "/>
+                    <Label Name="tourRestant" Content="{Binding NumTour}"/>
+                    <Label Name="sur" Content="/"/>
+                    <Label Name="tourMax" Content="{Binding NbTourMax}"/> 
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Name="Score" DockPanel.Dock ="Top" DataContext="{Binding Tag, ElementName=eltPartie}">
+                <Label Name="labelJ1" Content="{Binding Joueurs[0].Name}"/>
                 <Label Name="scoreJ1"/>
-                <Label Name="labelJ2"/>
+                <Label Name="labelJ2" Content="{Binding Joueurs[1].Name}"/>
                 <Label Name="scoreJ2"/>
             </StackPanel>
+        </StackPanel>
+        <StackPanel Name="bandeauD" DockPanel.Dock="Right">
             <StackPanel Name="ContenuCaseAnalysee" DockPanel.Dock ="Bottom">
-                <StackPanel Name="PositionCase" Orientation="Horizontal">
-                    <Label Name="posCaseX" Content="{Binding (Grid.Row), ElementName=caseAnalysee}"/>
-                    <Label Name="posCaseY" Content="{Binding (Grid.Column), ElementName=caseAnalysee}"/>
-                </StackPanel>
                 <StackPanel Name="DansCase" DataContext="{Binding Tag, ElementName=caseAnalysee}">
                     <Label Name="typeCase" Content="{Binding TCase}"/>
-                    <Label Name="occupeePar" Content="{Binding getMeilleureUnite()}"/>
-                    <Label Name="MeilleureUnite"/>
-                    <Label Name="ptsGeneres"/>
+                    <Label Name="occupeePar" Content="Case occupée par :"/>
+                    <Label Name="occupant"/>
                 </StackPanel>
             </StackPanel>
+            <StackPanel Name="vueUniteSelect" DataContext="{Binding Tag, ElementName=UniteSelectionnee}">
+                <StackPanel Name="nomJ" Orientation="Horizontal">
+                    <Label Name="nom" Content="Cette unité appartient à :"/>
+                    <Label Name="JoueurUnite" Content="{Binding Joueur.Name}"/>
+                </StackPanel>
+                <StackPanel Name="pvs" Orientation="Horizontal">
+                    <Label Name="pvCourant" Content="PV :"/>
+                    <Label Name="PVRestant" Content="{Binding PV}"/>
+                    <Label Name="pvMax" Content=" /5"/>
+                </StackPanel>
+                <StackPanel Name="dpcmt" Orientation="Horizontal">
+                    <Label Name="dpcmtCourant" Content="Déplacement :"/>
+                    <Label Name="depcmtRestant" Content="{Binding PtsDeplacement}"/>
+                    <Label Name="dpcmtMax" Content=" /2"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Name="gestionPartie" DockPanel.Dock="Bottom" Orientation="Vertical">
+                <Label Name="joueurCourant" Content="{Binding (JoueurCourant).Name,ElementName=eltPartie}"/>
+                <Button Name="FinTour" Content="FinirTour" Click="FinTour_Click"/>
+            </StackPanel>
         </StackPanel>
+
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
             <Grid Name="plateauGrid">
                 <Rectangle Name="caseAnalysee" Style="{StaticResource styleCaseSelect}"/>
+                <Ellipse Name="UniteSelectionnee" Style="{StaticResource styleUniteSelect}"/>
                 <!--<Ellipse Fill="White" Width="10" Height="10" Name="unitEllipse" Panel.ZIndex="444" IsHitTestVisible="False" />-->
             </Grid>
         </ScrollViewer>

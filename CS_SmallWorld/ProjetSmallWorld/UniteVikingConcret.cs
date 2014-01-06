@@ -23,9 +23,9 @@ namespace CS_SmallWorld
 
         protected override int avantageTerrain()
         {
-            if (_caseCourante is CaseEauConcret)
+            if (_caseCourante.TCase is CaseEauConcret)
                 return 1;
-            else if (_caseCourante is CaseDesertConcret)
+            else if (_caseCourante.TCase is CaseDesertConcret)
                 return -1;
             else
                 return 0;

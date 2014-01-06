@@ -19,6 +19,9 @@ namespace CS_SmallWorld
         MonteurPartie _monteur;
         public static CombatConcret _singletonCombat;
         private int _nbJoueurs;
+        private int _nbTourMax;
+        private int _numTour;
+        private int _tousJoueursOntJoue;
 
         /**
          * \fn PartieConcret(int taillePlateau, Dictionary<String,int> players)
@@ -28,6 +31,9 @@ namespace CS_SmallWorld
          */
         public PartieConcret(int taillePlateau, Dictionary<String,int> players)
         {
+            _nbTourMax = taillePlateau;
+            _numTour = 0;
+            _tousJoueursOntJoue = 0;
             _joueurs = new List<Joueur>();
             _monteur = new MonteurPartieConcret(taillePlateau);
             _plateau = _monteur.Plateau;
@@ -72,11 +78,44 @@ namespace CS_SmallWorld
             }
         }
 
-        public void finirTour()
+        /* cf interface */
+        public bool finirTour()
         {
             _joueurCourant.compterScore();
+            foreach (Unite u in _joueurCourant.Troupes)
+                u.PtsDeplacement = 2;
+
             _joueurCourant = _joueurs[++_numJoueurCourant % _nbJoueurs];
+
+            
+
+            if (_numTour++ > _nbTourMax)
+                return false;
+            else
+                return true;
+
         }
 
+        /* cf interface */
+        public int NbTourMax
+        {
+            get
+            {
+                return _nbTourMax;
+            }
+        }
+
+        /* cf interface */
+        public int NumTour
+        {
+            set
+            {
+                _numJoueurCourant = value;
+            }
+            get
+            {
+                return _numJoueurCourant;
+            }
+        }
     }
 }

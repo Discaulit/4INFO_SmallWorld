@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace Appli_SmallWorld
     {
         PartieConcret _partie;
         Plateau _plateau;
+        Unite _uniteSelect;
+        Dictionary<Unite, Ellipse> _troupes;
 
         public MainWindow()
         {
@@ -32,7 +35,10 @@ namespace Appli_SmallWorld
 
             players.Add("Tom", 1);
             players.Add("Fab", 2);
-            _partie = new PartieConcret(25, players);
+            _partie = new PartieConcret(5, players);
+            eltPartie.Tag = _partie; // permet le binding des infos contenues dans la partie
+            _uniteSelect = null;
+            _troupes = new Dictionary<Unite, Ellipse>();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -53,21 +59,16 @@ namespace Appli_SmallWorld
                     var bonusCase = _plateau.getCaseAt(new Position(c, l));
                     var element = createCaseGrid(c, l, bonusCase);
                     plateauGrid.Children.Add(element);
+                    scoreJ1.Content = 0;
+                    scoreJ2.Content = 0;
                 }
             }
-
-            // Affichage des noms des joueurs :
-            //labelJ1.Content = _partie.Joueurs.ElementAt(0).Name + " " + _partie.Joueurs.ElementAt(0).Troupes.ElementAt(0).CaseCourante.Position;
-            scoreJ1.Content = 0;
-            labelJ2.Content = _partie.Joueurs.ElementAt(1).Name;
-            scoreJ2.Content = 0;
 
             foreach (JoueurConcret j in _partie.Joueurs)
             {
                 foreach (Unite u in j.Troupes)
-                for (int i=0;i<5;i++)
                 {
-                    placerUnite(u.CaseCourante.Position.X, u.CaseCourante.Position.Y, j.Peuple);
+                    placerUnite(u, j.Peuple);
                 }
             }
             //updateUnitUI();
@@ -99,8 +100,10 @@ namespace Appli_SmallWorld
             return rectangle;
         }
 
-        private Ellipse placerUnite(int c, int l, Peuple peuple)
+        private Ellipse placerUnite(Unite u,Peuple peuple)
         {
+            int c = u.CaseCourante.Position.X;
+            int l = u.CaseCourante.Position.Y;
             var ellipseUnite = new Ellipse();
             if (peuple is PeupleGauloisConcret)
                      ellipseUnite.Fill = Brushes.Blue;
@@ -113,10 +116,13 @@ namespace Appli_SmallWorld
             Grid.SetColumn(ellipseUnite, c);
             Grid.SetRow(ellipseUnite, l);
 
-            ellipseUnite.Tag = _plateau.getCaseAt(new Position(c,l));
+            ellipseUnite.Tag = u;
             plateauGrid.Children.Add(ellipseUnite);
 
             ellipseUnite.MouseLeftButtonDown += new MouseButtonEventHandler(ellipseUnite_MouseLeftButtonDown);
+            
+            _troupes.Add(u, ellipseUnite);
+            
             return ellipseUnite;
         }
 
@@ -127,6 +133,9 @@ namespace Appli_SmallWorld
             //de le mettre via l'handler sur rectangle sur la nouvelle
             caseAnalysee.Tag = null;
             caseAnalysee.Visibility = System.Windows.Visibility.Collapsed;
+
+            UniteSelectionnee.Tag = null;
+            UniteSelectionnee.Visibility = System.Windows.Visibility.Collapsed;
         }
 
         void rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -141,23 +150,79 @@ namespace Appli_SmallWorld
             Grid.SetRow(caseAnalysee, r);
 
             caseAnalysee.Tag = bonusCase;
-            caseAnalysee.Visibility = System.Windows.Visibility.Visible;
+
+            Unite oqp = bonusCase.getMeilleureUnite();
+            //deplacement d'unite
+            if (_uniteSelect != null)
+            {
+                if (_uniteSelect.utiliserUnite(bonusCase))
+                {
+                    UniteSelectionnee.Visibility = System.Windows.Visibility.Hidden;
+                    Grid.SetColumn(_troupes[_uniteSelect], c);
+                    Grid.SetRow(_troupes[_uniteSelect], r);
+                    Grid.SetColumn(UniteSelectionnee, c);
+                    Grid.SetRow(UniteSelectionnee, r);
+                }
+
+                if (_uniteSelect.PV == 0)
+                {
+                    _troupes[_uniteSelect].Visibility = System.Windows.Visibility.Hidden;
+                    _troupes.Remove(_uniteSelect);
+                }
+
+                if ( (oqp != null) && oqp.PV == 0)
+                {
+                    _troupes[oqp].Visibility = System.Windows.Visibility.Hidden;
+                    _troupes.Remove(oqp);
+                    oqp = null;
+                }
+                _uniteSelect = null; // remise à zéro après utilisation
+            }
+            else
+            {   //analyse de la case s'il n'y a pas d'unite selectionnee
+                caseAnalysee.Visibility = System.Windows.Visibility.Visible;
+
+                if (oqp == null)
+                    occupeePar.Content = "personne";
+                else
+                    occupeePar.Content = oqp.Joueur.Name;
+            }
         }
 
-        void ellipse_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        void ellipseUnite_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            //var ellipse = sender as Rectangle;
-            //var bonusCase = ellipse.Tag as BonusCase;
+            var ellipse = sender as Ellipse;
+            var unite = ellipse.Tag as Unite;
+            if(unite.Joueur == _partie.JoueurCourant)
+                _uniteSelect = unite;
 
-            //int c = Grid.GetColumn(ellipse);
-            //int r = Grid.GetRow(ellipse);
+            //met à jour la surbrillance de l'unité sélectionnée
+            int c = Grid.GetColumn(ellipse);
+            int r = Grid.GetRow(ellipse);
+            Grid.SetColumn(UniteSelectionnee, c);
+            Grid.SetRow(UniteSelectionnee, r);
 
-            //Grid.SetColumn(caseAnalysee, c);
-            //Grid.SetRow(caseAnalysee, r);
-
-            //caseAnalysee.Tag = bonusCase;
-            //caseAnalysee.Visibility = System.Windows.Visibility.Visible;
+            UniteSelectionnee.Tag = unite;
+            UniteSelectionnee.Visibility = System.Windows.Visibility.Visible;
         }
+
+        private void FinTour_MouseLeftButtonUp(object sender, RoutedEventArgs e)
+        {
+            bool continuer = _partie.finirTour();
+            scoreJ1.Content = _partie.Joueurs[0].Score;
+            scoreJ2.Content = _partie.Joueurs[1].Score;
+
+            //if (!continuer)
+                //TODO: finir la partie
+        }
+
+        private void FinTour_Click(object sender, RoutedEventArgs e)
+        {
+            _partie.finirTour();
+            scoreJ1.Content = _partie.Joueurs[0].Score;
+            scoreJ2.Content = _partie.Joueurs[1].Score;
+        }
+
     }
 
 

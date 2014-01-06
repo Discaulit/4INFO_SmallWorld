@@ -23,9 +23,9 @@ namespace CS_SmallWorld
 
         protected override int avantageTerrain()
         {
-            if (_caseCourante is CaseMontagneConcret)
+            if (_caseCourante.TCase is CaseMontagneConcret)
                 return 1;
-            else if (_caseCourante is CasePlaineConcret)
+            else if (_caseCourante.TCase is CasePlaineConcret)
                 return -1;
             else
                 return 0;
@@ -36,7 +36,7 @@ namespace CS_SmallWorld
             // Un nain est capable de se déplacer sur n'importe quelle caseMontagne
             //si est déjà sur une CaseMontagne
             return ((_caseCourante.distance(caseCible) < 2) ||
-                (caseCible is CaseMontagne) && (_caseCourante is CaseMontagne));
+                (caseCible.TCase is CaseMontagne) && (caseCible.getMeilleureUnite() == null) && (_caseCourante.TCase is CaseMontagne));
         }
     }
 }

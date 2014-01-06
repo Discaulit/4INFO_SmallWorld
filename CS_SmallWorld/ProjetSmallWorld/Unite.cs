@@ -77,7 +77,7 @@ namespace CS_SmallWorld
         bool estAmie(Unite u);
 
         /**
-         * \fn void utiliserUnite(BonusCase c)
+         * \fn int utiliserUnite(BonusCase c)
          * 
          * \brief Déplace l'Unite vers la Case passée en paramètre.
          * Si la case cible est occupée par un ennemi, lance un combat.
@@ -85,8 +85,10 @@ namespace CS_SmallWorld
          * d'ennemi sur la case cible.
          * 
          * \param[in] Case c la case cible du déplacement
+         * 
+         * \return true en cas de deplacement, false sinon
          */
-        void utiliserUnite(BonusCase c);
+        bool utiliserUnite(BonusCase c);
 
         /**
          * \fn void detruire()

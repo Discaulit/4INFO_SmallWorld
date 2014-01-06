@@ -279,6 +279,18 @@
             \brief Le plateau sur lequel se déroule la partie.
             
         </member>
+        <member name="P:CS_SmallWorld.Partie.NbTourMax">
+            \fn property NbTourMax (lecture seule)
+            
+            \brief Le nombre de tour de la partie.
+            
+        </member>
+        <member name="P:CS_SmallWorld.Partie.NumTour">
+            \fn property NumTour (lecture-ecriture)
+            
+            \brief Le nombre de tour de la partie.
+            
+        </member>
         <!-- Commentaire XML incorrect ignoré pour le membre "M:CS_SmallWorld.PartieConcret.#ctor(System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32})" -->
         <member name="P:CS_SmallWorld.PartieConcret.Joueurs">
             cf interface 
@@ -529,7 +541,7 @@
             \return true si l'Unite en paramètre appartient au même joueur, faux sinon.
         </member>
         <member name="M:CS_SmallWorld.Unite.utiliserUnite(CS_SmallWorld.BonusCase)">
-            \fn void utiliserUnite(BonusCase c)
+            \fn int utiliserUnite(BonusCase c)
             
             \brief Déplace l'Unite vers la Case passée en paramètre.
             Si la case cible est occupée par un ennemi, lance un combat.
@@ -537,6 +549,8 @@
             d'ennemi sur la case cible.
             
             \param[in] Case c la case cible du déplacement
+            
+            \return true en cas de deplacement, false sinon
         </member>
         <member name="M:CS_SmallWorld.Unite.detruire">
             \fn void detruire()
