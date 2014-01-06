@@ -1,0 +1,13 @@
+﻿<Window x:Class="Appli_SmallWorld.FenetreChoix"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FenetreChoix" Height="300" Width="300">
+    <DockPanel>
+        <StackPanel Name="choixJ1" Orientation="Horizontal">
+            <Label Name="j1" Content="Joueur 1 :"/>
+            <ComboBox Name="p1">
+                <ComboBoxItem Content="Gaulois"/>
+            </ComboBox> 
+        </StackPanel>
+    </DockPanel>
+</Window>

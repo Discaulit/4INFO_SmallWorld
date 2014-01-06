@@ -206,23 +206,21 @@ namespace Appli_SmallWorld
             UniteSelectionnee.Visibility = System.Windows.Visibility.Visible;
         }
 
-        private void FinTour_MouseLeftButtonUp(object sender, RoutedEventArgs e)
+
+        private void FinTour_Click(object sender, RoutedEventArgs e)
         {
             bool continuer = _partie.finirTour();
             scoreJ1.Content = _partie.Joueurs[0].Score;
             scoreJ2.Content = _partie.Joueurs[1].Score;
 
-            //if (!continuer)
-                //TODO: finir la partie
-        }
+            if (!continuer)
+            {
+                Joueur jGagnant = (_partie.Joueurs[0].Score > _partie.Joueurs[1].Score ? _partie.Joueurs[0] : _partie.Joueurs[1]);
+                MessageBox.Show(jGagnant.Name + " a gagné !","Fin de partie !");
+                Close();
 
-        private void FinTour_Click(object sender, RoutedEventArgs e)
-        {
-            _partie.finirTour();
-            scoreJ1.Content = _partie.Joueurs[0].Score;
-            scoreJ2.Content = _partie.Joueurs[1].Score;
+            }
         }
-
     }
 
 

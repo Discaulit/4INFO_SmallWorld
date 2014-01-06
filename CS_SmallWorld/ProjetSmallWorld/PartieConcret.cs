@@ -87,9 +87,10 @@ namespace CS_SmallWorld
 
             _joueurCourant = _joueurs[++_numJoueurCourant % _nbJoueurs];
 
-            
+            if (++_tousJoueursOntJoue % _nbJoueurs == 0)
+                _numTour++;
 
-            if (_numTour++ > _nbTourMax)
+            if (Joueurs[0].Troupes.Count == 0 || Joueurs[1].Troupes.Count == 0 || _numTour > _nbTourMax)
                 return false;
             else
                 return true;

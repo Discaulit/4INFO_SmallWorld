@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Appli_SmallWorld.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Loaded="Window_Loaded" WindowState="Normal" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+        Title="SmallWorld - INSA" Loaded="Window_Loaded" WindowState="Normal" MouseLeftButtonDown="Window_MouseLeftButtonDown">
 
     <Window.Resources>
         <Style TargetType="Rectangle" x:Key="styleCaseSelect" >
