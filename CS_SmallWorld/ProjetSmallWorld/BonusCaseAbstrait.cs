@@ -14,6 +14,8 @@ namespace CS_SmallWorld
         /** Liste des unités présentes sur cette case. */
         protected List<Unite> _unitesPresentes;
 
+        protected List<BonusCase> _voisines;
+
         protected Position _position;
 
         public TypeCase TCase
@@ -25,6 +27,14 @@ namespace CS_SmallWorld
         {
             set { _position = value; }
             get { return _position; }
+        }
+
+        public List<BonusCase> Voisines
+        {
+            get
+            {
+                return _voisines;
+            }
         }
 
         /** cf interface */

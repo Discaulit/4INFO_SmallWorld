@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+//using System.Drawing;
 
 namespace CS_SmallWorld
 {
@@ -12,5 +13,11 @@ namespace CS_SmallWorld
      */
     public interface TypeCase : Case
     {
+        /*Image ImgToTexture
+        {
+            get;
+            set;
+        }
+         */
     }
 }

@@ -67,6 +67,16 @@ namespace CS_SmallWorld
                             break;
                     }
                     _plateau[x, y] = new CaseStandardConcret( tmp, new Position(x,y));
+                    if (x > 0)
+                    {
+                        _plateau[x, y].Voisines.Add(_plateau[x - 1, y]);
+                        _plateau[x - 1, y].Voisines.Add(_plateau[x, y]);
+                    }
+                    if (y > 0)
+                    {
+                        _plateau[x, y].Voisines.Add(_plateau[x, y - 1]);
+                        _plateau[x, y - 1].Voisines.Add(_plateau[x, y]);
+                    }
                 }
             }
         }

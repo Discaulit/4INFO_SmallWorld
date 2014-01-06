@@ -35,7 +35,7 @@ namespace Appli_SmallWorld
 
             players.Add("Tom", 1);
             players.Add("Fab", 2);
-            _partie = new PartieConcret(5, players);
+            _partie = new PartieConcret(10, players);
             eltPartie.Tag = _partie; // permet le binding des infos contenues dans la partie
             _uniteSelect = null;
             _troupes = new Dictionary<Unite, Ellipse>();
@@ -76,17 +76,28 @@ namespace Appli_SmallWorld
 
         private Rectangle createCaseGrid(int c, int l, BonusCase bonusCase)
         {
+            System.Windows.Media.ImageBrush imgMontagne = new ImageBrush();
+            imgMontagne.ImageSource = new BitmapImage(new Uri(@"..\..\Terrain\montagne1.jpg", UriKind.Relative));
+            System.Windows.Media.ImageBrush imgForet = new ImageBrush();
+            imgForet.ImageSource = new BitmapImage(new Uri(@"..\..\Terrain\foret2.jpg", UriKind.Relative));
+            System.Windows.Media.ImageBrush imgEau = new ImageBrush();
+            imgEau.ImageSource = new BitmapImage(new Uri(@"..\..\Terrain\mer1.jpg", UriKind.Relative));
+            System.Windows.Media.ImageBrush imgPlaine = new ImageBrush();
+            imgPlaine.ImageSource = new BitmapImage(new Uri(@"..\..\Terrain\herbe2.jpg", UriKind.Relative));
+            System.Windows.Media.ImageBrush imgDesert = new ImageBrush();
+            imgDesert.ImageSource = new BitmapImage(new Uri(@"..\..\Terrain\desert1.jpg", UriKind.Relative));
+
             var rectangle = new Rectangle();
             if (bonusCase.TCase is CaseMontagne)
-                rectangle.Fill = Brushes.Brown;
+                rectangle.Fill = imgMontagne; //Brushes.Brown;
             if (bonusCase.TCase is CaseForet)
-                rectangle.Fill = Brushes.DarkGreen;
+                rectangle.Fill = imgForet;//Brushes.DarkGreen;
             if (bonusCase.TCase is CaseEau)
-                rectangle.Fill = Brushes.SlateBlue;
+                rectangle.Fill = imgEau; //Brushes.SlateBlue;
             if (bonusCase.TCase is CasePlaine)
-                rectangle.Fill = Brushes.LightGreen;
+                rectangle.Fill = imgPlaine; //Brushes.LightGreen;
             if (bonusCase.TCase is CaseDesert)
-                rectangle.Fill = Brushes.DarkGoldenrod;
+                rectangle.Fill = imgDesert; //Brushes.DarkGoldenrod;
             // mise à jour des attributs (column et Row) référencant la position dans la grille à rectangle
             Grid.SetColumn(rectangle, c);
             Grid.SetRow(rectangle, l);
@@ -216,9 +227,7 @@ namespace Appli_SmallWorld
             if (!continuer)
             {
                 Joueur jGagnant = (_partie.Joueurs[0].Score > _partie.Joueurs[1].Score ? _partie.Joueurs[0] : _partie.Joueurs[1]);
-                MessageBox.Show(jGagnant.Name + " a gagné !","Fin de partie !");
-                Close();
-
+                MessageBox.Show(jGagnant.Name + " a gagné !","Fin de partie !"); 
             }
         }
     }

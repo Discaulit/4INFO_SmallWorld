@@ -32,6 +32,12 @@ namespace CS_SmallWorld
             set;
             get;
         }
+
+        List<BonusCase> Voisines
+        {
+            get;
+        }
+
         //Cette fonction ne sera pas trop longue car il y aura rarement plus de 5 unités sur une même case.
         //Dans le cas où le nombre d'unité grimperait, il serait judicieux de créer un getter d'UnitePresente
         //plus rapide juste pour vérifier si la case est amie ou non.

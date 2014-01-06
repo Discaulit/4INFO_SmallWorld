@@ -9,6 +9,7 @@ namespace CS_SmallWorld
     {
         public CaseStandardConcret(TypeCase tc, Position p)
         {
+            _voisines = new List<BonusCase>();
             _position = p;
             _tcase = tc;
             _unitesPresentes = new List<Unite>();

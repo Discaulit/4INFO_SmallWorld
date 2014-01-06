@@ -23,7 +23,13 @@ namespace CS_SmallWorld
 
         protected override int avantageTerrain()
         {
-            if (_caseCourante.TCase is CaseEauConcret)
+            //Position pc = _caseCourante.Position;
+            bool avantage = false;
+
+            foreach (BonusCase c in _caseCourante.Voisines)
+                avantage |= (c.TCase is CaseEau);
+
+            if (avantage)
                 return 1;
             else if (_caseCourante.TCase is CaseDesertConcret)
                 return -1;
@@ -34,7 +40,8 @@ namespace CS_SmallWorld
         protected override bool deplacementPeuple(BonusCase caseCible)
         {
             //la partie propre aux Viking est déjà traitée dans UniteAbstraite (cf CaseEau).
-            return (_caseCourante.distance(caseCible) <2);
+            return _caseCourante.Voisines.Contains(caseCible);
+                //(_caseCourante.distance(caseCible) <2);
         }
     }
 }

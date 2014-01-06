@@ -38,3 +38,5 @@ D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_Sm
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_SmallWorld.csproj.GenerateResource.Cache
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_SmallWorld.exe
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_SmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\FenetreChoix.baml
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\FenetreChoix.g.cs
