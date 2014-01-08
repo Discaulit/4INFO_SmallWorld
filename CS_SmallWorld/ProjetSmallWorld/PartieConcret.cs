@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel;
 
 namespace CS_SmallWorld
 {
@@ -10,7 +11,7 @@ namespace CS_SmallWorld
      * 
      * \brief implémentation de la classe Partie
      */
-    public class PartieConcret : Partie
+    public class PartieConcret : Partie, INotifyPropertyChanged
     {
         List<Joueur> _joueurs;
         Joueur _joueurCourant;
@@ -67,6 +68,11 @@ namespace CS_SmallWorld
             {
                 return _joueurCourant;
             }
+            set
+            {
+                _joueurCourant = value;
+                RaisePropertyChanged("JoueurCourant");
+            }
         }
 
         /** cf interface */
@@ -85,10 +91,10 @@ namespace CS_SmallWorld
             foreach (Unite u in _joueurCourant.Troupes)
                 u.PtsDeplacement = 2;
 
-            _joueurCourant = _joueurs[++_numJoueurCourant % _nbJoueurs];
+            JoueurCourant = _joueurs[++_numJoueurCourant % _nbJoueurs];
 
             if (++_tousJoueursOntJoue % _nbJoueurs == 0)
-                _numTour++;
+                NumTour++;
 
             if (Joueurs[0].Troupes.Count == 0 || Joueurs[1].Troupes.Count == 0 || _numTour > _nbTourMax)
                 return false;
@@ -111,12 +117,21 @@ namespace CS_SmallWorld
         {
             set
             {
-                _numJoueurCourant = value;
+                _numTour = value;
+                RaisePropertyChanged("NumTour");
             }
             get
             {
-                return _numJoueurCourant;
+                return _numTour;
             }
         }
+
+        private void RaisePropertyChanged(String property)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

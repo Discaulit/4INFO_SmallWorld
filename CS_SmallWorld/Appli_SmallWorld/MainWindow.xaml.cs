@@ -79,7 +79,7 @@ namespace Appli_SmallWorld
             else if (peuple is PeupleNainConcret)
                 ellipseUnite.Fill = Brushes.Red;
             else if (peuple is PeupleVikingConcret)
-                ellipseUnite.Fill = Brushes.Green;
+                ellipseUnite.Fill = Brushes.Brown;
             ellipseUnite.Height = 25;
             ellipseUnite.Width = 25;
             Grid.SetColumn(ellipseUnite, c);
@@ -93,6 +93,14 @@ namespace Appli_SmallWorld
             _troupes.Add(u, ellipseUnite);
 
             return ellipseUnite;
+        }
+
+        private void Dock_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Fin_tour();
+            }
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -152,9 +160,15 @@ namespace Appli_SmallWorld
                 caseAnalysee.Visibility = System.Windows.Visibility.Visible;
 
                 if (oqp == null)
-                    occupeePar.Content = "personne";
+                {
+                    occupant.Content = "personne";
+                    nbrUnitesCase.Content = 0;
+                }
                 else
-                    occupeePar.Content = oqp.Joueur.Name;
+                {
+                    occupant.Content = oqp.Joueur.Name;
+                    nbrUnitesCase.Content = bonusCase.NombreUniteSurCase;
+                }
             }
         }
 
@@ -177,6 +191,11 @@ namespace Appli_SmallWorld
 
 
         private void FinTour_Click(object sender, RoutedEventArgs e)
+        {
+            Fin_tour();
+        }
+
+        private void Fin_tour()
         {
             bool continuer = _partie.finirTour();
             scoreJ1.Content = _partie.Joueurs[0].Score;
@@ -274,6 +293,7 @@ namespace Appli_SmallWorld
                 MessageBox.Show("Veuillez entrer un nom de joueur et choisir un peuple.", "Error");
             }
         }
+
     }
 
 

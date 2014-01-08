@@ -48,8 +48,8 @@
                 <Label x:Name="joueur1PeupleLabel" Content="Peuple joueur 1 :"/>
                 <ComboBox Name="joueur1Peuple" SelectedValuePath="Tag">
                     <ComboBoxItem Content="Gaulois" Tag="1"/>
-                    <ComboBoxItem Content="Viking" Tag="2"/>
-                    <ComboBoxItem Content="Nain" Tag="3"/>
+                    <ComboBoxItem Content="Nain" Tag="2"/>
+                    <ComboBoxItem Content="Viking" Tag="3"/>
                 </ComboBox>
                 <Button x:Name="Joueur2" Content="Suivant" Click="Joueur2_Click"/>
             </StackPanel>
@@ -62,20 +62,20 @@
                 <Label x:Name="joueur2PeupleLabel" Content="Peuple joueur 2 :"/>
                 <ComboBox Name="joueur2Peuple" SelectedValuePath="Tag">
                     <ComboBoxItem Content="Gaulois" Tag="1"/>
-                    <ComboBoxItem Content="Viking" Tag="2"/>
-                    <ComboBoxItem Content="Nain" Tag="3"/>
+                    <ComboBoxItem Content="Nain" Tag="2"/>
+                    <ComboBoxItem Content="Viking" Tag="3"/>
                 </ComboBox>
                 <Button x:Name="CreerPartie" Content="Créer Partie" Click="CreerPartie_Click"/>
             </StackPanel>
         </DockPanel>
 
-        <DockPanel x:Name="dockPartie" Visibility="Collapsed">
+        <DockPanel x:Name="dockPartie" Visibility="Collapsed"  KeyDown="Dock_KeyDown">
             <Ellipse x:Name="eltPartie" Visibility="Hidden"/>
             <StackPanel x:Name="bandeauG" DockPanel.Dock="Left">
                 <StackPanel x:Name="GestionPartie" DataContext="{Binding Tag, ElementName=eltPartie}">
                     <StackPanel x:Name="tourJ" Orientation="Vertical">
                         <Label x:Name="phTourJ" Content="Joueur Courant : "/>
-                        <Label x:Name="JCourant" Content="{Binding JoueurCourant}"/>
+                        <Label x:Name="JCourant" Content="{Binding JoueurCourant.Name}"/>
                     </StackPanel>
                     <StackPanel x:Name="tourNum" Orientation="Horizontal">
                         <Label x:Name="phTourPartie" Content="Tour "/>
@@ -97,6 +97,8 @@
                         <Label x:Name="typeCase" Content="{Binding TCase}"/>
                         <Label x:Name="occupeePar" Content="Case occupée par :"/>
                         <Label x:Name="occupant"/>
+                        <Label x:Name="unitesCase" Content="Nomre d'unités sur la case :"/>
+                        <Label x:Name="nbrUnitesCase"/>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel x:Name="vueUniteSelect" DataContext="{Binding Tag, ElementName=UniteSelectionnee}">

@@ -73,5 +73,13 @@ namespace CS_SmallWorld
         {
             return (Math.Abs(this.Position.X - c.Position.X) + Math.Abs(this.Position.Y - c.Position.Y));
         }
+
+        public int NombreUniteSurCase
+        {
+            get
+            {
+                return _unitesPresentes.Count;
+            }
+        }
     }
 }

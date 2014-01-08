@@ -33,6 +33,7 @@ namespace CS_SmallWorld
         Joueur JoueurCourant
         {
             get;
+            set;
         }
 
         /**
