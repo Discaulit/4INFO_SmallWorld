@@ -222,7 +222,7 @@
             
             \return Combat le singleton gérant les combats
         </member>
-        <!-- Commentaire XML incorrect ignoré pour le membre "P:CS_SmallWorld.MonteurPartie.CasesDepart" -->
+        <!-- Badly formed XML comment ignored for member "P:CS_SmallWorld.MonteurPartie.CasesDepart" -->
         <member name="P:CS_SmallWorld.MonteurPartie.Plateau">
             \fn proterty Plateau Plateau
             
@@ -231,7 +231,7 @@
         <member name="M:CS_SmallWorld.MonteurPartieConcret.#ctor(System.Int32)">
             \fn Constructeur de la casse
         </member>
-        <!-- Commentaire XML incorrect ignoré pour le membre "M:CS_SmallWorld.MonteurPartieConcret.positionsDepart" -->
+        <!-- Badly formed XML comment ignored for member "M:CS_SmallWorld.MonteurPartieConcret.positionsDepart" -->
         <member name="M:CS_SmallWorld.MonteurPartieConcret.creerJoueur(System.String,System.Int32,System.Int32)">
             cf interface 
         </member>
@@ -291,7 +291,7 @@
             \brief Le nombre de tour de la partie.
             
         </member>
-        <!-- Commentaire XML incorrect ignoré pour le membre "M:CS_SmallWorld.PartieConcret.#ctor(System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32})" -->
+        <!-- Badly formed XML comment ignored for member "M:CS_SmallWorld.PartieConcret.#ctor(System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32})" -->
         <member name="P:CS_SmallWorld.PartieConcret.Joueurs">
             cf interface 
         </member>
