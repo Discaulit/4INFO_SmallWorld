@@ -30,48 +30,6 @@ namespace Appli_SmallWorld
         public MainWindow()
         {
             InitializeComponent();
-            System.Collections.Generic.Dictionary<String, int> players = new System.Collections.Generic.Dictionary<String, int>();
-
-
-            players.Add("Tom", 1);
-            players.Add("Fab", 2);
-            _partie = new PartieConcret(10, players);
-            eltPartie.Tag = _partie; // permet le binding des infos contenues dans la partie
-            _uniteSelect = null;
-            _troupes = new Dictionary<Unite, Ellipse>();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            // on initialise la Grid (mapGrid défini dans le xaml) à partir de la map du modèle (engine)
-            _plateau = _partie.Plateau;
-            for (int c = 0; c < _plateau.Taille; c++)
-            {
-                plateauGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(50, GridUnitType.Pixel) });
-            }
-            for (int l = 0; l < _plateau.Taille; l++)
-            {
-                plateauGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(50, GridUnitType.Pixel) });
-                for (int c = 0; c < _plateau.Taille; c++)
-                {
-                    // dans chaque case de la grille on ajoute une tuile (logique) matérialisée par un rectangle (physique)
-                    // le rectangle possède une référence sur sa tuile
-                    var bonusCase = _plateau.getCaseAt(new Position(c, l));
-                    var element = createCaseGrid(c, l, bonusCase);
-                    plateauGrid.Children.Add(element);
-                    scoreJ1.Content = 0;
-                    scoreJ2.Content = 0;
-                }
-            }
-
-            foreach (JoueurConcret j in _partie.Joueurs)
-            {
-                foreach (Unite u in j.Troupes)
-                {
-                    placerUnite(u, j.Peuple);
-                }
-            }
-            //updateUnitUI();
         }
 
         private Rectangle createCaseGrid(int c, int l, BonusCase bonusCase)
@@ -111,17 +69,17 @@ namespace Appli_SmallWorld
             return rectangle;
         }
 
-        private Ellipse placerUnite(Unite u,Peuple peuple)
+        private Ellipse placerUnite(Unite u, Peuple peuple)
         {
             int c = u.CaseCourante.Position.X;
             int l = u.CaseCourante.Position.Y;
             var ellipseUnite = new Ellipse();
             if (peuple is PeupleGauloisConcret)
-                     ellipseUnite.Fill = Brushes.Blue;
+                ellipseUnite.Fill = Brushes.Blue;
             else if (peuple is PeupleNainConcret)
-                    ellipseUnite.Fill = Brushes.Red;
+                ellipseUnite.Fill = Brushes.Red;
             else if (peuple is PeupleVikingConcret)
-                    ellipseUnite.Fill = Brushes.Yellow;
+                ellipseUnite.Fill = Brushes.Green;
             ellipseUnite.Height = 25;
             ellipseUnite.Width = 25;
             Grid.SetColumn(ellipseUnite, c);
@@ -131,9 +89,9 @@ namespace Appli_SmallWorld
             plateauGrid.Children.Add(ellipseUnite);
 
             ellipseUnite.MouseLeftButtonDown += new MouseButtonEventHandler(ellipseUnite_MouseLeftButtonDown);
-            
+
             _troupes.Add(u, ellipseUnite);
-            
+
             return ellipseUnite;
         }
 
@@ -181,7 +139,7 @@ namespace Appli_SmallWorld
                     _troupes.Remove(_uniteSelect);
                 }
 
-                if ( (oqp != null) && oqp.PV == 0)
+                if ((oqp != null) && oqp.PV == 0)
                 {
                     _troupes[oqp].Visibility = System.Windows.Visibility.Hidden;
                     _troupes.Remove(oqp);
@@ -204,7 +162,7 @@ namespace Appli_SmallWorld
         {
             var ellipse = sender as Ellipse;
             var unite = ellipse.Tag as Unite;
-            if(unite.Joueur == _partie.JoueurCourant)
+            if (unite.Joueur == _partie.JoueurCourant)
                 _uniteSelect = unite;
 
             //met à jour la surbrillance de l'unité sélectionnée
@@ -227,7 +185,93 @@ namespace Appli_SmallWorld
             if (!continuer)
             {
                 Joueur jGagnant = (_partie.Joueurs[0].Score > _partie.Joueurs[1].Score ? _partie.Joueurs[0] : _partie.Joueurs[1]);
-                MessageBox.Show(jGagnant.Name + " a gagné !","Fin de partie !"); 
+                MessageBox.Show(jGagnant.Name + " a gagné !", "Fin de partie !");
+            }
+        }
+
+        private void Joueur1_Click(object sender, RoutedEventArgs e)
+        {
+            if (partieTaille.SelectedIndex > -1)
+            {
+                dockInfoPartie.Visibility = System.Windows.Visibility.Collapsed;
+                dockJoueur1.Visibility = System.Windows.Visibility.Visible;
+            }
+            else
+            {
+                MessageBox.Show("Veuillez choisir une taille de partie.", "Error");
+            }
+        }
+
+        private void Joueur2_Click(object sender, RoutedEventArgs e)
+        {
+            if (joueur1Peuple.SelectedIndex > -1 && !String.IsNullOrEmpty(joueur1Name.Text.Trim()))
+            {
+                joueur2Peuple.Items.RemoveAt(joueur1Peuple.Items.IndexOf(joueur1Peuple.SelectedItem));
+                dockJoueur1.Visibility = System.Windows.Visibility.Collapsed;
+                dockJoueur2.Visibility = System.Windows.Visibility.Visible;
+            }
+            else
+            {
+                MessageBox.Show("Veuillez entrer un nom de joueur et choisir un peuple.", "Error");
+            }
+        }
+
+        private void CreerPartie_Click(object sender, RoutedEventArgs e)
+        {
+            if (joueur2Peuple.SelectedIndex > -1 && !String.IsNullOrEmpty(joueur2Name.Text.Trim()))
+            {
+                if (joueur1Name.Text.Trim() == joueur2Name.Text.Trim())
+                {
+                    MessageBox.Show("Ce nom est déjà pris, veuillez en choisir un autre.", "Error");
+                }
+                else
+                {
+                    System.Collections.Generic.Dictionary<String, int> players = new System.Collections.Generic.Dictionary<String, int>();
+                    players.Add(joueur1Name.Text.Trim(), Convert.ToInt32(joueur1Peuple.SelectedValue));
+                    players.Add(joueur2Name.Text.Trim(), Convert.ToInt32(joueur2Peuple.SelectedValue));
+                    _partie = new PartieConcret(Convert.ToInt32(partieTaille.SelectedValue), players);
+                    eltPartie.Tag = _partie; // permet le binding des infos contenues dans la partie
+                    _uniteSelect = null;
+                    _troupes = new Dictionary<Unite, Ellipse>();
+
+                    // on initialise la Grid (mapGrid défini dans le xaml) à partir de la map du modèle (engine)
+                    _plateau = _partie.Plateau;
+                    for (int c = 0; c < _plateau.Taille; c++)
+                    {
+                        plateauGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(50, GridUnitType.Pixel) });
+                    }
+                    for (int l = 0; l < _plateau.Taille; l++)
+                    {
+                        plateauGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(50, GridUnitType.Pixel) });
+                        for (int c = 0; c < _plateau.Taille; c++)
+                        {
+                            // dans chaque case de la grille on ajoute une tuile (logique) matérialisée par un rectangle (physique)
+                            // le rectangle possède une référence sur sa tuile
+                            var bonusCase = _plateau.getCaseAt(new Position(c, l));
+                            var element = createCaseGrid(c, l, bonusCase);
+                            plateauGrid.Children.Add(element);
+                            scoreJ1.Content = 0;
+                            scoreJ2.Content = 0;
+                        }
+                    }
+
+                    foreach (JoueurConcret j in _partie.Joueurs)
+                    {
+                        foreach (Unite u in j.Troupes)
+                        {
+                            placerUnite(u, j.Peuple);
+                        }
+                    }
+                    //updateUnitUI();
+
+                    // on passe à l'interface de partie
+                    dockJoueur2.Visibility = System.Windows.Visibility.Collapsed;
+                    dockPartie.Visibility = System.Windows.Visibility.Visible;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez entrer un nom de joueur et choisir un peuple.", "Error");
             }
         }
     }

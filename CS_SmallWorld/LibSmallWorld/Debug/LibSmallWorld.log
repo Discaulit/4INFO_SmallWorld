@@ -1,9 +1,23 @@
-﻿Build started 07/01/2014 18:56:46.
-     1>Project "C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\LibSmallWorld\LibSmallWorld.vcxproj" on node 2 (Build target(s)).
-     1>Link:
+﻿Build started 08/01/2014 12:54:35.
+     1>Project "C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\LibSmallWorld\LibSmallWorld.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LIBSMALLWORLD_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt apiSmallWorld.cpp calcCombat.cpp map.cpp
+         map.cpp
+     1>c:\users\orhin\documents\visual studio 2012\projects\4info_smallworld\cs_smallworld\libsmallworld\map.cpp(24): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         calcCombat.cpp
+     1>c:\users\orhin\documents\visual studio 2012\projects\4info_smallworld\cs_smallworld\libsmallworld\calccombat.cpp(6): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         apiSmallWorld.cpp
+     1>c:\users\orhin\documents\visual studio 2012\projects\4info_smallworld\cs_smallworld\libsmallworld\apismallworld.h(5): warning C4005: 'LIBSMALLWORLD_EXPORTS' : macro redefinition
+                 command-line arguments :  see previous definition of 'LIBSMALLWORLD_EXPORTS'
+         Generating Code...
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.lib" /MACHINE:X86 /DLL Debug\apiSmallWorld.obj
+         Debug\calcCombat.obj
+         Debug\map.obj
+            Creating library C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.lib and object C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.exp
          LibSmallWorld.vcxproj -> C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Debug\LibSmallWorld.dll
-     1>Done Building Project "C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\LibSmallWorld\LibSmallWorld.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\LibSmallWorld\LibSmallWorld.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.04
+Time Elapsed 00:00:00.50
