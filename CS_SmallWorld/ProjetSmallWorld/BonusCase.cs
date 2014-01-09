@@ -69,10 +69,23 @@ namespace CS_SmallWorld
         void enleverUneUnite(Unite u);
 
         int distance(BonusCase c);
-
-        int NombreUniteSurCase
+        
+        List<Unite> UnitesPresentes
         {
             get;
+            set;
+        }
+
+        int NbrUnitesCase
+        {
+            get;
+            set;
+        }
+
+        bool PointsGeneres
+        {
+            get;
+            set;
         }
     }
 }

@@ -12,7 +12,7 @@ namespace CS_SmallWorld
             _voisines = new List<BonusCase>();
             _position = p;
             _tcase = tc;
-            _unitesPresentes = new List<Unite>();
+            UnitesPresentes = new List<Unite>();
         }
     }
 }

@@ -167,7 +167,7 @@ namespace Appli_SmallWorld
                 else
                 {
                     occupant.Content = oqp.Joueur.Name;
-                    nbrUnitesCase.Content = bonusCase.NombreUniteSurCase;
+                    nbrUnitesCase.Content = bonusCase.UnitesPresentes.Count;
                 }
             }
         }

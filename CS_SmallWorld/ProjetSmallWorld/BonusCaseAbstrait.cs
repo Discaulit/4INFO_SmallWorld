@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel;
 
 namespace CS_SmallWorld
 {
     /**/
-    public class BonusCaseAbstrait : CaseAbstrait, BonusCase
+    public class BonusCaseAbstrait : CaseAbstrait, BonusCase, INotifyPropertyChanged
     {
         /** TypeCase _tcase le type de la case */
         protected TypeCase _tcase;
@@ -17,6 +18,10 @@ namespace CS_SmallWorld
         protected List<BonusCase> _voisines;
 
         protected Position _position;
+
+        protected int _nbrUnitesCase;
+
+        protected bool _pointsGeneres;
 
         public TypeCase TCase
         {
@@ -37,15 +42,52 @@ namespace CS_SmallWorld
             }
         }
 
+        public List<Unite> UnitesPresentes
+        {
+            set 
+            {
+                _unitesPresentes = value;
+                RaisePropertyChanged("NbrUnitesCase");
+            }
+            get 
+            {
+                return _unitesPresentes;
+            }
+        }
+
+        public int NbrUnitesCase
+        {
+            get
+            {
+                return UnitesPresentes.Count;
+            }
+            set
+            {
+                _nbrUnitesCase = value;
+            }
+        }
+
+        public bool PointsGeneres
+        {
+            get
+            {
+                return _pointsGeneres;
+            }
+            set
+            {
+                _pointsGeneres = value;
+            }
+        }
+
         /** cf interface */
         public Unite getMeilleureUnite()
         {
             Unite best = null;
 
-            if (_unitesPresentes.Count > 0)
+            if (UnitesPresentes.Count > 0)
             {
-                best = _unitesPresentes.ElementAt(0);
-                foreach (Unite u in _unitesPresentes)
+                best = UnitesPresentes.ElementAt(0);
+                foreach (Unite u in UnitesPresentes)
                     if (u.PV > best.PV)
                         best = u;
             }
@@ -56,14 +98,14 @@ namespace CS_SmallWorld
         /** cf interface */
         public void positionnerUnite(Unite u)
         {
-            _unitesPresentes.Add(u);
+            UnitesPresentes.Add(u);
         }
 
         /** cf interface */
         public void enleverUneUnite(Unite u)
         {
-            if (_unitesPresentes.Contains(u))
-                _unitesPresentes.Remove(u);
+            if (UnitesPresentes.Contains(u))
+                UnitesPresentes.Remove(u);
             else
                 throw new InvalidOperationException("L'unite passée en paramètre ne peut pas être retirée car "
                     + "elle ne fait pas partie des unités présentent sur cette case.");
@@ -74,12 +116,12 @@ namespace CS_SmallWorld
             return (Math.Abs(this.Position.X - c.Position.X) + Math.Abs(this.Position.Y - c.Position.Y));
         }
 
-        public int NombreUniteSurCase
+        private void RaisePropertyChanged(String property)
         {
-            get
-            {
-                return _unitesPresentes.Count;
-            }
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

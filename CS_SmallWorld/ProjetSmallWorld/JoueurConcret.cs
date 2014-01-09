@@ -105,6 +105,9 @@ namespace CS_SmallWorld
             foreach (Unite u in _troupes)
                 scoreTmp += u.PtsGeneres;
 
+            foreach (Unite u in _troupes)
+                u.CaseCourante.PointsGeneres = false;
+
             _score += scoreTmp;
         }
     }

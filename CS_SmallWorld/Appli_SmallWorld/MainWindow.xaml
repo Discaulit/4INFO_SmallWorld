@@ -86,9 +86,9 @@
                 </StackPanel>
                 <StackPanel x:Name="Score" DockPanel.Dock ="Top" DataContext="{Binding Tag, ElementName=eltPartie}">
                     <Label x:Name="labelJ1" Content="{Binding Joueurs[0].Name}"/>
-                    <Label x:Name="scoreJ1"/>
+                    <Label x:Name="scoreJ1" Content="{Binding Joueurs[0].Score}"/>
                     <Label x:Name="labelJ2" Content="{Binding Joueurs[1].Name}"/>
-                    <Label x:Name="scoreJ2"/>
+                    <Label x:Name="scoreJ2" Content="{Binding Joueurs[1].Score}"/>
                 </StackPanel>
             </StackPanel>
             <StackPanel x:Name="bandeauD" DockPanel.Dock="Right">

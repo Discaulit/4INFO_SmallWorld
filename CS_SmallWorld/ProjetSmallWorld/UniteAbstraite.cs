@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel;
 
 namespace CS_SmallWorld
 {
@@ -10,7 +11,7 @@ namespace CS_SmallWorld
      * 
      * \brief implémente en partie Unite : possède les fonctions et attributs communs à toutes les Unites
      */
-    public abstract class UniteAbstrait : Unite
+    public abstract class UniteAbstrait : Unite, INotifyPropertyChanged
     {
         /**
          * points d'attaque et de défense de l'Unite.
@@ -49,14 +50,22 @@ namespace CS_SmallWorld
         public int PV
         {
             get { return _ptVie; }
-            set { _ptVie = value; }
+            set 
+            { 
+                _ptVie = value;
+                RaisePropertyChanged("PV");
+            }
         }
 
         /** cf interface */
         public int PtsDeplacement
         {
             get { return _ptsDeplacement; }
-            set { _ptsDeplacement = value; }
+            set 
+            {
+                _ptsDeplacement = value;
+                RaisePropertyChanged("PV");
+            }
         }
 
         /** cf interface */
@@ -64,14 +73,20 @@ namespace CS_SmallWorld
         {
             get
             {
-                if (_caseCourante is CaseEauConcret)
-                    return 0; //une case Eau ne donne jamais de points
-                else if (avantageTerrain() == 0) //case standard
-                    return _ptsGenereBase;
-                else if (avantageTerrain() == 1) // avantage
-                    return _ptsGenereBase + _ptsAvantageTerrain;
-                else // desavantage
-                    return _ptsGenereBase - _ptsAvantageTerrain;
+                if (!_caseCourante.PointsGeneres)
+                {
+                    _caseCourante.PointsGeneres = true;
+                    if (_caseCourante is CaseEauConcret)
+                        return 0; //une case Eau ne donne jamais de points
+                    else if (avantageTerrain() == 0) //case standard
+                        return _ptsGenereBase;
+                    else if (avantageTerrain() == 1) // avantage
+                        return _ptsGenereBase + _ptsAvantageTerrain;
+                    else // desavantage
+                        return _ptsGenereBase - _ptsAvantageTerrain;
+                }
+                else
+                    return 0;
             }
         }
 
@@ -157,9 +172,9 @@ namespace CS_SmallWorld
             _caseCourante = c; //changer de case
             _caseCourante.positionnerUnite(this); //se rajouter sur la nouvelle case
             if (this is UniteGaulois && _caseCourante is CasePlaine && _caseCourante.distance(c) == 1)
-                _ptsDeplacement--; // Le Gaulois peut se déplacer 2x s'il est une case Plaine lors de son 1er déplacement
+                PtsDeplacement--; // Le Gaulois peut se déplacer 2x s'il est une case Plaine lors de son 1er déplacement
             else
-                _ptsDeplacement -= 2;
+                PtsDeplacement -= 2;
         }
 
         /**
@@ -204,5 +219,12 @@ namespace CS_SmallWorld
             _caseCourante.enleverUneUnite(this);
         }
 
+        private void RaisePropertyChanged(String property)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
