@@ -40,10 +40,8 @@ D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_Sm
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_SmallWorld.pdb
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\FenetreChoix.baml
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\FenetreChoix.g.cs
-C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Debug\Appli_SmallWorld.exe.config
-C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_SmallWorld.exe
-C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_SmallWorld.pdb
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Debug\LibSmallWorld.dll
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Debug\Appli_SmallWorld.exe.config
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Debug\Appli_SmallWorld.exe
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Debug\Appli_SmallWorld.pdb
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Debug\CS_SmallWorld.dll
@@ -62,3 +60,5 @@ C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWo
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_SmallWorld.g.resources
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_SmallWorld.Properties.Resources.resources
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_SmallWorld.csproj.GenerateResource.Cache
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_SmallWorld.exe
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_SmallWorld.pdb

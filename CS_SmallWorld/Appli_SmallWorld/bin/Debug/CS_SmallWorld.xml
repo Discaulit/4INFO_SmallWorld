@@ -558,6 +558,15 @@
             \brief Tue l'Unite si elle n'a plus de points de vie.
             Il faut donc retirer toutes les références vers cette Unite
         </member>
+        <member name="M:CS_SmallWorld.Unite.caseAccessible(CS_SmallWorld.BonusCase)">
+             \fn void deplacementOk(BonusCase caseCible)
+             
+             \brief Vérifie si l'Unite peut se déplacer sur la case passée en paramètre.
+            
+             \param[in] BonusCase c la case cible
+             
+             \return true si l'Unite est capable de se déplacer à cet endroit, false sinon
+        </member>
         <member name="P:CS_SmallWorld.Unite.Joueur">
             \fn property JoueurConcret Joueur
             

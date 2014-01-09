@@ -103,6 +103,29 @@ namespace Appli_SmallWorld
             }
         }
 
+        private void DeSurbrillanceCasesPossible()
+        {
+            foreach (Shape rt in plateauGrid.Children)
+            {
+                if (rt is Rectangle)
+                {
+                    rt.Opacity = 1;
+                }
+            }
+        }
+
+        private void SurbrillanceCasesPossible(Unite unite)
+        {
+            foreach (Shape rt in plateauGrid.Children)
+            {
+                if (rt is Rectangle && rt.Tag != null)
+                {
+                    if(!unite.caseAccessible((BonusCase)rt.Tag))
+                        rt.Opacity = 0.5;
+                }
+            }
+        }
+
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             //Cette fonction est appelée AVANT celle sur le rectangle donc
@@ -112,6 +135,7 @@ namespace Appli_SmallWorld
             caseAnalysee.Visibility = System.Windows.Visibility.Collapsed;
 
             UniteSelectionnee.Tag = null;
+            DeSurbrillanceCasesPossible();
             UniteSelectionnee.Visibility = System.Windows.Visibility.Collapsed;
         }
 
@@ -154,6 +178,7 @@ namespace Appli_SmallWorld
                     oqp = null;
                 }
                 _uniteSelect = null; // remise à zéro après utilisation
+                DeSurbrillanceCasesPossible();
             }
             else
             {   //analyse de la case s'il n'y a pas d'unite selectionnee
@@ -179,11 +204,16 @@ namespace Appli_SmallWorld
             if (unite.Joueur == _partie.JoueurCourant)
                 _uniteSelect = unite;
 
+            DeSurbrillanceCasesPossible();
+
             //met à jour la surbrillance de l'unité sélectionnée
             int c = Grid.GetColumn(ellipse);
             int r = Grid.GetRow(ellipse);
             Grid.SetColumn(UniteSelectionnee, c);
             Grid.SetRow(UniteSelectionnee, r);
+
+            //surbrillance des cases possibles de déplacement
+            SurbrillanceCasesPossible(unite);
 
             UniteSelectionnee.Tag = unite;
             UniteSelectionnee.Visibility = System.Windows.Visibility.Visible;

@@ -97,5 +97,16 @@ namespace CS_SmallWorld
          * Il faut donc retirer toutes les références vers cette Unite
          */
         void detruire();
+
+        /**
+         * \fn void deplacementOk(BonusCase caseCible)
+         * 
+         * \brief Vérifie si l'Unite peut se déplacer sur la case passée en paramètre.
+         *
+         * \param[in] BonusCase c la case cible
+         * 
+         * \return true si l'Unite est capable de se déplacer à cet endroit, false sinon
+         */
+        bool caseAccessible(BonusCase caseCible);
     }
 }

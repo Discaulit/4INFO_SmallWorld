@@ -131,7 +131,7 @@ namespace CS_SmallWorld
          * 
          * \return true si l'Unite est capable de se déplacer à cet endroit, false sinon
          */
-        protected bool caseAccessible(BonusCase caseCible)
+        public bool caseAccessible(BonusCase caseCible)
         {
             // test d'abord si c'est une Unite Viking car celle-ci peut aller sur l'eau ;
             // si ce n'est pas une Unite Viking, elle n'a pas le droit.
