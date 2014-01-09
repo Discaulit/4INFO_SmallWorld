@@ -25,14 +25,14 @@ namespace Appli_SmallWorld
         PartieConcret _partie;
         Plateau _plateau;
         Unite _uniteSelect;
-        Dictionary<Unite, Ellipse> _troupes;
+        Dictionary<Unite, Grid> _troupes;
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private Rectangle createCaseGrid(int c, int l, BonusCase bonusCase)
+        private Grid createCaseGrid(int c, int l, BonusCase bonusCase)
         {
             System.Windows.Media.ImageBrush imgMontagne = new ImageBrush();
             imgMontagne.ImageSource = new BitmapImage(new Uri(@"..\..\Terrain\montagne1.jpg", UriKind.Relative));
@@ -56,43 +56,73 @@ namespace Appli_SmallWorld
                 rectangle.Fill = imgPlaine; //Brushes.LightGreen;
             if (bonusCase.TCase is CaseDesert)
                 rectangle.Fill = imgDesert; //Brushes.DarkGoldenrod;
-            // mise à jour des attributs (column et Row) référencant la position dans la grille à rectangle
-            Grid.SetColumn(rectangle, c);
-            Grid.SetRow(rectangle, l);
-            rectangle.Tag = bonusCase; // Tag : ref par defaut sur la tuile logique
 
             rectangle.Stroke = Brushes.Black;
             rectangle.StrokeThickness = 0.5;
+
+            var g = new Grid();
             // enregistrement d'un écouteur d'evt sur le rectangle : 
             // source = rectangle / evt = MouseLeftButtonDown / délégué = rectangle_MouseLeftButtonDown
-            rectangle.MouseLeftButtonDown += new MouseButtonEventHandler(rectangle_MouseLeftButtonDown);
-            return rectangle;
+            g.MouseLeftButtonDown += new MouseButtonEventHandler(rectangle_MouseLeftButtonDown);
+
+            // mise à jour des attributs (column et Row) référencant la position dans la grille à rectangle
+            Grid.SetColumn(g, c);
+            Grid.SetRow(g, l);
+            g.Tag = bonusCase; // Tag : ref par defaut sur la tuile logique
+
+            g.Children.Add(rectangle);
+
+            return g;
         }
 
-        private Ellipse placerUnite(Unite u, Peuple peuple)
+        private void placerUnite(Unite u, Peuple peuple)
         {
             int c = u.CaseCourante.Position.X;
             int l = u.CaseCourante.Position.Y;
             var ellipseUnite = new Ellipse();
+            var gridUnite = new Grid();
+
             if (peuple is PeupleGauloisConcret)
-                ellipseUnite.Fill = Brushes.Blue;
+                ellipseUnite.Fill = Brushes.DarkBlue;
             else if (peuple is PeupleNainConcret)
-                ellipseUnite.Fill = Brushes.Red;
+                ellipseUnite.Fill = Brushes.DarkRed;
             else if (peuple is PeupleVikingConcret)
-                ellipseUnite.Fill = Brushes.Brown;
+                ellipseUnite.Fill = Brushes.DarkOrange;
             ellipseUnite.Height = 25;
             ellipseUnite.Width = 25;
-            Grid.SetColumn(ellipseUnite, c);
-            Grid.SetRow(ellipseUnite, l);
 
-            ellipseUnite.Tag = u;
-            plateauGrid.Children.Add(ellipseUnite);
+            gridUnite.Children.Add(ellipseUnite);
+            gridUnite.Tag = u;
 
-            ellipseUnite.MouseLeftButtonDown += new MouseButtonEventHandler(ellipseUnite_MouseLeftButtonDown);
+            var nbrUnite = new TextBlock();
+            nbrUnite.TextAlignment = TextAlignment.Center;
+            nbrUnite.VerticalAlignment = VerticalAlignment.Center;
+            nbrUnite.Foreground = Brushes.White;
+            nbrUnite.FontWeight = FontWeights.UltraBold;
+            nbrUnite.FontSize = 15;
+            nbrUnite.Text = u.CaseCourante.UnitesPresentes.Count.ToString();
+            
+            gridUnite.Children.Add(nbrUnite);
 
-            _troupes.Add(u, ellipseUnite);
+            Grid.SetColumn(gridUnite, c);
+            Grid.SetRow(gridUnite, l);
+            plateauGrid.Children.Add(gridUnite);
 
-            return ellipseUnite;
+            gridUnite.MouseLeftButtonDown += new MouseButtonEventHandler(ellipseUnite_MouseLeftButtonDown);
+
+            _troupes.Add(u, gridUnite);
+        }
+
+        private void RefreshNbrUnite()
+        {
+            foreach (var pair in _troupes)
+            {
+                if (pair.Value.Children[1] is TextBlock)
+                {
+                    TextBlock t = (TextBlock)pair.Value.Children[1];
+                    t.Text = pair.Key.CaseCourante.UnitesPresentes.Count.ToString();
+                }
+            }
         }
 
         private void Dock_KeyDown(object sender, KeyEventArgs e)
@@ -105,23 +135,23 @@ namespace Appli_SmallWorld
 
         private void DeSurbrillanceCasesPossible()
         {
-            foreach (Shape rt in plateauGrid.Children)
+            foreach (Grid g in plateauGrid.Children)
             {
-                if (rt is Rectangle)
+                if (g.Children[0] is Rectangle)
                 {
-                    rt.Opacity = 1;
+                    g.Children[0].Opacity = 1;
                 }
             }
         }
 
         private void SurbrillanceCasesPossible(Unite unite)
         {
-            foreach (Shape rt in plateauGrid.Children)
+            foreach (Grid g in plateauGrid.Children)
             {
-                if (rt is Rectangle && rt.Tag != null)
+                if (g.Children[0] is Rectangle && g.Tag != null)
                 {
-                    if(!unite.caseAccessible((BonusCase)rt.Tag))
-                        rt.Opacity = 0.5;
+                    if (!unite.caseAccessible((BonusCase)g.Tag))
+                        g.Children[0].Opacity = 0.5;
                 }
             }
         }
@@ -134,18 +164,16 @@ namespace Appli_SmallWorld
             caseAnalysee.Tag = null;
             caseAnalysee.Visibility = System.Windows.Visibility.Collapsed;
 
-            UniteSelectionnee.Tag = null;
-            DeSurbrillanceCasesPossible();
-            UniteSelectionnee.Visibility = System.Windows.Visibility.Collapsed;
+            DeselectionUnite();
         }
 
         void rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            var rectangle = sender as Rectangle;
-            var bonusCase = rectangle.Tag as BonusCase;
+            var grid = sender as Grid;
+            var bonusCase = grid.Tag as BonusCase;
 
-            int c = Grid.GetColumn(rectangle);
-            int r = Grid.GetRow(rectangle);
+            int c = Grid.GetColumn(grid);
+            int r = Grid.GetRow(grid);
 
             Grid.SetColumn(caseAnalysee, c);
             Grid.SetRow(caseAnalysee, r);
@@ -177,8 +205,6 @@ namespace Appli_SmallWorld
                     _troupes.Remove(oqp);
                     oqp = null;
                 }
-                _uniteSelect = null; // remise à zéro après utilisation
-                DeSurbrillanceCasesPossible();
             }
             else
             {   //analyse de la case s'il n'y a pas d'unite selectionnee
@@ -195,20 +221,18 @@ namespace Appli_SmallWorld
                     nbrUnitesCase.Content = bonusCase.UnitesPresentes.Count;
                 }
             }
+
+            DeselectionUnite();
+            RefreshNbrUnite();
         }
 
-        void ellipseUnite_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void SelectionUnite(Unite unite, Grid grid)
         {
-            var ellipse = sender as Ellipse;
-            var unite = ellipse.Tag as Unite;
-            if (unite.Joueur == _partie.JoueurCourant)
-                _uniteSelect = unite;
-
             DeSurbrillanceCasesPossible();
 
             //met à jour la surbrillance de l'unité sélectionnée
-            int c = Grid.GetColumn(ellipse);
-            int r = Grid.GetRow(ellipse);
+            int c = Grid.GetColumn(grid);
+            int r = Grid.GetRow(grid);
             Grid.SetColumn(UniteSelectionnee, c);
             Grid.SetRow(UniteSelectionnee, r);
 
@@ -219,6 +243,36 @@ namespace Appli_SmallWorld
             UniteSelectionnee.Visibility = System.Windows.Visibility.Visible;
         }
 
+        private void DeselectionUnite()
+        {
+            DeSurbrillanceCasesPossible();
+
+            _uniteSelect = null;
+            UniteSelectionnee.Tag = null;
+            UniteSelectionnee.Visibility = System.Windows.Visibility.Hidden;
+        }
+
+        void ellipseUnite_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var grid = sender as Grid;
+            var unite = grid.Tag as Unite;
+
+            if (unite == (Unite)UniteSelectionnee.Tag)
+            {
+                DeselectionUnite();
+            }
+            else
+            {
+                SelectionUnite(unite, grid);
+
+                if (unite.Joueur == _partie.JoueurCourant)
+                {
+                    _uniteSelect = unite;
+                }
+            }
+
+        }
+
 
         private void FinTour_Click(object sender, RoutedEventArgs e)
         {
@@ -227,6 +281,7 @@ namespace Appli_SmallWorld
 
         private void Fin_tour()
         {
+            DeselectionUnite();
             bool continuer = _partie.finirTour();
             scoreJ1.Content = _partie.Joueurs[0].Score;
             scoreJ2.Content = _partie.Joueurs[1].Score;
@@ -281,7 +336,7 @@ namespace Appli_SmallWorld
                     _partie = new PartieConcret(Convert.ToInt32(partieTaille.SelectedValue), players);
                     eltPartie.Tag = _partie; // permet le binding des infos contenues dans la partie
                     _uniteSelect = null;
-                    _troupes = new Dictionary<Unite, Ellipse>();
+                    _troupes = new Dictionary<Unite, Grid>();
 
                     // on initialise la Grid (mapGrid défini dans le xaml) à partir de la map du modèle (engine)
                     _plateau = _partie.Plateau;

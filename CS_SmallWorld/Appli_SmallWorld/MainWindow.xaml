@@ -125,9 +125,12 @@
 
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                 <Grid Name="plateauGrid">
-                    <Rectangle Name="caseAnalysee" Style="{StaticResource styleCaseSelect}"/>
-                    <Ellipse Name="UniteSelectionnee" Style="{StaticResource styleUniteSelect}"/>
-                    <!--<Ellipse Fill="White" Width="10" Height="10" Name="unitEllipse" Panel.ZIndex="444" IsHitTestVisible="False" />-->
+                    <Grid Name="caseAnalysee" Panel.ZIndex="333">
+                        <Rectangle Style="{StaticResource styleCaseSelect}"/>
+                    </Grid>
+                    <Grid Name="UniteSelectionnee" Panel.ZIndex="333">
+                        <Ellipse Style="{StaticResource styleUniteSelect}"/>
+                    </Grid>
                 </Grid>
             </ScrollViewer>
         </DockPanel>
