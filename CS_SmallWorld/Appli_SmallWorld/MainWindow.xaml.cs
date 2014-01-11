@@ -26,9 +26,9 @@ namespace Appli_SmallWorld
         Plateau _plateau;
         Unite _uniteSelect;
         Dictionary<Unite, Grid> _troupes;
-        SolidColorBrush _gauloisColor = Brushes.DarkBlue;
-        SolidColorBrush _nainColor = Brushes.DarkRed;
-        SolidColorBrush _vikingColor = Brushes.DarkOrange;
+        SolidColorBrush _gauloisColor = Brushes.DarkOliveGreen;
+        SolidColorBrush _nainColor = Brushes.DarkSlateBlue;
+        SolidColorBrush _vikingColor = Brushes.DarkRed;
 
         public MainWindow()
         {
@@ -36,6 +36,11 @@ namespace Appli_SmallWorld
 
             this.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\background.jpg", UriKind.Relative)));
             zoneDeJeu.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\map_background.png", UriKind.Relative)));
+            tourNum.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\tournum_panel2.png", UriKind.Relative)));
+            scoreJoueur1.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\score_panel.png", UriKind.Relative)));
+            scoreJoueur2.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\score_panel.png", UriKind.Relative)));
+            borderJ1.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\joueur_label2.png", UriKind.Relative)));
+            borderJ2.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\joueur_label1.png", UriKind.Relative)));
         }
 
         private Grid createCaseGrid(int c, int l, BonusCase bonusCase)
@@ -129,6 +134,10 @@ namespace Appli_SmallWorld
                     t.Text = pair.Key.CaseCourante.UnitesPresentes.Count.ToString();
                 }
             }
+
+            unitesJ1_1.Content = _partie.Joueurs[0].Troupes.Count + " unités";
+            unitesJ2_1.Content = _partie.Joueurs[1].Troupes.Count + " unités";
+
         }
 
         private void RefreshColorJoueurCourant()
@@ -310,8 +319,8 @@ namespace Appli_SmallWorld
         {
             DeselectionUnite();
             bool continuer = _partie.finirTour();
-            scoreJ1.Content = _partie.Joueurs[0].Score;
-            scoreJ2.Content = _partie.Joueurs[1].Score;
+            scoreJ1.Content = _partie.Joueurs[0].Score + " points";
+            scoreJ2.Content = _partie.Joueurs[1].Score + " points";
 
             RefreshColorJoueurCourant();
 
@@ -383,8 +392,7 @@ namespace Appli_SmallWorld
                             var bonusCase = _plateau.getCaseAt(new Position(c, l));
                             var element = createCaseGrid(c, l, bonusCase);
                             plateauGrid.Children.Add(element);
-                            scoreJ1.Content = 0;
-                            scoreJ2.Content = 0;
+                            
                         }
                     }
 
@@ -397,9 +405,36 @@ namespace Appli_SmallWorld
                     }
                     //updateUnitUI();
 
+                    scoreJ1.Content = "0 points";
+                    scoreJ2.Content = "0 points";
+
+                    RefreshNbrUnite();
                     RefreshColorJoueurCourant();
                     labelJ1.Foreground = GetColorJoueur(_partie.Joueurs[0]);
                     labelJ2.Foreground = GetColorJoueur(_partie.Joueurs[1]);
+
+                    //marges de la zone de jeu
+                    Double x;
+                    Double y;
+
+                    switch (_plateau.Taille)
+                    {
+                        case 5:
+                            y = 100;
+                            break;
+                        case 10:
+                            y = 125;
+                            break;
+                        case 15:
+                            y = 175;
+                            break;
+                        default:
+                            y = 100;
+                            break;
+                    }
+
+                    x = 1.1 * y + 0.05 * _plateau.Taille * 50;
+                    backgroundMap.Margin = new Thickness(x,y,x,y);
 
                     // on passe à l'interface de partie
                     dockJoueur2.Visibility = System.Windows.Visibility.Collapsed;

@@ -128,28 +128,115 @@
                      Visibility="Hidden" />
             <StackPanel x:Name="bandeauG"
                         DockPanel.Dock="Left">
-                <StackPanel x:Name="tourNum"
-                            Orientation="Horizontal">
+                <StackPanel x:Name="tourNum">
                     <Label x:Name="phTourPartie"
-                           Content="Tour " />
-                    <Label x:Name="tourRestant"
-                           Content="{Binding NumTour}" />
-                    <Label x:Name="sur"
-                           Content="/" />
-                    <Label x:Name="tourMax"
-                           Content="{Binding NbTourMax}" />
+                           Content="Tour "
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="40"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Foreground="Goldenrod"
+                           Margin="50,20,50,0" />
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Margin="50,0,50,20">
+                        <Label x:Name="tourRestant"
+                               Content="{Binding NumTour}"
+                               FontFamily="Old London"
+                               FontWeight="Bold"
+                               FontSize="40"
+                               Foreground="Goldenrod"/>
+                        <Label x:Name="sur"
+                               Content="/"
+                               FontFamily="Old London"
+                               FontWeight="Bold"
+                               FontSize="40"
+                               Foreground="Goldenrod"/>
+                        <Label x:Name="tourMax"
+                               Content="{Binding NbTourMax}"
+                               FontFamily="Old London"
+                               FontWeight="Bold"
+                               FontSize="40"
+                               Foreground="Goldenrod"/>
+                    </StackPanel>
                 </StackPanel>
-                <StackPanel x:Name="scoreJoueur1">
+                <Border x:Name="borderJ1"
+                        Margin="0,30,0,0">
                     <Label x:Name="labelJ1"
-                           Content="{Binding Joueurs[0].Name}" />
+                           Content="{Binding Joueurs[0].Name}"
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="60"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="0,0,0,20" />
+                </Border>
+                <StackPanel x:Name="scoreJoueur1">
                     <Label x:Name="scoreJ1"
-                           Content="{Binding Joueurs[0].Score}" />
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="40"
+                           Foreground="Beige"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="50,3,50,57" />
+                    <Label x:Name="unitesJ1_1"
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="40"
+                           Foreground="Beige"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="50,0,50,0" />
+                    <Label x:Name="unitesJ1_2"
+                           Content="restantes"
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="40"
+                           Foreground="Beige"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="50,0,50,5" />
                 </StackPanel>
-                <StackPanel x:Name="scoreJoueur2">
+                <Border x:Name="borderJ2"
+                        Margin="0,30,0,0">
                     <Label x:Name="labelJ2"
-                           Content="{Binding Joueurs[1].Name}" />
+                           Content="{Binding Joueurs[1].Name}"
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="60"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="0,0,0,20" />
+                </Border>
+                <StackPanel x:Name="scoreJoueur2">
                     <Label x:Name="scoreJ2"
-                           Content="{Binding Joueurs[1].Score}" />
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="40"
+                           Foreground="Beige"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="50,3,50,57" />
+                    <Label x:Name="unitesJ2_1"
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="40"
+                           Foreground="Beige"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="50,0,50,0" />
+                    <Label x:Name="unitesJ2_2"
+                           Content="restantes"
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="40"
+                           Foreground="Beige"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="50,0,50,5" />
                 </StackPanel>
                 <Button x:Name="FinTour"
                         Content="FinirTour"
@@ -190,53 +277,46 @@
                 </StackPanel>
             </StackPanel>
 
-            <Grid Name="zoneDeJeuGrid">
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
+            <StackPanel x:Name="tourJ"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        DockPanel.Dock="Top">
+                <TextBlock x:Name="JCourant"
+                           Text="{Binding JoueurCourant.Name}"
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="60" />
+                <TextBlock x:Name="phTourJ"
+                           Text=" c'est à vous de jouer !"
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="60" />
+            </StackPanel>
 
-                <StackPanel Name="zoneDeJeu"
-                            Grid.Row="1"
-                            Grid.Column="1">
-                    <StackPanel x:Name="tourJ"
-                                Orientation="Horizontal"
-                                HorizontalAlignment="Center"
-                                Margin="100,60,100,20">
-                        <TextBlock x:Name="JCourant"
-                                   Text="{Binding JoueurCourant.Name}"
-                                   FontFamily="Old London"
-                                   FontWeight="Bold"
-                                   FontSize="50" />
-                        <TextBlock x:Name="phTourJ"
-                                   Text=" c'est à vous de jouer !"
-                                   FontFamily="Old London"
-                                   FontWeight="Bold"
-                                   FontSize="50" />
-                    </StackPanel>
-
-                    <ScrollViewer VerticalScrollBarVisibility="Auto"
-                                  HorizontalScrollBarVisibility="Auto" Margin="100,0,100,100">
-                        <Grid Name="plateauGrid">
-                            <Grid Name="caseAnalysee"
-                                  Panel.ZIndex="333">
-                                <Rectangle Style="{StaticResource styleCaseSelect}" />
+            <ScrollViewer VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Auto"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center">
+                <Border Name="zoneDeJeu">
+                <Border Name="backgroundMap">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                                      HorizontalScrollBarVisibility="Auto"
+                                      HorizontalAlignment="Center"
+                                      VerticalAlignment="Center">
+                            <Grid Name="plateauGrid">
+                                <Grid Name="caseAnalysee"
+                                      Panel.ZIndex="333">
+                                    <Rectangle Style="{StaticResource styleCaseSelect}" />
+                                </Grid>
+                                <Grid Name="UniteSelectionnee"
+                                      Panel.ZIndex="333">
+                                    <Ellipse Style="{StaticResource styleUniteSelect}" />
+                                </Grid>
                             </Grid>
-                            <Grid Name="UniteSelectionnee"
-                                  Panel.ZIndex="333">
-                                <Ellipse Style="{StaticResource styleUniteSelect}" />
-                            </Grid>
-                        </Grid>
-                    </ScrollViewer>
-                </StackPanel>
-            </Grid>
-            
+                        </ScrollViewer>
+                </Border>
+                </Border>
+            </ScrollViewer>
         </DockPanel>
     </DockPanel>
 </Window>
