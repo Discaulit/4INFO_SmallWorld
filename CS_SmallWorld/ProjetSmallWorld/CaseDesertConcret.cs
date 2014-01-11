@@ -15,6 +15,7 @@ namespace CS_SmallWorld
     {
         public CaseDesertConcret()
         {
+            Name = "Désert";
         }
     }
 }

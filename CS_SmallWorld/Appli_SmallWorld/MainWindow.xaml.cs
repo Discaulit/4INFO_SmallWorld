@@ -26,24 +26,30 @@ namespace Appli_SmallWorld
         Plateau _plateau;
         Unite _uniteSelect;
         Dictionary<Unite, Grid> _troupes;
+        SolidColorBrush _gauloisColor = Brushes.DarkBlue;
+        SolidColorBrush _nainColor = Brushes.DarkRed;
+        SolidColorBrush _vikingColor = Brushes.DarkOrange;
 
         public MainWindow()
         {
             InitializeComponent();
+
+            this.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\background.jpg", UriKind.Relative)));
+            zoneDeJeu.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\map_background.png", UriKind.Relative)));
         }
 
         private Grid createCaseGrid(int c, int l, BonusCase bonusCase)
         {
             System.Windows.Media.ImageBrush imgMontagne = new ImageBrush();
-            imgMontagne.ImageSource = new BitmapImage(new Uri(@"..\..\Terrain\montagne1.jpg", UriKind.Relative));
+            imgMontagne.ImageSource = new BitmapImage(new Uri(@"..\..\..\ressources\terrain\montagne.jpg", UriKind.Relative));
             System.Windows.Media.ImageBrush imgForet = new ImageBrush();
-            imgForet.ImageSource = new BitmapImage(new Uri(@"..\..\Terrain\foret2.jpg", UriKind.Relative));
+            imgForet.ImageSource = new BitmapImage(new Uri(@"..\..\..\ressources\terrain\foret.jpg", UriKind.Relative));
             System.Windows.Media.ImageBrush imgEau = new ImageBrush();
-            imgEau.ImageSource = new BitmapImage(new Uri(@"..\..\Terrain\mer1.jpg", UriKind.Relative));
+            imgEau.ImageSource = new BitmapImage(new Uri(@"..\..\..\ressources\terrain\eau.jpg", UriKind.Relative));
             System.Windows.Media.ImageBrush imgPlaine = new ImageBrush();
-            imgPlaine.ImageSource = new BitmapImage(new Uri(@"..\..\Terrain\herbe2.jpg", UriKind.Relative));
+            imgPlaine.ImageSource = new BitmapImage(new Uri(@"..\..\..\ressources\terrain\plaine.jpg", UriKind.Relative));
             System.Windows.Media.ImageBrush imgDesert = new ImageBrush();
-            imgDesert.ImageSource = new BitmapImage(new Uri(@"..\..\Terrain\desert1.jpg", UriKind.Relative));
+            imgDesert.ImageSource = new BitmapImage(new Uri(@"..\..\..\ressources\terrain\desert.jpg", UriKind.Relative));
 
             var rectangle = new Rectangle();
             if (bonusCase.TCase is CaseMontagne)
@@ -83,11 +89,11 @@ namespace Appli_SmallWorld
             var gridUnite = new Grid();
 
             if (peuple is PeupleGauloisConcret)
-                ellipseUnite.Fill = Brushes.DarkBlue;
+                ellipseUnite.Fill = _gauloisColor;
             else if (peuple is PeupleNainConcret)
-                ellipseUnite.Fill = Brushes.DarkRed;
+                ellipseUnite.Fill = _nainColor;
             else if (peuple is PeupleVikingConcret)
-                ellipseUnite.Fill = Brushes.DarkOrange;
+                ellipseUnite.Fill = _vikingColor;
             ellipseUnite.Height = 25;
             ellipseUnite.Width = 25;
 
@@ -101,7 +107,7 @@ namespace Appli_SmallWorld
             nbrUnite.FontWeight = FontWeights.UltraBold;
             nbrUnite.FontSize = 15;
             nbrUnite.Text = u.CaseCourante.UnitesPresentes.Count.ToString();
-            
+
             gridUnite.Children.Add(nbrUnite);
 
             Grid.SetColumn(gridUnite, c);
@@ -121,6 +127,30 @@ namespace Appli_SmallWorld
                 {
                     TextBlock t = (TextBlock)pair.Value.Children[1];
                     t.Text = pair.Key.CaseCourante.UnitesPresentes.Count.ToString();
+                }
+            }
+        }
+
+        private void RefreshColorJoueurCourant()
+        {
+            JCourant.Foreground = GetColorJoueur(_partie.JoueurCourant);
+        }
+
+        private SolidColorBrush GetColorJoueur(Joueur j)
+        {
+            if (j.Peuple is PeupleGauloisConcret)
+            {
+                return _gauloisColor;
+            }
+            else
+            {
+                if (j.Peuple is PeupleNainConcret)
+                {
+                    return _nainColor;
+                }
+                else
+                {
+                    return _vikingColor;
                 }
             }
         }
@@ -186,7 +216,6 @@ namespace Appli_SmallWorld
             {
                 if (_uniteSelect.utiliserUnite(bonusCase))
                 {
-                    UniteSelectionnee.Visibility = System.Windows.Visibility.Hidden;
                     Grid.SetColumn(_troupes[_uniteSelect], c);
                     Grid.SetRow(_troupes[_uniteSelect], r);
                     Grid.SetColumn(UniteSelectionnee, c);
@@ -213,12 +242,10 @@ namespace Appli_SmallWorld
                 if (oqp == null)
                 {
                     occupant.Content = "personne";
-                    nbrUnitesCase.Content = 0;
                 }
                 else
                 {
                     occupant.Content = oqp.Joueur.Name;
-                    nbrUnitesCase.Content = bonusCase.UnitesPresentes.Count;
                 }
             }
 
@@ -285,6 +312,8 @@ namespace Appli_SmallWorld
             bool continuer = _partie.finirTour();
             scoreJ1.Content = _partie.Joueurs[0].Score;
             scoreJ2.Content = _partie.Joueurs[1].Score;
+
+            RefreshColorJoueurCourant();
 
             if (!continuer)
             {
@@ -367,6 +396,10 @@ namespace Appli_SmallWorld
                         }
                     }
                     //updateUnitUI();
+
+                    RefreshColorJoueurCourant();
+                    labelJ1.Foreground = GetColorJoueur(_partie.Joueurs[0]);
+                    labelJ2.Foreground = GetColorJoueur(_partie.Joueurs[1]);
 
                     // on passe à l'interface de partie
                     dockJoueur2.Visibility = System.Windows.Visibility.Collapsed;

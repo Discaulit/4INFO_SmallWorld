@@ -137,7 +137,7 @@ namespace CS_SmallWorld
             // si ce n'est pas une Unite Viking, elle n'a pas le droit.
             if ((this is UniteViking) || !(caseCible.TCase is CaseEau))
             {
-                if (_ptsDeplacement > 0)
+                if (_ptsDeplacement > 0 && caseCible!=_caseCourante)
                 {
                     return deplacementPeuple(caseCible);
                 }

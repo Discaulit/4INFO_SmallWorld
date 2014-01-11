@@ -10,7 +10,7 @@ namespace CS_SmallWorld
     {
         public CaseEauConcret()
         {
-            //_imageToTexture = Image.FromFile("../Terrain/mer1.jpg");
+            Name = "Eau";
         }
     }
 }

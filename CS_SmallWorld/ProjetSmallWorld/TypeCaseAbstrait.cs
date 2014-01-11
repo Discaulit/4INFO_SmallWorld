@@ -13,18 +13,6 @@ namespace CS_SmallWorld
      */
     public abstract class TypeCaseAbstrait : CaseAbstrait, TypeCase
     {
-        /*protected Image _imageToTexture;
-
-        Image ImgToTexture
-        {
-            set
-            {
-                _imageToTexture = value;
-            }
-            get
-            {
-                return _imageToTexture;
-            }
-        }*/
+        public String Name { get; set; }
     }
 }

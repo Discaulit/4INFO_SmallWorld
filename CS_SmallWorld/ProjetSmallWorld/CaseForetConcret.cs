@@ -9,6 +9,7 @@ namespace CS_SmallWorld
     {
         public CaseForetConcret()
         {
+            Name = "Forêt";
         }
     }
 }

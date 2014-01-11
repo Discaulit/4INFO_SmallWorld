@@ -13,11 +13,6 @@ namespace CS_SmallWorld
      */
     public interface TypeCase : Case
     {
-        /*Image ImgToTexture
-        {
-            get;
-            set;
-        }
-         */
+        String Name { get; set; }
     }
 }

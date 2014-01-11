@@ -7,9 +7,9 @@ namespace CS_SmallWorld
 {
     public class CaseMontagneConcret : TypeCaseAbstrait, CaseMontagne
     {
-
         public CaseMontagneConcret()
         {
+            Name = "Montagne";
         }
     }
 }
