@@ -123,7 +123,7 @@
                    Visibility="Collapsed"
                    LastChildFill="True"
                    KeyDown="Dock_KeyDown"
-                   DataContext="{Binding Tag, ElementName=eltPartie}">
+                   DataContext="{Binding Tag, ElementName=eltPartie}">                   
             <Ellipse x:Name="eltPartie"
                      Visibility="Hidden" />
             <StackPanel x:Name="bandeauG"
@@ -244,7 +244,8 @@
             </StackPanel>
 
             <StackPanel x:Name="bandeauD"
-                        DockPanel.Dock="Right">
+                        DockPanel.Dock="Right"
+                        MinWidth="180">
                 <StackPanel x:Name="ContenuCaseAnalysee"
                             DockPanel.Dock="Bottom">
                     <StackPanel x:Name="DansCase"
@@ -254,27 +255,7 @@
                                Content="{Binding TCase.Name}" />
                     </StackPanel>
                 </StackPanel>
-                <StackPanel x:Name="vueUniteSelect"
-                            DataContext="{Binding Tag, ElementName=UniteSelectionnee}">
-                    <StackPanel x:Name="pvs"
-                                Orientation="Horizontal">
-                        <Label x:Name="pvCourant"
-                               Content="PV :" />
-                        <Label x:Name="PVRestant"
-                               Content="{Binding PV}" />
-                        <Label x:Name="pvMax"
-                               Content=" /5" />
-                    </StackPanel>
-                    <StackPanel x:Name="dpcmt"
-                                Orientation="Horizontal">
-                        <Label x:Name="dpcmtCourant"
-                               Content="Déplacement :" />
-                        <Label x:Name="depcmtRestant"
-                               Content="{Binding PtsDeplacement}" />
-                        <Label x:Name="dpcmtMax"
-                               Content=" /2" />
-                    </StackPanel>
-                </StackPanel>
+                    <StackPanel x:Name="unitesCase" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
             </StackPanel>
 
             <StackPanel x:Name="tourJ"

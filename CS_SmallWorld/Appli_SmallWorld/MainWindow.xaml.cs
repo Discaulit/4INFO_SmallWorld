@@ -202,8 +202,6 @@ namespace Appli_SmallWorld
             //de le mettre via l'handler sur rectangle sur la nouvelle
             caseAnalysee.Tag = null;
             caseAnalysee.Visibility = System.Windows.Visibility.Collapsed;
-
-            DeselectionUnite();
         }
 
         void rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -218,6 +216,8 @@ namespace Appli_SmallWorld
             Grid.SetRow(caseAnalysee, r);
 
             caseAnalysee.Tag = bonusCase;
+
+            afficherUniteCase(bonusCase);
 
             Unite oqp = bonusCase.getMeilleureUnite();
             //deplacement d'unite
@@ -262,21 +262,29 @@ namespace Appli_SmallWorld
             RefreshNbrUnite();
         }
 
-        private void SelectionUnite(Unite unite, Grid grid)
+        private void SelectionUnite(Unite unite)
         {
             DeSurbrillanceCasesPossible();
-
-            //met à jour la surbrillance de l'unité sélectionnée
-            int c = Grid.GetColumn(grid);
-            int r = Grid.GetRow(grid);
-            Grid.SetColumn(UniteSelectionnee, c);
-            Grid.SetRow(UniteSelectionnee, r);
 
             //surbrillance des cases possibles de déplacement
             SurbrillanceCasesPossible(unite);
 
             UniteSelectionnee.Tag = unite;
             UniteSelectionnee.Visibility = System.Windows.Visibility.Visible;
+
+            if (unite.Joueur == _partie.JoueurCourant)
+            {
+                _uniteSelect = unite;
+            }
+        }
+
+        private void SurbrillanceUnite(Grid grid)
+        {
+            //met à jour la surbrillance de l'unité sélectionnée
+            int c = Grid.GetColumn(grid);
+            int r = Grid.GetRow(grid);
+            Grid.SetColumn(UniteSelectionnee, c);
+            Grid.SetRow(UniteSelectionnee, r);
         }
 
         private void DeselectionUnite()
@@ -288,10 +296,102 @@ namespace Appli_SmallWorld
             UniteSelectionnee.Visibility = System.Windows.Visibility.Hidden;
         }
 
-        void ellipseUnite_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void afficherUniteCase(BonusCase c)
+        {
+            unitesCase.Children.Clear();
+
+            foreach (Unite u in c.UnitesPresentes)
+            {
+                StackPanel unite = new StackPanel();
+
+                unite.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\hpmp_background.png", UriKind.Relative)));
+                unite.Margin = new Thickness(0, 10, 0, 10);
+
+                StackPanel hps = new StackPanel();
+                hps.Orientation = Orientation.Horizontal;
+                hps.Width = 30 * 5;
+                hps.Height = 30;
+                hps.Margin = new Thickness(15, 10, 15, 10);
+
+                for (int i = 0; i < u.PV; i++)
+                {
+                    Border hp = new Border();
+                    hp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\hp.png", UriKind.Relative)));
+                    hp.Height = 30;
+                    hp.Width = 30;
+                    hps.Children.Add(hp);
+                }
+
+                for (int i = u.PV; i < 5; i++)
+                {
+                    Border hp = new Border();
+                    hp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\hp2.png", UriKind.Relative)));
+                    hp.Height = 30;
+                    hp.Width = 30;
+                    hps.Children.Add(hp);
+                }
+
+                unite.Children.Add(hps);
+                
+                StackPanel mps = new StackPanel();
+                mps.Orientation = Orientation.Horizontal;
+                mps.Width = 30 * 5;
+                mps.Height = 30;
+                mps.Margin = new Thickness(15, 10, 15, 10);
+
+                for (int i = 0; i < u.PtsDeplacement; i++)
+                {
+                    Border mp = new Border();
+                    mp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\mp.png", UriKind.Relative)));
+                    mp.Height = 30;
+                    mp.Width = 30;
+                    mps.Children.Add(mp);
+                }
+
+                for (int i = u.PtsDeplacement; i < 2; i++)
+                {
+                    Border mp = new Border();
+                    mp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\mp2.png", UriKind.Relative)));
+                    mp.Height = 30;
+                    mp.Width = 30;
+                    mps.Children.Add(mp);
+                }
+
+                unite.Children.Add(mps);
+
+                Border border = new Border();
+                border.MouseLeftButtonDown += new MouseButtonEventHandler(unitesCase_MouseLeftButtonDown);
+                border.Tag = u;
+                border.Child = unite;
+
+                if (u == _uniteSelect)
+                    uniteCase_highlight(border);
+
+                unitesCase.Children.Add(border);
+            }
+        }
+
+        private void unitesCase_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var border = sender as Border;
+            var unite = border.Tag as Unite;
+
+            uniteCase_highlight(border);
+            SelectionUnite(unite);
+        }
+
+        private void uniteCase_highlight(Border b)
+        {
+            b.BorderThickness = new Thickness(2);
+            b.BorderBrush = Brushes.Yellow;
+        }
+
+        private void ellipseUnite_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var grid = sender as Grid;
-            var unite = grid.Tag as Unite;
+            var u = grid.Tag as Unite;
+
+            Unite unite = u.CaseCourante.getMeilleureUnite();
 
             if (unite == (Unite)UniteSelectionnee.Tag)
             {
@@ -299,12 +399,9 @@ namespace Appli_SmallWorld
             }
             else
             {
-                SelectionUnite(unite, grid);
-
-                if (unite.Joueur == _partie.JoueurCourant)
-                {
-                    _uniteSelect = unite;
-                }
+                SelectionUnite(unite);
+                afficherUniteCase(unite.CaseCourante);
+                SurbrillanceUnite(grid);
             }
 
         }
