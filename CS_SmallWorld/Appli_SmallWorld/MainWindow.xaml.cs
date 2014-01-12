@@ -27,20 +27,27 @@ namespace Appli_SmallWorld
         Unite _uniteSelect;
         Dictionary<Unite, Grid> _troupes;
         SolidColorBrush _gauloisColor = Brushes.DarkOliveGreen;
-        SolidColorBrush _nainColor = Brushes.DarkSlateBlue;
+        SolidColorBrush _nainColor = Brushes.DarkSlateGray;
         SolidColorBrush _vikingColor = Brushes.DarkRed;
+        Border _borderHighlighted;
 
         public MainWindow()
         {
             InitializeComponent();
 
             this.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\background.jpg", UriKind.Relative)));
-            zoneDeJeu.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\map_background.png", UriKind.Relative)));
-            tourNum.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\tournum_panel2.png", UriKind.Relative)));
+            dockInfoPartie.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\menu_background.png", UriKind.Relative)));
+            dockJoueur1.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\menu_background.png", UriKind.Relative)));
+            dockJoueur2.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\menu_background.png", UriKind.Relative)));
+
+            backgroundMap.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\map_background.png", UriKind.Relative)));
+            tourNum.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\tournum_panel.png", UriKind.Relative)));
             scoreJoueur1.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\score_panel.png", UriKind.Relative)));
             scoreJoueur2.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\score_panel.png", UriKind.Relative)));
             borderJ1.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\joueur_label2.png", UriKind.Relative)));
             borderJ2.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\joueur_label1.png", UriKind.Relative)));
+            unitesCaseBorder.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\unitesCase_label.png", UriKind.Relative)));
+            tourJ.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\joueurCourant.png", UriKind.Relative)));
         }
 
         private Grid createCaseGrid(int c, int l, BonusCase bonusCase)
@@ -247,15 +254,6 @@ namespace Appli_SmallWorld
             else
             {   //analyse de la case s'il n'y a pas d'unite selectionnee
                 caseAnalysee.Visibility = System.Windows.Visibility.Visible;
-
-                if (oqp == null)
-                {
-                    occupant.Content = "personne";
-                }
-                else
-                {
-                    occupant.Content = oqp.Joueur.Name;
-                }
             }
 
             DeselectionUnite();
@@ -299,75 +297,84 @@ namespace Appli_SmallWorld
         private void afficherUniteCase(BonusCase c)
         {
             unitesCase.Children.Clear();
-
-            foreach (Unite u in c.UnitesPresentes)
+            if (c.getMeilleureUnite() == null)
             {
-                StackPanel unite = new StackPanel();
+                unitesCaseBorder.Visibility = System.Windows.Visibility.Hidden;
+            }
+            else
+            {
+                unitesCaseBorder.Visibility = System.Windows.Visibility.Visible;
+                unitesCasesTexte.Foreground = GetColorJoueur(c.getMeilleureUnite().Joueur);
 
-                unite.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\hpmp_background.png", UriKind.Relative)));
-                unite.Margin = new Thickness(0, 10, 0, 10);
-
-                StackPanel hps = new StackPanel();
-                hps.Orientation = Orientation.Horizontal;
-                hps.Width = 30 * 5;
-                hps.Height = 30;
-                hps.Margin = new Thickness(15, 10, 15, 10);
-
-                for (int i = 0; i < u.PV; i++)
+                foreach (Unite u in c.UnitesPresentes)
                 {
-                    Border hp = new Border();
-                    hp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\hp.png", UriKind.Relative)));
-                    hp.Height = 30;
-                    hp.Width = 30;
-                    hps.Children.Add(hp);
+                    StackPanel unite = new StackPanel();
+
+                    unite.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\hpmp_background.png", UriKind.Relative)));
+                    unite.Margin = new Thickness(5);
+
+                    StackPanel hps = new StackPanel();
+                    hps.Orientation = Orientation.Horizontal;
+                    hps.Width = 30 * 5;
+                    hps.Height = 30;
+                    hps.Margin = new Thickness(15, 10, 15, 10);
+
+                    for (int i = 0; i < u.PV; i++)
+                    {
+                        Border hp = new Border();
+                        hp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\hp.png", UriKind.Relative)));
+                        hp.Height = 30;
+                        hp.Width = 30;
+                        hps.Children.Add(hp);
+                    }
+
+                    for (int i = u.PV; i < 5; i++)
+                    {
+                        Border hp = new Border();
+                        hp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\hp2.png", UriKind.Relative)));
+                        hp.Height = 30;
+                        hp.Width = 30;
+                        hps.Children.Add(hp);
+                    }
+
+                    unite.Children.Add(hps);
+
+                    StackPanel mps = new StackPanel();
+                    mps.Orientation = Orientation.Horizontal;
+                    mps.Width = 30 * 5;
+                    mps.Height = 30;
+                    mps.Margin = new Thickness(15, 10, 15, 10);
+
+                    for (int i = 0; i < u.PtsDeplacement; i++)
+                    {
+                        Border mp = new Border();
+                        mp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\mp.png", UriKind.Relative)));
+                        mp.Height = 30;
+                        mp.Width = 30;
+                        mps.Children.Add(mp);
+                    }
+
+                    for (int i = u.PtsDeplacement; i < 2; i++)
+                    {
+                        Border mp = new Border();
+                        mp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\mp2.png", UriKind.Relative)));
+                        mp.Height = 30;
+                        mp.Width = 30;
+                        mps.Children.Add(mp);
+                    }
+
+                    unite.Children.Add(mps);
+
+                    Border border = new Border();
+                    border.MouseLeftButtonDown += new MouseButtonEventHandler(unitesCase_MouseLeftButtonDown);
+                    border.Tag = u;
+                    border.Child = unite;
+
+                    if (u == _uniteSelect)
+                        uniteCase_highlight(border);
+
+                    unitesCase.Children.Add(border);
                 }
-
-                for (int i = u.PV; i < 5; i++)
-                {
-                    Border hp = new Border();
-                    hp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\hp2.png", UriKind.Relative)));
-                    hp.Height = 30;
-                    hp.Width = 30;
-                    hps.Children.Add(hp);
-                }
-
-                unite.Children.Add(hps);
-                
-                StackPanel mps = new StackPanel();
-                mps.Orientation = Orientation.Horizontal;
-                mps.Width = 30 * 5;
-                mps.Height = 30;
-                mps.Margin = new Thickness(15, 10, 15, 10);
-
-                for (int i = 0; i < u.PtsDeplacement; i++)
-                {
-                    Border mp = new Border();
-                    mp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\mp.png", UriKind.Relative)));
-                    mp.Height = 30;
-                    mp.Width = 30;
-                    mps.Children.Add(mp);
-                }
-
-                for (int i = u.PtsDeplacement; i < 2; i++)
-                {
-                    Border mp = new Border();
-                    mp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\mp2.png", UriKind.Relative)));
-                    mp.Height = 30;
-                    mp.Width = 30;
-                    mps.Children.Add(mp);
-                }
-
-                unite.Children.Add(mps);
-
-                Border border = new Border();
-                border.MouseLeftButtonDown += new MouseButtonEventHandler(unitesCase_MouseLeftButtonDown);
-                border.Tag = u;
-                border.Child = unite;
-
-                if (u == _uniteSelect)
-                    uniteCase_highlight(border);
-
-                unitesCase.Children.Add(border);
             }
         }
 
@@ -382,8 +389,20 @@ namespace Appli_SmallWorld
 
         private void uniteCase_highlight(Border b)
         {
-            b.BorderThickness = new Thickness(2);
-            b.BorderBrush = Brushes.Yellow;
+            if (_borderHighlighted != null)
+            {
+                _borderHighlighted.BorderThickness = new Thickness(0);
+                _borderHighlighted.Background = null;
+            }
+            
+            var u = b.Tag as Unite;
+                
+            b.BorderThickness = new Thickness(4);
+            b.BorderBrush = Brushes.Goldenrod;
+            b.CornerRadius = new CornerRadius(20);
+            b.Background = GetColorJoueur(u.Joueur);
+
+            _borderHighlighted = b;
         }
 
         private void ellipseUnite_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -531,7 +550,7 @@ namespace Appli_SmallWorld
                     }
 
                     x = 1.1 * y + 0.05 * _plateau.Taille * 50;
-                    backgroundMap.Margin = new Thickness(x,y,x,y);
+                    zoneDeJeu.Margin = new Thickness(x, y, x, y);
 
                     // on passe à l'interface de partie
                     dockJoueur2.Visibility = System.Windows.Visibility.Collapsed;
