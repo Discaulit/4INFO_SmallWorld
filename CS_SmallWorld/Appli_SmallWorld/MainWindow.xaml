@@ -60,20 +60,35 @@
                        FontFamily="Old London"
                        FontWeight="Bold"
                        FontSize="60"
-                       Margin="0,5,0,35"/>
+                       Foreground="Sienna"
+                       Margin="0,5,0,17"/>
                 <ComboBox Name="partieTaille"
                           SelectedValuePath="Tag"
-                          Margin="0,0,0,235">
+                          Margin="0,0,0,207"
+                          FontFamily="Old London"
+                          FontWeight="Bold"
+                          Foreground="Beige"
+                          Background="Transparent"
+                          HorizontalContentAlignment="Center"
+                          FontSize="40">
                     <ComboBoxItem Content="Demo"
-                                  Tag="5" />
+                                  Tag="5"
+                                  Background="BurlyWood" />
                     <ComboBoxItem Content="Petite"
-                                  Tag="10" />
+                                  Tag="10"
+                                  Background="BurlyWood" />
                     <ComboBoxItem Content="Normale"
-                                  Tag="15" />
+                                  Tag="15"
+                                  Background="BurlyWood" />
                 </ComboBox>
                 <Button x:Name="Joueur1"
                         Content="Suivant"
-                        Click="Joueur1_Click"/>
+                        Click="Joueur1_Click"
+                        FontFamily="Old London"
+                        FontWeight="Bold"
+                        Foreground="Sienna"
+                        FontSize="40"
+                        Background="Transparent"/>
             </StackPanel>
         </DockPanel>
 
@@ -90,30 +105,52 @@
                        FontFamily="Old London"
                        FontWeight="Bold"
                        FontSize="60"
-                       Margin="0,5,0,35"/>
+                       Foreground="Sienna"
+                       Margin="0,5,0,17"/>
                 <TextBox x:Name="joueur1Name"
                          TextWrapping="Wrap"
                          Text=""
-                         Margin="0,0,0,30"/>
+                         FontFamily="Old London"
+                         FontWeight="Bold"
+                         FontSize="40"
+                         Foreground="Beige"
+                         Background="Transparent"
+                         TextAlignment="Center"
+                         Margin="0,0,0,20"/>
                 <Label x:Name="joueur1PeupleLabel"
                        Content="Peuple joueur 1"
                        FontFamily="Old London"
                        FontWeight="Bold"
                        FontSize="60"
-                       Margin="0,0,0,45"/>
+                       Foreground="Sienna"
+                       Margin="0,0,0,25"/>
                 <ComboBox Name="joueur1Peuple"
                           SelectedValuePath="Tag"
-                          Margin="0,0,0,60">
+                          FontFamily="Old London"
+                          FontWeight="Bold"
+                          FontSize="40"
+                          Foreground="Beige"
+                          Background="Transparent"
+                          HorizontalContentAlignment="Center"
+                          Margin="0,0,0,35">
                     <ComboBoxItem Content="Gaulois"
-                                  Tag="1" />
+                                  Tag="1"
+                                  Background="DarkOliveGreen"/>
                     <ComboBoxItem Content="Nain"
-                                  Tag="2" />
+                                  Tag="2"
+                                  Background="DarkSlateGray"/>
                     <ComboBoxItem Content="Viking"
-                                  Tag="3" />
+                                  Tag="3"
+                                  Background="DarkRed"/>
                 </ComboBox>
                 <Button x:Name="Joueur2"
                         Content="Suivant"
-                        Click="Joueur2_Click" />
+                        Click="Joueur2_Click"
+                        FontFamily="Old London"
+                        FontWeight="Bold"
+                        Foreground="Sienna"
+                        Background="Transparent"
+                        FontSize="40" />
             </StackPanel>
         </DockPanel>
 
@@ -130,30 +167,52 @@
                        FontFamily="Old London"
                        FontWeight="Bold"
                        FontSize="60"
-                       Margin="0,5,0,35"/>
+                       Foreground="Sienna"
+                       Margin="0,5,0,17"/>
                 <TextBox x:Name="joueur2Name"
                          TextWrapping="Wrap"
                          Text=""
-                         Margin="0,0,0,30"/>
+                         FontFamily="Old London"
+                         FontWeight="Bold"
+                         FontSize="40"
+                         Foreground="Beige"
+                         Background="Transparent"
+                         TextAlignment="Center"
+                         Margin="0,0,0,20" />
                 <Label x:Name="joueur2PeupleLabel"
                        Content="Peuple joueur 2"
                        FontFamily="Old London"
                        FontWeight="Bold"
                        FontSize="60"
-                       Margin="0,0,0,45"/>
+                       Foreground="Sienna"
+                       Margin="0,0,0,25"/>
                 <ComboBox Name="joueur2Peuple"
                           SelectedValuePath="Tag"
-                          Margin="0,0,0,60">
+                          FontFamily="Old London"
+                          FontWeight="Bold"
+                          FontSize="40"
+                          Foreground="Beige"
+                          Background="Transparent"
+                          HorizontalContentAlignment="Center"
+                          Margin="0,0,0,35">
                     <ComboBoxItem Content="Gaulois"
-                                  Tag="1" />
+                                  Tag="1"
+                                  Background="DarkOliveGreen" />
                     <ComboBoxItem Content="Nain"
-                                  Tag="2" />
+                                  Tag="2"
+                                  Background="DarkSlateGray" />
                     <ComboBoxItem Content="Viking"
-                                  Tag="3" />
+                                  Tag="3"
+                                  Background="DarkRed" />
                 </ComboBox>
                 <Button x:Name="CreerPartie"
                         Content="Créer Partie"
-                        Click="CreerPartie_Click" />
+                        Click="CreerPartie_Click"
+                        FontFamily="Old London"
+                        FontWeight="Bold"
+                        Foreground="Sienna"
+                        Background="Transparent"
+                        FontSize="40" />
             </StackPanel>
         </DockPanel>
 
@@ -176,7 +235,7 @@
                                FontSize="60"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
-                               Margin="0,0,0,20" />
+                               Margin="0,0,0,15" />
                     </Border>
                     <StackPanel x:Name="scoreJoueur1"
                                 Margin="0,0,0,30">
@@ -214,7 +273,7 @@
                                FontSize="60"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
-                               Margin="0,0,0,20" />
+                               Margin="0,0,0,15" />
                     </Border>
                     <StackPanel x:Name="scoreJoueur2"
                                 Margin="0,0,0,30">
@@ -313,6 +372,7 @@
                            FontFamily="Old London"
                            FontWeight="Bold"
                            FontSize="60"
+                           Foreground="Sienna"
                            Margin="70,10,0,20"/>
                 <TextBlock x:Name="JCourant"
                            Text="{Binding JoueurCourant.Name}"
@@ -325,6 +385,7 @@
                            FontFamily="Old London"
                            FontWeight="Bold"
                            FontSize="60"
+                           Foreground="Sienna"
                            Margin="0,10,70,20" />
             </StackPanel>
 

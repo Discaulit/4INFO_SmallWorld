@@ -30,6 +30,7 @@ namespace Appli_SmallWorld
         SolidColorBrush _nainColor = Brushes.DarkSlateGray;
         SolidColorBrush _vikingColor = Brushes.DarkRed;
         Border _borderHighlighted;
+        Ellipse _uniteHighlighted;
 
         public MainWindow()
         {
@@ -266,6 +267,7 @@ namespace Appli_SmallWorld
 
             //surbrillance des cases possibles de déplacement
             SurbrillanceCasesPossible(unite);
+            SurbrillanceUnite(unite);
 
             UniteSelectionnee.Tag = unite;
             UniteSelectionnee.Visibility = System.Windows.Visibility.Visible;
@@ -276,18 +278,46 @@ namespace Appli_SmallWorld
             }
         }
 
-        private void SurbrillanceUnite(Grid grid)
+        private void DeSurbrillanceUnite()
         {
-            //met à jour la surbrillance de l'unité sélectionnée
-            int c = Grid.GetColumn(grid);
-            int r = Grid.GetRow(grid);
-            Grid.SetColumn(UniteSelectionnee, c);
-            Grid.SetRow(UniteSelectionnee, r);
+            if (_uniteHighlighted != null)
+            {
+                _uniteHighlighted.StrokeThickness = 0;
+            }
+        }
+
+        private void SurbrillanceUnite(Unite unite)
+        {
+            Grid g = GetGridUnite(unite);
+
+            plateauGrid.Children.Remove(g);
+            plateauGrid.Children.Add(g);
+
+            var e = g.Children[0] as Ellipse;
+            
+            e.Stroke = Brushes.Yellow;
+            e.StrokeThickness = 3;
+
+            _uniteHighlighted = e;
+        }
+
+        private Grid GetGridUnite(Unite unite)
+        {
+            foreach (Grid g in plateauGrid.Children)
+            {
+                if (g.Tag == unite)
+                {
+                    return g;
+                }
+            }
+            return null;
         }
 
         private void DeselectionUnite()
         {
             DeSurbrillanceCasesPossible();
+            DeSurbrillanceUnite();
+            uniteCase_deshighlight();
 
             _uniteSelect = null;
             UniteSelectionnee.Tag = null;
@@ -370,7 +400,7 @@ namespace Appli_SmallWorld
                     border.Tag = u;
                     border.Child = unite;
 
-                    if (u == _uniteSelect)
+                    if (u == UniteSelectionnee.Tag)
                         uniteCase_highlight(border);
 
                     unitesCase.Children.Add(border);
@@ -383,17 +413,31 @@ namespace Appli_SmallWorld
             var border = sender as Border;
             var unite = border.Tag as Unite;
 
-            uniteCase_highlight(border);
-            SelectionUnite(unite);
+            if (unite == (Unite)UniteSelectionnee.Tag)
+            {
+                DeselectionUnite();
+            }
+            else
+            {
+                DeselectionUnite();
+                uniteCase_highlight(border);
+                SelectionUnite(unite);
+            }
+
         }
 
-        private void uniteCase_highlight(Border b)
+        private void uniteCase_deshighlight()
         {
             if (_borderHighlighted != null)
             {
                 _borderHighlighted.BorderThickness = new Thickness(0);
                 _borderHighlighted.Background = null;
             }
+        }
+
+        private void uniteCase_highlight(Border b)
+        {
+            uniteCase_deshighlight();
             
             var u = b.Tag as Unite;
                 
@@ -418,11 +462,10 @@ namespace Appli_SmallWorld
             }
             else
             {
+                DeselectionUnite();
                 SelectionUnite(unite);
                 afficherUniteCase(unite.CaseCourante);
-                SurbrillanceUnite(grid);
             }
-
         }
 
 
