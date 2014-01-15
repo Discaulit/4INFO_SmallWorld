@@ -17,6 +17,7 @@ using CS_SmallWorld;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Diagnostics;
 
 namespace Appli_SmallWorld
 {
@@ -217,6 +218,16 @@ namespace Appli_SmallWorld
 
         private void Dock_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.Key == Key.F1)
+            {
+                Process proc = new Process();
+                proc.StartInfo = new ProcessStartInfo()
+                {
+                    FileName = "readme.pdf" //put your path here
+                };
+                proc.Start();
+            }
+            
             if (_partie != null)
             {
                 if (e.Key == Key.Enter)
