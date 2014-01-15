@@ -26,3 +26,6 @@ D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.csproj.GenerateResource.Cache
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.exe
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.pdb
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Release\Appli_SmallWorld.exe.config
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.exe
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.pdb

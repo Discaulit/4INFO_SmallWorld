@@ -327,7 +327,7 @@ namespace Appli_SmallWorld
             else
             {
                 unitesCaseBorder.Visibility = System.Windows.Visibility.Hidden;
-                unitesCase.Visibility = System.Windows.Visibility.Hidden;
+                unitesCase.Children.Clear();
                 DeSurbrillanceCasesPossible();
             }
         }
