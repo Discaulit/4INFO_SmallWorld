@@ -1,4 +1,3 @@
-C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Release\Appli_SmallWorld.exe.config
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.csprojResolveAssemblyReference.cache
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\MainWindow.baml
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\MainWindow.g.cs
@@ -8,3 +7,4 @@ C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWo
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.g.resources
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.Properties.Resources.resources
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.csproj.GenerateResource.Cache
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Release\Appli_SmallWorld.exe.config

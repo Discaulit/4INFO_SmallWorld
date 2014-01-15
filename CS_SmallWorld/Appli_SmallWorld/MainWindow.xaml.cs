@@ -42,24 +42,24 @@ namespace Appli_SmallWorld
         {
             InitializeComponent();
 
-            this.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\background.jpg", UriKind.Relative)));
+            this.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\background.jpg", UriKind.Relative)));
 
-            mainMenuPanel.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\menu_background.png", UriKind.Relative)));
-            mainMenu.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\test.png", UriKind.Relative)));
+            mainMenuPanel.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\menu_background.png", UriKind.Relative)));
+            mainMenu.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\test.png", UriKind.Relative)));
             mainMenu.Background.Opacity = 0;
 
-            dockInfoPartie.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\menu_background.png", UriKind.Relative)));
-            dockJoueur1.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\menu_background.png", UriKind.Relative)));
-            dockJoueur2.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\menu_background.png", UriKind.Relative)));
+            dockInfoPartie.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\menu_background.png", UriKind.Relative)));
+            dockJoueur1.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\menu_background.png", UriKind.Relative)));
+            dockJoueur2.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\menu_background.png", UriKind.Relative)));
 
-            backgroundMap.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\map_background.png", UriKind.Relative)));
-            tourNum.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\tournum_panel.png", UriKind.Relative)));
-            scoreJoueur1.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\score_panel.png", UriKind.Relative)));
-            scoreJoueur2.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\score_panel.png", UriKind.Relative)));
-            borderJ1.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\joueur_label2.png", UriKind.Relative)));
-            borderJ2.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\joueur_label1.png", UriKind.Relative)));
-            unitesCaseBorder.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\unitesCase_label.png", UriKind.Relative)));
-            tourJ.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\joueurCourant.png", UriKind.Relative)));
+            backgroundMap.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\map_background.png", UriKind.Relative)));
+            tourNum.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\tournum_panel.png", UriKind.Relative)));
+            scoreJoueur1.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\score_panel.png", UriKind.Relative)));
+            scoreJoueur2.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\score_panel.png", UriKind.Relative)));
+            borderJ1.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\joueur_label2.png", UriKind.Relative)));
+            borderJ2.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\joueur_label1.png", UriKind.Relative)));
+            unitesCaseBorder.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\unitesCase_label.png", UriKind.Relative)));
+            tourJ.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\joueurCourant.png", UriKind.Relative)));
 
             charger = new Microsoft.Win32.OpenFileDialog();
             sauvegarder = new Microsoft.Win32.SaveFileDialog();
@@ -68,15 +68,15 @@ namespace Appli_SmallWorld
         private Grid createCaseGrid(int c, int l, BonusCase bonusCase)
         {
             System.Windows.Media.ImageBrush imgMontagne = new ImageBrush();
-            imgMontagne.ImageSource = new BitmapImage(new Uri(@"..\..\..\ressources\terrain\montagne.jpg", UriKind.Relative));
+            imgMontagne.ImageSource = new BitmapImage(new Uri(@"..\..\ressources\terrain\montagne.jpg", UriKind.Relative));
             System.Windows.Media.ImageBrush imgForet = new ImageBrush();
-            imgForet.ImageSource = new BitmapImage(new Uri(@"..\..\..\ressources\terrain\foret.jpg", UriKind.Relative));
+            imgForet.ImageSource = new BitmapImage(new Uri(@"..\..\ressources\terrain\foret.jpg", UriKind.Relative));
             System.Windows.Media.ImageBrush imgEau = new ImageBrush();
-            imgEau.ImageSource = new BitmapImage(new Uri(@"..\..\..\ressources\terrain\eau.jpg", UriKind.Relative));
+            imgEau.ImageSource = new BitmapImage(new Uri(@"..\..\ressources\terrain\eau.jpg", UriKind.Relative));
             System.Windows.Media.ImageBrush imgPlaine = new ImageBrush();
-            imgPlaine.ImageSource = new BitmapImage(new Uri(@"..\..\..\ressources\terrain\plaine.jpg", UriKind.Relative));
+            imgPlaine.ImageSource = new BitmapImage(new Uri(@"..\..\ressources\terrain\plaine.jpg", UriKind.Relative));
             System.Windows.Media.ImageBrush imgDesert = new ImageBrush();
-            imgDesert.ImageSource = new BitmapImage(new Uri(@"..\..\..\ressources\terrain\desert.jpg", UriKind.Relative));
+            imgDesert.ImageSource = new BitmapImage(new Uri(@"..\..\ressources\terrain\desert.jpg", UriKind.Relative));
 
             var rectangle = new Rectangle();
             if (bonusCase.TCase is CaseMontagne)
@@ -377,7 +377,7 @@ namespace Appli_SmallWorld
                 {
                     StackPanel unite = new StackPanel();
 
-                    unite.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\hpmp_background.png", UriKind.Relative)));
+                    unite.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\hpmp_background.png", UriKind.Relative)));
                     unite.Margin = new Thickness(5);
 
                     StackPanel hps = new StackPanel();
@@ -389,7 +389,7 @@ namespace Appli_SmallWorld
                     for (int i = 0; i < u.PV; i++)
                     {
                         Border hp = new Border();
-                        hp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\hp.png", UriKind.Relative)));
+                        hp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\hp.png", UriKind.Relative)));
                         hp.Height = 30;
                         hp.Width = 30;
                         hps.Children.Add(hp);
@@ -398,7 +398,7 @@ namespace Appli_SmallWorld
                     for (int i = u.PV; i < 5; i++)
                     {
                         Border hp = new Border();
-                        hp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\hp2.png", UriKind.Relative)));
+                        hp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\hp2.png", UriKind.Relative)));
                         hp.Height = 30;
                         hp.Width = 30;
                         hps.Children.Add(hp);
@@ -415,7 +415,7 @@ namespace Appli_SmallWorld
                     for (int i = 0; i < u.PtsDeplacement; i++)
                     {
                         Border mp = new Border();
-                        mp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\mp.png", UriKind.Relative)));
+                        mp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\mp.png", UriKind.Relative)));
                         mp.Height = 30;
                         mp.Width = 30;
                         mps.Children.Add(mp);
@@ -424,7 +424,7 @@ namespace Appli_SmallWorld
                     for (int i = u.PtsDeplacement; i < 2; i++)
                     {
                         Border mp = new Border();
-                        mp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\mp2.png", UriKind.Relative)));
+                        mp.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\mp2.png", UriKind.Relative)));
                         mp.Height = 30;
                         mp.Width = 30;
                         mps.Children.Add(mp);
@@ -587,6 +587,11 @@ namespace Appli_SmallWorld
 
             // on initialise la Grid (mapGrid défini dans le xaml) à partir de la map du modèle (engine)
             _plateau = _partie.Plateau;
+
+            plateauGrid.Children.Clear();
+            plateauGrid.RowDefinitions.Clear();
+            plateauGrid.ColumnDefinitions.Clear();
+
             for (int c = 0; c < _plateau.Taille; c++)
             {
                 plateauGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(50, GridUnitType.Pixel) });
@@ -673,6 +678,8 @@ namespace Appli_SmallWorld
 
                     creationPartie.Visibility = System.Windows.Visibility.Collapsed;
                     dockPartie.Visibility = System.Windows.Visibility.Visible;
+
+                    RefreshInterface();
                 }
             }
             else

@@ -1,4 +1,4 @@
-﻿Build started 15/01/2014 19:36:57.
+﻿Build started 15/01/2014 20:06:43.
      1>Project "C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\LibSmallWorld\LibSmallWorld.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D LIBSMALLWORLD_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt apiSmallWorld.cpp calcCombat.cpp map.cpp
@@ -23,4 +23,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.29
+Time Elapsed 00:00:00.70
