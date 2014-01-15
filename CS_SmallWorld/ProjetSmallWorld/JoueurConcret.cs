@@ -10,6 +10,7 @@ namespace CS_SmallWorld
      * 
      * \brief implémentation de la classe Joueur
      */
+    [Serializable()]
     public class JoueurConcret : Joueur
     {
         private string _name;

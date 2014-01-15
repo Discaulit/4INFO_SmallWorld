@@ -11,6 +11,7 @@ namespace CS_SmallWorld
      * 
      * \brief implémentation de MonteurPartie
      */
+    [Serializable()]
     public class MonteurPartieConcret : MonteurPartie
     {
         WrapperLibsSmallWorld _wrapper;

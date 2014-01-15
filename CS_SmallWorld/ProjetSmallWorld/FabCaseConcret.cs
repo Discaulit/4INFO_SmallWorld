@@ -10,6 +10,7 @@ namespace CS_SmallWorld
      * 
      * \brief implémente FabCase
      */
+    [Serializable()]
     public class FabCaseConcret : FabCase
     {
         private CaseMontagneConcret _caseMontagne;

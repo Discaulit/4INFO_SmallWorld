@@ -5,6 +5,7 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    [Serializable()]
     public class UniteVikingConcret : UniteAbstrait, UniteViking
     {
         /**

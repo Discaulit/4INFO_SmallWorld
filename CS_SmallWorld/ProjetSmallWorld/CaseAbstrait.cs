@@ -10,6 +10,7 @@ namespace CS_SmallWorld
      * 
      * \brief implémente Case. Contient tout ce qui est commun à toutes les cases
      */
+    [Serializable()]
     public abstract class CaseAbstrait : Case
     {
     }

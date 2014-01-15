@@ -11,6 +11,7 @@ namespace CS_SmallWorld
      * 
      * \brief Hérite de CaseAbstrait et est mère des cases concrètes
      */
+    [Serializable()]
     public abstract class TypeCaseAbstrait : CaseAbstrait, TypeCase
     {
         public String Name { get; set; }

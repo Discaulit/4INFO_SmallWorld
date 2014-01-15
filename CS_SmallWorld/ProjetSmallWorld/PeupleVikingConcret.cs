@@ -5,6 +5,7 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    [Serializable()]
     public class PeupleVikingConcret : PeupleAbstrait, PeupleViking
     {
         public PeupleVikingConcret(JoueurConcret j, BonusCase startCase, int nbUnite)

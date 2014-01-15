@@ -11,7 +11,8 @@ namespace CS_SmallWorld
      * 
      * \brief implémente en partie Unite : possède les fonctions et attributs communs à toutes les Unites
      */
-    public abstract class UniteAbstrait : Unite, INotifyPropertyChanged
+    [Serializable()]
+    public abstract class UniteAbstrait : Unite
     {
         /**
          * points d'attaque et de défense de l'Unite.
@@ -53,7 +54,6 @@ namespace CS_SmallWorld
             set 
             { 
                 _ptVie = value;
-                RaisePropertyChanged("PV");
             }
         }
 
@@ -64,7 +64,6 @@ namespace CS_SmallWorld
             set 
             {
                 _ptsDeplacement = value;
-                RaisePropertyChanged("PV");
             }
         }
 
@@ -218,13 +217,5 @@ namespace CS_SmallWorld
             _joueur.retirerUneUnite(this);
             _caseCourante.enleverUneUnite(this);
         }
-
-        private void RaisePropertyChanged(String property)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(property));
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

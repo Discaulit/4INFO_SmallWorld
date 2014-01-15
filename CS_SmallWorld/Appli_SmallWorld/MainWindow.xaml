@@ -7,6 +7,7 @@
         x:Class="Appli_SmallWorld.MainWindow"
         Title="SmallWorld - INSA"
         WindowState="Maximized"
+        KeyDown="Dock_KeyDown"
         MouseLeftButtonDown="Window_MouseLeftButtonDown">
 
     <Window.Resources>
@@ -214,7 +215,6 @@
         <DockPanel x:Name="dockPartie"
                    Visibility="Collapsed"
                    LastChildFill="True"
-                   KeyDown="Dock_KeyDown"
                    DataContext="{Binding Tag, ElementName=eltPartie}">
             <Ellipse x:Name="eltPartie"
                      Visibility="Hidden" />
@@ -384,12 +384,13 @@
                            Margin="0,10,70,20" />
             </StackPanel>
 
-            <ScrollViewer VerticalScrollBarVisibility="Auto"
+            <ScrollViewer Name="zoneDeJeu"
+                          VerticalScrollBarVisibility="Auto"
                           HorizontalScrollBarVisibility="Auto"
                           HorizontalAlignment="Center"
                           VerticalAlignment="Center">
                 <Border Name="backgroundMap">
-                    <ScrollViewer Name="zoneDeJeu"
+                    <ScrollViewer Name="carte"
                                   VerticalScrollBarVisibility="Auto"
                                   HorizontalScrollBarVisibility="Auto"
                                   HorizontalAlignment="Center"
@@ -422,7 +423,7 @@
                         Background="Transparent"
                         Width="360"
                         Margin="0,5,0,0"
-                        Click="creerPartie_Click" />
+                        Click="nouvellePartie_Click" />
                 <Button x:Name="chargerPartie"
                         Content="Charger"
                         FontFamily="Old London"

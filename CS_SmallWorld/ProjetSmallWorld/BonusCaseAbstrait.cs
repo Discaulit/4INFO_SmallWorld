@@ -7,7 +7,8 @@ using System.ComponentModel;
 namespace CS_SmallWorld
 {
     /**/
-    public class BonusCaseAbstrait : CaseAbstrait, BonusCase, INotifyPropertyChanged
+    [Serializable()]
+    public class BonusCaseAbstrait : CaseAbstrait, BonusCase
     {
         /** TypeCase _tcase le type de la case */
         protected TypeCase _tcase;
@@ -47,7 +48,6 @@ namespace CS_SmallWorld
             set 
             {
                 _unitesPresentes = value;
-                RaisePropertyChanged("NbrUnitesCase");
             }
             get 
             {
@@ -115,13 +115,5 @@ namespace CS_SmallWorld
         {
             return (Math.Abs(this.Position.X - c.Position.X) + Math.Abs(this.Position.Y - c.Position.Y));
         }
-
-        private void RaisePropertyChanged(String property)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(property));
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

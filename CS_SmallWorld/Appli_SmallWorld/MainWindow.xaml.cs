@@ -14,6 +14,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CS_SmallWorld;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Appli_SmallWorld
 {
@@ -181,13 +184,16 @@ namespace Appli_SmallWorld
 
         private void Dock_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Enter)
+            if (_partie != null)
             {
-                Fin_tour();
-            }
-            if (e.Key == Key.Escape)
-            {
-                afficher_mainmenu();
+                if (e.Key == Key.Enter)
+                {
+                    Fin_tour();
+                }
+                if (e.Key == Key.Escape)
+                {
+                    afficher_mainmenu();
+                }
             }
         }
 
@@ -503,17 +509,27 @@ namespace Appli_SmallWorld
 
         private void Fin_tour()
         {
-            DeselectionUnite();
-            bool continuer = _partie.finirTour();
+            if (_partie != null)
+            {
+                DeselectionUnite();
+                bool continuer = _partie.finirTour();
+                RefreshInfosPartie();
+                
+                if (!continuer)
+                {
+                    FinPartie();
+                }
+            }
+        }
+
+        private void RefreshInfosPartie()
+        {
             scoreJ1.Content = _partie.Joueurs[0].Score + " points";
             scoreJ2.Content = _partie.Joueurs[1].Score + " points";
+            JCourant.Text = _partie.JoueurCourant.Name;
+            tourRestant.Content = _partie.NumTour;
 
             RefreshColorJoueurCourant();
-
-            if (!continuer)
-            {
-                FinPartie();
-            }
         }
 
         private void FinPartie()
@@ -546,8 +562,10 @@ namespace Appli_SmallWorld
         private void Joueur2_Click(object sender, RoutedEventArgs e)
         {
             if (joueur1Peuple.SelectedIndex > -1 && !String.IsNullOrEmpty(joueur1Name.Text.Trim()))
-            {
-                joueur2Peuple.Items.RemoveAt(joueur1Peuple.Items.IndexOf(joueur1Peuple.SelectedItem));
+            {               
+                ComboBoxItem a = (ComboBoxItem)joueur2Peuple.Items[joueur1Peuple.Items.IndexOf(joueur1Peuple.SelectedItem)];
+                a.Visibility = System.Windows.Visibility.Collapsed;
+
                 dockJoueur1.Visibility = System.Windows.Visibility.Collapsed;
                 dockJoueur2.Visibility = System.Windows.Visibility.Visible;
             }
@@ -559,10 +577,6 @@ namespace Appli_SmallWorld
 
         private void creerPartie()
         {
-            System.Collections.Generic.Dictionary<String, int> players = new System.Collections.Generic.Dictionary<String, int>();
-            players.Add(joueur1Name.Text.Trim(), Convert.ToInt32(joueur1Peuple.SelectedValue));
-            players.Add(joueur2Name.Text.Trim(), Convert.ToInt32(joueur2Peuple.SelectedValue));
-            _partie = new PartieConcret(Convert.ToInt32(partieTaille.SelectedValue), players);
             eltPartie.Tag = _partie; // permet le binding des infos contenues dans la partie
             _uniteSelect = null;
             _troupes = new Dictionary<Unite, Grid>();
@@ -625,7 +639,7 @@ namespace Appli_SmallWorld
             }
 
             x = 1.1 * y + 0.05 * _plateau.Taille * 50;
-            zoneDeJeu.Margin = new Thickness(x, y, x, y);
+            carte.Margin = new Thickness(x, y, x, y);
         }
 
         private void fincreerPartie_Click(object sender, RoutedEventArgs e)
@@ -638,7 +652,15 @@ namespace Appli_SmallWorld
                 }
                 else
                 {
+                    System.Collections.Generic.Dictionary<String, int> players = new System.Collections.Generic.Dictionary<String, int>();
+                    players.Add(joueur1Name.Text.Trim(), Convert.ToInt32(joueur1Peuple.SelectedValue));
+                    players.Add(joueur2Name.Text.Trim(), Convert.ToInt32(joueur2Peuple.SelectedValue));
+                    _partie = new PartieConcret(Convert.ToInt32(partieTaille.SelectedValue), players);
+
                     creerPartie();
+
+                    ComboBoxItem a = (ComboBoxItem)joueur2Peuple.Items[joueur1Peuple.Items.IndexOf(joueur1Peuple.SelectedItem)];
+                    a.Visibility = System.Windows.Visibility.Visible;            
 
                     // on passe à l'interface de partie
                     dockInfoPartie.Visibility = System.Windows.Visibility.Visible;
@@ -655,7 +677,7 @@ namespace Appli_SmallWorld
             }
         }
 
-        private void creerPartie_Click(object sender, RoutedEventArgs e)
+        private void nouvellePartie_Click(object sender, RoutedEventArgs e)
         {
             dockPartie.Visibility = System.Windows.Visibility.Collapsed;
             mainMenu.Visibility = System.Windows.Visibility.Collapsed;
@@ -664,7 +686,33 @@ namespace Appli_SmallWorld
 
         private void chargerPartie_Click(object sender, RoutedEventArgs e)
         {
+            _partie = null;
+            
+            Stream stream = File.Open("data.xml", FileMode.Open);
+            BinaryFormatter formatter = new BinaryFormatter();
 
+            _partie = (PartieConcret)formatter.Deserialize(stream);
+            stream.Close();
+
+            creerPartie();
+
+            // on passe à l'interface de partie
+            mainMenu.Visibility = System.Windows.Visibility.Collapsed;
+            dockInfoPartie.Visibility = System.Windows.Visibility.Visible;
+            dockJoueur1.Visibility = System.Windows.Visibility.Collapsed;
+            dockJoueur2.Visibility = System.Windows.Visibility.Collapsed;
+
+            creationPartie.Visibility = System.Windows.Visibility.Collapsed;
+            dockPartie.Visibility = System.Windows.Visibility.Visible;
+
+            RefreshInterface();
+        }
+
+        private void RefreshInterface()
+        {
+            RefreshColorJoueurCourant();
+            RefreshNbrUnite();
+            RefreshInfosPartie();
         }
 
         private void quitter_Click(object sender, RoutedEventArgs e)
@@ -676,8 +724,14 @@ namespace Appli_SmallWorld
         {
             if (_partie == null)
                 MessageBox.Show("Pas de partie en cours à sauvegarder !");
+            else
+            {                
+                Stream stream = File.Open("data.xml", FileMode.Create);
+                BinaryFormatter formatter = new BinaryFormatter();
+
+                formatter.Serialize(stream, _partie);
+                stream.Close();
+            }
         }
-
-
     }
 }

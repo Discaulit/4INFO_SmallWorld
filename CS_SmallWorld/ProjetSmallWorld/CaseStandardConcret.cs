@@ -5,6 +5,7 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    [Serializable()]
     public class CaseStandardConcret : BonusCaseAbstrait, CaseStandard
     {
         public CaseStandardConcret(TypeCase tc, Position p)

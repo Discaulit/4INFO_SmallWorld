@@ -10,6 +10,7 @@ namespace CS_SmallWorld
      * 
      * \brief implémente PeupleAbstrait et PeupleGaulois
      */
+    [Serializable()]
     public class PeupleGauloisConcret : PeupleAbstrait, PeupleGaulois
     {
         /**

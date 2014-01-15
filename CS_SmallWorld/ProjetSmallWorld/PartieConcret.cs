@@ -11,7 +11,8 @@ namespace CS_SmallWorld
      * 
      * \brief implémentation de la classe Partie
      */
-    public class PartieConcret : Partie, INotifyPropertyChanged
+    [Serializable()]
+    public class PartieConcret : Partie
     {
         List<Joueur> _joueurs;
         Joueur _joueurCourant;
@@ -71,7 +72,6 @@ namespace CS_SmallWorld
             set
             {
                 _joueurCourant = value;
-                RaisePropertyChanged("JoueurCourant");
             }
         }
 
@@ -119,20 +119,11 @@ namespace CS_SmallWorld
             set
             {
                 _numTour = value;
-                RaisePropertyChanged("NumTour");
             }
             get
             {
                 return _numTour;
             }
         }
-
-        private void RaisePropertyChanged(String property)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(property));
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

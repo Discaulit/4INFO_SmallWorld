@@ -10,6 +10,7 @@ namespace CS_SmallWorld
      * 
      * \brief implémente Plateau
      */
+    [Serializable()]
     public class PlateauConcret : Plateau
     {
         private StrategiePlateau _strategie;

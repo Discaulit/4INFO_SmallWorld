@@ -10,6 +10,7 @@ namespace CS_SmallWorld
      * 
      * \brief "implémente" Peuple.
      */
+    [Serializable()]
     public abstract class PeupleAbstrait : Peuple
     {
         /**

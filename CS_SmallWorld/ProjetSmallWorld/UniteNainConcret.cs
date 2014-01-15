@@ -10,6 +10,7 @@ namespace CS_SmallWorld
      * 
      * \brief Une Unite Naine.
      */
+    [Serializable()]
     public class UniteNainConcret : UniteAbstrait, UniteNain
     {
         public UniteNainConcret(JoueurConcret j, BonusCase startCase)

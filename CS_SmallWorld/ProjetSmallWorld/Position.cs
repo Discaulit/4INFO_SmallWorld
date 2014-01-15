@@ -11,6 +11,7 @@ namespace CS_SmallWorld
      * 
      * \brief représente une position(x,y) sur le plateau
      */
+    [Serializable()]
     public class Position
     {
         private int _x;

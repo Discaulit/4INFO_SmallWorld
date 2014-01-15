@@ -10,6 +10,7 @@ using namespace System::Collections::Generic;
 
 namespace wrapperLibSmallWorld {
 
+	[Serializable]
 	public ref class WrapperLibsSmallWorld
 	{
 	private :

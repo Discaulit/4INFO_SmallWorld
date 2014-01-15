@@ -6,6 +6,7 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    [Serializable()]
     public class CaseEauConcret : TypeCaseAbstrait, CaseEau
     {
         public CaseEauConcret()

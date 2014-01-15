@@ -11,6 +11,7 @@ namespace CS_SmallWorld
      * 
      * \brief implémente StrategiePlateau.
      */
+    [Serializable()]
     public class StrategiePlateauConcret : StrategiePlateau
     {
         private BonusCase[,] _plateau;

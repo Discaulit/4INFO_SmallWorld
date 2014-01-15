@@ -10,6 +10,7 @@ namespace CS_SmallWorld
      * 
      * \brief Une Unite Gauloise.
      */
+    [Serializable()]
     public class UniteGauloisConcret : UniteAbstrait, UniteGaulois
     {
         /**

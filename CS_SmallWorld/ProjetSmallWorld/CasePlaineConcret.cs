@@ -5,6 +5,7 @@ using System.Text;
 
 namespace CS_SmallWorld
 {
+    [Serializable()]
     public class CasePlaineConcret : TypeCaseAbstrait, CasePlaine
     {
         public CasePlaineConcret()

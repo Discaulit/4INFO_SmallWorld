@@ -11,6 +11,7 @@ namespace CS_SmallWorld
      * 
      * \brief implémente CaseDesert
      */
+    [Serializable()]
     public class CaseDesertConcret : TypeCaseAbstrait, CaseDesert
     {
         public CaseDesertConcret()
