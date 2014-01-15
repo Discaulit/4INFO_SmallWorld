@@ -7,3 +7,22 @@ C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWo
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.g.resources
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.Properties.Resources.resources
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.csproj.GenerateResource.Cache
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Release\Appli_SmallWorld.exe.config
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Release\LibSmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Release\Appli_SmallWorld.exe
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Release\Appli_SmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Release\CS_SmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Release\wrapperLibSmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Release\CS_SmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Release\wrapperLibSmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.csprojResolveAssemblyReference.cache
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\MainWindow.baml
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\MainWindow.g.cs
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\App.g.cs
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld_Content.g.cs
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld_MarkupCompile.cache
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.g.resources
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.Properties.Resources.resources
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.csproj.GenerateResource.Cache
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.exe
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Release\Appli_SmallWorld.pdb

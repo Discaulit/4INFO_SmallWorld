@@ -1,1 +1,12 @@
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\obj\Release\UnitTestSmallWorld.csprojResolveAssemblyReference.cache
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Release\LibSmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Release\LibSmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Release\UnitTestSmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Release\UnitTestSmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Release\CS_SmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Release\wrapperLibSmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Release\CS_SmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Release\wrapperLibSmallWorld.pdb
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\obj\Release\UnitTestSmallWorld.csprojResolveAssemblyReference.cache
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\obj\Release\UnitTestSmallWorld.dll
+D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\obj\Release\UnitTestSmallWorld.pdb
