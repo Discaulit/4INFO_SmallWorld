@@ -35,7 +35,8 @@ namespace Appli_SmallWorld
         Border _borderHighlighted;
         Ellipse _uniteHighlighted;
         Boolean _mainMenu;
-        Grid _atq;
+        Microsoft.Win32.OpenFileDialog charger;
+        Microsoft.Win32.SaveFileDialog sauvegarder;
 
         public MainWindow()
         {
@@ -59,6 +60,9 @@ namespace Appli_SmallWorld
             borderJ2.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\joueur_label1.png", UriKind.Relative)));
             unitesCaseBorder.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\unitesCase_label.png", UriKind.Relative)));
             tourJ.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\joueurCourant.png", UriKind.Relative)));
+
+            charger = new Microsoft.Win32.OpenFileDialog();
+            sauvegarder = new Microsoft.Win32.SaveFileDialog();
         }
 
         private Grid createCaseGrid(int c, int l, BonusCase bonusCase)
@@ -687,25 +691,34 @@ namespace Appli_SmallWorld
         private void chargerPartie_Click(object sender, RoutedEventArgs e)
         {
             _partie = null;
-            
-            Stream stream = File.Open("data.xml", FileMode.Open);
-            BinaryFormatter formatter = new BinaryFormatter();
 
-            _partie = (PartieConcret)formatter.Deserialize(stream);
-            stream.Close();
+            Nullable<bool> result = charger.ShowDialog();
 
-            creerPartie();
+            // Process open file dialog box results 
+            if (result == true)
+            {
+                // Open document 
+                string filename = charger.FileName;
 
-            // on passe à l'interface de partie
-            mainMenu.Visibility = System.Windows.Visibility.Collapsed;
-            dockInfoPartie.Visibility = System.Windows.Visibility.Visible;
-            dockJoueur1.Visibility = System.Windows.Visibility.Collapsed;
-            dockJoueur2.Visibility = System.Windows.Visibility.Collapsed;
+                Stream stream = File.Open(filename, FileMode.Open);
+                BinaryFormatter formatter = new BinaryFormatter();
 
-            creationPartie.Visibility = System.Windows.Visibility.Collapsed;
-            dockPartie.Visibility = System.Windows.Visibility.Visible;
+                _partie = (PartieConcret)formatter.Deserialize(stream);
+                stream.Close();
 
-            RefreshInterface();
+                creerPartie();
+
+                // on passe à l'interface de partie
+                mainMenu.Visibility = System.Windows.Visibility.Collapsed;
+                dockInfoPartie.Visibility = System.Windows.Visibility.Visible;
+                dockJoueur1.Visibility = System.Windows.Visibility.Collapsed;
+                dockJoueur2.Visibility = System.Windows.Visibility.Collapsed;
+
+                creationPartie.Visibility = System.Windows.Visibility.Collapsed;
+                dockPartie.Visibility = System.Windows.Visibility.Visible;
+
+                RefreshInterface();
+            }                       
         }
 
         private void RefreshInterface()
@@ -717,7 +730,7 @@ namespace Appli_SmallWorld
 
         private void quitter_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            Application.Current.Shutdown();            
         }
 
         private void sauvegarderPartie_Click(object sender, RoutedEventArgs e)
@@ -725,12 +738,20 @@ namespace Appli_SmallWorld
             if (_partie == null)
                 MessageBox.Show("Pas de partie en cours à sauvegarder !");
             else
-            {                
-                Stream stream = File.Open("data.xml", FileMode.Create);
-                BinaryFormatter formatter = new BinaryFormatter();
+            {
+                Nullable<bool> result = sauvegarder.ShowDialog();
 
-                formatter.Serialize(stream, _partie);
-                stream.Close();
+                if (result == true)
+                {
+                    string filename = sauvegarder.FileName;
+
+                    Stream stream = File.Open(filename, FileMode.Create);
+                    BinaryFormatter formatter = new BinaryFormatter();
+
+                    formatter.Serialize(stream, _partie);
+                    stream.Close();
+                }
+
             }
         }
     }

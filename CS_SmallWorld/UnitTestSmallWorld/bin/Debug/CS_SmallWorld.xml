@@ -222,7 +222,7 @@
             
             \return Combat le singleton gérant les combats
         </member>
-        <!-- Commentaire XML incorrect ignoré pour le membre "P:CS_SmallWorld.MonteurPartie.CasesDepart" -->
+        <!-- Badly formed XML comment ignored for member "P:CS_SmallWorld.MonteurPartie.CasesDepart" -->
         <member name="P:CS_SmallWorld.MonteurPartie.Plateau">
             \fn proterty Plateau Plateau
             
@@ -231,7 +231,7 @@
         <member name="M:CS_SmallWorld.MonteurPartieConcret.#ctor(System.Int32)">
             \fn Constructeur de la casse
         </member>
-        <!-- Commentaire XML incorrect ignoré pour le membre "M:CS_SmallWorld.MonteurPartieConcret.positionsDepart" -->
+        <!-- Badly formed XML comment ignored for member "M:CS_SmallWorld.MonteurPartieConcret.positionsDepart" -->
         <member name="M:CS_SmallWorld.MonteurPartieConcret.creerJoueur(System.String,System.Int32,System.Int32)">
             cf interface 
         </member>
@@ -279,7 +279,19 @@
             \brief Le plateau sur lequel se déroule la partie.
             
         </member>
-        <!-- Commentaire XML incorrect ignoré pour le membre "M:CS_SmallWorld.PartieConcret.#ctor(System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32})" -->
+        <member name="P:CS_SmallWorld.Partie.NbTourMax">
+            \fn property NbTourMax (lecture seule)
+            
+            \brief Le nombre de tour de la partie.
+            
+        </member>
+        <member name="P:CS_SmallWorld.Partie.NumTour">
+            \fn property NumTour (lecture-ecriture)
+            
+            \brief Le nombre de tour de la partie.
+            
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CS_SmallWorld.PartieConcret.#ctor(System.Int32,System.Collections.Generic.Dictionary{System.String,System.Int32})" -->
         <member name="P:CS_SmallWorld.PartieConcret.Joueurs">
             cf interface 
         </member>
@@ -529,7 +541,7 @@
             \return true si l'Unite en paramètre appartient au même joueur, faux sinon.
         </member>
         <member name="M:CS_SmallWorld.Unite.utiliserUnite(CS_SmallWorld.BonusCase)">
-            \fn void utiliserUnite(BonusCase c)
+            \fn int utiliserUnite(BonusCase c)
             
             \brief Déplace l'Unite vers la Case passée en paramètre.
             Si la case cible est occupée par un ennemi, lance un combat.
@@ -537,12 +549,23 @@
             d'ennemi sur la case cible.
             
             \param[in] Case c la case cible du déplacement
+            
+            \return true en cas de deplacement, false sinon
         </member>
         <member name="M:CS_SmallWorld.Unite.detruire">
             \fn void detruire()
             
             \brief Tue l'Unite si elle n'a plus de points de vie.
             Il faut donc retirer toutes les références vers cette Unite
+        </member>
+        <member name="M:CS_SmallWorld.Unite.caseAccessible(CS_SmallWorld.BonusCase)">
+             \fn void deplacementOk(BonusCase caseCible)
+             
+             \brief Vérifie si l'Unite peut se déplacer sur la case passée en paramètre.
+            
+             \param[in] BonusCase c la case cible
+             
+             \return true si l'Unite est capable de se déplacer à cet endroit, false sinon
         </member>
         <member name="P:CS_SmallWorld.Unite.Joueur">
             \fn property JoueurConcret Joueur

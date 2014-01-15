@@ -22,3 +22,15 @@ D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Debug\wrappe
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\obj\Debug\UnitTestSmallWorld.csprojResolveAssemblyReference.cache
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\obj\Debug\UnitTestSmallWorld.dll
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\obj\Debug\UnitTestSmallWorld.pdb
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Debug\LibSmallWorld.dll
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Debug\LibSmallWorld.pdb
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Debug\UnitTestSmallWorld.dll
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Debug\UnitTestSmallWorld.pdb
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Debug\CS_SmallWorld.dll
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Debug\wrapperLibSmallWorld.dll
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Debug\CS_SmallWorld.pdb
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Debug\CS_SmallWorld.xml
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\bin\Debug\wrapperLibSmallWorld.pdb
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\obj\Debug\UnitTestSmallWorld.csprojResolveAssemblyReference.cache
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\obj\Debug\UnitTestSmallWorld.dll
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\UnitTestSmallWorld\obj\Debug\UnitTestSmallWorld.pdb

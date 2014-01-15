@@ -50,9 +50,7 @@ C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWo
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Debug\CS_SmallWorld.xml
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\bin\Debug\wrapperLibSmallWorld.pdb
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_SmallWorld.csprojResolveAssemblyReference.cache
-C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\FenetreChoix.baml
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\MainWindow.baml
-C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\FenetreChoix.g.cs
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\MainWindow.g.cs
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\App.g.cs
 C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Appli_SmallWorld\obj\Debug\Appli_SmallWorld_Content.g.cs

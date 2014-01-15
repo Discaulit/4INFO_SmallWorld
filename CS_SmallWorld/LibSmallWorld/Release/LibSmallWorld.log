@@ -1,0 +1,26 @@
+﻿Build started 15/01/2014 19:36:57.
+     1>Project "C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\LibSmallWorld\LibSmallWorld.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D LIBSMALLWORLD_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt apiSmallWorld.cpp calcCombat.cpp map.cpp
+         apiSmallWorld.cpp
+     1>c:\users\orhin\documents\visual studio 2012\projects\4info_smallworld\cs_smallworld\libsmallworld\apiSmallWorld.h(5): warning C4005: 'LIBSMALLWORLD_EXPORTS' : macro redefinition
+                 command-line arguments :  see previous definition of 'LIBSMALLWORLD_EXPORTS'
+         calcCombat.cpp
+     1>calcCombat.cpp(6): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         map.cpp
+     1>map.cpp(24): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+       Link:
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Release\LibSmallWorld.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\LibSmallWorld.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Release\LibSmallWorld.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Release\LibSmallWorld.lib" /MACHINE:X86 /DLL Release\apiSmallWorld.obj
+         Release\calcCombat.obj
+         Release\map.obj
+            Creating library C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Release\LibSmallWorld.lib and object C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Release\LibSmallWorld.exp
+         Generating code
+         Finished generating code
+         LibSmallWorld.vcxproj -> C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Release\LibSmallWorld.dll
+       Manifest:
+         c:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\Release\LibSmallWorld.dll;#2" /manifest Release\LibSmallWorld.dll.intermediate.manifest
+     1>Done Building Project "C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\LibSmallWorld\LibSmallWorld.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.29
