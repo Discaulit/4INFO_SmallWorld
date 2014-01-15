@@ -40,8 +40,19 @@ namespace CS_SmallWorld
         {
             // Un Gaulois peut se déplacer deux cases plus loin s'il est sur une case Plaine et que c'est
             // son premier déplacement, 1 case sinon.
-            return (((_caseCourante.TCase is CasePlaine) && (_caseCourante.distance(caseCible) < 3) && (_ptsDeplacement > 1))
-                || _caseCourante.distance(caseCible) < 2);
+            Boolean cheminsanseau = false;
+            if ((_caseCourante.TCase is CasePlaine) && (_caseCourante.distance(caseCible) < 3) && (_ptsDeplacement > 1))
+            {
+                foreach (BonusCase c in _caseCourante.Voisines)
+                {
+                    if (_caseCourante.distance(c) == 1 && caseCible.distance(c) == 1 && !(c.TCase is CaseEau))
+                    {
+                        cheminsanseau = true;
+                    }
+                }
+            }
+
+            return (cheminsanseau || _caseCourante.distance(caseCible) < 2);
         }
     }
 }

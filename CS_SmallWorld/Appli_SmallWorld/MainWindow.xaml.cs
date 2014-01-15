@@ -37,6 +37,8 @@ namespace Appli_SmallWorld
         Boolean _mainMenu;
         Microsoft.Win32.OpenFileDialog charger;
         Microsoft.Win32.SaveFileDialog sauvegarder;
+        Grid atq;
+        Boolean isOver = false;
 
         public MainWindow()
         {
@@ -63,6 +65,10 @@ namespace Appli_SmallWorld
 
             charger = new Microsoft.Win32.OpenFileDialog();
             sauvegarder = new Microsoft.Win32.SaveFileDialog();
+
+            atq = new Grid();
+            atq.Children.Add(new Ellipse());
+            atq.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\ressources\attaque.png", UriKind.Relative)));
         }
 
         private Grid createCaseGrid(int c, int l, BonusCase bonusCase)
@@ -142,8 +148,31 @@ namespace Appli_SmallWorld
             plateauGrid.Children.Add(gridUnite);
 
             gridUnite.MouseLeftButtonDown += new MouseButtonEventHandler(ellipseUnite_MouseLeftButtonDown);
+            gridUnite.MouseEnter += new MouseEventHandler(unite_MouseEnter);
+            gridUnite.MouseLeave += new MouseEventHandler(unite_MouseLeave);
 
             _troupes.Add(u, gridUnite);
+        }
+
+        private void unite_MouseEnter(object sender, MouseEventArgs e)
+        {
+            var grid = sender as Grid;
+            var u = grid.Tag as Unite;
+
+            if (_uniteSelect != null && !u.estAmie(_uniteSelect) && _uniteSelect.caseAccessible(u.CaseCourante))
+            {
+                grid.Children.Add(atq);
+                atq.Visibility = System.Windows.Visibility.Visible;
+            }
+        }
+
+        private void unite_MouseLeave(object sender, MouseEventArgs e)
+        {
+            var grid = sender as Grid;
+            var u = grid.Tag as Unite;
+
+            grid.Children.Remove(atq);            
+            atq.Visibility = System.Windows.Visibility.Hidden;
         }
 
         private void RefreshNbrUnite()
@@ -249,6 +278,49 @@ namespace Appli_SmallWorld
             caseAnalysee.Visibility = System.Windows.Visibility.Collapsed;
         }
 
+        private void combat(Grid grid)
+        {         
+            var bonusCase = grid.Tag as BonusCase;
+
+            int c = Grid.GetColumn(grid);
+            int r = Grid.GetRow(grid);
+
+            Unite oqp = bonusCase.getMeilleureUnite();
+            if (_uniteSelect.utiliserUnite(bonusCase))
+            {
+                Grid.SetColumn(_troupes[_uniteSelect], c);
+                Grid.SetRow(_troupes[_uniteSelect], r);
+                Grid.SetColumn(UniteSelectionnee, c);
+                Grid.SetRow(UniteSelectionnee, r);
+            }
+
+            if (_uniteSelect.PV == 0)
+            {
+                _troupes[_uniteSelect].Visibility = System.Windows.Visibility.Hidden;
+                _troupes.Remove(_uniteSelect);
+                _uniteSelect = null;
+            }
+
+            if ((oqp != null) && oqp.PV == 0)
+            {
+                _troupes[oqp].Visibility = System.Windows.Visibility.Hidden;
+                _troupes.Remove(oqp);
+                oqp = null;
+            }
+
+            RefreshInfosPartie();
+            if (_uniteSelect != null)
+            {
+                afficherUniteCase(_uniteSelect.CaseCourante);
+            }
+            else
+            {
+                unitesCaseBorder.Visibility = System.Windows.Visibility.Hidden;
+                unitesCase.Visibility = System.Windows.Visibility.Hidden;
+                DeSurbrillanceCasesPossible();
+            }
+        }
+
         void rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var grid = sender as Grid;
@@ -264,30 +336,10 @@ namespace Appli_SmallWorld
 
             afficherUniteCase(bonusCase);
 
-            Unite oqp = bonusCase.getMeilleureUnite();
             //deplacement d'unite
             if (_uniteSelect != null)
             {
-                if (_uniteSelect.utiliserUnite(bonusCase))
-                {
-                    Grid.SetColumn(_troupes[_uniteSelect], c);
-                    Grid.SetRow(_troupes[_uniteSelect], r);
-                    Grid.SetColumn(UniteSelectionnee, c);
-                    Grid.SetRow(UniteSelectionnee, r);
-                }
-
-                if (_uniteSelect.PV == 0)
-                {
-                    _troupes[_uniteSelect].Visibility = System.Windows.Visibility.Hidden;
-                    _troupes.Remove(_uniteSelect);
-                }
-
-                if ((oqp != null) && oqp.PV == 0)
-                {
-                    _troupes[oqp].Visibility = System.Windows.Visibility.Hidden;
-                    _troupes.Remove(oqp);
-                    oqp = null;
-                }
+                combat(grid);
             }
             else
             {   //analyse de la case s'il n'y a pas d'unite selectionnee
@@ -343,6 +395,20 @@ namespace Appli_SmallWorld
             foreach (Grid g in plateauGrid.Children)
             {
                 if (g.Tag == unite)
+                {
+                    return g;
+                }
+            }
+            return null;
+        }
+
+        private Grid GetGridCaseUnite(Grid grid)
+        {
+            var u = grid.Tag as Unite;
+
+            foreach (Grid g in plateauGrid.Children)
+            {
+                if (g.Tag is BonusCase && g.Tag == u.CaseCourante)
                 {
                     return g;
                 }
@@ -499,9 +565,16 @@ namespace Appli_SmallWorld
             }
             else
             {
-                DeselectionUnite();
-                SelectionUnite(unite);
-                afficherUniteCase(unite.CaseCourante);
+                if (_uniteSelect != null)
+                {
+                    combat(GetGridCaseUnite(grid));
+                }
+                else
+                {
+                    DeselectionUnite();
+                    SelectionUnite(unite);
+                    afficherUniteCase(unite.CaseCourante);
+                }
             }
         }
 
@@ -591,7 +664,7 @@ namespace Appli_SmallWorld
             plateauGrid.Children.Clear();
             plateauGrid.RowDefinitions.Clear();
             plateauGrid.ColumnDefinitions.Clear();
-
+            
             for (int c = 0; c < _plateau.Taille; c++)
             {
                 plateauGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(50, GridUnitType.Pixel) });

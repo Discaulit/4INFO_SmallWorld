@@ -65,9 +65,9 @@ namespace CS_SmallWorld
         {
             if (_troupes.Contains(u))
                 _troupes.Remove(u);
-            else
+            /*else
                 throw new InvalidOperationException("L'unite passée en paramètre ne peut pas être retirée car "
-                    + "elle ne fait pas partie des troupes de ce joueur");
+                    + "elle ne fait pas partie des troupes de ce joueur");*/
         }
 
         //public Unite getUneUnite(int numUnite)

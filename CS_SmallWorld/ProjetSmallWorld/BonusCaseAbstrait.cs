@@ -106,9 +106,9 @@ namespace CS_SmallWorld
         {
             if (UnitesPresentes.Contains(u))
                 UnitesPresentes.Remove(u);
-            else
+            /*else
                 throw new InvalidOperationException("L'unite passée en paramètre ne peut pas être retirée car "
-                    + "elle ne fait pas partie des unités présentent sur cette case.");
+                    + "elle ne fait pas partie des unités présentent sur cette case.");*/
         }
 
         public int distance(BonusCase c)
