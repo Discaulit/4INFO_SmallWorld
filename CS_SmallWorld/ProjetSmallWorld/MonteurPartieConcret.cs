@@ -17,6 +17,8 @@ namespace CS_SmallWorld
         int _taillePlateau;
         List<BonusCase> _casesDepart;
         Plateau _plateau;
+        int _nbTourMax;
+        int _nbUnite;
 
         /**
          * \fn Constructeur de la casse
@@ -27,6 +29,26 @@ namespace CS_SmallWorld
             _wrapper = new WrapperLibsSmallWorld(taillePlateau);
             _plateau = new PlateauConcret(_taillePlateau, _wrapper);
             _casesDepart = positionsDepart();
+
+            switch (taillePlateau)
+            {
+                case 5:
+                    _nbUnite = 4;
+                    _nbTourMax = 5;
+                    break;
+                case 10:
+                    _nbUnite = 6;
+                    _nbTourMax = 20;
+                    break;
+                case 15:
+                    _nbUnite = 8;
+                    _nbTourMax = 30;
+                    break;
+                default:
+                    _nbUnite = 4;
+                    _nbTourMax = 5;
+                    break;
+            }
         }
 
         /** cf interface */
@@ -39,6 +61,11 @@ namespace CS_SmallWorld
         public List<BonusCase> CasesDepart
         {
             get { return _casesDepart; }
+        }
+
+        public int NbTourMax
+        {
+            get { return _nbTourMax; }
         }
 
         /**
@@ -65,7 +92,7 @@ namespace CS_SmallWorld
         /** cf interface */
         public Joueur creerJoueur(string name, int peuple, int numJ)
         {
-            return new JoueurConcret(name, peuple, _casesDepart[numJ], _taillePlateau);
+            return new JoueurConcret(name, peuple, _casesDepart[numJ], _nbUnite);
         }
 
         /** cf interface */

@@ -32,6 +32,11 @@ namespace CS_SmallWorld
             get;
         }
 
+        int NbTourMax
+        {
+            get;
+        }
+
         /**
          * \fn Joueur creerJoueur(string name, int peuple, int numJoueur)
          * 
