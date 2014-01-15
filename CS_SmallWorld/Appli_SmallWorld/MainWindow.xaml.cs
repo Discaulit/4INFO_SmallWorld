@@ -31,12 +31,19 @@ namespace Appli_SmallWorld
         SolidColorBrush _vikingColor = Brushes.DarkRed;
         Border _borderHighlighted;
         Ellipse _uniteHighlighted;
+        Boolean _mainMenu;
+        Grid _atq;
 
         public MainWindow()
         {
             InitializeComponent();
 
             this.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\background.jpg", UriKind.Relative)));
+
+            mainMenuPanel.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\menu_background.png", UriKind.Relative)));
+            mainMenu.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\test.png", UriKind.Relative)));
+            mainMenu.Background.Opacity = 0;
+
             dockInfoPartie.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\menu_background.png", UriKind.Relative)));
             dockJoueur1.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\menu_background.png", UriKind.Relative)));
             dockJoueur2.Background = new ImageBrush(new BitmapImage(new Uri(@"..\..\..\ressources\menu_background.png", UriKind.Relative)));
@@ -178,6 +185,26 @@ namespace Appli_SmallWorld
             {
                 Fin_tour();
             }
+            if (e.Key == Key.Escape)
+            {
+                afficher_mainmenu();
+            }
+        }
+
+        private void afficher_mainmenu()
+        {
+            if (_mainMenu)
+            {
+                mainMenu.Visibility = System.Windows.Visibility.Collapsed;
+                mainMenu.Background.Opacity = 0;
+                _mainMenu = false;
+            }
+            else
+            {
+                mainMenu.Visibility = System.Windows.Visibility.Visible;
+                mainMenu.Background.Opacity = 0.7;
+                _mainMenu = true;
+            }
         }
 
         private void DeSurbrillanceCasesPossible()
@@ -294,7 +321,7 @@ namespace Appli_SmallWorld
             plateauGrid.Children.Add(g);
 
             var e = g.Children[0] as Ellipse;
-            
+
             e.Stroke = Brushes.Yellow;
             e.StrokeThickness = 3;
 
@@ -438,9 +465,9 @@ namespace Appli_SmallWorld
         private void uniteCase_highlight(Border b)
         {
             uniteCase_deshighlight();
-            
+
             var u = b.Tag as Unite;
-                
+
             b.BorderThickness = new Thickness(4);
             b.BorderBrush = Brushes.Goldenrod;
             b.CornerRadius = new CornerRadius(20);
@@ -485,8 +512,21 @@ namespace Appli_SmallWorld
 
             if (!continuer)
             {
-                Joueur jGagnant = (_partie.Joueurs[0].Score > _partie.Joueurs[1].Score ? _partie.Joueurs[0] : _partie.Joueurs[1]);
-                MessageBox.Show(jGagnant.Name + " a gagné !", "Fin de partie !");
+                FinPartie();
+            }
+        }
+
+        private void FinPartie()
+        {
+            Joueur jGagnant = (_partie.Joueurs[0].Score > _partie.Joueurs[1].Score ? _partie.Joueurs[0] : _partie.Joueurs[1]);
+            var res = MessageBox.Show(jGagnant.Name + " a gagné !", "Fin de partie !", MessageBoxButton.OK);
+
+            if (res == MessageBoxResult.OK)
+            {
+                dockPartie.Visibility = System.Windows.Visibility.Collapsed;
+                mainMenu.Visibility = System.Windows.Visibility.Visible;
+
+                _partie = null;
             }
         }
 
@@ -517,7 +557,78 @@ namespace Appli_SmallWorld
             }
         }
 
-        private void CreerPartie_Click(object sender, RoutedEventArgs e)
+        private void creerPartie()
+        {
+            System.Collections.Generic.Dictionary<String, int> players = new System.Collections.Generic.Dictionary<String, int>();
+            players.Add(joueur1Name.Text.Trim(), Convert.ToInt32(joueur1Peuple.SelectedValue));
+            players.Add(joueur2Name.Text.Trim(), Convert.ToInt32(joueur2Peuple.SelectedValue));
+            _partie = new PartieConcret(Convert.ToInt32(partieTaille.SelectedValue), players);
+            eltPartie.Tag = _partie; // permet le binding des infos contenues dans la partie
+            _uniteSelect = null;
+            _troupes = new Dictionary<Unite, Grid>();
+
+            // on initialise la Grid (mapGrid défini dans le xaml) à partir de la map du modèle (engine)
+            _plateau = _partie.Plateau;
+            for (int c = 0; c < _plateau.Taille; c++)
+            {
+                plateauGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(50, GridUnitType.Pixel) });
+            }
+            for (int l = 0; l < _plateau.Taille; l++)
+            {
+                plateauGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(50, GridUnitType.Pixel) });
+                for (int c = 0; c < _plateau.Taille; c++)
+                {
+                    // dans chaque case de la grille on ajoute une tuile (logique) matérialisée par un rectangle (physique)
+                    // le rectangle possède une référence sur sa tuile
+                    var bonusCase = _plateau.getCaseAt(new Position(c, l));
+                    var element = createCaseGrid(c, l, bonusCase);
+                    plateauGrid.Children.Add(element);
+
+                }
+            }
+
+            foreach (JoueurConcret j in _partie.Joueurs)
+            {
+                foreach (Unite u in j.Troupes)
+                {
+                    placerUnite(u, j.Peuple);
+                }
+            }
+            //updateUnitUI();
+
+            scoreJ1.Content = "0 points";
+            scoreJ2.Content = "0 points";
+
+            RefreshNbrUnite();
+            RefreshColorJoueurCourant();
+            labelJ1.Foreground = GetColorJoueur(_partie.Joueurs[0]);
+            labelJ2.Foreground = GetColorJoueur(_partie.Joueurs[1]);
+
+            //marges de la zone de jeu
+            Double x = 0;
+            Double y = 0;
+
+            switch (_plateau.Taille)
+            {
+                case 5:
+                    y = 100;
+                    break;
+                case 10:
+                    y = 125;
+                    break;
+                case 15:
+                    y = 175;
+                    break;
+                default:
+                    y = 100;
+                    break;
+            }
+
+            x = 1.1 * y + 0.05 * _plateau.Taille * 50;
+            zoneDeJeu.Margin = new Thickness(x, y, x, y);
+        }
+
+        private void fincreerPartie_Click(object sender, RoutedEventArgs e)
         {
             if (joueur2Peuple.SelectedIndex > -1 && !String.IsNullOrEmpty(joueur2Name.Text.Trim()))
             {
@@ -527,76 +638,14 @@ namespace Appli_SmallWorld
                 }
                 else
                 {
-                    System.Collections.Generic.Dictionary<String, int> players = new System.Collections.Generic.Dictionary<String, int>();
-                    players.Add(joueur1Name.Text.Trim(), Convert.ToInt32(joueur1Peuple.SelectedValue));
-                    players.Add(joueur2Name.Text.Trim(), Convert.ToInt32(joueur2Peuple.SelectedValue));
-                    _partie = new PartieConcret(Convert.ToInt32(partieTaille.SelectedValue), players);
-                    eltPartie.Tag = _partie; // permet le binding des infos contenues dans la partie
-                    _uniteSelect = null;
-                    _troupes = new Dictionary<Unite, Grid>();
-
-                    // on initialise la Grid (mapGrid défini dans le xaml) à partir de la map du modèle (engine)
-                    _plateau = _partie.Plateau;
-                    for (int c = 0; c < _plateau.Taille; c++)
-                    {
-                        plateauGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(50, GridUnitType.Pixel) });
-                    }
-                    for (int l = 0; l < _plateau.Taille; l++)
-                    {
-                        plateauGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(50, GridUnitType.Pixel) });
-                        for (int c = 0; c < _plateau.Taille; c++)
-                        {
-                            // dans chaque case de la grille on ajoute une tuile (logique) matérialisée par un rectangle (physique)
-                            // le rectangle possède une référence sur sa tuile
-                            var bonusCase = _plateau.getCaseAt(new Position(c, l));
-                            var element = createCaseGrid(c, l, bonusCase);
-                            plateauGrid.Children.Add(element);
-                            
-                        }
-                    }
-
-                    foreach (JoueurConcret j in _partie.Joueurs)
-                    {
-                        foreach (Unite u in j.Troupes)
-                        {
-                            placerUnite(u, j.Peuple);
-                        }
-                    }
-                    //updateUnitUI();
-
-                    scoreJ1.Content = "0 points";
-                    scoreJ2.Content = "0 points";
-
-                    RefreshNbrUnite();
-                    RefreshColorJoueurCourant();
-                    labelJ1.Foreground = GetColorJoueur(_partie.Joueurs[0]);
-                    labelJ2.Foreground = GetColorJoueur(_partie.Joueurs[1]);
-
-                    //marges de la zone de jeu
-                    Double x;
-                    Double y;
-
-                    switch (_plateau.Taille)
-                    {
-                        case 5:
-                            y = 100;
-                            break;
-                        case 10:
-                            y = 125;
-                            break;
-                        case 15:
-                            y = 175;
-                            break;
-                        default:
-                            y = 100;
-                            break;
-                    }
-
-                    x = 1.1 * y + 0.05 * _plateau.Taille * 50;
-                    zoneDeJeu.Margin = new Thickness(x, y, x, y);
+                    creerPartie();
 
                     // on passe à l'interface de partie
+                    dockInfoPartie.Visibility = System.Windows.Visibility.Visible;
+                    dockJoueur1.Visibility = System.Windows.Visibility.Collapsed;
                     dockJoueur2.Visibility = System.Windows.Visibility.Collapsed;
+
+                    creationPartie.Visibility = System.Windows.Visibility.Collapsed;
                     dockPartie.Visibility = System.Windows.Visibility.Visible;
                 }
             }
@@ -606,7 +655,29 @@ namespace Appli_SmallWorld
             }
         }
 
+        private void creerPartie_Click(object sender, RoutedEventArgs e)
+        {
+            dockPartie.Visibility = System.Windows.Visibility.Collapsed;
+            mainMenu.Visibility = System.Windows.Visibility.Collapsed;
+            creationPartie.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void chargerPartie_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void quitter_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void sauvegarderPartie_Click(object sender, RoutedEventArgs e)
+        {
+            if (_partie == null)
+                MessageBox.Show("Pas de partie en cours à sauvegarder !");
+        }
+
+
     }
-
-
 }

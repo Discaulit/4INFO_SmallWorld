@@ -32,12 +32,12 @@ namespace CS_SmallWorld
          */
         public PartieConcret(int taillePlateau, Dictionary<String,int> players)
         {
-            _nbTourMax = taillePlateau;
             _numTour = 0;
             _tousJoueursOntJoue = 0;
             _joueurs = new List<Joueur>();
             _monteur = new MonteurPartieConcret(taillePlateau);
             _plateau = _monteur.Plateau;
+            _nbTourMax = _monteur.NbTourMax;
             _singletonCombat = _monteur.singletonCombat();
 
             int numPlayer = 0;
@@ -93,13 +93,14 @@ namespace CS_SmallWorld
 
             JoueurCourant = _joueurs[++_numJoueurCourant % _nbJoueurs];
 
-            if (++_tousJoueursOntJoue % _nbJoueurs == 0)
-                NumTour++;
-
-            if (Joueurs[0].Troupes.Count == 0 || Joueurs[1].Troupes.Count == 0 || _numTour > _nbTourMax)
+            if (Joueurs[0].Troupes.Count == 0 || Joueurs[1].Troupes.Count == 0 || (_tousJoueursOntJoue % _nbJoueurs == 0 && _numTour >= _nbTourMax))
                 return false;
             else
+            {
+                if (++_tousJoueursOntJoue % _nbJoueurs == 0)
+                    NumTour++;
                 return true;
+            }
 
         }
 

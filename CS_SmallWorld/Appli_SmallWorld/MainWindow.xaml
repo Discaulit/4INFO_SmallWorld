@@ -48,173 +48,168 @@
 
     <Grid x:Name="dockMainWindow">
 
-        <DockPanel x:Name="dockInfoPartie"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Height="430"
-                   Width="470">
-            <StackPanel x:Name="partie"
-                        HorizontalAlignment="Center">
-                <Label x:Name="partieTailleLabel"
-                       Content="Taille partie"
-                       FontFamily="Old London"
-                       FontWeight="Bold"
-                       FontSize="60"
-                       Foreground="Sienna"
-                       Margin="0,5,0,17"/>
-                <ComboBox Name="partieTaille"
-                          SelectedValuePath="Tag"
-                          Margin="0,0,0,207"
-                          FontFamily="Old London"
-                          FontWeight="Bold"
-                          Foreground="Beige"
-                          Background="Transparent"
-                          HorizontalContentAlignment="Center"
-                          FontSize="40">
-                    <ComboBoxItem Content="Demo"
-                                  Tag="5"
-                                  Background="BurlyWood" />
-                    <ComboBoxItem Content="Petite"
-                                  Tag="10"
-                                  Background="BurlyWood" />
-                    <ComboBoxItem Content="Normale"
-                                  Tag="15"
-                                  Background="BurlyWood" />
-                </ComboBox>
-                <Button x:Name="Joueur1"
-                        Content="Suivant"
-                        Click="Joueur1_Click"
-                        FontFamily="Old London"
-                        FontWeight="Bold"
-                        Foreground="Sienna"
-                        FontSize="40"
-                        Background="Transparent"/>
-            </StackPanel>
-        </DockPanel>
+        <Grid x:Name="creationPartie"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Height="430"
+              Width="470"
+              Visibility="Collapsed">
+            <DockPanel x:Name="dockInfoPartie">
+                <StackPanel x:Name="partie"
+                            HorizontalAlignment="Center">
+                    <Label x:Name="partieTailleLabel"
+                           Content="Taille partie"
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="60"
+                           Foreground="Sienna"
+                           Margin="0,5,0,17" />
+                    <ComboBox Name="partieTaille"
+                              SelectedValuePath="Tag"
+                              Margin="0,0,0,207"
+                              FontFamily="Old London"
+                              FontWeight="Bold"
+                              Foreground="Beige"
+                              Background="Transparent"
+                              HorizontalContentAlignment="Center"
+                              FontSize="40">
+                        <ComboBoxItem Content="Demo"
+                                      Tag="5"
+                                      Background="BurlyWood" />
+                        <ComboBoxItem Content="Petite"
+                                      Tag="10"
+                                      Background="BurlyWood" />
+                        <ComboBoxItem Content="Normale"
+                                      Tag="15"
+                                      Background="BurlyWood" />
+                    </ComboBox>
+                    <Button x:Name="Joueur1"
+                            Content="Suivant"
+                            Click="Joueur1_Click"
+                            FontFamily="Old London"
+                            FontWeight="Bold"
+                            Foreground="Sienna"
+                            FontSize="40"
+                            Background="Transparent" />
+                </StackPanel>
+            </DockPanel>
 
-        <DockPanel x:Name="dockJoueur1"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Height="430"
-                   Width="470"
-                   Visibility="Collapsed">
-            <StackPanel x:Name="joueur1"
-                        HorizontalAlignment="Center">
-                <Label x:Name="joueur1NameLabel"
-                       Content="Nom joueur 1"
-                       FontFamily="Old London"
-                       FontWeight="Bold"
-                       FontSize="60"
-                       Foreground="Sienna"
-                       Margin="0,5,0,17"/>
-                <TextBox x:Name="joueur1Name"
-                         TextWrapping="Wrap"
-                         Text=""
-                         FontFamily="Old London"
-                         FontWeight="Bold"
-                         FontSize="40"
-                         Foreground="Beige"
-                         Background="Transparent"
-                         TextAlignment="Center"
-                         Margin="0,0,0,20"/>
-                <Label x:Name="joueur1PeupleLabel"
-                       Content="Peuple joueur 1"
-                       FontFamily="Old London"
-                       FontWeight="Bold"
-                       FontSize="60"
-                       Foreground="Sienna"
-                       Margin="0,0,0,25"/>
-                <ComboBox Name="joueur1Peuple"
-                          SelectedValuePath="Tag"
-                          FontFamily="Old London"
-                          FontWeight="Bold"
-                          FontSize="40"
-                          Foreground="Beige"
-                          Background="Transparent"
-                          HorizontalContentAlignment="Center"
-                          Margin="0,0,0,35">
-                    <ComboBoxItem Content="Gaulois"
-                                  Tag="1"
-                                  Background="DarkOliveGreen"/>
-                    <ComboBoxItem Content="Nain"
-                                  Tag="2"
-                                  Background="DarkSlateGray"/>
-                    <ComboBoxItem Content="Viking"
-                                  Tag="3"
-                                  Background="DarkRed"/>
-                </ComboBox>
-                <Button x:Name="Joueur2"
-                        Content="Suivant"
-                        Click="Joueur2_Click"
-                        FontFamily="Old London"
-                        FontWeight="Bold"
-                        Foreground="Sienna"
-                        Background="Transparent"
-                        FontSize="40" />
-            </StackPanel>
-        </DockPanel>
+            <DockPanel x:Name="dockJoueur1"
+                       Visibility="Collapsed">
+                <StackPanel x:Name="joueur1"
+                            HorizontalAlignment="Center">
+                    <Label x:Name="joueur1NameLabel"
+                           Content="Nom joueur 1"
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="60"
+                           Foreground="Sienna"
+                           Margin="0,5,0,17" />
+                    <TextBox x:Name="joueur1Name"
+                             TextWrapping="Wrap"
+                             Text=""
+                             FontFamily="Old London"
+                             FontWeight="Bold"
+                             FontSize="40"
+                             Foreground="Beige"
+                             Background="Transparent"
+                             TextAlignment="Center"
+                             Margin="0,0,0,20" />
+                    <Label x:Name="joueur1PeupleLabel"
+                           Content="Peuple joueur 1"
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="60"
+                           Foreground="Sienna"
+                           Margin="0,0,0,25" />
+                    <ComboBox Name="joueur1Peuple"
+                              SelectedValuePath="Tag"
+                              FontFamily="Old London"
+                              FontWeight="Bold"
+                              FontSize="40"
+                              Foreground="Beige"
+                              Background="Transparent"
+                              HorizontalContentAlignment="Center"
+                              Margin="0,0,0,35">
+                        <ComboBoxItem Content="Gaulois"
+                                      Tag="1"
+                                      Background="DarkOliveGreen" />
+                        <ComboBoxItem Content="Nain"
+                                      Tag="2"
+                                      Background="DarkSlateGray" />
+                        <ComboBoxItem Content="Viking"
+                                      Tag="3"
+                                      Background="DarkRed" />
+                    </ComboBox>
+                    <Button x:Name="Joueur2"
+                            Content="Suivant"
+                            Click="Joueur2_Click"
+                            FontFamily="Old London"
+                            FontWeight="Bold"
+                            Foreground="Sienna"
+                            Background="Transparent"
+                            FontSize="40" />
+                </StackPanel>
+            </DockPanel>
 
-        <DockPanel x:Name="dockJoueur2"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Height="430"
-                   Width="470"
-                   Visibility="Collapsed">
-            <StackPanel x:Name="joueur2"
-                        HorizontalAlignment="Center">
-                <Label x:Name="joueur2NameLabel"
-                       Content="Nom joueur 2"
-                       FontFamily="Old London"
-                       FontWeight="Bold"
-                       FontSize="60"
-                       Foreground="Sienna"
-                       Margin="0,5,0,17"/>
-                <TextBox x:Name="joueur2Name"
-                         TextWrapping="Wrap"
-                         Text=""
-                         FontFamily="Old London"
-                         FontWeight="Bold"
-                         FontSize="40"
-                         Foreground="Beige"
-                         Background="Transparent"
-                         TextAlignment="Center"
-                         Margin="0,0,0,20" />
-                <Label x:Name="joueur2PeupleLabel"
-                       Content="Peuple joueur 2"
-                       FontFamily="Old London"
-                       FontWeight="Bold"
-                       FontSize="60"
-                       Foreground="Sienna"
-                       Margin="0,0,0,25"/>
-                <ComboBox Name="joueur2Peuple"
-                          SelectedValuePath="Tag"
-                          FontFamily="Old London"
-                          FontWeight="Bold"
-                          FontSize="40"
-                          Foreground="Beige"
-                          Background="Transparent"
-                          HorizontalContentAlignment="Center"
-                          Margin="0,0,0,35">
-                    <ComboBoxItem Content="Gaulois"
-                                  Tag="1"
-                                  Background="DarkOliveGreen" />
-                    <ComboBoxItem Content="Nain"
-                                  Tag="2"
-                                  Background="DarkSlateGray" />
-                    <ComboBoxItem Content="Viking"
-                                  Tag="3"
-                                  Background="DarkRed" />
-                </ComboBox>
-                <Button x:Name="CreerPartie"
-                        Content="Créer Partie"
-                        Click="CreerPartie_Click"
-                        FontFamily="Old London"
-                        FontWeight="Bold"
-                        Foreground="Sienna"
-                        Background="Transparent"
-                        FontSize="40" />
-            </StackPanel>
-        </DockPanel>
+            <DockPanel x:Name="dockJoueur2"
+                       Visibility="Collapsed">
+                <StackPanel x:Name="joueur2"
+                            HorizontalAlignment="Center">
+                    <Label x:Name="joueur2NameLabel"
+                           Content="Nom joueur 2"
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="60"
+                           Foreground="Sienna"
+                           Margin="0,5,0,17" />
+                    <TextBox x:Name="joueur2Name"
+                             TextWrapping="Wrap"
+                             Text=""
+                             FontFamily="Old London"
+                             FontWeight="Bold"
+                             FontSize="40"
+                             Foreground="Beige"
+                             Background="Transparent"
+                             TextAlignment="Center"
+                             Margin="0,0,0,20" />
+                    <Label x:Name="joueur2PeupleLabel"
+                           Content="Peuple joueur 2"
+                           FontFamily="Old London"
+                           FontWeight="Bold"
+                           FontSize="60"
+                           Foreground="Sienna"
+                           Margin="0,0,0,25" />
+                    <ComboBox Name="joueur2Peuple"
+                              SelectedValuePath="Tag"
+                              FontFamily="Old London"
+                              FontWeight="Bold"
+                              FontSize="40"
+                              Foreground="Beige"
+                              Background="Transparent"
+                              HorizontalContentAlignment="Center"
+                              Margin="0,0,0,35">
+                        <ComboBoxItem Content="Gaulois"
+                                      Tag="1"
+                                      Background="DarkOliveGreen" />
+                        <ComboBoxItem Content="Nain"
+                                      Tag="2"
+                                      Background="DarkSlateGray" />
+                        <ComboBoxItem Content="Viking"
+                                      Tag="3"
+                                      Background="DarkRed" />
+                    </ComboBox>
+                    <Button x:Name="CreerPartie"
+                            Content="Créer Partie"
+                            Click="fincreerPartie_Click"
+                            FontFamily="Old London"
+                            FontWeight="Bold"
+                            Foreground="Sienna"
+                            Background="Transparent"
+                            FontSize="40" />
+                </StackPanel>
+            </DockPanel>
+        </Grid>
 
         <DockPanel x:Name="dockPartie"
                    Visibility="Collapsed"
@@ -223,7 +218,7 @@
                    DataContext="{Binding Tag, ElementName=eltPartie}">
             <Ellipse x:Name="eltPartie"
                      Visibility="Hidden" />
-            
+
             <StackPanel x:Name="bandeauG"
                         DockPanel.Dock="Left">
                 <StackPanel x:Name="scoresJoueurs">
@@ -373,7 +368,7 @@
                            FontWeight="Bold"
                            FontSize="60"
                            Foreground="Sienna"
-                           Margin="70,10,0,20"/>
+                           Margin="70,10,0,20" />
                 <TextBlock x:Name="JCourant"
                            Text="{Binding JoueurCourant.Name}"
                            FontFamily="Old London"
@@ -394,24 +389,71 @@
                           HorizontalAlignment="Center"
                           VerticalAlignment="Center">
                 <Border Name="backgroundMap">
-                        <ScrollViewer Name="zoneDeJeu"
-                                      VerticalScrollBarVisibility="Auto"
-                                      HorizontalScrollBarVisibility="Auto"
-                                      HorizontalAlignment="Center"
-                                      VerticalAlignment="Center">
-                            <Grid Name="plateauGrid">
-                                <Grid Name="caseAnalysee"
-                                      Panel.ZIndex="333">
-                                    <Rectangle Style="{StaticResource styleCaseSelect}" />
-                                </Grid>
-                                <Grid Name="UniteSelectionnee"
-                                      Panel.ZIndex="333">
-                                    <Ellipse Style="{StaticResource styleUniteSelect}" />
-                                </Grid>
+                    <ScrollViewer Name="zoneDeJeu"
+                                  VerticalScrollBarVisibility="Auto"
+                                  HorizontalScrollBarVisibility="Auto"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center">
+                        <Grid Name="plateauGrid">
+                            <Grid Name="caseAnalysee">
+                                <Rectangle Style="{StaticResource styleCaseSelect}" />
                             </Grid>
-                        </ScrollViewer>
-                    </Border>
+                            <Grid Name="UniteSelectionnee">
+                                <Ellipse Style="{StaticResource styleUniteSelect}" />
+                            </Grid>
+                        </Grid>
+                    </ScrollViewer>
+                </Border>
             </ScrollViewer>
         </DockPanel>
+        
+        <Grid x:Name="mainMenu">
+            <StackPanel x:Name="mainMenuPanel"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Height="430"
+                        Width="470">
+                <Button x:Name="creerPartieButton"
+                        Content="Nouvelle Partie"
+                        FontFamily="Old London"
+                        FontWeight="Bold"
+                        Foreground="Sienna"
+                        FontSize="60"
+                        Background="Transparent"
+                        Width="360"
+                        Margin="0,5,0,0"
+                        Click="creerPartie_Click" />
+                <Button x:Name="chargerPartie"
+                        Content="Charger"
+                        FontFamily="Old London"
+                        FontWeight="Bold"
+                        Foreground="Sienna"
+                        FontSize="60"
+                        Width="360"
+                        Background="Transparent"
+                        Margin="0,10,0,0"
+                        Click="chargerPartie_Click" />
+                <Button x:Name="sauvegarderPartie"
+                        Content="Sauvegarder"
+                        FontFamily="Old London"
+                        FontWeight="Bold"
+                        Foreground="Sienna"
+                        FontSize="60"
+                        Width="360"
+                        Background="Transparent"
+                        Margin="0,12,0,0"
+                        Click="sauvegarderPartie_Click" />
+                <Button x:Name="quitter"
+                        Content="Quitter"
+                        FontFamily="Old London"
+                        FontWeight="Bold"
+                        Foreground="Sienna"
+                        FontSize="60"
+                        Width="360"
+                        Background="Transparent"
+                        Margin="0,100,0,0"
+                        Click="quitter_Click" />
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
