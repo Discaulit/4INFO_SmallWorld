@@ -1,6 +1,10 @@
-C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Release\CS_SmallWorld.dll
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Release\CS_SmallWorld.dll
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Release\wrapperLibSmallWorld.dll
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Release\CS_SmallWorld.pdb
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Release\wrapperLibSmallWorld.pdb
 D:\INSA\4INFO\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\obj\Release\ModelisationSmallWorld.modelprojResolveAssemblyReference.cache
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Release\CS_SmallWorld.dll
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Release\wrapperLibSmallWorld.dll
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Release\CS_SmallWorld.pdb
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\bin\Release\wrapperLibSmallWorld.pdb
+C:\Users\Orhin\Documents\Visual Studio 2012\Projects\4INFO_SmallWorld\CS_SmallWorld\ModelisationSmallWorld\obj\Release\ModelisationSmallWorld.modelprojResolveAssemblyReference.cache
